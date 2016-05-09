@@ -1,0 +1,86 @@
+# Results for distribution coefficients Submission 1 
+# 
+# This file will be automatically parsed. It must contain the following four elements: predictions, name of method, software listing, and method description. These elements must be provided in the order shown, with their respective headers.
+#
+# The data in each prediction line should be structured as follows, with all four fields provided.
+# Compound ID, log D, log D SEM, log D model uncertainty
+# The list of predictions must begin with the "Predictions:" keyword, as illustrated here, and (except in the case of standardization runs) predictions for all of Batch 0, Batches 0-1, or Batches 0-2 must be provided. Compound order is unimportant
+
+#QMPFF3
+Predictions:
+SAMPL5_002,  5.66,   0.34,    2.12
+SAMPL5_003,  5.81,   0.31,    2.12
+SAMPL5_004,  3.24,   0.37,    2.29
+SAMPL5_005, -5.58,   0.52,    2.24
+SAMPL5_006,  0.71,   0.32,    1.94
+SAMPL5_007,  2.46,   0.38,    2.24
+SAMPL5_010,  0.17,   0.29,    2.06
+SAMPL5_011,  3.42,   0.30,    2.12
+SAMPL5_013,  0.52,   0.41,    2.55
+SAMPL5_015, -0.21,   0.39,    2.00
+SAMPL5_017,  4.41,   0.41,    2.40
+SAMPL5_019,  6.72,   0.35,    2.40
+SAMPL5_020,  2.82,   0.33,    2.12
+SAMPL5_021, -4.01,   0.35,    2.06
+SAMPL5_024,  3.82,   0.46,    2.50
+SAMPL5_026, -0.32,   0.38,    2.00
+SAMPL5_027,  2.62,   0.29,    1.94
+SAMPL5_033,  5.38,   0.51,    2.40
+SAMPL5_037, -0.73,   0.48,    1.73
+SAMPL5_042, -1.95,   0.43,    2.35
+SAMPL5_044,  0.81,   0.37,    2.40
+SAMPL5_045, -1.65,   0.30,    1.87
+SAMPL5_046,  0.30,   0.46,    2.29
+SAMPL5_047, -4.14,   1.14,    2.18
+SAMPL5_048, -2.28,   0.44,    2.40
+SAMPL5_049, -3.69,   0.38,    2.00
+SAMPL5_050,  6.27,   0.33,    1.94
+SAMPL5_055, -1.74,   0.29,    1.80
+SAMPL5_056,  1.16,   0.68,    2.00
+SAMPL5_058,  0.77,   0.31,    2.06
+SAMPL5_059,  1.27,   0.26,    1.73
+SAMPL5_060, -1.89,   0.27,    2.00
+SAMPL5_061,  2.13,   0.36,    1.87
+SAMPL5_063, -2.43,   0.34,    1.94
+SAMPL5_065, -1.40,   0.56,    3.32
+SAMPL5_067, -0.89,   0.53,    2.12
+SAMPL5_068,  5.44,   0.36,    2.45
+SAMPL5_069, -2.46,   0.50,    2.45
+SAMPL5_070, 10.12,   0.39,    2.29
+SAMPL5_071, -2.76,   0.42,    2.18
+SAMPL5_072,  7.63,   0.37,    2.18
+SAMPL5_074, -6.46,   0.42,    2.18
+SAMPL5_075,  1.67,   0.55,    2.18
+SAMPL5_080, -2.30,   0.22,    1.87
+SAMPL5_081, -5.25,   0.43,    2.18
+SAMPL5_082,  9.06,   0.53,    2.65
+SAMPL5_083, -4.55,   1.47,    3.81
+SAMPL5_084,  5.94,   0.51,    2.50
+SAMPL5_085, -1.91,   0.37,    2.12
+SAMPL5_086,  7.93,   0.63,    2.50
+SAMPL5_088,  2.02,   0.50,    2.29
+SAMPL5_090,  7.72,   0.44,    2.45
+SAMPL5_092,  1.04,   0.89,    2.96
+
+# etc.
+#
+# Please provide an informal but informative name of the method used. The "Name:" keyword is required, as shown here.
+Name: 
+Normal/solvation/QMPFF3/QMPFF3-water-cyclohexane
+#
+# List all major software packages used and their versions
+# The "Software:" keyword is required.
+Software:
+Arbalest (proprietary MD suite)
+OCTAVE/MATLAB
+
+# Methodology and computational details.
+# Level of details should be roughly equivalent to that used in a publication.
+# Please include the values of key parameters, with units, and explain how statistical uncertainties were estimated.
+# Use as many lines of text as you need.
+# All text following the "Method:" keyword will be regarded as part of your free text methods description.
+Method:
+Distribution coefficients were estimated from the difference in solvation free energies of the solute in neutral state in water and cyclohexane at infinite dilution. The provided .mol2 files were used to build solvated boxes with a single solute molecule in each solvent, for all solutes. The number of solvent molecules was determined in order to create a box with at least 4.0 nm on each edge, so at least 2124 water molecules in each case, and 352 in the case of cyclohexane.  Solute, Water, and cyclohexane were treated based on polarizable non bonded parameters and valence parameters of Quantum Mechanical Polarizable Force Field (QMPFFF3) see e.g. (J Comput Chem (2008) 29: 1242). 
+
+In-house tools in the Arbalest code and various scripts in Octave/Matlab were used for setting up the initial configuration and subsequent post processing of generated data. Solvation free energy calculations were broken into 10 lambda states, while annihilation was done for all interactions in similar way as it was done for protein-ligand complexes (as in PNAS (2008) 105:10378). Each solvated system was simulated separately at each lambda value by minimizing in Arbalest with the steepest descents algorithm, followed by a 450 ps production phase at each lambda value using a Berendsen barostat and Nose-Hoover thermostat with relaxation time of 0.5 ps and 1 ps, respectively of which we typically discarded another 50 ps as equilibration. In cases where convergence was suspect, longer simulation times were employed. Analysis was done with in house Octave/Matlab scripts based on thermodynamic integration using cubic-spline interpolation of the lambda points, and  were used to obtain the solvation free energies (and hence predicted distribution coefficients) reported. The statistical errors (SEM) of the run was determined not by multiple runs, but by analysis of correlation times (as in supplementary materials of PNAS (2008) 105:10378).
+In this submission no corrections based on protonation states were made.

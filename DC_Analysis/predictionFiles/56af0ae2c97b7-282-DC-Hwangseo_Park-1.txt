@@ -1,0 +1,88 @@
+# Results for distribution coefficients
+# 
+# This file will be automatically parsed. It must contain the following four elements: predictions, name of method, software listing, and method description. These elements must be provided in the order shown, with their respective headers.
+#
+# The data in each prediction line should be structured as follows, with all four fields provided.
+# Compound ID, log D, log D SEM, log D model uncertainty
+# The list of predictions must begin with the "Predictions:" keyword, as illustrated here, and (except in the case of standardization runs) predictions for all of Batch 0, Batches 0-1, or Batches 0-2 must be provided. Compound order is unimportant
+
+Predictions:
+SAMPL5_002, 2.02, 0.06, 0.6
+SAMPL5_003, 1.36, 0.05, 0.8
+SAMPL5_004, 4.02, 0.09, 0.6
+SAMPL5_005, -0.06, 0.06, 0.7
+SAMPL5_006, 1.86, 0.05, 0.8
+SAMPL5_007, 2.04, 0.06, 0.7
+SAMPL5_010, -1.89, 0.06, 0.6
+SAMPL5_011, -2.72, 0.13, 0.8
+SAMPL5_013, -0.15, 0.06, 1.0
+SAMPL5_015, -3.40, 0.12, 0.6
+SAMPL5_017, 2.32, 0.03, 0.8
+SAMPL5_019, 1.09, 0.04, 0.7
+SAMPL5_020, 2.22, 0.05, 1.0
+SAMPL5_021, 4.15, 0.05, 0.8
+SAMPL5_024, 3.33, 0.04, 0.9
+SAMPL5_026, -0.32, 0.03, 0.9
+SAMPL5_027, -3.74, 0.11, 0.7
+SAMPL5_033, 4.92, 0.04, 0.6
+SAMPL5_037, -4.61, 0.13, 0.4
+SAMPL5_042, -0.11, 0.07, 0.8
+SAMPL5_044, -0.37, 0.07, 0.8
+SAMPL5_045, -0.29, 0.06, 0.7
+SAMPL5_046, -0.35, 0.06, 0.5
+SAMPL5_047, -0.58, 0.05, 0.6
+SAMPL5_048, -0.07, 0.01, 0.9
+SAMPL5_049, -0.34, 0.07, 0.7
+SAMPL5_050, 0.82, 0.05, 0.8
+SAMPL5_055, -3.37, 0.05, 0.6
+SAMPL5_056, -0.67, 0.04, 0.7
+SAMPL5_058, 4.67, 0.16, 0.5
+SAMPL5_059, -1.20, 0.06, 0.8
+SAMPL5_060, -2.46, 0.06, 0.9
+SAMPL5_061, -0.57, 0.06, 0.8
+SAMPL5_063, 0.25, 0.03, 0.8
+SAMPL5_065, 6.48, 0.27, 0.5
+SAMPL5_067, 3.80, 0.10, 0.6
+SAMPL5_068, 2.02, 0.06, 0.7
+SAMPL5_069, 0.81, 0.03, 0.6
+SAMPL5_070, 6.05, 0.33, 0.5
+SAMPL5_071, 4.43, 0.11, 0.6
+SAMPL5_072, 3.68, 0.08, 0.7
+SAMPL5_074, -8.64, 0.63, 0.3
+SAMPL5_075, 0.17, 0.04, 0.8
+SAMPL5_080, 6.61, 0.40, 0.4
+SAMPL5_081, -1.94, 0.05, 0.8
+SAMPL5_082, 5.77, 0.39, 0.7
+SAMPL5_083, -2.40, 0.11, 0.9
+SAMPL5_084, 3.95, 0.02, 1.0
+SAMPL5_085, 2.55, 0.07, 0.5
+SAMPL5_086, 5.08, 0.27, 0.7
+SAMPL5_088, 0.52, 0.08, 0.6
+SAMPL5_090, 1.89, 0.05, 0.9
+SAMPL5_092, 6.21, 0.59, 0.6
+#
+# Please provide an informal but informative name of the method used. The "Name:" keyword is required, as shown here.
+Name 
+Extended Solvent-Contact Model
+Genetic Algorithm
+#
+# List all major software packages used and their versions
+# The "Software:" keyword is required.
+Software:
+ViewerPro 4.2
+Molden 4.8
+
+# Methodology and computational details.
+# Level of details should be roughly equivalent to that used in a publication.
+# Please include the values of key parameters, with units, and explain how statistical uncertainties were estimated.
+# Use as many lines of text as you need.
+# All text following the "Method:" keyword will be regarded as part of your free text methods description.
+Method:
+Assuming that LogD can be calculated from the difference between the solvation free energy of a molecule
+in water and that in cyclohexane, we propose a method for predicting the molecular LogD values based on 
+the extended solvent-contact model. To obtain the molecular solvation free energy data for the two solvents, 
+a proper potential energy function was defined for each solvent with respect to atomic distributions and 
+three kinds of atomic parameters. Total 246 atomic parameters were optimized with the standard genetic algorithm 
+using the training set consisting of 92 organic molecules with varying shapes and functional groups. The solvation 
+free energy values of 53 SAMPL5 molecules for water and cyclohexene calculated with the two optimized potential were 
+then combined to estimate their LogD values.

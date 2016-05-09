@@ -1,0 +1,88 @@
+Predictions:
+SAMPL5_002,     -0.428, 0.35, 1.1
+SAMPL5_003,      1.410, 0.32, 1.1
+SAMPL5_004,      3.095, 0.31, 1.1
+SAMPL5_005,     -0.792, 0.48, 1.1
+SAMPL5_006,     -1.854, 0.48, 1.1
+SAMPL5_007,      1.958, 0.49, 1.1
+SAMPL5_010,     -5.116, 0.31, 1.1
+SAMPL5_011,     -2.975, 0.48, 1.1
+SAMPL5_013,      1.346, 0.54, 1.1
+SAMPL5_015,     -6.120, 0.66, 1.1
+SAMPL5_017,      2.437, 0.97, 1.1
+SAMPL5_019,      3.269, 0.35, 1.1
+SAMPL5_020,     -0.159, 0.59, 1.1
+SAMPL5_021,     -0.107, 0.18, 1.1
+SAMPL5_024,      1.635, 0.60, 1.1
+SAMPL5_026,     -2.651, 0.56, 1.1
+SAMPL5_027,      1.023, 0.61, 1.1
+SAMPL5_033,      3.172, 0.47, 1.1
+SAMPL5_037,     -6.081, 0.54, 1.1
+SAMPL5_042,     -0.841, 0.49, 1.1
+SAMPL5_044,     -2.418, 1.22, 1.1
+SAMPL5_045,     -2.884, 0.36, 1.1
+SAMPL5_046,     -0.987, 0.83, 1.1
+SAMPL5_047,     -1.583, 0.31, 1.1
+SAMPL5_048,     -1.123, 0.30, 1.1
+SAMPL5_049,     -0.081, 0.37, 1.1
+SAMPL5_050,    -10.471, 0.70, 1.1
+SAMPL5_055,     -3.452, 0.32, 1.1
+SAMPL5_056,     -4.445, 0.31, 1.1
+SAMPL5_058,      0.978, 0.26, 1.1
+SAMPL5_059,     -1.260, 0.15, 1.1
+SAMPL5_060,     -3.535, 0.32, 1.1
+SAMPL5_061,     -2.960, 0.48, 1.1
+SAMPL5_063,     -9.610, 0.45, 1.1
+SAMPL5_065,     -4.040, 0.85, 1.1
+SAMPL5_067,     -1.240, 0.74, 1.1
+SAMPL5_068,      0.112, 0.44, 1.1
+SAMPL5_069,     -2.308, 0.72, 1.1
+SAMPL5_070,      3.649, 0.38, 1.1
+SAMPL5_071,     -1.982, 0.76, 1.1
+SAMPL5_072,      1.699, 0.41, 1.1
+SAMPL5_074,     -7.218, 0.87, 1.1
+SAMPL5_075,     -1.003, 0.57, 1.1
+SAMPL5_080,      0.367, 0.30, 1.1
+SAMPL5_081,     -7.021, 0.76, 1.1
+SAMPL5_082,      4.615, 0.25, 1.1
+SAMPL5_083,     -9.912, 9.99, 1.1
+SAMPL5_084,     -1.716, 0.45, 1.1
+SAMPL5_085,     -0.413, 0.32, 1.1
+SAMPL5_086,     -0.023, 0.68, 1.1
+SAMPL5_088,     -2.129, 0.45, 1.1
+SAMPL5_090,      0.038, 0.53, 1.1
+SAMPL5_092,     -1.489, 0.76, 1.1
+
+Name:
+QMNBB/OLYP/ABSPKA/SOLV
+
+Software:
+CHARMM v.40a2
+Gaussian 09 Rev. A2
+
+Method:
+MM trajectores were analysed with Gaussian, using DFT/BASIS and the SMD implicit solvent model for both water and cyclohexane. 
+The trajectories of the solute in water and cyclohexane were generated with CHARMM and the CHARMM General Force field. The underlying trajectories 
+were 5ns long and frames were saved every 1ps. To increase sampling, Hamiltonian Replica exchange was used between the lambda points. The water simulations 
+were conduced in cubic boxes with a box length between 38.55 and 38.75 Angstrom, using 1906 TIP3P water molecules.The free energy analysis was conducted 
+with Non-Boltzmann Bennett, using the solute-solute and solute-solvent interactions for the biasing potential. Statistical uncertainties were calculated by 
+using block averages from 0.5ns blocks (or 500 snapshots).
+
+Absolute pKa calculations were performed in an effort to obtain the free energy
+differences between the various ionization states for certain molecules.
+Tautomers were also generated. All pKa calculations were done using
+M062X/6-31+G*/SMD level of theory.  The free energy of a gas phase proton
+was calculated analytically (-6.28 kcal/mol) and the experimental value of
+the proton solvation was used as suggested by Tissandier et al. (-265.9
+kcal/mol). A correction to change from a standard state of one atmosphere
+to one molar was also employed (kT * ln(24.46)). No pKa corrections or
+tautomerizations were attempted for molecule 83.
+
+Fully relaxed geometry optimizations were performed for all QM optimizations
+where applicable (pKa corrections if present, or solvantion free energy
+calculations). Frequency and large basis set single point calculations were
+also performed for the optimized solvent geometries. Molecule 83 was not
+optimized in the various solvent phases, instead vertical calculations were
+performed.
+
+

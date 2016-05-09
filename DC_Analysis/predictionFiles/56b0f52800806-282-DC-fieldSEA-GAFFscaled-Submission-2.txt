@@ -1,0 +1,87 @@
+#Results for distribution coefficients
+#
+Predictions:
+SAMPL5_002,  3.1,  0.1, 2.0
+SAMPL5_003,  0.3,  0.1, 2.0
+SAMPL5_004,  5.2,  0.1, 2.0
+SAMPL5_005,  1.0,  0.1, 2.0
+SAMPL5_006, -3.0,  0.1, 2.0
+SAMPL5_007,  7.2,  0.1, 2.0
+SAMPL5_010, -1.6,  0.1, 2.0
+SAMPL5_011,  0.7,  0.1, 2.0
+SAMPL5_013, -2.4,  0.1, 2.0
+SAMPL5_015, -3.1,  0.1, 2.0
+SAMPL5_017,  1.7,  0.1, 2.0
+SAMPL5_019,  4.2,  0.1, 2.0
+SAMPL5_020, -7.9,  0.1, 2.0
+SAMPL5_021,  0.6,  0.1, 2.0
+SAMPL5_024,  4.3,  0.1, 2.0
+SAMPL5_026, -0.3,  0.1, 2.0
+SAMPL5_027,  1.8,  0.1, 2.0
+SAMPL5_033,  5.8,  0.1, 2.0
+SAMPL5_037, -1.8,  0.1, 2.0
+SAMPL5_042,  0.8,  0.1, 2.0
+SAMPL5_044,  2.3,  0.1, 2.0
+SAMPL5_045, -2.2,  0.1, 2.0
+SAMPL5_046,  2.7,  0.1, 2.0
+SAMPL5_047,  5.1,  0.1, 2.0
+SAMPL5_048,  1.6,  0.1, 2.0
+SAMPL5_049,  4.0,  0.1, 2.0
+SAMPL5_050, -8.6,  0.1, 2.0
+SAMPL5_055,  1.2,  0.1, 2.0
+SAMPL5_056,  1.0,  0.1, 2.0
+SAMPL5_058, -0.4,  0.1, 2.0
+SAMPL5_059,  0.5,  0.1, 2.0
+SAMPL5_060, -1.4,  0.1, 2.0
+SAMPL5_061,  5.3,  0.1, 2.0
+SAMPL5_063,  2.6,  0.1, 2.0
+SAMPL5_065,  0.1,  0.1, 2.0
+SAMPL5_067,  1.8,  0.1, 2.0
+SAMPL5_068, -0.3,  0.1, 2.0
+SAMPL5_069, -1.8,  0.1, 2.0
+SAMPL5_070,  1.8,  0.1, 2.0
+SAMPL5_071,  1.7,  0.1, 2.0
+SAMPL5_072,  0.8,  0.1, 2.0
+SAMPL5_074, -10.4, 0.1, 2.0
+SAMPL5_075,  5.5,  0.1, 2.0
+SAMPL5_080, -2.8,  0.1, 2.0
+SAMPL5_081, -4.2,  0.1, 2.0
+SAMPL5_082,  0.1,  0.1, 2.0
+SAMPL5_083, -3.1,  0.1, 2.0
+SAMPL5_084,  1.7,  0.1, 2.0
+SAMPL5_085, -3.0,  0.1, 2.0
+SAMPL5_086,  5.1,  0.1, 2.0
+SAMPL5_088, -4.5,  0.1, 2.0
+SAMPL5_090, -3.1,  0.1, 2.0
+SAMPL5_092, -7.3,  0.1, 2.0 
+
+#
+# Please provide an informal but informative name of the method used. The "Name:" keyword is required, as shown here.
+Name:
+SEA/TIP3P-Water/Cyclohexane_UA-DC/GAFF-scaled
+#
+# List all major software packages used and their versions
+# The "Software:" keyword is required.
+Software:
+GROMACS 5.0.4
+AmberTools 14
+acpype.py
+SEA
+#
+# Methodology and computational details.
+# Level of details should be roughly equivalent to that used in a publication.
+# Please include the values of key parameters, with units, and explain how statistical uncertainties were estimated.
+# Use as many lines of text as you need.
+# All text following the "Method:" keyword will be regarded as part of your free text methods description.
+Method:
+Distribution coefficients were here estimated from the difference in solvation free energies of the solute in water and cyclohexane at infinite dilution using the field Semi-Explicit Assembly (SEA) solvation model. The solutes were represented using a scaled version of the the GAFF force field with AM1-BCC partial charges. In particular charges were enhanced by ~20% and Lennard-Jones sigma parameters were increased following a simple linear relation that is applied as a function of the change in charge magnitude upon polarization enhancement. This scaling was performed in order to maintain the solute model's neat liquid density, and generally results in improved thermodynamic properties for the molecular models.
+#
+The SEA solvation models computes the solvation free energy for a solute molecules by rapidly assembling at runtime the precomputed solvation free energy of a set of model spheres. The computationally expensive precomputation step needs to be performed only once for every given solvent environment. Precomputed solvation free energy tables for model spheres in TIP3P water molecules were taken from previous work in our group. Solvation free energies for model spheres in cyclohexane were computed using a dielectric corrected united-atom (UA) model of the solvent. The optimization procedure was performed in order to obtain a UA solvent model that reproduces the experimental density, dielectric constant and enthalpy of vaporization of cyclohexane.  
+#
+SEA performs free energy calculations on rigid molecules. In order to use the most representative conformation of the solutes in the respective solvents we performed a set of 5 ns simulations where each solute was immersed in explicit water or cyclohexane. These trajectories were clustered to extract out the representative conformation. As stated above, the solutes were modeled using a scaled form of the GAFF force field with AM1-BCC partial charges. Solute parameters were assigned using antechamber and parmchk2, and the molecule was converted to GROMACS form using acpype.py. The charges and Lennard-Jones sigma parameters were then modulated as described above to obtain a model that is likely better represents the molecule in the condensed phase state. The explicit solvents where TIP3P water and our dielectrically corrected cyclohexane. Following minimization of the solvated systems (rhombic dodecahedral box with at least 12 Å of solvent between the solute and the periodic boundary walls), each solute box was first equilibrated under the NVT ensemble using the Berendsen thermostat for 100 ps, and subsequently it was equilibrated under the NPT ensemble for 200 ps (Langevin thermostat and Parrinello-Rahman barostat). After equilibration for each box a 5ns NPT production trajectory was done. The dominant conformations of the solutes over their trajectories were determined with clustering using the g_cluster tool. This conformer was used for subsequent field SEA calculations. 
+#
+In field SEA, the non-polar contribution to the solvation free energy was computed by constructing a Lee-Richards type solvent accessible surface using a dot density of roughly 300 dots per atom. Each exterior point was probed to determine the collective solvation field, and the appropriate free energy estimates were pulled from the precomputed sphere contours. The reported results are averaged over 20 independent calculations. The polar contribution to the solvation free energy was performed using the field SEA approach. As in the nonpolar term, the polar contribution comes from first building a solvent accessible surface of similar detail as the nonpolar surface. These field SEA results were averaged over 60 runs. In the case of the cyclohexane environment, a correction to account the contribution to the solvation free energy due to buried solute atoms was applied.  
+#
+Statistical analysis was done using a block average over 5 blocks. The predicted distribution coefficients simply come from subtraction of the solvation free energies in the various states, with error propagated to the log(D) value. The systematic error comes from a comparison of the obtained result with explicit solvent calculation performed in our group, submitted separately. 
+
+

@@ -1,0 +1,85 @@
+Predictions:
+SAMPL5_002,      4.127, 1.33, 2.1
+SAMPL5_003,      2.522, 1.02, 2.1
+SAMPL5_004,      4.226, 1.55, 2.1
+SAMPL5_005,     -4.002, 1.46, 2.1
+SAMPL5_006,     -0.279, 0.42, 2.1
+SAMPL5_007,     10.621, 3.46, 2.1
+SAMPL5_010,     -5.731, 1.84, 2.1
+SAMPL5_011,     -1.404, 1.61, 2.1
+SAMPL5_013,     -2.573, 3.08, 2.1
+SAMPL5_015,     -5.900, 1.56, 2.1
+SAMPL5_017,      6.399, 0.82, 2.1
+SAMPL5_019,      2.082, 1.63, 2.1
+SAMPL5_020,     -7.462, 0.79, 2.1
+SAMPL5_021,      2.074, 0.94, 2.1
+SAMPL5_024,     10.599, 1.17, 2.1
+SAMPL5_026,      2.094, 1.09, 2.1
+SAMPL5_027,      5.197, 0.79, 2.1
+SAMPL5_033,      8.510, 1.10, 2.1
+SAMPL5_037,     -1.745, 0.63, 2.1
+SAMPL5_042,     -4.471, 1.93, 2.1
+SAMPL5_044,      5.197, 1.55, 2.1
+SAMPL5_045,     -2.390, 0.43, 2.1
+SAMPL5_046,      4.809, 1.34, 2.1
+SAMPL5_047,      1.151, 0.82, 2.1
+SAMPL5_048,     -2.434, 1.14, 2.1
+SAMPL5_049,      1.884, 1.21, 2.1
+SAMPL5_050,    -10.755, 2.05, 2.1
+SAMPL5_055,      4.530, 1.25, 2.1
+SAMPL5_056,      2.487, 2.21, 2.1
+SAMPL5_058,     -6.920, 0.95, 2.1
+SAMPL5_059,      3.306, 1.34, 2.1
+SAMPL5_060,     -4.482, 0.81, 2.1
+SAMPL5_061,      2.179, 1.54, 2.1
+SAMPL5_063,     -0.118, 0.87, 2.1
+SAMPL5_065,      3.635, 1.22, 2.1
+SAMPL5_067,      9.602, 2.69, 2.1
+SAMPL5_068,      0.044, 2.15, 2.1
+SAMPL5_069,      5.156, 1.69, 2.1
+SAMPL5_070,      8.233, 1.15, 2.1
+SAMPL5_071,      4.046, 1.88, 2.1
+SAMPL5_072,      6.712, 0.87, 2.1
+SAMPL5_074,     -9.536, 1.90, 2.1
+SAMPL5_075,      3.881, 1.27, 2.1
+SAMPL5_080,     -6.421, 2.43, 2.1
+SAMPL5_081,      0.290, 0.78, 2.1
+SAMPL5_082,      9.261, 0.78, 2.1
+SAMPL5_083,    -12.256, 5.27, 2.1
+SAMPL5_084,      2.233, 2.23, 2.1
+SAMPL5_085,     -8.068, 1.47, 2.1
+SAMPL5_086,      8.690, 1.13, 2.1
+SAMPL5_088,     -6.604, 1.60, 2.1
+SAMPL5_090,      3.504, 1.04, 2.1
+SAMPL5_092,     -3.539, 0.00, 2.1
+
+Name:
+QMMMNBB/BLYP/RELPKA/SOLV
+
+Software:
+CHARMM v.40a2
+Q-Chem v.4.3
+
+Method:
+MM trajectores were analysed with Q-Chem, using the BLYP functional and the 6-31G* basis set on the solute. The solvent was treated explicitly using MM. 
+The trajectories of the solute in water and cyclohexane were generated with CHARMM and the CHARMM General Force field. The underlying trajectories 
+were 1-5ns long and frames were saved every 1ps. To increase sampling, Hamiltonian Replica exchange was used between the lambda points. The water simulations 
+were conduced in cubic boxes with a box length between 38.55 and 38.75 Angstrom, using 1906 TIP3P water molecules.The free energy analysis was conducted 
+with Non-Boltzmann Bennett, using the solute-solute and solute-solvent interactions for the biasing potential. Statistical uncertainties were calculated by 
+using block averages from 0.5ns blocks (or 500 snapshots).
+
+Relative pKa calculations were performed to obtain free energies of ionization
+in the aqueous phase. Tautomerization was also explored in the aqueous
+solvent. Analogue structures for molecules were assigned manually, and
+analogue pKa information was taken from widely available chemical data
+bases, such a PubChem, or the CRC Handbook in most cases. No pKa corrections or
+tautomerizations were attempted for molecule 83.
+
+Fully relaxed geometry optimizations were performed for all QM optimizations
+where applicable (pKa corrections if present, or solvantion free energy
+calculations). Frequency and large basis set single point calculations were
+also performed for the optimized solvent geometries. Molecule 83 was not
+optimized in the various solvent phases, instead vertical calculations were
+performed.
+
+

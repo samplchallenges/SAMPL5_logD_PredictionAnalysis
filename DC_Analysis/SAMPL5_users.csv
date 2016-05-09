@@ -1,0 +1,78 @@
+FirstName,LastName,Email,Organization,isAnonymous,receiptID,Filename,component,Type,
+Samuel,Genheden,samuel.genheden@gu.se,Gothenburg University,0,56a8be3aceb59,56a8be3aceb59-282-DC-genheden-1.txt,282,Regular,DC
+Andreas,Klamt,klamt@cosmologic.de,COSMOlogic,0,56ab0294f1b3d,56ab0294f1b3d-282-DC-COSMOlogic.txt,282,Regular,DC
+Hwangseo,Park,hspark@sejong.ac.kr,Sejong University,0,56af0ae2c97b7,56af0ae2c97b7-282-DC-Hwangseo_Park-1.txt,282,Regular,DC
+Gerhard,Koenig,gkoenig@mpi-muelheim.mpg.de,Max-Planck-Institut fuer Kohlenforschung,0,56af9876b836a,56af9876b836a-282-DC-NIH-MPIKOFO-MM-1.txt,282,Regular,DC
+Gerhard,Koenig,gkoenig@mpi-muelheim.mpg.de,Max-Planck-Institut fuer Kohlenforschung,0,56af9c3040b02,56af9c3040b02-282-DC-NIH-MPIKOFO-QMMM-nobatch2.txt,282,Regular,DC
+Tyler,Luchko,tluchko@csun.edu,California State University-Northridge,0,56afa2d5a16f4,56afa2d5a16f4-282-DC-kh-rism-1.txt,282,Regular,DC
+Tyler,Luchko,tluchko@csun.edu,California State University-Northridge,0,56afa2d659fbe,56afa2d659fbe-282-DC-kh-uc-2.txt,282,Regular,DC
+Tyler,Luchko,tluchko@csun.edu,California State University-Northridge,0,56afa2f10776e,56afa2f10776e-282-DC-pse3-pc_3DRISM-3.txt,282,Regular,DC
+Tyler,Luchko,tluchko@csun.edu,California State University-Northridge,0,56afa2f1a950c,56afa2f1a950c-282-DC-pse3-pc_MDFT-4.txt,282,Regular,DC
+Tyler,Luchko,tluchko@csun.edu,California State University-Northridge,0,56afa305c91c4,56afa305c91c4-282-DC-pse3-pcplus_3DRISM-5.txt,282,Regular,DC
+Tyler,Luchko,tluchko@csun.edu,California State University-Northridge,0,56afa30674557,56afa30674557-282-DC-pse3-pcplus_MDFT-6.txt,282,Regular,DC
+Tyler,Luchko,tluchko@csun.edu,California State University-Northridge,0,56afa323314ae,56afa323314ae-282-DC-pse3-rism-7.txt,282,Regular,DC
+Tyler,Luchko,tluchko@csun.edu,California State University-Northridge,0,56afa3242275f,56afa3242275f-282-DC-pse3-uc-8.txt,282,Regular,DC
+Gerhard,Koenig,gkoenig@mpi-muelheim.mpg.de,Max-Planck-Institut fuer Kohlenforschung,0,56afa89726aba,56afa89726aba-282-DC-NIH-MPIKOFO-M062X-3.txt,282,Regular,DC
+Gerhard,Koenig,gkoenig@mpi-muelheim.mpg.de,Max-Planck-Institut fuer Kohlenforschung,0,56afa8a302587,56afa8a302587-282-DC-NIH-MPIKOFO-OLYP-4.txt,282,Regular,DC
+Andrew,Paluch,paluchas@miamioh.edu,Miami University,0,56afbed29602e,56afbed29602e-282-DC-paluch-2.txt,282,Regular,DC
+Andrew,Paluch,paluchas@miamioh.edu,Miami University,0,56afc14acecf9,56afc14acecf9-282-DC-paluch-1.txt,282,Regular,DC
+Julien,Michel,mail@julienmichel.net,University of Edinburgh,0,56afcf636bc73,56afcf636bc73-282-DC-Batch0_A-1.txt,282,Regular,DC
+Julien,Michel,mail@julienmichel.net,University of Edinburgh,0,56afcf6482b3e,56afcf6482b3e-282-DC-Batch0_B-2.txt,282,Regular,DC
+Julien,Michel,mail@julienmichel.net,University of Edinburgh,0,56afcf6fa2152,56afcf6fa2152-282-DC-Batch0_C-3.txt,282,Regular,DC
+Julien,Michel,mail@julienmichel.net,University of Edinburgh,0,56afcf70a9095,56afcf70a9095-282-DC-Batch0_D-4.txt,282,Regular,DC
+Julien,Michel,mail@julienmichel.net,University of Edinburgh,0,56afcf7b94dfb,56afcf7b94dfb-282-DC-Batch0-1_A-1.txt,282,Regular,DC
+Julien,Michel,mail@julienmichel.net,University of Edinburgh,0,56afcf7c921df,56afcf7c921df-282-DC-Batch0-1_B-2.txt,282,Regular,DC
+Julien,Michel,mail@julienmichel.net,University of Edinburgh,0,56afcf89a44a5,56afcf89a44a5-282-DC-Batch0-1_C-3.txt,282,Regular,DC
+Julien,Michel,mail@julienmichel.net,University of Edinburgh,0,56afcf8ab6192,56afcf8ab6192-282-DC-Batch0-1_D-4.txt,282,Regular,DC
+Julien,Michel,mail@julienmichel.net,University of Edinburgh,0,56afcf9630de0,56afcf9630de0-282-DC-Batch0-2_B-2.txt,282,Regular,DC
+Julien,Michel,mail@julienmichel.net,University of Edinburgh,0,56afd03d7fc70,56afd03d7fc70-282-DC-Batch0-2_A-1.txt,282,Regular,DC
+Julien,Michel,mail@julienmichel.net,University of Edinburgh,0,56afd04fc2eb6,56afd04fc2eb6-282-DC-Batch0-2_C-3.txt,282,Regular,DC
+Julien,Michel,mail@julienmichel.net,University of Edinburgh,0,56afd050bc618,56afd050bc618-282-DC-Batch0-2_D-4.txt,282,Regular,DC
+Leonid,Pereyaslavets,leonid.pereyaslavets@interxinc.com,InterX Inc,0,56afd071da559,56afd071da559-282-DC-InterXInc-1.txt,282,Regular,DC
+Leonid,Pereyaslavets,leonid.pereyaslavets@interxinc.com,InterX Inc,0,56afd072a89e4,56afd072a89e4-282-DC-InterXInc-2.txt,282,Regular,DC
+Leonid,Pereyaslavets,leonid.pereyaslavets@interxinc.com,InterX Inc,0,56afd08fe99b1,56afd08fe99b1-282-DC-InterXInc-3.txt,282,Regular,DC
+Leonid,Pereyaslavets,leonid.pereyaslavets@interxinc.com,InterX Inc,0,56afd091437bb,56afd091437bb-282-DC-InterXInc-4.txt,282,Regular,DC
+Leonid,Pereyaslavets,leonid.pereyaslavets@interxinc.com,InterX Inc,0,56afd0a22a98b,56afd0a22a98b-282-DC-InterXInc-5.txt,282,Regular,DC
+Leonid,Pereyaslavets,leonid.pereyaslavets@interxinc.com,InterX Inc,0,56afd0a344d8f,56afd0a344d8f-282-DC-InterXInc-6.txt,282,Regular,DC
+Leonid,Pereyaslavets,leonid.pereyaslavets@interxinc.com,InterX Inc,0,56afd0b42d6f6,56afd0b42d6f6-282-DC-InterXInc-7.txt,282,Regular,DC
+Christopher,Fennell,christopher.fennell@okstate.edu,Oklahoma State University,0,56afd43983ee9,56afd43983ee9-282-DC-exp-env-normal-1.txt,282,Regular,DC
+Christopher,Fennell,christopher.fennell@okstate.edu,Oklahoma State University,0,56afd45354dd8,56afd45354dd8-282-DC-exp-env-dicorr-2.txt,282,Regular,DC
+Bogdan,Iorga,bogdan.iorga@cnrs.fr,CNRS-ICSN,0,56afde2b026b4,56afde2b026b4-282-DC-iorgabeckstein-1.txt,282,Regular,DC
+Bogdan,Iorga,bogdan.iorga@cnrs.fr,CNRS-ICSN,0,56afde3f27e14,56afde3f27e14-282-DC-iorgabeckstein-2.txt,282,Regular,DC
+Stefan,Kast,stefan.kast@tu-dortmund.de,TU Dortmund,0,56afdf58dec77,56afdf58dec77-282-DC-ECRISM-1.txt,282,Regular,DC
+Stefan,Kast,stefan.kast@tu-dortmund.de,TU Dortmund,0,56afdf7ae267f,56afdf7ae267f-282-DC-ECRISM-2.txt,282,Regular,DC
+Stefan,Kast,stefan.kast@tu-dortmund.de,TU Dortmund,0,56afdf8b60560,56afdf8b60560-282-DC-ECRISM-3.txt,282,Regular,DC
+Stefan,Kast,stefan.kast@tu-dortmund.de,TU Dortmund,0,56afdf9e560c8,56afdf9e560c8-282-DC-ECRISM-4.txt,282,Regular,DC
+Frank,Pickard,pickard81@gmail.com,NIH,0,56afe064c4137,56afe064c4137-282-DC-SOLV_ABSPKA_x_MMBAR_01.txt,282,Regular,DC
+Frank,Pickard,pickard81@gmail.com,NIH,0,56afe0656b2e1,56afe0656b2e1-282-DC-SOLV_ABSPKA_x_QMMMNBB_BLYP_02.txt,282,Regular,DC
+Frank,Pickard,pickard81@gmail.com,NIH,0,56afe069bc410,56afe069bc410-282-DC-SOLV_ABSPKA_x_QMNBB_M06_03.txt,282,Regular,DC
+Frank,Pickard,pickard81@gmail.com,NIH,0,56afe0c70d055,56afe0c70d055-282-DC-SOLV_ABSPKA_x_QMNBB_OLYP_04.txt,282,Regular,DC
+Frank,Pickard,pickard81@gmail.com,NIH,0,56afe0d661bea,56afe0d661bea-282-DC-SOLV_RELPKA_x_MMBAR_05.txt,282,Regular,DC
+Frank,Pickard,pickard81@gmail.com,NIH,0,56afe0e1f267e,56afe0e1f267e-282-DC-SOLV_RELPKA_x_QMMMNBB_BLYP_06.txt,282,Regular,DC
+Frank,Pickard,pickard81@gmail.com,NIH,0,56afe157939b6,56afe157939b6-282-DC-SOLV_RELPKA_x_QMNBB_M06_07.txt,282,Regular,DC
+Frank,Pickard,pickard81@gmail.com,NIH,0,56afe16e17452,56afe16e17452-282-DC-SOLV_RELPKA_x_QMNBB_OLYP_08.txt,282,Regular,DC
+Frank,Pickard,pickard81@gmail.com,NIH,0,56afe17681464,56afe17681464-282-DC-VSOLV_ABSPKA_x_MMBAR_09.txt,282,Regular,DC
+Frank,Pickard,pickard81@gmail.com,NIH,0,56afe18040586,56afe18040586-282-DC-VSOLV_ABSPKA_x_QMMMNBB_BLYP_10.txt,282,Regular,DC
+Frank,Pickard,pickard81@gmail.com,NIH,0,56afe18db6da5,56afe18db6da5-282-DC-VSOLV_ABSPKA_x_QMNBB_M06_11.txt,282,Regular,DC
+Frank,Pickard,pickard81@gmail.com,NIH,0,56afe197d798b,56afe197d798b-282-DC-VSOLV_ABSPKA_x_QMNBB_OLYP_12.txt,282,Regular,DC
+Frank,Pickard,pickard81@gmail.com,NIH,0,56afe1a4aa4dd,56afe1a4aa4dd-282-DC-VSOLV_RELPKA_x_MMBAR_13.txt,282,Regular,DC
+Frank,Pickard,pickard81@gmail.com,NIH,0,56afe1b115410,56afe1b115410-282-DC-VSOLV_RELPKA_x_QMMMNBB_BLYP_14.txt,282,Regular,DC
+Frank,Pickard,pickard81@gmail.com,NIH,0,56afe1bb74648,56afe1bb74648-282-DC-VSOLV_RELPKA_x_QMNBB_M06_15.txt,282,Regular,DC
+Frank,Pickard,pickard81@gmail.com,NIH,0,56afe1c89d243,56afe1c89d243-282-DC-VSOLV_RELPKA_x_QMNBB_OLYP_16.txt,282,Regular,DC
+Frank,Pickard,pickard81@gmail.com,NIH,0,56afe1d2dbbbc,56afe1d2dbbbc-282-DC-SOLV_NOPKA_x_QMOPT_M06_17.txt,282,Regular,DC
+Frank,Pickard,pickard81@gmail.com,NIH,0,56afe1db0232e,56afe1db0232e-282-DC-SOLV_ABSPKA_x_QMOPT_M06_18.txt,282,Regular,DC
+Frank,Pickard,pickard81@gmail.com,NIH,0,56afe1f04388d,56afe1f04388d-282-DC-VSOLV_NOPKA_x_QMOPT_M06_19.txt,282,Regular,DC
+Frank,Pickard,pickard81@gmail.com,NIH,0,56afe1fc24c1b,56afe1fc24c1b-282-DC-SOLV_RELPKA_x_QMOPT_M06_20.txt,282,Regular,DC
+Frank,Pickard,pickard81@gmail.com,NIH,0,56afe204b67fa,56afe204b67fa-282-DC-VSOLV_ABSPKA_x_QMOPT_M06_21.txt,282,Regular,DC
+Frank,Pickard,pickard81@gmail.com,NIH,0,56afe2177632f,56afe2177632f-282-DC-VSOLV_RELPKA_x_QMOPT_M06_22.txt,282,Regular,DC
+Caitlin,Bannan,bannanc@uci.edu,UCI,0,56b0df2618c01,56b0df2618c01-282-DC-MobleySAMPL-1.txt,282,Regular,DC
+Caitlin,Bannan,bannanc@uci.edu,UCI,0,56b0df26da016,56b0df26da016-282-DCStandard-MobleySAMPL-1.txt,282,Standard,DC
+Gerhard,Koenig,gkoenig@mpi-muelheim.mpg.de,Max-Planck-Institut fuer Kohlenforschung,0,56b0e2b031207,56b0e2b031207-282-DC-NIH-MPIKOFO-MM-f8892.txt,282,Regular,DC
+Gerhard,Koenig,gkoenig@mpi-muelheim.mpg.de,Max-Planck-Institut fuer Kohlenforschung,0,56b0e2d5d682e,56b0e2d5d682e-282-DC-NIH-MPIKOFO-QMMM-f8892.txt,282,Regular,DC
+Gerhard,Koenig,gkoenig@mpi-muelheim.mpg.de,Max-Planck-Institut fuer Kohlenforschung,0,56b0e2e7aa8fd,56b0e2e7aa8fd-282-DC-NIH-MPIKOFO-M062X-f8892.txt,282,Regular,DC
+Gerhard,Koenig,gkoenig@mpi-muelheim.mpg.de,Max-Planck-Institut fuer Kohlenforschung,0,56b0e2f59ba22,56b0e2f59ba22-282-DC-NIH-MPIKOFO-OLYP-f8892.txt,282,Regular,DC
+Emiliano,Brini,emiacetale@gmail.com,SUNY Stony Brook,0,56b0f52723c20,56b0f52723c20-282-DC-fieldSEA-GAFF-Submission-1.txt,282,Regular,DC
+Emiliano,Brini,emiacetale@gmail.com,SUNY Stony Brook,0,56b0f52800806,56b0f52800806-282-DC-fieldSEA-GAFFscaled-Submission-2.txt,282,Regular,DC
+Diogo,Santos Martins,diogo.st.mart@gmail.com,University of Porto,0,56b10fc6c2dda,56b10fc6c2dda-282-DC-empiricalSES-1.txt,282,Regular,DC
+Diogo,Santos Martins,diogo.st.mart@gmail.com,University of Porto,0,56b10fd282e15,56b10fd282e15-282-DC-empiricalSES-2.txt,282,Regular,DC
+Michael,Jones,mrj0089@unt.edu,University of North Texas,1,56b11f6bc0328,56b11f6bc0328-282-DC-mjones-1.txt,282,Regular,DC

@@ -1,0 +1,84 @@
+# Results for distribution coefficients
+#
+# This file will be automatically parsed. It must contain the following four elements: predictions, name of method, software listing, and method description. These elements must be provided in the order shown, with their respective headers.
+#
+# The data in each prediction line should be structured as follows, with all four fields provided.
+# Compound ID, log D, log D SEM, log D model uncertainty
+# The list of predictions must begin with the "Predictions:" keyword, as illustrated here, and (except in the case of standardization runs) predictions for all of Batch 0, Batches 0-1, or Batches 0-2 must be provided. Compound order is unimportant
+
+Predictions:
+SAMPL5_002, 1.51, 0.02, 0.7
+SAMPL5_003, 1.29, 0.03, 0.8
+SAMPL5_004, 2.60, 0.03, 0.7
+SAMPL5_005, 0.07, 0.04, 0.7
+SAMPL5_006, -0.93, 0.03, 0.8
+SAMPL5_007, 2.11, 0.06, 0.8
+SAMPL5_010, -4.23, 0.03, 0.7
+SAMPL5_011, -0.65, 0.02, 0.7
+SAMPL5_013, -1.83, 0.02, 0.7
+SAMPL5_015, -3.17, 0.04, 0.7
+SAMPL5_017, 3.85, 0.06, 0.7
+SAMPL5_019, -0.58, 0.03, 0.7
+SAMPL5_020, -2.74, 0.33, 0.7
+SAMPL5_021, 2.26, 0.02, 0.7
+SAMPL5_024, 0.05, 0.04, 0.7
+SAMPL5_026, -4.19, 0.09, 0.7
+SAMPL5_027, -5.36, 0.03, 0.7
+SAMPL5_033, 2.95, 0.04, 0.8
+SAMPL5_037, -2.74, 0.08, 0.9
+SAMPL5_042, -4.98, 0.03, 0.7
+SAMPL5_044, 0.93, 0.02, 0.7
+SAMPL5_045, -2.07, 0.02, 0.7
+SAMPL5_046, -0.19, 0.03, 0.8
+SAMPL5_047, 0.96, 0.04, 0.7
+SAMPL5_048, -0.89, 0.02, 0.7
+SAMPL5_049, 0.08, 0.02, 0.8
+SAMPL5_050, -0.96, 0.02, 0.7
+SAMPL5_055, -1.17, 0.02, 0.7
+SAMPL5_056, 0.16, 0.03, 0.7
+SAMPL5_058, 0.84, 0.02, 0.7
+SAMPL5_059, -3.12, 0.03, 0.7
+SAMPL5_060, -6.05, 0.03, 0.7
+SAMPL5_061, 2.15, 0.04, 0.7
+SAMPL5_063, -2.10, 0.07, 0.7
+SAMPL5_065, 0.50, 0.04, 0.8
+SAMPL5_067, 1.63, 0.19, 0.7
+SAMPL5_068, 2.83, 0.07, 0.7
+SAMPL5_069, -0.06, 0.06, 0.7
+SAMPL5_070, 5.31, 0.03, 0.7
+SAMPL5_071, -0.29, 0.04, 0.7
+SAMPL5_072, 4.36, 0.03, 0.7
+SAMPL5_074, -10.00, 0.05, 0.8
+SAMPL5_075, 2.56, 0.11, 0.7
+SAMPL5_080, -2.14, 0.02, 0.7
+SAMPL5_081, -2.39, 0.28, 0.7
+SAMPL5_082, 6.94, 0.06, 0.7
+SAMPL5_083, -0.50, 0.35, 0.8
+SAMPL5_084, 2.08, 0.19, 0.8
+SAMPL5_085, -4.12, 0.02, 0.7
+SAMPL5_086, 4.68, 0.13, 0.7
+SAMPL5_088, -0.36, 0.05, 0.7
+SAMPL5_090, 3.78, 0.04, 0.7
+SAMPL5_092, 1.71, 0.41, 0.8
+# etc.
+#
+# Please provide an informal but informative name of the method used. The "Name:" keyword is required, as shown here.
+Name
+Normal/solvation/GAFF/ELBA
+#
+# List all major software packages used and their versions
+# The "Software:" keyword is required.
+Software:
+Lammps (10 of Aug 2015,  with unofficial modifications)
+
+# Methodology and computational details.
+# Level of details should be roughly equivalent to that used in a publication.
+# Please include the values of key parameters, with units, and explain how statistical uncertainties were estimated.
+# Use as many lines of text as you need.
+# All text following the "Method:" keyword will be regarded as part of your free text methods description.
+Method:
+Distribution coefficients were estimated from the difference in solvation free energies of the solutes in water and cyclohexene. log D = [dG(wat)-dG(cyclohex.)] / 2.3 RT
+The provided input files for Lammps where used as a starting point. The force field and conformation of the solutes where taken as provided,  whereas the solvent molecules where coarse-grained with in-house tools. The solvent molecules where described with the coarse-grained ELBA model. The system was minimized and equilibrated for 1.2 ns in the NPT ensemble.
+In general,  the protocol from a recent publication in JCTC (doi: 10.1021/acs.jctc.5b00963) was used. The solvation free energy was estimated from decoupling the solute from the surrounding using thermodynamic integration. The potential was scaled with a fourth-power function and twenty-five equally spaced values of lambda was used from 0 to 0.96. Lambda = 1.0 was estimated by linear extrapolation and integration was carried out with trapezoid integration. Electrostatics and van der Waals forces were decoupled concurrently. 1.2 ns of equilibration and 3.6 data collection was simulated (in NPT) at each value of lambda. The sampling frequency was 0.3 ps. Five (for simulations in cyclohexane) or ten (for simulations in water) independent repeats were initiated by assigning different initial velocities.
+Analysis was carried out with in-house tools. The reported standard error is the standard error over the five or ten repeats,  propagated to log D.
+No attempt has been made to predict likely protonation states of the compounds,  or how different tautomers affect the log D calculations.
