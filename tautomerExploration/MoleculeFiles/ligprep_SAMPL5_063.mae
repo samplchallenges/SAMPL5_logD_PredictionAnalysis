@@ -1,0 +1,2144 @@
+{ 
+ s_m_m2io_version
+ :::
+ 2.0.0 
+} 
+
+f_m_ct { 
+ s_m_title
+ s_m_source_file
+ i_m_source_file_index
+ i_lp_mmshare_version
+ s_lp_label
+ i_lp_orig_ion_str
+ r_epik_Ionization_Penalty
+ r_epik_Ionization_Penalty_Charging
+ r_epik_Ionization_Penalty_Neutral
+ r_epik_State_Penalty
+ i_epik_Tot_Q
+ s_st_Chirality_1
+ r_mmod_Potential_Energy-OPLS-2005
+ b_mmod_Minimization_Converged-OPLS-2005
+ r_mmod_RMS_Derivative-OPLS-2005
+ i_mmod_Times_Found-OPLS-2005
+ r_mmod_Relative_Potential_Energy-OPLS-2005
+ b_mmod_Chiralities_Consistent-OPLS-2005
+ i_mmod_Conformation-OPLS-2005
+ i_mmod_Serial_Number-OPLS-2005
+ i_m_ct_format
+ :::
+ "1-[(3~{R})-3-piperidyl]piperidine-4-carboxamide" 
+  SAMPL5_063.mol2 
+  1
+  28013
+  1 
+  1
+    4.8782 
+    0.0000 
+    4.8782 
+    8.3041 
+  0
+  3_R_8_5_2_4 
+  152.218795776367
+  1
+  0.0143315503373742
+  1
+  0
+  1
+  1
+  1
+  2
+ m_depend[16] { 
+  # First column is dependency index #
+  i_m_depend_dependency
+  s_m_depend_property
+  :::
+  1 10 r_lp_tautomer_probability 
+  2 10 i_lp_orig_ion_str 
+  3 10 r_epik_Ionization_Penalty 
+  4 10 r_epik_Ionization_Penalty_Charging 
+  5 10 r_epik_Ionization_Penalty_Neutral 
+  6 10 r_epik_State_Penalty 
+  7 10 i_epik_Tot_Q 
+  8 10 s_st_Chirality_1 
+  9 20 r_mmod_Potential_Energy-OPLS-2005 
+  10 20 b_mmod_Minimization_Converged-OPLS-2005 
+  11 20 r_mmod_RMS_Derivative-OPLS-2005 
+  12 20 i_mmod_Times_Found-OPLS-2005 
+  13 20 r_mmod_Relative_Potential_Energy-OPLS-2005 
+  14 20 b_mmod_Chiralities_Consistent-OPLS-2005 
+  15 20 i_mmod_Conformation-OPLS-2005 
+  16 10 i_mmod_Serial_Number-OPLS-2005 
+  :::
+ } 
+ m_atom[36] { 
+  # First column is atom index #
+  i_m_mmod_type
+  r_m_x_coord
+  r_m_y_coord
+  r_m_z_coord
+  i_m_residue_number
+  i_m_color
+  r_m_charge1
+  r_m_charge2
+  s_m_pdb_residue_name
+  s_m_pdb_atom_name
+  i_m_atomic_number
+  s_m_atom_name
+  i_m_Hcount
+  b_st_NoSrcChirality
+  r_epik_H2O_pKa
+  r_epik_H2O_pKa_uncertainty
+  :::
+  1 3 -2.460310 5.574349 -3.593415 1 2 -0.12000 -0.12000 "MOL " " C1 " 6 C1  2 <> <> <>
+  2 3 -1.401682 4.500712 -3.312671 1 2 -0.12000 -0.12000 "MOL " " C2 " 6 C2  2 <> <> <>
+  3 3 -1.094207 4.377477 -1.795869 1 2 0.15000 0.15000 "MOL " " C3 " 6 C3  1 1 <> <>
+  4 41 -2.017567 4.067797 -1.303391 1 21 0.06000 0.06000 "MOL " " H1 " 1 H1  0 <> <> <>
+  5 3 -0.745531 5.799559 -1.266233 1 2 0.08000 0.08000 "MOL " " C4 " 6 C4  2 <> <> <>
+  6 26 -1.775443 6.795150 -1.577893 1 43 -0.78000 -0.78000 "MOL " " N1 " 7 N1  1 <>   9.687    1.157 
+  7 3 -2.041151 6.924541 -3.007320 1 2 0.08000 0.08000 "MOL " " C5 " 6 C5  2 <> <> <>
+  8 26 -0.051399 3.369263 -1.486493 1 43 -0.63000 -0.63000 "MOL " " N2 " 7 N2  0 <>   8.664    1.310 
+  9 3 -0.393474 2.031400 -1.996126 1 2 0.09000 0.09000 "MOL " " C6 " 6 C6  2 <> <> <>
+  10 3 0.693244 0.975968 -1.730612 1 2 -0.12000 -0.12000 "MOL " " C7 " 6 C7  2 <> <> <>
+  11 3 0.988406 0.862481 -0.225693 1 2 -0.06000 -0.06000 "MOL " " C8 " 6 C8  1 <> <> <>
+  12 3 1.329128 2.264396 0.306594 1 2 -0.12000 -0.12000 "MOL " " C9 " 6 C9  2 <> <> <>
+  13 3 0.215708 3.266193 -0.042576 1 2 0.09000 0.09000 "MOL " " C10" 6 C10  2 <> <> <>
+  14 2 2.125184 -0.131349 0.048014 1 2 0.50000 0.50000 "MOL " " C11" 6 C11  0 <> <> <>
+  15 15 3.248423 0.050807 -0.417019 1 70 -0.50000 -0.50000 "MOL " " O1 " 8 O1  0 <>  -0.308    1.117 
+  16 25 1.839218 -1.191379 0.806867 1 43 -0.76000 -0.76000 "MOL " " N3 " 7 N3  2 <> <> <>
+  17 41 -3.415639 5.268990 -3.164301 1 21 0.06000 0.06000 "MOL " " H2 " 1 H2  0 <> <> <>
+  18 41 -2.619482 5.669240 -4.667869 1 21 0.06000 0.06000 "MOL " " H3 " 1 H3  0 <> <> <>
+  19 41 -1.784797 3.568055 -3.722672 1 21 0.06000 0.06000 "MOL " " H4 " 1 H4  0 <> <> <>
+  20 41 -0.486462 4.734059 -3.858488 1 21 0.06000 0.06000 "MOL " " H5 " 1 H5  0 <> <> <>
+  21 41 -0.624728 5.790147 -0.184942 1 21 0.06000 0.06000 "MOL " " H6 " 1 H6  0 <> <> <>
+  22 41 0.212020 6.118283 -1.680255 1 21 0.06000 0.06000 "MOL " " H7 " 1 H7  0 <> <> <>
+  23 43 -1.493981 7.696777 -1.205728 1 21 0.38000 0.38000 "MOL " " H8 " 1 H8  0 <> <> <>
+  24 41 -1.151531 7.291688 -3.520670 1 21 0.06000 0.06000 "MOL " " H9 " 1 H9  0 <> <> <>
+  25 41 -2.826162 7.662162 -3.175676 1 21 0.06000 0.06000 "MOL " " H10" 1 H10  0 <> <> <>
+  26 41 -1.339634 1.700708 -1.564942 1 21 0.06000 0.06000 "MOL " " H11" 1 H11  0 <> <> <>
+  27 41 -0.532248 2.055671 -3.074646 1 21 0.06000 0.06000 "MOL " " H12" 1 H12  0 <> <> <>
+  28 41 0.370848 0.011408 -2.124756 1 21 0.06000 0.06000 "MOL " " H13" 1 H13  0 <> <> <>
+  29 41 1.597869 1.247723 -2.277410 1 21 0.06000 0.06000 "MOL " " H14" 1 H14  0 <> <> <>
+  30 41 0.085702 0.511778 0.277861 1 21 0.06000 0.06000 "MOL " " H15" 1 H15  0 <> <> <>
+  31 41 1.467453 2.233000 1.388052 1 21 0.06000 0.06000 "MOL " " H16" 1 H16  0 <> <> <>
+  32 41 2.272178 2.614607 -0.116719 1 21 0.06000 0.06000 "MOL " " H17" 1 H17  0 <> <> <>
+  33 41 0.535795 4.225163 0.358596 1 21 0.06000 0.06000 "MOL " " H18" 1 H18  0 <> <> <>
+  34 41 -0.699856 2.995335 0.485562 1 21 0.06000 0.06000 "MOL " " H19" 1 H19  0 <> <> <>
+  35 43 2.562311 -1.866469 1.008092 1 21 0.38000 0.38000 "MOL " " H20" 1 H20  0 <>  13.253    1.117 
+  36 43 0.907794 -1.315426 1.175416 1 21 0.38000 0.38000 "MOL " " H21" 1 H21  0 <>  13.253    1.117 
+  :::
+ } 
+ m_bond[37] { 
+  # First column is bond index #
+  i_m_from
+  i_m_to
+  i_m_order
+  :::
+  1 1 7 1
+  2 1 2 1
+  3 1 17 1
+  4 1 18 1
+  5 2 3 1
+  6 2 19 1
+  7 2 20 1
+  8 3 4 1
+  9 3 5 1
+  10 3 8 1
+  11 5 6 1
+  12 5 21 1
+  13 5 22 1
+  14 6 7 1
+  15 6 23 1
+  16 7 24 1
+  17 7 25 1
+  18 8 13 1
+  19 8 9 1
+  20 9 10 1
+  21 9 26 1
+  22 9 27 1
+  23 10 11 1
+  24 10 28 1
+  25 10 29 1
+  26 11 12 1
+  27 11 14 1
+  28 11 30 1
+  29 12 13 1
+  30 12 31 1
+  31 12 32 1
+  32 13 33 1
+  33 13 34 1
+  34 14 15 2
+  35 14 16 1
+  36 16 35 1
+  37 16 36 1
+  :::
+ } 
+} 
+
+f_m_ct { 
+ s_m_title
+ s_m_source_file
+ i_m_source_file_index
+ i_lp_mmshare_version
+ s_lp_label
+ i_lp_orig_ion_str
+ r_epik_Ionization_Penalty
+ r_epik_Ionization_Penalty_Charging
+ r_epik_Ionization_Penalty_Neutral
+ r_epik_State_Penalty
+ i_epik_Tot_Q
+ s_st_Chirality_1
+ r_mmod_Potential_Energy-OPLS-2005
+ b_mmod_Minimization_Converged-OPLS-2005
+ r_mmod_RMS_Derivative-OPLS-2005
+ i_mmod_Times_Found-OPLS-2005
+ r_mmod_Relative_Potential_Energy-OPLS-2005
+ b_mmod_Chiralities_Consistent-OPLS-2005
+ i_mmod_Conformation-OPLS-2005
+ i_mmod_Serial_Number-OPLS-2005
+ i_m_ct_format
+ :::
+ "1-[(3~{R})-3-piperidyl]piperidine-4-carboxamide" 
+  SAMPL5_063.mol2 
+  1
+  28013
+  1 
+  1
+    4.8782 
+    0.0000 
+    4.8782 
+    8.3041 
+  0
+  3_S_8_5_2_4 
+  157.681686401367
+  1
+  0.00578863034024835
+  1
+  0
+  1
+  1
+  2
+  2
+ m_depend[16] { 
+  # First column is dependency index #
+  i_m_depend_dependency
+  s_m_depend_property
+  :::
+  1 10 r_lp_tautomer_probability 
+  2 10 i_lp_orig_ion_str 
+  3 10 r_epik_Ionization_Penalty 
+  4 10 r_epik_Ionization_Penalty_Charging 
+  5 10 r_epik_Ionization_Penalty_Neutral 
+  6 10 r_epik_State_Penalty 
+  7 10 i_epik_Tot_Q 
+  8 10 s_st_Chirality_1 
+  9 20 r_mmod_Potential_Energy-OPLS-2005 
+  10 20 b_mmod_Minimization_Converged-OPLS-2005 
+  11 20 r_mmod_RMS_Derivative-OPLS-2005 
+  12 20 i_mmod_Times_Found-OPLS-2005 
+  13 20 r_mmod_Relative_Potential_Energy-OPLS-2005 
+  14 20 b_mmod_Chiralities_Consistent-OPLS-2005 
+  15 20 i_mmod_Conformation-OPLS-2005 
+  16 10 i_mmod_Serial_Number-OPLS-2005 
+  :::
+ } 
+ m_atom[36] { 
+  # First column is atom index #
+  i_m_mmod_type
+  r_m_x_coord
+  r_m_y_coord
+  r_m_z_coord
+  i_m_residue_number
+  i_m_color
+  r_m_charge1
+  r_m_charge2
+  s_m_pdb_residue_name
+  s_m_pdb_atom_name
+  i_m_atomic_number
+  s_m_atom_name
+  i_m_Hcount
+  b_st_NoSrcChirality
+  r_epik_H2O_pKa
+  r_epik_H2O_pKa_uncertainty
+  :::
+  1 3 -1.908360 5.915753 -3.770965 1 2 -0.12000 -0.12000 "MOL " " C1 " 6 C1  2 <> <> <>
+  2 3 -1.336433 4.535297 -3.423293 1 2 -0.12000 -0.12000 "MOL " " C2 " 6 C2  2 <> <> <>
+  3 3 -0.516968 4.617756 -2.119223 1 2 0.15000 0.15000 "MOL " " C3 " 6 C3  1 1 <> <>
+  4 41 0.260541 5.358082 -2.315185 1 21 0.06000 0.06000 "MOL " " H1 " 1 H1  0 <> <> <>
+  5 3 -1.399453 5.206233 -0.989072 1 2 0.08000 0.08000 "MOL " " C4 " 6 C4  2 <> <> <>
+  6 26 -1.957678 6.508755 -1.367160 1 43 -0.78000 -0.78000 "MOL " " N1 " 7 N1  1 <>   9.687    1.157 
+  7 3 -2.741685 6.469613 -2.604280 1 2 0.08000 0.08000 "MOL " " C5 " 6 C5  2 <> <> <>
+  8 26 0.179140 3.364743 -1.787084 1 43 -0.63000 -0.63000 "MOL " " N2 " 7 N2  0 <>   8.664    1.310 
+  9 3 -0.707815 2.253850 -1.425307 1 2 0.09000 0.09000 "MOL " " C6 " 6 C6  2 <> <> <>
+  10 3 0.056745 0.931211 -1.247157 1 2 -0.12000 -0.12000 "MOL " " C7 " 6 C7  2 <> <> <>
+  11 3 1.170959 1.079920 -0.191023 1 2 -0.06000 -0.06000 "MOL " " C8 " 6 C8  1 <> <> <>
+  12 3 2.063484 2.280997 -0.564286 1 2 -0.12000 -0.12000 "MOL " " C9 " 6 C9  2 <> <> <>
+  13 3 1.212706 3.545738 -0.765569 1 2 0.09000 0.09000 "MOL " " C10" 6 C10  2 <> <> <>
+  14 2 1.995432 -0.208281 -0.067058 1 2 0.50000 0.50000 "MOL " " C11" 6 C11  0 <> <> <>
+  15 15 2.620448 -0.652177 -1.027971 1 70 -0.50000 -0.50000 "MOL " " O1 " 8 O1  0 <>  -0.308    1.117 
+  16 25 2.001551 -0.817125 1.120639 1 43 -0.76000 -0.76000 "MOL " " N3 " 7 N3  2 <> <> <>
+  17 41 -2.522884 5.849855 -4.669137 1 21 0.06000 0.06000 "MOL " " H2 " 1 H2  0 <> <> <>
+  18 41 -1.094976 6.605022 -4.001739 1 21 0.06000 0.06000 "MOL " " H3 " 1 H3  0 <> <> <>
+  19 41 -2.159732 3.828276 -3.323595 1 21 0.06000 0.06000 "MOL " " H4 " 1 H4  0 <> <> <>
+  20 41 -0.710025 4.177313 -4.241008 1 21 0.06000 0.06000 "MOL " " H5 " 1 H5  0 <> <> <>
+  21 41 -2.212328 4.519347 -0.752001 1 21 0.06000 0.06000 "MOL " " H6 " 1 H6  0 <> <> <>
+  22 41 -0.818443 5.323108 -0.075018 1 21 0.06000 0.06000 "MOL " " H7 " 1 H7  0 <> <> <>
+  23 43 -2.537289 6.859866 -0.611220 1 21 0.38000 0.38000 "MOL " " H8 " 1 H8  0 <> <> <>
+  24 41 -3.099658 7.469987 -2.848745 1 21 0.06000 0.06000 "MOL " " H9 " 1 H9  0 <> <> <>
+  25 41 -3.627828 5.850050 -2.460821 1 21 0.06000 0.06000 "MOL " " H10" 1 H10  0 <> <> <>
+  26 41 -1.241046 2.485010 -0.502592 1 21 0.06000 0.06000 "MOL " " H11" 1 H11  0 <> <> <>
+  27 41 -1.465471 2.105702 -2.193249 1 21 0.06000 0.06000 "MOL " " H12" 1 H12  0 <> <> <>
+  28 41 -0.637641 0.142600 -0.954758 1 21 0.06000 0.06000 "MOL " " H13" 1 H13  0 <> <> <>
+  29 41 0.480464 0.631288 -2.207165 1 21 0.06000 0.06000 "MOL " " H14" 1 H14  0 <> <> <>
+  30 41 0.702329 1.289163 0.772310 1 21 0.06000 0.06000 "MOL " " H15" 1 H15  0 <> <> <>
+  31 41 2.805067 2.457516 0.215762 1 21 0.06000 0.06000 "MOL " " H16" 1 H16  0 <> <> <>
+  32 41 2.619186 2.072910 -1.480254 1 21 0.06000 0.06000 "MOL " " H17" 1 H17  0 <> <> <>
+  33 41 1.869905 4.369156 -1.047486 1 21 0.06000 0.06000 "MOL " " H18" 1 H18  0 <> <> <>
+  34 41 0.758341 3.823151 0.185891 1 21 0.06000 0.06000 "MOL " " H19" 1 H19  0 <> <> <>
+  35 43 2.533140 -1.667113 1.239124 1 21 0.38000 0.38000 "MOL " " H20" 1 H20  0 <>  13.253    1.117 
+  36 43 1.478934 -0.429791 1.892385 1 21 0.38000 0.38000 "MOL " " H21" 1 H21  0 <>  13.253    1.117 
+  :::
+ } 
+ m_bond[37] { 
+  # First column is bond index #
+  i_m_from
+  i_m_to
+  i_m_order
+  :::
+  1 1 7 1
+  2 1 2 1
+  3 1 17 1
+  4 1 18 1
+  5 2 3 1
+  6 2 19 1
+  7 2 20 1
+  8 3 4 1
+  9 3 5 1
+  10 3 8 1
+  11 5 6 1
+  12 5 21 1
+  13 5 22 1
+  14 6 7 1
+  15 6 23 1
+  16 7 24 1
+  17 7 25 1
+  18 8 13 1
+  19 8 9 1
+  20 9 10 1
+  21 9 26 1
+  22 9 27 1
+  23 10 11 1
+  24 10 28 1
+  25 10 29 1
+  26 11 12 1
+  27 11 14 1
+  28 11 30 1
+  29 12 13 1
+  30 12 31 1
+  31 12 32 1
+  32 13 33 1
+  33 13 34 1
+  34 14 15 2
+  35 14 16 1
+  36 16 35 1
+  37 16 36 1
+  :::
+ } 
+} 
+
+f_m_ct { 
+ s_m_title
+ s_m_source_file
+ i_m_source_file_index
+ i_lp_mmshare_version
+ s_lp_label
+ i_lp_orig_ion_str
+ r_epik_Ionization_Penalty
+ r_epik_Ionization_Penalty_Charging
+ r_epik_Ionization_Penalty_Neutral
+ r_epik_State_Penalty
+ i_epik_Tot_Q
+ s_st_Chirality_1
+ r_mmod_Potential_Energy-OPLS-2005
+ b_mmod_Minimization_Converged-OPLS-2005
+ r_mmod_RMS_Derivative-OPLS-2005
+ i_mmod_Times_Found-OPLS-2005
+ r_mmod_Relative_Potential_Energy-OPLS-2005
+ b_mmod_Chiralities_Consistent-OPLS-2005
+ i_mmod_Conformation-OPLS-2005
+ i_mmod_Serial_Number-OPLS-2005
+ i_m_ct_format
+ :::
+ "1-[(3~{R})-3-piperidyl]piperidine-4-carboxamide" 
+  SAMPL5_063.mol2 
+  1
+  28013
+  1 
+  1
+    0.0201 
+    0.0031 
+    0.0170 
+    0.0737 
+  1
+  3_R_8_5_2_4 
+  114.622215270996
+  1
+  0.00448448909446597
+  1
+  0
+  1
+  1
+  3
+  2
+ m_depend[16] { 
+  # First column is dependency index #
+  i_m_depend_dependency
+  s_m_depend_property
+  :::
+  1 10 r_lp_tautomer_probability 
+  2 10 i_lp_orig_ion_str 
+  3 10 r_epik_Ionization_Penalty 
+  4 10 r_epik_Ionization_Penalty_Charging 
+  5 10 r_epik_Ionization_Penalty_Neutral 
+  6 10 r_epik_State_Penalty 
+  7 10 i_epik_Tot_Q 
+  8 10 s_st_Chirality_1 
+  9 20 r_mmod_Potential_Energy-OPLS-2005 
+  10 20 b_mmod_Minimization_Converged-OPLS-2005 
+  11 20 r_mmod_RMS_Derivative-OPLS-2005 
+  12 20 i_mmod_Times_Found-OPLS-2005 
+  13 20 r_mmod_Relative_Potential_Energy-OPLS-2005 
+  14 20 b_mmod_Chiralities_Consistent-OPLS-2005 
+  15 20 i_mmod_Conformation-OPLS-2005 
+  16 10 i_mmod_Serial_Number-OPLS-2005 
+  :::
+ } 
+ m_atom[37] { 
+  # First column is atom index #
+  i_m_mmod_type
+  r_m_x_coord
+  r_m_y_coord
+  r_m_z_coord
+  i_m_residue_number
+  i_m_color
+  r_m_charge1
+  r_m_charge2
+  s_m_pdb_residue_name
+  s_m_pdb_atom_name
+  i_m_atomic_number
+  i_m_formal_charge
+  s_m_atom_name
+  i_m_Hcount
+  b_st_NoSrcChirality
+  r_epik_H2O_pKa
+  r_epik_H2O_pKa_uncertainty
+  :::
+  1 3 -2.531301 5.538468 -3.528017 1 2 -0.12000 -0.12000 "MOL " " C1 " 6 0 "C1"  2 <> <> <>
+  2 3 -1.548934 4.399973 -3.215958 1 2 -0.12000 -0.12000 "MOL " " C2 " 6 0 "C2"  2 <> <> <>
+  3 3 -1.146332 4.378183 -1.715212 1 2 0.15000 0.15000 "MOL " " C3 " 6 0 "C3"  1 1 <> <>
+  4 41 -2.040678 4.139863 -1.136728 1 21 0.06000 0.06000 "MOL " " H1 " 1 0 "H1"  0 <> <> <>
+  5 3 -0.640670 5.795196 -1.319111 1 2 0.17000 0.17000 "MOL " " C4 " 6 0 "C4"  2 <> <> <>
+  6 32 -1.624424 6.848857 -1.650324 1 43 -0.20000 -0.20000 "MOL " " N1 " 7 1 "N1"  2 <> <> <>
+  7 3 -1.964704 6.891224 -3.085313 1 2 0.17000 0.17000 "MOL " " C5 " 6 0 "C5"  2 <> <> <>
+  8 26 -0.105232 3.373807 -1.406265 1 43 -0.63000 -0.63000 "MOL " " N2 " 7 0 "N2"  0 <>   5.865    2.220 
+  9 3 -0.346772 2.064567 -2.035744 1 2 0.09000 0.09000 "MOL " " C6 " 6 0 "C6"  2 <> <> <>
+  10 3 0.802135 1.080252 -1.752420 1 2 -0.12000 -0.12000 "MOL " " C7 " 6 0 "C7"  2 <> <> <>
+  11 3 0.986841 0.860383 -0.244470 1 2 -0.06000 -0.06000 "MOL " " C8 " 6 0 "C8"  1 <> <> <>
+  12 3 1.158339 2.237204 0.412153 1 2 -0.12000 -0.12000 "MOL " " C9 " 6 0 "C9"  2 <> <> <>
+  13 3 -0.012262 3.166353 0.049055 1 2 0.09000 0.09000 "MOL " " C10" 6 0 "C10"  2 <> <> <>
+  14 2 2.185273 -0.053016 0.046526 1 2 0.50000 0.50000 "MOL " " C11" 6 0 "C11"  0 <> <> <>
+  15 15 3.320273 0.265191 -0.302165 1 70 -0.50000 -0.50000 "MOL " " O1 " 8 0 "O1"  0 <>  -0.327    1.117 
+  16 25 1.939150 -1.196365 0.689483 1 43 -0.76000 -0.76000 "MOL " " N3 " 7 0 "N3"  2 <> <> <>
+  17 41 -3.479668 5.352846 -3.021735 1 21 0.06000 0.06000 "MOL " " H2 " 1 0 "H2"  0 <> <> <>
+  18 41 -2.750579 5.558362 -4.596100 1 21 0.06000 0.06000 "MOL " " H3 " 1 0 "H3"  0 <> <> <>
+  19 41 -2.035651 3.469229 -3.507122 1 21 0.06000 0.06000 "MOL " " H4 " 1 0 "H4"  0 <> <> <>
+  20 41 -0.660028 4.505448 -3.840055 1 21 0.06000 0.06000 "MOL " " H5 " 1 0 "H5"  0 <> <> <>
+  21 41 -0.451939 5.884604 -0.251484 1 21 0.06000 0.06000 "MOL " " H6 " 1 0 "H6"  0 <> <> <>
+  22 41 0.300429 6.017414 -1.824892 1 21 0.06000 0.06000 "MOL " " H7 " 1 0 "H7"  0 <> <> <>
+  23 44 -2.468946 6.678505 -1.123103 1 21 0.31000 0.31000 "MOL " " H8 " 1 0 "H8"  0 <>   9.687    1.117 
+  24 41 -1.074168 7.141714 -3.663694 1 21 0.06000 0.06000 "MOL " " H9 " 1 0 "H9"  0 <> <> <>
+  25 41 -2.693233 7.683733 -3.258598 1 21 0.06000 0.06000 "MOL " " H10" 1 0 "H10"  0 <> <> <>
+  26 41 -1.298377 1.652614 -1.695992 1 21 0.06000 0.06000 "MOL " " H11" 1 0 "H11"  0 <> <> <>
+  27 41 -0.402837 2.161129 -3.118609 1 21 0.06000 0.06000 "MOL " " H12" 1 0 "H12"  0 <> <> <>
+  28 41 0.595119 0.129366 -2.245047 1 21 0.06000 0.06000 "MOL " " H13" 1 0 "H13"  0 <> <> <>
+  29 41 1.721574 1.463936 -2.198375 1 21 0.06000 0.06000 "MOL " " H14" 1 0 "H14"  0 <> <> <>
+  30 41 0.082846 0.395176 0.152772 1 21 0.06000 0.06000 "MOL " " H15" 1 0 "H15"  0 <> <> <>
+  31 41 1.213212 2.128334 1.496070 1 21 0.06000 0.06000 "MOL " " H16" 1 0 "H16"  0 <> <> <>
+  32 41 2.096882 2.698977 0.100176 1 21 0.06000 0.06000 "MOL " " H17" 1 0 "H17"  0 <> <> <>
+  33 41 0.149714 4.102637 0.576915 1 21 0.06000 0.06000 "MOL " " H18" 1 0 "H18"  0 <> <> <>
+  34 41 -0.949294 2.753842 0.426906 1 21 0.06000 0.06000 "MOL " " H19" 1 0 "H19"  0 <> <> <>
+  35 43 2.703503 -1.822130 0.897866 1 21 0.38000 0.38000 "MOL " " H20" 1 0 "H20"  0 <>  13.237    1.117 
+  36 43 0.996985 -1.432531 0.963914 1 21 0.38000 0.38000 "MOL " " H21" 1 0 "H21"  0 <>  13.237    1.117 
+  37 44 -1.246221 7.745085 -1.377890 1 21 0.31000 0.31000 "MOL " "    " 1 0 ""  0 <>   9.687    1.117 
+  :::
+ } 
+ m_bond[38] { 
+  # First column is bond index #
+  i_m_from
+  i_m_to
+  i_m_order
+  :::
+  1 1 7 1
+  2 1 2 1
+  3 1 17 1
+  4 1 18 1
+  5 2 3 1
+  6 2 19 1
+  7 2 20 1
+  8 3 4 1
+  9 3 5 1
+  10 3 8 1
+  11 5 6 1
+  12 5 21 1
+  13 5 22 1
+  14 6 7 1
+  15 6 23 1
+  16 6 37 1
+  17 7 24 1
+  18 7 25 1
+  19 8 13 1
+  20 8 9 1
+  21 9 10 1
+  22 9 26 1
+  23 9 27 1
+  24 10 11 1
+  25 10 28 1
+  26 10 29 1
+  27 11 12 1
+  28 11 14 1
+  29 11 30 1
+  30 12 13 1
+  31 12 31 1
+  32 12 32 1
+  33 13 33 1
+  34 13 34 1
+  35 14 15 2
+  36 14 16 1
+  37 16 35 1
+  38 16 36 1
+  :::
+ } 
+} 
+
+f_m_ct { 
+ s_m_title
+ s_m_source_file
+ i_m_source_file_index
+ i_lp_mmshare_version
+ s_lp_label
+ i_lp_orig_ion_str
+ r_epik_Ionization_Penalty
+ r_epik_Ionization_Penalty_Charging
+ r_epik_Ionization_Penalty_Neutral
+ r_epik_State_Penalty
+ i_epik_Tot_Q
+ s_st_Chirality_1
+ r_mmod_Potential_Energy-OPLS-2005
+ b_mmod_Minimization_Converged-OPLS-2005
+ r_mmod_RMS_Derivative-OPLS-2005
+ i_mmod_Times_Found-OPLS-2005
+ r_mmod_Relative_Potential_Energy-OPLS-2005
+ b_mmod_Chiralities_Consistent-OPLS-2005
+ i_mmod_Conformation-OPLS-2005
+ i_mmod_Serial_Number-OPLS-2005
+ i_m_ct_format
+ :::
+ "1-[(3~{R})-3-piperidyl]piperidine-4-carboxamide" 
+  SAMPL5_063.mol2 
+  1
+  28013
+  1 
+  1
+    0.0201 
+    0.0031 
+    0.0170 
+    0.0737 
+  1
+  3_S_8_5_2_4 
+  109.850570678711
+  1
+  0.0274309851229191
+  1
+  0
+  1
+  1
+  4
+  2
+ m_depend[16] { 
+  # First column is dependency index #
+  i_m_depend_dependency
+  s_m_depend_property
+  :::
+  1 10 r_lp_tautomer_probability 
+  2 10 i_lp_orig_ion_str 
+  3 10 r_epik_Ionization_Penalty 
+  4 10 r_epik_Ionization_Penalty_Charging 
+  5 10 r_epik_Ionization_Penalty_Neutral 
+  6 10 r_epik_State_Penalty 
+  7 10 i_epik_Tot_Q 
+  8 10 s_st_Chirality_1 
+  9 20 r_mmod_Potential_Energy-OPLS-2005 
+  10 20 b_mmod_Minimization_Converged-OPLS-2005 
+  11 20 r_mmod_RMS_Derivative-OPLS-2005 
+  12 20 i_mmod_Times_Found-OPLS-2005 
+  13 20 r_mmod_Relative_Potential_Energy-OPLS-2005 
+  14 20 b_mmod_Chiralities_Consistent-OPLS-2005 
+  15 20 i_mmod_Conformation-OPLS-2005 
+  16 10 i_mmod_Serial_Number-OPLS-2005 
+  :::
+ } 
+ m_atom[37] { 
+  # First column is atom index #
+  i_m_mmod_type
+  r_m_x_coord
+  r_m_y_coord
+  r_m_z_coord
+  i_m_residue_number
+  i_m_color
+  r_m_charge1
+  r_m_charge2
+  s_m_pdb_residue_name
+  s_m_pdb_atom_name
+  i_m_atomic_number
+  i_m_formal_charge
+  s_m_atom_name
+  i_m_Hcount
+  b_st_NoSrcChirality
+  r_epik_H2O_pKa
+  r_epik_H2O_pKa_uncertainty
+  :::
+  1 3 -1.853234 5.893775 -3.794456 1 2 -0.12000 -0.12000 "MOL " " C1 " 6 0 "C1"  2 <> <> <>
+  2 3 -1.258227 4.527772 -3.419354 1 2 -0.12000 -0.12000 "MOL " " C2 " 6 0 "C2"  2 <> <> <>
+  3 3 -0.506257 4.632478 -2.076293 1 2 0.15000 0.15000 "MOL " " C3 " 6 0 "C3"  1 1 <> <>
+  4 41 0.290685 5.361203 -2.234036 1 21 0.06000 0.06000 "MOL " " H1 " 1 0 "H1"  0 <> <> <>
+  5 3 -1.441655 5.191796 -0.975608 1 2 0.17000 0.17000 "MOL " " C4 " 6 0 "C4"  2 <> <> <>
+  6 32 -1.998093 6.499416 -1.388076 1 43 -0.20000 -0.20000 "MOL " " N1 " 7 1 "N1"  2 <> <> <>
+  7 3 -2.745885 6.434030 -2.663687 1 2 0.17000 0.17000 "MOL " " C5 " 6 0 "C5"  2 <> <> <>
+  8 26 0.154865 3.364118 -1.737858 1 43 -0.63000 -0.63000 "MOL " " N2 " 7 0 "N2"  0 <>   5.865    2.220 
+  9 3 -0.753878 2.292464 -1.310957 1 2 0.09000 0.09000 "MOL " " C6 " 6 0 "C6"  2 <> <> <>
+  10 3 0.012545 0.963791 -1.194034 1 2 -0.12000 -0.12000 "MOL " " C7 " 6 0 "C7"  2 <> <> <>
+  11 3 1.171923 1.082364 -0.188789 1 2 -0.06000 -0.06000 "MOL " " C8 " 6 0 "C8"  1 <> <> <>
+  12 3 2.052497 2.275951 -0.599276 1 2 -0.12000 -0.12000 "MOL " " C9 " 6 0 "C9"  2 <> <> <>
+  13 3 1.214230 3.558127 -0.742666 1 2 0.09000 0.09000 "MOL " " C10" 6 0 "C10"  2 <> <> <>
+  14 2 1.987539 -0.215860 -0.122263 1 2 0.50000 0.50000 "MOL " " C11" 6 0 "C11"  0 <> <> <>
+  15 15 2.558283 -0.653712 -1.119006 1 70 -0.50000 -0.50000 "MOL " " O1 " 8 0 "O1"  0 <>  -0.327    1.117 
+  16 25 2.046982 -0.839929 1.055995 1 43 -0.76000 -0.76000 "MOL " " N3 " 7 0 "N3"  2 <> <> <>
+  17 41 -2.429596 5.808491 -4.716259 1 21 0.06000 0.06000 "MOL " " H2 " 1 0 "H2"  0 <> <> <>
+  18 41 -1.048327 6.601311 -3.998459 1 21 0.06000 0.06000 "MOL " " H3 " 1 0 "H3"  0 <> <> <>
+  19 41 -2.064661 3.796880 -3.363240 1 21 0.06000 0.06000 "MOL " " H4 " 1 0 "H4"  0 <> <> <>
+  20 41 -0.583024 4.189271 -4.206307 1 21 0.06000 0.06000 "MOL " " H5 " 1 0 "H5"  0 <> <> <>
+  21 41 -2.271920 4.513304 -0.776597 1 21 0.06000 0.06000 "MOL " " H6 " 1 0 "H6"  0 <> <> <>
+  22 41 -0.906722 5.330364 -0.036378 1 21 0.06000 0.06000 "MOL " " H7 " 1 0 "H7"  0 <> <> <>
+  23 44 -2.614967 6.837140 -0.662873 1 21 0.31000 0.31000 "MOL " " H8 " 1 0 "H8"  0 <>   9.687    1.117 
+  24 41 -3.112247 7.429943 -2.914228 1 21 0.06000 0.06000 "MOL " " H9 " 1 0 "H9"  0 <> <> <>
+  25 41 -3.621495 5.796127 -2.534674 1 21 0.06000 0.06000 "MOL " " H10" 1 0 "H10"  0 <> <> <>
+  26 41 -1.210578 2.538140 -0.351616 1 21 0.06000 0.06000 "MOL " " H11" 1 0 "H11"  0 <> <> <>
+  27 41 -1.563062 2.165357 -2.028458 1 21 0.06000 0.06000 "MOL " " H12" 1 0 "H12"  0 <> <> <>
+  28 41 -0.673037 0.174789 -0.882411 1 21 0.06000 0.06000 "MOL " " H13" 1 0 "H13"  0 <> <> <>
+  29 41 0.386962 0.676005 -2.178128 1 21 0.06000 0.06000 "MOL " " H14" 1 0 "H14"  0 <> <> <>
+  30 41 0.753339 1.285638 0.798552 1 21 0.06000 0.06000 "MOL " " H15" 1 0 "H15"  0 <> <> <>
+  31 41 2.836628 2.434887 0.142023 1 21 0.06000 0.06000 "MOL " " H16" 1 0 "H16"  0 <> <> <>
+  32 41 2.558820 2.069841 -1.544052 1 21 0.06000 0.06000 "MOL " " H17" 1 0 "H17"  0 <> <> <>
+  33 41 1.868362 4.374458 -1.051210 1 21 0.06000 0.06000 "MOL " " H18" 1 0 "H18"  0 <> <> <>
+  34 41 0.787664 3.835248 0.221872 1 21 0.06000 0.06000 "MOL " " H19" 1 0 "H19"  0 <> <> <>
+  35 43 2.574677 -1.696844 1.136584 1 21 0.38000 0.38000 "MOL " " H20" 1 0 "H20"  0 <>  13.237    1.117 
+  36 43 1.568537 -0.457927 1.858407 1 21 0.38000 0.38000 "MOL " " H21" 1 0 "H21"  0 <>  13.237    1.117 
+  37 44 -1.235432 7.152855 -1.496254 1 21 0.31000 0.31000 "MOL " "    " 1 0 ""  0 <>   9.687    1.117 
+  :::
+ } 
+ m_bond[38] { 
+  # First column is bond index #
+  i_m_from
+  i_m_to
+  i_m_order
+  :::
+  1 1 7 1
+  2 1 2 1
+  3 1 17 1
+  4 1 18 1
+  5 2 3 1
+  6 2 19 1
+  7 2 20 1
+  8 3 4 1
+  9 3 5 1
+  10 3 8 1
+  11 5 6 1
+  12 5 21 1
+  13 5 22 1
+  14 6 7 1
+  15 6 23 1
+  16 6 37 1
+  17 7 24 1
+  18 7 25 1
+  19 8 13 1
+  20 8 9 1
+  21 9 10 1
+  22 9 26 1
+  23 9 27 1
+  24 10 11 1
+  25 10 28 1
+  26 10 29 1
+  27 11 12 1
+  28 11 14 1
+  29 11 30 1
+  30 12 13 1
+  31 12 31 1
+  32 12 32 1
+  33 13 33 1
+  34 13 34 1
+  35 14 15 2
+  36 14 16 1
+  37 16 35 1
+  38 16 36 1
+  :::
+ } 
+} 
+
+f_m_ct { 
+ s_m_title
+ s_m_source_file
+ i_m_source_file_index
+ i_lp_mmshare_version
+ s_lp_label
+ i_lp_orig_ion_str
+ r_epik_Ionization_Penalty
+ r_epik_Ionization_Penalty_Charging
+ r_epik_Ionization_Penalty_Neutral
+ r_epik_State_Penalty
+ i_epik_Tot_Q
+ s_st_Chirality_1
+ s_st_Chirality_2
+ s_st_Chirality_3
+ r_mmod_Potential_Energy-OPLS-2005
+ b_mmod_Minimization_Converged-OPLS-2005
+ r_mmod_RMS_Derivative-OPLS-2005
+ i_mmod_Times_Found-OPLS-2005
+ r_mmod_Relative_Potential_Energy-OPLS-2005
+ b_mmod_Chiralities_Consistent-OPLS-2005
+ i_mmod_Conformation-OPLS-2005
+ i_mmod_Serial_Number-OPLS-2005
+ i_m_ct_format
+ :::
+ "1-[(3~{R})-3-piperidyl]piperidine-4-carboxamide" 
+  SAMPL5_063.mol2 
+  1
+  28013
+  1 
+  1
+    0.1218 
+    0.0314 
+    0.0904 
+    1.3658 
+  1
+  3_R_8_5_2_4 
+  8_ANR_3_9_13_37 
+  11_ANS_10_12_14_30 
+  107.498291015625
+  1
+  0.00967145245522261
+  1
+  0
+  1
+  1
+  5
+  2
+ m_depend[18] { 
+  # First column is dependency index #
+  i_m_depend_dependency
+  s_m_depend_property
+  :::
+  1 10 r_lp_tautomer_probability 
+  2 10 i_lp_orig_ion_str 
+  3 10 r_epik_Ionization_Penalty 
+  4 10 r_epik_Ionization_Penalty_Charging 
+  5 10 r_epik_Ionization_Penalty_Neutral 
+  6 10 r_epik_State_Penalty 
+  7 10 i_epik_Tot_Q 
+  8 10 s_st_Chirality_1 
+  9 10 s_st_Chirality_2 
+  10 10 s_st_Chirality_3 
+  11 20 r_mmod_Potential_Energy-OPLS-2005 
+  12 20 b_mmod_Minimization_Converged-OPLS-2005 
+  13 20 r_mmod_RMS_Derivative-OPLS-2005 
+  14 20 i_mmod_Times_Found-OPLS-2005 
+  15 20 r_mmod_Relative_Potential_Energy-OPLS-2005 
+  16 20 b_mmod_Chiralities_Consistent-OPLS-2005 
+  17 20 i_mmod_Conformation-OPLS-2005 
+  18 10 i_mmod_Serial_Number-OPLS-2005 
+  :::
+ } 
+ m_atom[37] { 
+  # First column is atom index #
+  i_m_mmod_type
+  r_m_x_coord
+  r_m_y_coord
+  r_m_z_coord
+  i_m_residue_number
+  i_m_color
+  r_m_charge1
+  r_m_charge2
+  s_m_pdb_residue_name
+  s_m_pdb_atom_name
+  i_m_atomic_number
+  i_m_formal_charge
+  s_m_atom_name
+  i_m_Hcount
+  b_st_NoSrcChirality
+  r_epik_H2O_pKa
+  r_epik_H2O_pKa_uncertainty
+  :::
+  1 3 -2.777689 5.310824 -3.123353 1 2 -0.12000 -0.12000 "MOL " " C1 " 6 0 "C1"  2 <> <> <>
+  2 3 -1.643880 4.277465 -3.105240 1 2 -0.12000 -0.12000 "MOL " " C2 " 6 0 "C2"  2 <> <> <>
+  3 3 -0.965882 4.238338 -1.713243 1 2 0.21000 0.21000 "MOL " " C3 " 6 0 "C3"  1 1 <> <>
+  4 41 -1.713600 3.885226 -1.000227 1 21 0.06000 0.06000 "MOL " " H1 " 1 0 "H1"  0 <> <> <>
+  5 3 -0.555621 5.685497 -1.331514 1 2 0.08000 0.08000 "MOL " " C4 " 6 0 "C4"  2 <> <> <>
+  6 26 -1.709142 6.578604 -1.322961 1 43 -0.78000 -0.78000 "MOL " " N1 " 7 0 "N1"  1 <>   6.617    0.723 
+  7 3 -2.275440 6.686052 -2.661467 1 2 0.08000 0.08000 "MOL " " C5 " 6 0 "C5"  2 <> <> <>
+  8 32 0.211523 3.313086 -1.627804 1 43 -0.10000 -0.10000 "MOL " " N2 " 7 1 "N2"  1 1 <> <>
+  9 3 0.585636 3.011151 -0.215921 1 2 0.15000 0.15000 "MOL " " C6 " 6 0 "C6"  2 <> <> <>
+  10 3 1.893704 2.202804 -0.125582 1 2 -0.12000 -0.12000 "MOL " " C7 " 6 0 "C7"  2 <> <> <>
+  11 3 1.856773 0.895826 -0.940179 1 2 -0.06000 -0.06000 "MOL " " C8 " 6 0 "C8"  1 1 <> <>
+  12 3 1.380544 1.212874 -2.370631 1 2 -0.12000 -0.12000 "MOL " " C9 " 6 0 "C9"  2 <> <> <>
+  13 3 0.089818 2.055144 -2.421377 1 2 0.15000 0.15000 "MOL " " C10" 6 0 "C10"  2 <> <> <>
+  14 2 1.024749 -0.209449 -0.262932 1 2 0.50000 0.50000 "MOL " " C11" 6 0 "C11"  0 <> <> <>
+  15 15 -0.184273 -0.081398 -0.085879 1 70 -0.50000 -0.50000 "MOL " " O1 " 8 0 "O1"  0 <>  -1.224    1.117 
+  16 25 1.674087 -1.310806 0.119777 1 43 -0.76000 -0.76000 "MOL " " N3 " 7 0 "N3"  2 <> <> <>
+  17 41 -3.589682 4.979624 -2.474268 1 21 0.06000 0.06000 "MOL " " H2 " 1 0 "H2"  0 <> <> <>
+  18 41 -3.196405 5.386158 -4.127297 1 21 0.06000 0.06000 "MOL " " H3 " 1 0 "H3"  0 <> <> <>
+  19 41 -2.069196 3.308563 -3.367563 1 21 0.06000 0.06000 "MOL " " H4 " 1 0 "H4"  0 <> <> <>
+  20 41 -0.911661 4.529463 -3.873780 1 21 0.06000 0.06000 "MOL " " H5 " 1 0 "H5"  0 <> <> <>
+  21 41 -0.122343 5.727169 -0.334027 1 21 0.06000 0.06000 "MOL " " H6 " 1 0 "H6"  0 <> <> <>
+  22 41 0.200358 6.068115 -2.018948 1 21 0.06000 0.06000 "MOL " " H7 " 1 0 "H7"  0 <> <> <>
+  23 43 -1.424063 7.495852 -1.008193 1 21 0.38000 0.38000 "MOL " " H8 " 1 0 "H8"  0 <> <> <>
+  24 41 -1.528463 7.079629 -3.352360 1 21 0.06000 0.06000 "MOL " " H9 " 1 0 "H9"  0 <> <> <>
+  25 41 -3.100762 7.398301 -2.641361 1 21 0.06000 0.06000 "MOL " " H10" 1 0 "H10"  0 <> <> <>
+  26 41 0.726204 3.928486 0.352187 1 21 0.06000 0.06000 "MOL " " H11" 1 0 "H11"  0 <> <> <>
+  27 41 -0.230988 2.479289 0.273045 1 21 0.06000 0.06000 "MOL " " H12" 1 0 "H12"  0 <> <> <>
+  28 41 2.718117 2.820749 -0.484050 1 21 0.06000 0.06000 "MOL " " H13" 1 0 "H13"  0 <> <> <>
+  29 41 2.118908 1.987383 0.920029 1 21 0.06000 0.06000 "MOL " " H14" 1 0 "H14"  0 <> <> <>
+  30 41 2.880475 0.523914 -1.010850 1 21 0.06000 0.06000 "MOL " " H15" 1 0 "H15"  0 <> <> <>
+  31 41 2.172937 1.751725 -2.892016 1 21 0.06000 0.06000 "MOL " " H16" 1 0 "H16"  0 <> <> <>
+  32 41 1.235457 0.288559 -2.931916 1 21 0.06000 0.06000 "MOL " " H17" 1 0 "H17"  0 <> <> <>
+  33 41 -0.769461 1.480979 -2.073617 1 21 0.06000 0.06000 "MOL " " H18" 1 0 "H18"  0 <> <> <>
+  34 41 -0.086563 2.279490 -3.472430 1 21 0.06000 0.06000 "MOL " " H19" 1 0 "H19"  0 <> <> <>
+  35 43 1.162665 -2.058194 0.566422 1 21 0.38000 0.38000 "MOL " " H20" 1 0 "H20"  0 <>  12.520    1.117 
+  36 43 2.667864 -1.396597 -0.035833 1 21 0.38000 0.38000 "MOL " " H21" 1 0 "H21"  0 <>  12.520    1.117 
+  37 44 0.988272 3.814639 -2.034060 1 21 0.29000 0.29000 "MOL " "    " 1 0 ""  0 <>   8.664    1.310 
+  :::
+ } 
+ m_bond[38] { 
+  # First column is bond index #
+  i_m_from
+  i_m_to
+  i_m_order
+  :::
+  1 1 7 1
+  2 1 2 1
+  3 1 17 1
+  4 1 18 1
+  5 2 3 1
+  6 2 19 1
+  7 2 20 1
+  8 3 4 1
+  9 3 5 1
+  10 3 8 1
+  11 5 6 1
+  12 5 21 1
+  13 5 22 1
+  14 6 7 1
+  15 6 23 1
+  16 7 24 1
+  17 7 25 1
+  18 8 13 1
+  19 8 9 1
+  20 8 37 1
+  21 9 10 1
+  22 9 26 1
+  23 9 27 1
+  24 10 11 1
+  25 10 28 1
+  26 10 29 1
+  27 11 12 1
+  28 11 14 1
+  29 11 30 1
+  30 12 13 1
+  31 12 31 1
+  32 12 32 1
+  33 13 33 1
+  34 13 34 1
+  35 14 15 2
+  36 14 16 1
+  37 16 35 1
+  38 16 36 1
+  :::
+ } 
+} 
+
+f_m_ct { 
+ s_m_title
+ s_m_source_file
+ i_m_source_file_index
+ i_lp_mmshare_version
+ s_lp_label
+ i_lp_orig_ion_str
+ r_epik_Ionization_Penalty
+ r_epik_Ionization_Penalty_Charging
+ r_epik_Ionization_Penalty_Neutral
+ r_epik_State_Penalty
+ i_epik_Tot_Q
+ s_st_Chirality_1
+ s_st_Chirality_2
+ s_st_Chirality_3
+ r_mmod_Potential_Energy-OPLS-2005
+ b_mmod_Minimization_Converged-OPLS-2005
+ r_mmod_RMS_Derivative-OPLS-2005
+ i_mmod_Times_Found-OPLS-2005
+ r_mmod_Relative_Potential_Energy-OPLS-2005
+ b_mmod_Chiralities_Consistent-OPLS-2005
+ i_mmod_Conformation-OPLS-2005
+ i_mmod_Serial_Number-OPLS-2005
+ i_m_ct_format
+ :::
+ "1-[(3~{R})-3-piperidyl]piperidine-4-carboxamide" 
+  SAMPL5_063.mol2 
+  1
+  28013
+  1 
+  1
+    0.1218 
+    0.0314 
+    0.0904 
+    1.3658 
+  1
+  3_S_8_5_2_4 
+  8_ANR_3_9_13_37 
+  11_ANS_10_12_14_30 
+  100.861320495605
+  1
+  0.0218491777777672
+  1
+  0
+  1
+  1
+  6
+  2
+ m_depend[18] { 
+  # First column is dependency index #
+  i_m_depend_dependency
+  s_m_depend_property
+  :::
+  1 10 r_lp_tautomer_probability 
+  2 10 i_lp_orig_ion_str 
+  3 10 r_epik_Ionization_Penalty 
+  4 10 r_epik_Ionization_Penalty_Charging 
+  5 10 r_epik_Ionization_Penalty_Neutral 
+  6 10 r_epik_State_Penalty 
+  7 10 i_epik_Tot_Q 
+  8 10 s_st_Chirality_1 
+  9 10 s_st_Chirality_2 
+  10 10 s_st_Chirality_3 
+  11 20 r_mmod_Potential_Energy-OPLS-2005 
+  12 20 b_mmod_Minimization_Converged-OPLS-2005 
+  13 20 r_mmod_RMS_Derivative-OPLS-2005 
+  14 20 i_mmod_Times_Found-OPLS-2005 
+  15 20 r_mmod_Relative_Potential_Energy-OPLS-2005 
+  16 20 b_mmod_Chiralities_Consistent-OPLS-2005 
+  17 20 i_mmod_Conformation-OPLS-2005 
+  18 10 i_mmod_Serial_Number-OPLS-2005 
+  :::
+ } 
+ m_atom[37] { 
+  # First column is atom index #
+  i_m_mmod_type
+  r_m_x_coord
+  r_m_y_coord
+  r_m_z_coord
+  i_m_residue_number
+  i_m_color
+  r_m_charge1
+  r_m_charge2
+  s_m_pdb_residue_name
+  s_m_pdb_atom_name
+  i_m_atomic_number
+  i_m_formal_charge
+  s_m_atom_name
+  i_m_Hcount
+  b_st_NoSrcChirality
+  r_epik_H2O_pKa
+  r_epik_H2O_pKa_uncertainty
+  :::
+  1 3 -1.701293 6.183658 -3.329271 1 2 -0.12000 -0.12000 "MOL " " C1 " 6 0 "C1"  2 <> <> <>
+  2 3 -0.827785 4.921925 -3.348650 1 2 -0.12000 -0.12000 "MOL " " C2 " 6 0 "C2"  2 <> <> <>
+  3 3 -0.460204 4.534373 -1.904040 1 2 0.21000 0.21000 "MOL " " C3 " 6 0 "C3"  1 1 <> <>
+  4 41 0.123042 5.367478 -1.507059 1 21 0.06000 0.06000 "MOL " " H1 " 1 0 "H1"  0 <> <> <>
+  5 3 -1.740198 4.407057 -1.042732 1 2 0.08000 0.08000 "MOL " " C4 " 6 0 "C4"  2 <> <> <>
+  6 26 -2.472156 5.669667 -1.046203 1 43 -0.78000 -0.78000 "MOL " " N1 " 7 0 "N1"  1 <>   6.617    0.723 
+  7 3 -2.913724 5.997906 -2.398792 1 2 0.08000 0.08000 "MOL " " C5 " 6 0 "C5"  2 <> <> <>
+  8 32 0.421176 3.331798 -1.852421 1 43 -0.10000 -0.10000 "MOL " " N2 " 7 1 "N2"  1 1 <> <>
+  9 3 1.234749 3.259078 -0.610120 1 2 0.15000 0.15000 "MOL " " C6 " 6 0 "C6"  2 <> <> <>
+  10 3 2.294478 2.143782 -0.703635 1 2 -0.12000 -0.12000 "MOL " " C7 " 6 0 "C7"  2 <> <> <>
+  11 3 1.699909 0.762838 -1.054646 1 2 -0.06000 -0.06000 "MOL " " C8 " 6 0 "C8"  1 1 <> <>
+  12 3 0.775669 0.898308 -2.284043 1 2 -0.12000 -0.12000 "MOL " " C9 " 6 0 "C9"  2 <> <> <>
+  13 3 -0.252738 2.037644 -2.148211 1 2 0.15000 0.15000 "MOL " " C10" 6 0 "C10"  2 <> <> <>
+  14 2 1.001867 0.093364 0.144170 1 2 0.50000 0.50000 "MOL " " C11" 6 0 "C11"  0 <> <> <>
+  15 15 0.033253 0.614501 0.691751 1 70 -0.50000 -0.50000 "MOL " " O1 " 8 0 "O1"  0 <>  -1.224    1.117 
+  16 25 1.495611 -1.074363 0.560979 1 43 -0.76000 -0.76000 "MOL " " N3 " 7 0 "N3"  2 <> <> <>
+  17 41 -2.039291 6.418188 -4.339035 1 21 0.06000 0.06000 "MOL " " H2 " 1 0 "H2"  0 <> <> <>
+  18 41 -1.110528 7.037938 -2.995445 1 21 0.06000 0.06000 "MOL " " H3 " 1 0 "H3"  0 <> <> <>
+  19 41 -1.379016 4.121005 -3.840755 1 21 0.06000 0.06000 "MOL " " H4 " 1 0 "H4"  0 <> <> <>
+  20 41 0.070934 5.097786 -3.940810 1 21 0.06000 0.06000 "MOL " " H5 " 1 0 "H5"  0 <> <> <>
+  21 41 -2.392939 3.614064 -1.409638 1 21 0.06000 0.06000 "MOL " " H6 " 1 0 "H6"  0 <> <> <>
+  22 41 -1.485513 4.163447 -0.011266 1 21 0.06000 0.06000 "MOL " " H7 " 1 0 "H7"  0 <> <> <>
+  23 43 -3.277955 5.594632 -0.440592 1 21 0.38000 0.38000 "MOL " " H8 " 1 0 "H8"  0 <> <> <>
+  24 41 -3.500897 6.916012 -2.364915 1 21 0.06000 0.06000 "MOL " " H9 " 1 0 "H9"  0 <> <> <>
+  25 41 -3.571409 5.212440 -2.773885 1 21 0.06000 0.06000 "MOL " " H10" 1 0 "H10"  0 <> <> <>
+  26 41 1.745102 4.209100 -0.447376 1 21 0.06000 0.06000 "MOL " " H11" 1 0 "H11"  0 <> <> <>
+  27 41 0.586752 3.107593 0.253030 1 21 0.06000 0.06000 "MOL " " H12" 1 0 "H12"  0 <> <> <>
+  28 41 3.026458 2.415222 -1.465553 1 21 0.06000 0.06000 "MOL " " H13" 1 0 "H13"  0 <> <> <>
+  29 41 2.850945 2.088130 0.233190 1 21 0.06000 0.06000 "MOL " " H14" 1 0 "H14"  0 <> <> <>
+  30 41 2.529647 0.113705 -1.339985 1 21 0.06000 0.06000 "MOL " " H15" 1 0 "H15"  0 <> <> <>
+  31 41 1.388519 1.077982 -3.168422 1 21 0.06000 0.06000 "MOL " " H16" 1 0 "H16"  0 <> <> <>
+  32 41 0.256568 -0.042986 -2.470848 1 21 0.06000 0.06000 "MOL " " H17" 1 0 "H17"  0 <> <> <>
+  33 41 -0.976241 1.800825 -1.368568 1 21 0.06000 0.06000 "MOL " " H18" 1 0 "H18"  0 <> <> <>
+  34 41 -0.815705 2.107485 -3.077900 1 21 0.06000 0.06000 "MOL " " H19" 1 0 "H19"  0 <> <> <>
+  35 43 1.065158 -1.543631 1.344647 1 21 0.38000 0.38000 "MOL " " H20" 1 0 "H20"  0 <>  12.520    1.117 
+  36 43 2.292703 -1.485331 0.097371 1 21 0.38000 0.38000 "MOL " " H21" 1 0 "H21"  0 <>  12.520    1.117 
+  37 44 1.091552 3.468678 -2.595272 1 21 0.29000 0.29000 "MOL " "    " 1 0 ""  0 <>   8.664    1.310 
+  :::
+ } 
+ m_bond[38] { 
+  # First column is bond index #
+  i_m_from
+  i_m_to
+  i_m_order
+  :::
+  1 1 7 1
+  2 1 2 1
+  3 1 17 1
+  4 1 18 1
+  5 2 3 1
+  6 2 19 1
+  7 2 20 1
+  8 3 4 1
+  9 3 5 1
+  10 3 8 1
+  11 5 6 1
+  12 5 21 1
+  13 5 22 1
+  14 6 7 1
+  15 6 23 1
+  16 7 24 1
+  17 7 25 1
+  18 8 13 1
+  19 8 9 1
+  20 8 37 1
+  21 9 10 1
+  22 9 26 1
+  23 9 27 1
+  24 10 11 1
+  25 10 28 1
+  26 10 29 1
+  27 11 12 1
+  28 11 14 1
+  29 11 30 1
+  30 12 13 1
+  31 12 31 1
+  32 12 32 1
+  33 13 33 1
+  34 13 34 1
+  35 14 15 2
+  36 14 16 1
+  37 16 35 1
+  38 16 36 1
+  :::
+ } 
+} 
+
+f_m_ct { 
+ s_m_title
+ s_m_source_file
+ i_m_source_file_index
+ i_lp_mmshare_version
+ s_lp_label
+ i_lp_orig_ion_str
+ r_epik_Ionization_Penalty
+ r_epik_Ionization_Penalty_Charging
+ r_epik_Ionization_Penalty_Neutral
+ r_epik_State_Penalty
+ i_epik_Tot_Q
+ s_st_Chirality_1
+ s_st_Chirality_2
+ s_st_Chirality_3
+ r_mmod_Potential_Energy-OPLS-2005
+ b_mmod_Minimization_Converged-OPLS-2005
+ r_mmod_RMS_Derivative-OPLS-2005
+ i_mmod_Times_Found-OPLS-2005
+ r_mmod_Relative_Potential_Energy-OPLS-2005
+ b_mmod_Chiralities_Consistent-OPLS-2005
+ i_mmod_Conformation-OPLS-2005
+ i_mmod_Serial_Number-OPLS-2005
+ i_m_ct_format
+ :::
+ "1-[(3~{R})-3-piperidyl]piperidine-4-carboxamide" 
+  SAMPL5_063.mol2 
+  1
+  28013
+  1 
+  1
+    0.1218 
+    0.0314 
+    0.0904 
+    1.3658 
+  1
+  3_R_8_5_2_4 
+  8_ANR_3_9_13_37 
+  11_ANR_10_12_14_30 
+  117.228927612305
+  1
+  0.000617650279309601
+  1
+  0
+  1
+  1
+  7
+  2
+ m_depend[18] { 
+  # First column is dependency index #
+  i_m_depend_dependency
+  s_m_depend_property
+  :::
+  1 10 r_lp_tautomer_probability 
+  2 10 i_lp_orig_ion_str 
+  3 10 r_epik_Ionization_Penalty 
+  4 10 r_epik_Ionization_Penalty_Charging 
+  5 10 r_epik_Ionization_Penalty_Neutral 
+  6 10 r_epik_State_Penalty 
+  7 10 i_epik_Tot_Q 
+  8 10 s_st_Chirality_1 
+  9 10 s_st_Chirality_2 
+  10 10 s_st_Chirality_3 
+  11 20 r_mmod_Potential_Energy-OPLS-2005 
+  12 20 b_mmod_Minimization_Converged-OPLS-2005 
+  13 20 r_mmod_RMS_Derivative-OPLS-2005 
+  14 20 i_mmod_Times_Found-OPLS-2005 
+  15 20 r_mmod_Relative_Potential_Energy-OPLS-2005 
+  16 20 b_mmod_Chiralities_Consistent-OPLS-2005 
+  17 20 i_mmod_Conformation-OPLS-2005 
+  18 10 i_mmod_Serial_Number-OPLS-2005 
+  :::
+ } 
+ m_atom[37] { 
+  # First column is atom index #
+  i_m_mmod_type
+  r_m_x_coord
+  r_m_y_coord
+  r_m_z_coord
+  i_m_residue_number
+  i_m_color
+  r_m_charge1
+  r_m_charge2
+  s_m_pdb_residue_name
+  s_m_pdb_atom_name
+  i_m_atomic_number
+  i_m_formal_charge
+  s_m_atom_name
+  i_m_Hcount
+  b_st_NoSrcChirality
+  r_epik_H2O_pKa
+  r_epik_H2O_pKa_uncertainty
+  :::
+  1 3 -2.447151 5.674396 -3.560611 1 2 -0.12000 -0.12000 "MOL " " C1 " 6 0 "C1"  2 <> <> <>
+  2 3 -1.475596 4.510415 -3.325898 1 2 -0.12000 -0.12000 "MOL " " C2 " 6 0 "C2"  2 <> <> <>
+  3 3 -1.168002 4.355536 -1.815982 1 2 0.21000 0.21000 "MOL " " C3 " 6 0 "C3"  1 1 <> <>
+  4 41 -2.102207 4.079410 -1.322894 1 21 0.06000 0.06000 "MOL " " H1 " 1 0 "H1"  0 <> <> <>
+  5 3 -0.703110 5.731894 -1.270718 1 2 0.08000 0.08000 "MOL " " C4 " 6 0 "C4"  2 <> <> <>
+  6 26 -1.716516 6.757956 -1.490791 1 43 -0.78000 -0.78000 "MOL " " N1 " 7 0 "N1"  1 <>   6.617    0.723 
+  7 3 -1.922678 6.966515 -2.918383 1 2 0.08000 0.08000 "MOL " " C5 " 6 0 "C5"  2 <> <> <>
+  8 32 -0.158840 3.292485 -1.499196 1 43 -0.10000 -0.10000 "MOL " " N2 " 7 1 "N2"  1 1 <> <>
+  9 3 -0.181251 2.908542 -0.057925 1 2 0.15000 0.15000 "MOL " " C6 " 6 0 "C6"  2 <> <> <>
+  10 3 0.967941 1.951955 0.296884 1 2 -0.12000 -0.12000 "MOL " " C7 " 6 0 "C7"  2 <> <> <>
+  11 3 0.910899 0.679022 -0.563662 1 2 -0.06000 -0.06000 "MOL " " C8 " 6 0 "C8"  1 1 <> <>
+  12 3 0.918144 1.091246 -2.045144 1 2 -0.12000 -0.12000 "MOL " " C9 " 6 0 "C9"  2 <> <> <>
+  13 3 -0.218656 2.077743 -2.364513 1 2 0.15000 0.15000 "MOL " " C10" 6 0 "C10"  2 <> <> <>
+  14 2 2.083097 -0.258430 -0.243715 1 2 0.50000 0.50000 "MOL " " C11" 6 0 "C11"  0 <> <> <>
+  15 15 3.244249 0.112131 -0.401770 1 70 -0.50000 -0.50000 "MOL " " O1 " 8 0 "O1"  0 <>  -1.224    1.117 
+  16 25 1.785739 -1.478366 0.208289 1 43 -0.76000 -0.76000 "MOL " " N3 " 7 0 "N3"  2 <> <> <>
+  17 41 -3.425339 5.428676 -3.144564 1 21 0.06000 0.06000 "MOL " " H2 " 1 0 "H2"  0 <> <> <>
+  18 41 -2.595857 5.824978 -4.630249 1 21 0.06000 0.06000 "MOL " " H3 " 1 0 "H3"  0 <> <> <>
+  19 41 -1.929579 3.607095 -3.733773 1 21 0.06000 0.06000 "MOL " " H4 " 1 0 "H4"  0 <> <> <>
+  20 41 -0.553951 4.689961 -3.881480 1 21 0.06000 0.06000 "MOL " " H5 " 1 0 "H5"  0 <> <> <>
+  21 41 -0.523401 5.695516 -0.197905 1 21 0.06000 0.06000 "MOL " " H6 " 1 0 "H6"  0 <> <> <>
+  22 41 0.235494 6.036345 -1.736374 1 21 0.06000 0.06000 "MOL " " H7 " 1 0 "H7"  0 <> <> <>
+  23 43 -1.415935 7.625735 -1.068474 1 21 0.38000 0.38000 "MOL " " H8 " 1 0 "H8"  0 <> <> <>
+  24 41 -0.990254 7.283535 -3.387752 1 21 0.06000 0.06000 "MOL " " H9 " 1 0 "H9"  0 <> <> <>
+  25 41 -2.642867 7.773051 -3.058710 1 21 0.06000 0.06000 "MOL " " H10" 1 0 "H10"  0 <> <> <>
+  26 41 -0.099599 3.784367 0.582859 1 21 0.06000 0.06000 "MOL " " H11" 1 0 "H11"  0 <> <> <>
+  27 41 -1.138690 2.441163 0.178475 1 21 0.06000 0.06000 "MOL " " H12" 1 0 "H12"  0 <> <> <>
+  28 41 1.921482 2.464845 0.158551 1 21 0.06000 0.06000 "MOL " " H13" 1 0 "H13"  0 <> <> <>
+  29 41 0.910026 1.690559 1.354521 1 21 0.06000 0.06000 "MOL " " H14" 1 0 "H14"  0 <> <> <>
+  30 41 -0.023900 0.156456 -0.352044 1 21 0.06000 0.06000 "MOL " " H15" 1 0 "H15"  0 <> <> <>
+  31 41 1.873806 1.550249 -2.305034 1 21 0.06000 0.06000 "MOL " " H16" 1 0 "H16"  0 <> <> <>
+  32 41 0.821061 0.208387 -2.678717 1 21 0.06000 0.06000 "MOL " " H17" 1 0 "H17"  0 <> <> <>
+  33 41 -1.188247 1.590963 -2.247379 1 21 0.06000 0.06000 "MOL " " H18" 1 0 "H18"  0 <> <> <>
+  34 41 -0.114274 2.342727 -3.415789 1 21 0.06000 0.06000 "MOL " " H19" 1 0 "H19"  0 <> <> <>
+  35 43 2.533202 -2.120528 0.428622 1 21 0.38000 0.38000 "MOL " " H20" 1 0 "H20"  0 <>  12.520    1.117 
+  36 43 0.823167 -1.757262 0.329034 1 21 0.38000 0.38000 "MOL " " H21" 1 0 "H21"  0 <>  12.520    1.117 
+  37 44 0.745097 3.706845 -1.676710 1 21 0.29000 0.29000 "MOL " "    " 1 0 ""  0 <>   8.664    1.310 
+  :::
+ } 
+ m_bond[38] { 
+  # First column is bond index #
+  i_m_from
+  i_m_to
+  i_m_order
+  :::
+  1 1 7 1
+  2 1 2 1
+  3 1 17 1
+  4 1 18 1
+  5 2 3 1
+  6 2 19 1
+  7 2 20 1
+  8 3 4 1
+  9 3 5 1
+  10 3 8 1
+  11 5 6 1
+  12 5 21 1
+  13 5 22 1
+  14 6 7 1
+  15 6 23 1
+  16 7 24 1
+  17 7 25 1
+  18 8 13 1
+  19 8 9 1
+  20 8 37 1
+  21 9 10 1
+  22 9 26 1
+  23 9 27 1
+  24 10 11 1
+  25 10 28 1
+  26 10 29 1
+  27 11 12 1
+  28 11 14 1
+  29 11 30 1
+  30 12 13 1
+  31 12 31 1
+  32 12 32 1
+  33 13 33 1
+  34 13 34 1
+  35 14 15 2
+  36 14 16 1
+  37 16 35 1
+  38 16 36 1
+  :::
+ } 
+} 
+
+f_m_ct { 
+ s_m_title
+ s_m_source_file
+ i_m_source_file_index
+ i_lp_mmshare_version
+ s_lp_label
+ i_lp_orig_ion_str
+ r_epik_Ionization_Penalty
+ r_epik_Ionization_Penalty_Charging
+ r_epik_Ionization_Penalty_Neutral
+ r_epik_State_Penalty
+ i_epik_Tot_Q
+ s_st_Chirality_1
+ s_st_Chirality_2
+ s_st_Chirality_3
+ r_mmod_Potential_Energy-OPLS-2005
+ b_mmod_Minimization_Converged-OPLS-2005
+ r_mmod_RMS_Derivative-OPLS-2005
+ i_mmod_Times_Found-OPLS-2005
+ r_mmod_Relative_Potential_Energy-OPLS-2005
+ b_mmod_Chiralities_Consistent-OPLS-2005
+ i_mmod_Conformation-OPLS-2005
+ i_mmod_Serial_Number-OPLS-2005
+ i_m_ct_format
+ :::
+ "1-[(3~{R})-3-piperidyl]piperidine-4-carboxamide" 
+  SAMPL5_063.mol2 
+  1
+  28013
+  1 
+  1
+    0.1218 
+    0.0314 
+    0.0904 
+    1.3658 
+  1
+  3_S_8_5_2_4 
+  8_ANR_3_9_13_37 
+  11_ANR_10_12_14_30 
+  111.225242614746
+  1
+  0.000103128120827023
+  1
+  0
+  1
+  1
+  8
+  2
+ m_depend[18] { 
+  # First column is dependency index #
+  i_m_depend_dependency
+  s_m_depend_property
+  :::
+  1 10 r_lp_tautomer_probability 
+  2 10 i_lp_orig_ion_str 
+  3 10 r_epik_Ionization_Penalty 
+  4 10 r_epik_Ionization_Penalty_Charging 
+  5 10 r_epik_Ionization_Penalty_Neutral 
+  6 10 r_epik_State_Penalty 
+  7 10 i_epik_Tot_Q 
+  8 10 s_st_Chirality_1 
+  9 10 s_st_Chirality_2 
+  10 10 s_st_Chirality_3 
+  11 20 r_mmod_Potential_Energy-OPLS-2005 
+  12 20 b_mmod_Minimization_Converged-OPLS-2005 
+  13 20 r_mmod_RMS_Derivative-OPLS-2005 
+  14 20 i_mmod_Times_Found-OPLS-2005 
+  15 20 r_mmod_Relative_Potential_Energy-OPLS-2005 
+  16 20 b_mmod_Chiralities_Consistent-OPLS-2005 
+  17 20 i_mmod_Conformation-OPLS-2005 
+  18 10 i_mmod_Serial_Number-OPLS-2005 
+  :::
+ } 
+ m_atom[37] { 
+  # First column is atom index #
+  i_m_mmod_type
+  r_m_x_coord
+  r_m_y_coord
+  r_m_z_coord
+  i_m_residue_number
+  i_m_color
+  r_m_charge1
+  r_m_charge2
+  s_m_pdb_residue_name
+  s_m_pdb_atom_name
+  i_m_atomic_number
+  i_m_formal_charge
+  s_m_atom_name
+  i_m_Hcount
+  b_st_NoSrcChirality
+  r_epik_H2O_pKa
+  r_epik_H2O_pKa_uncertainty
+  :::
+  1 3 -1.478964 6.233304 -3.693880 1 2 -0.12000 -0.12000 "MOL " " C1 " 6 0 "C1"  2 <> <> <>
+  2 3 -0.819882 4.866970 -3.461565 1 2 -0.12000 -0.12000 "MOL " " C2 " 6 0 "C2"  2 <> <> <>
+  3 3 -0.554414 4.678213 -1.956239 1 2 0.21000 0.21000 "MOL " " C3 " 6 0 "C3"  1 1 <> <>
+  4 41 0.146997 5.465026 -1.671985 1 21 0.06000 0.06000 "MOL " " H1 " 1 0 "H1"  0 <> <> <>
+  5 3 -1.858102 4.899462 -1.151546 1 2 0.08000 0.08000 "MOL " " C4 " 6 0 "C4"  2 <> <> <>
+  6 26 -2.377236 6.240643 -1.399677 1 43 -0.78000 -0.78000 "MOL " " N1 " 7 0 "N1"  1 <>   6.617    0.723 
+  7 3 -2.727536 6.398246 -2.808462 1 2 0.08000 0.08000 "MOL " " C5 " 6 0 "C5"  2 <> <> <>
+  8 32 0.118027 3.378905 -1.665089 1 43 -0.10000 -0.10000 "MOL " " N2 " 7 1 "N2"  1 1 <> <>
+  9 3 0.882635 3.388340 -0.389835 1 2 0.15000 0.15000 "MOL " " C6 " 6 0 "C6"  2 <> <> <>
+  10 3 1.747874 2.123735 -0.257480 1 2 -0.12000 -0.12000 "MOL " " C7 " 6 0 "C7"  2 <> <> <>
+  11 3 0.892546 0.846178 -0.364345 1 2 -0.06000 -0.06000 "MOL " " C8 " 6 0 "C8"  1 1 <> <>
+  12 3 0.085475 0.887820 -1.676657 1 2 -0.12000 -0.12000 "MOL " " C9 " 6 0 "C9"  2 <> <> <>
+  13 3 -0.750610 2.174425 -1.772465 1 2 0.15000 0.15000 "MOL " " C10" 6 0 "C10"  2 <> <> <>
+  14 2 1.769102 -0.411576 -0.295914 1 2 0.50000 0.50000 "MOL " " C11" 6 0 "C11"  0 <> <> <>
+  15 15 2.638621 -0.616845 -1.139899 1 70 -0.50000 -0.50000 "MOL " " O1 " 8 0 "O1"  0 <>  -1.224    1.117 
+  16 25 1.545432 -1.260196 0.709479 1 43 -0.76000 -0.76000 "MOL " " N3 " 7 0 "N3"  2 <> <> <>
+  17 41 -1.750289 6.342142 -4.744316 1 21 0.06000 0.06000 "MOL " " H2 " 1 0 "H2"  0 <> <> <>
+  18 41 -0.766550 7.030075 -3.475098 1 21 0.06000 0.06000 "MOL " " H3 " 1 0 "H3"  0 <> <> <>
+  19 41 -1.480465 4.088794 -3.843156 1 21 0.06000 0.06000 "MOL " " H4 " 1 0 "H4"  0 <> <> <>
+  20 41 0.109512 4.798556 -4.028009 1 21 0.06000 0.06000 "MOL " " H5 " 1 0 "H5"  0 <> <> <>
+  21 41 -2.620863 4.165743 -1.415069 1 21 0.06000 0.06000 "MOL " " H6 " 1 0 "H6"  0 <> <> <>
+  22 41 -1.669758 4.799534 -0.082610 1 21 0.06000 0.06000 "MOL " " H7 " 1 0 "H7"  0 <> <> <>
+  23 43 -3.198908 6.396113 -0.831871 1 21 0.38000 0.38000 "MOL " " H8 " 1 0 "H8"  0 <> <> <>
+  24 41 -3.159873 7.388333 -2.955641 1 21 0.06000 0.06000 "MOL " " H9 " 1 0 "H9"  0 <> <> <>
+  25 41 -3.493855 5.671726 -3.082544 1 21 0.06000 0.06000 "MOL " " H10" 1 0 "H10"  0 <> <> <>
+  26 41 1.530424 4.264862 -0.348454 1 21 0.06000 0.06000 "MOL " " H11" 1 0 "H11"  0 <> <> <>
+  27 41 0.195833 3.462041 0.454460 1 21 0.06000 0.06000 "MOL " " H12" 1 0 "H12"  0 <> <> <>
+  28 41 2.515809 2.131443 -1.033134 1 21 0.06000 0.06000 "MOL " " H13" 1 0 "H13"  0 <> <> <>
+  29 41 2.276026 2.142203 0.696934 1 21 0.06000 0.06000 "MOL " " H14" 1 0 "H14"  0 <> <> <>
+  30 41 0.191330 0.829057 0.472135 1 21 0.06000 0.06000 "MOL " " H15" 1 0 "H15"  0 <> <> <>
+  31 41 0.754584 0.827909 -2.536957 1 21 0.06000 0.06000 "MOL " " H16" 1 0 "H16"  0 <> <> <>
+  32 41 -0.573002 0.020200 -1.738767 1 21 0.06000 0.06000 "MOL " " H17" 1 0 "H17"  0 <> <> <>
+  33 41 -1.499406 2.180027 -0.979303 1 21 0.06000 0.06000 "MOL " " H18" 1 0 "H18"  0 <> <> <>
+  34 41 -1.291030 2.173587 -2.718163 1 21 0.06000 0.06000 "MOL " " H19" 1 0 "H19"  0 <> <> <>
+  35 43 2.104501 -2.097760 0.784025 1 21 0.38000 0.38000 "MOL " " H20" 1 0 "H20"  0 <>  12.520    1.117 
+  36 43 0.824669 -1.067394 1.389351 1 21 0.38000 0.38000 "MOL " " H21" 1 0 "H21"  0 <>  12.520    1.117 
+  37 44 0.816737 3.280211 -2.387874 1 21 0.29000 0.29000 "MOL " "    " 1 0 ""  0 <>   8.664    1.310 
+  :::
+ } 
+ m_bond[38] { 
+  # First column is bond index #
+  i_m_from
+  i_m_to
+  i_m_order
+  :::
+  1 1 7 1
+  2 1 2 1
+  3 1 17 1
+  4 1 18 1
+  5 2 3 1
+  6 2 19 1
+  7 2 20 1
+  8 3 4 1
+  9 3 5 1
+  10 3 8 1
+  11 5 6 1
+  12 5 21 1
+  13 5 22 1
+  14 6 7 1
+  15 6 23 1
+  16 7 24 1
+  17 7 25 1
+  18 8 13 1
+  19 8 9 1
+  20 8 37 1
+  21 9 10 1
+  22 9 26 1
+  23 9 27 1
+  24 10 11 1
+  25 10 28 1
+  26 10 29 1
+  27 11 12 1
+  28 11 14 1
+  29 11 30 1
+  30 12 13 1
+  31 12 31 1
+  32 12 32 1
+  33 13 33 1
+  34 13 34 1
+  35 14 15 2
+  36 14 16 1
+  37 16 35 1
+  38 16 36 1
+  :::
+ } 
+} 
+
+f_m_ct { 
+ s_m_title
+ s_m_source_file
+ i_m_source_file_index
+ i_lp_mmshare_version
+ s_lp_label
+ i_lp_orig_ion_str
+ r_epik_Ionization_Penalty
+ r_epik_Ionization_Penalty_Charging
+ r_epik_Ionization_Penalty_Neutral
+ r_epik_State_Penalty
+ i_epik_Tot_Q
+ s_st_Chirality_1
+ s_st_Chirality_2
+ s_st_Chirality_3
+ r_mmod_Potential_Energy-OPLS-2005
+ b_mmod_Minimization_Converged-OPLS-2005
+ r_mmod_RMS_Derivative-OPLS-2005
+ i_mmod_Times_Found-OPLS-2005
+ r_mmod_Relative_Potential_Energy-OPLS-2005
+ b_mmod_Chiralities_Consistent-OPLS-2005
+ i_mmod_Conformation-OPLS-2005
+ i_mmod_Serial_Number-OPLS-2005
+ i_m_ct_format
+ :::
+ "1-[(3~{R})-3-piperidyl]piperidine-4-carboxamide" 
+  SAMPL5_063.mol2 
+  1
+  28013
+  1 
+  1
+    3.2701 
+    3.2701 
+    0.0000 
+    2.4071 
+  2
+  3_R_8_5_2_4 
+  8_ANR_3_9_13_38 
+  11_ANS_10_12_14_30 
+  125.122337341309
+  1
+  0.0402574203908443
+  1
+  0
+  1
+  1
+  9
+  2
+ m_depend[18] { 
+  # First column is dependency index #
+  i_m_depend_dependency
+  s_m_depend_property
+  :::
+  1 10 r_lp_tautomer_probability 
+  2 10 i_lp_orig_ion_str 
+  3 10 r_epik_Ionization_Penalty 
+  4 10 r_epik_Ionization_Penalty_Charging 
+  5 10 r_epik_Ionization_Penalty_Neutral 
+  6 10 r_epik_State_Penalty 
+  7 10 i_epik_Tot_Q 
+  8 10 s_st_Chirality_1 
+  9 10 s_st_Chirality_2 
+  10 10 s_st_Chirality_3 
+  11 20 r_mmod_Potential_Energy-OPLS-2005 
+  12 20 b_mmod_Minimization_Converged-OPLS-2005 
+  13 20 r_mmod_RMS_Derivative-OPLS-2005 
+  14 20 i_mmod_Times_Found-OPLS-2005 
+  15 20 r_mmod_Relative_Potential_Energy-OPLS-2005 
+  16 20 b_mmod_Chiralities_Consistent-OPLS-2005 
+  17 20 i_mmod_Conformation-OPLS-2005 
+  18 10 i_mmod_Serial_Number-OPLS-2005 
+  :::
+ } 
+ m_atom[38] { 
+  # First column is atom index #
+  i_m_mmod_type
+  r_m_x_coord
+  r_m_y_coord
+  r_m_z_coord
+  i_m_residue_number
+  i_m_color
+  r_m_charge1
+  r_m_charge2
+  s_m_pdb_residue_name
+  s_m_pdb_atom_name
+  i_m_atomic_number
+  i_m_formal_charge
+  s_m_atom_name
+  i_m_Hcount
+  b_st_NoSrcChirality
+  r_epik_H2O_pKa
+  r_epik_H2O_pKa_uncertainty
+  :::
+  1 3 -2.814968 5.266885 -3.117053 1 2 -0.12000 -0.12000 "MOL " " C1 " 6 0 "C1"  2 <> <> <>
+  2 3 -1.649269 4.266365 -3.084846 1 2 -0.12000 -0.12000 "MOL " " C2 " 6 0 "C2"  2 <> <> <>
+  3 3 -0.968071 4.228868 -1.690535 1 2 0.21000 0.21000 "MOL " " C3 " 6 0 "C3"  1 1 <> <>
+  4 41 -1.714171 3.863849 -0.981958 1 21 0.06000 0.06000 "MOL " " H1 " 1 0 "H1"  0 <> <> <>
+  5 3 -0.572487 5.678321 -1.294703 1 2 0.17000 0.17000 "MOL " " C4 " 6 0 "C4"  2 <> <> <>
+  6 32 -1.727678 6.602795 -1.349622 1 43 -0.20000 -0.20000 "MOL " " N1 " 7 1 "N1"  2 <> <> <>
+  7 3 -2.355497 6.664581 -2.684572 1 2 0.17000 0.17000 "MOL " " C5 " 6 0 "C5"  2 <> <> <>
+  8 32 0.216700 3.308385 -1.610770 1 43 -0.10000 -0.10000 "MOL " " N2 " 7 1 "N2"  1 1 <> <>
+  9 3 0.586045 2.988598 -0.200890 1 2 0.15000 0.15000 "MOL " " C6 " 6 0 "C6"  2 <> <> <>
+  10 3 1.895421 2.181947 -0.113247 1 2 -0.12000 -0.12000 "MOL " " C7 " 6 0 "C7"  2 <> <> <>
+  11 3 1.866445 0.885387 -0.944146 1 2 -0.06000 -0.06000 "MOL " " C8 " 6 0 "C8"  1 1 <> <>
+  12 3 1.401528 1.221961 -2.373436 1 2 -0.12000 -0.12000 "MOL " " C9 " 6 0 "C9"  2 <> <> <>
+  13 3 0.108125 2.060060 -2.422492 1 2 0.15000 0.15000 "MOL " " C10" 6 0 "C10"  2 <> <> <>
+  14 2 1.028827 -0.228867 -0.288714 1 2 0.50000 0.50000 "MOL " " C11" 6 0 "C11"  0 <> <> <>
+  15 15 -0.180036 -0.098646 -0.111686 1 70 -0.50000 -0.50000 "MOL " " O1 " 8 0 "O1"  0 <>  -1.281    1.117 
+  16 25 1.672927 -1.339497 0.075456 1 43 -0.76000 -0.76000 "MOL " " N3 " 7 0 "N3"  2 <> <> <>
+  17 41 -3.613256 4.921665 -2.458348 1 21 0.06000 0.06000 "MOL " " H2 " 1 0 "H2"  0 <> <> <>
+  18 41 -3.241081 5.309704 -4.120077 1 21 0.06000 0.06000 "MOL " " H3 " 1 0 "H3"  0 <> <> <>
+  19 41 -2.051082 3.288771 -3.352383 1 21 0.06000 0.06000 "MOL " " H4 " 1 0 "H4"  0 <> <> <>
+  20 41 -0.920869 4.534442 -3.851811 1 21 0.06000 0.06000 "MOL " " H5 " 1 0 "H5"  0 <> <> <>
+  21 41 -0.178649 5.729654 -0.281291 1 21 0.06000 0.06000 "MOL " " H6 " 1 0 "H6"  0 <> <> <>
+  22 41 0.211698 6.051692 -1.955236 1 21 0.06000 0.06000 "MOL " " H7 " 1 0 "H7"  0 <> <> <>
+  23 44 -2.421924 6.298794 -0.681392 1 21 0.31000 0.31000 "MOL " " H8 " 1 0 "H8"  0 <>   6.617    0.945 
+  24 41 -1.642444 7.071985 -3.402862 1 21 0.06000 0.06000 "MOL " " H9 " 1 0 "H9"  0 <> <> <>
+  25 41 -3.202906 7.350038 -2.651531 1 21 0.06000 0.06000 "MOL " " H10" 1 0 "H10"  0 <> <> <>
+  26 41 0.724020 3.898186 0.379857 1 21 0.06000 0.06000 "MOL " " H11" 1 0 "H11"  0 <> <> <>
+  27 41 -0.231480 2.449392 0.278390 1 21 0.06000 0.06000 "MOL " " H12" 1 0 "H12"  0 <> <> <>
+  28 41 2.720888 2.805851 -0.458782 1 21 0.06000 0.06000 "MOL " " H13" 1 0 "H13"  0 <> <> <>
+  29 41 2.115021 1.953471 0.930819 1 21 0.06000 0.06000 "MOL " " H14" 1 0 "H14"  0 <> <> <>
+  30 41 2.890934 0.514892 -1.011170 1 21 0.06000 0.06000 "MOL " " H15" 1 0 "H15"  0 <> <> <>
+  31 41 2.196519 1.770842 -2.880233 1 21 0.06000 0.06000 "MOL " " H16" 1 0 "H16"  0 <> <> <>
+  32 41 1.264522 0.305365 -2.949288 1 21 0.06000 0.06000 "MOL " " H17" 1 0 "H17"  0 <> <> <>
+  33 41 -0.751448 1.476814 -2.090868 1 21 0.06000 0.06000 "MOL " " H18" 1 0 "H18"  0 <> <> <>
+  34 41 -0.058767 2.297841 -3.472175 1 21 0.06000 0.06000 "MOL " " H19" 1 0 "H19"  0 <> <> <>
+  35 43 1.157770 -2.092999 0.507425 1 21 0.38000 0.38000 "MOL " " H20" 1 0 "H20"  0 <>  12.474    1.117 
+  36 43 2.666658 -1.426969 -0.079857 1 21 0.38000 0.38000 "MOL " " H21" 1 0 "H21"  0 <>  12.474    1.117 
+  37 44 -1.418568 7.530214 -1.093300 1 21 0.31000 0.31000 "MOL " "    " 1 0 ""  0 <>   6.617    0.945 
+  38 44 0.995969 3.814837 -2.006636 1 21 0.29000 0.29000 "MOL " "    " 1 0 ""  0 <>   5.865    2.220 
+  :::
+ } 
+ m_bond[39] { 
+  # First column is bond index #
+  i_m_from
+  i_m_to
+  i_m_order
+  :::
+  1 1 7 1
+  2 1 2 1
+  3 1 17 1
+  4 1 18 1
+  5 2 3 1
+  6 2 19 1
+  7 2 20 1
+  8 3 4 1
+  9 3 5 1
+  10 3 8 1
+  11 5 6 1
+  12 5 21 1
+  13 5 22 1
+  14 6 7 1
+  15 6 23 1
+  16 6 37 1
+  17 7 24 1
+  18 7 25 1
+  19 8 13 1
+  20 8 9 1
+  21 8 38 1
+  22 9 10 1
+  23 9 26 1
+  24 9 27 1
+  25 10 11 1
+  26 10 28 1
+  27 10 29 1
+  28 11 12 1
+  29 11 14 1
+  30 11 30 1
+  31 12 13 1
+  32 12 31 1
+  33 12 32 1
+  34 13 33 1
+  35 13 34 1
+  36 14 15 2
+  37 14 16 1
+  38 16 35 1
+  39 16 36 1
+  :::
+ } 
+} 
+
+f_m_ct { 
+ s_m_title
+ s_m_source_file
+ i_m_source_file_index
+ i_lp_mmshare_version
+ s_lp_label
+ i_lp_orig_ion_str
+ r_epik_Ionization_Penalty
+ r_epik_Ionization_Penalty_Charging
+ r_epik_Ionization_Penalty_Neutral
+ r_epik_State_Penalty
+ i_epik_Tot_Q
+ s_st_Chirality_1
+ s_st_Chirality_2
+ s_st_Chirality_3
+ r_mmod_Potential_Energy-OPLS-2005
+ b_mmod_Minimization_Converged-OPLS-2005
+ r_mmod_RMS_Derivative-OPLS-2005
+ i_mmod_Times_Found-OPLS-2005
+ r_mmod_Relative_Potential_Energy-OPLS-2005
+ b_mmod_Chiralities_Consistent-OPLS-2005
+ i_mmod_Conformation-OPLS-2005
+ i_mmod_Serial_Number-OPLS-2005
+ i_m_ct_format
+ :::
+ "1-[(3~{R})-3-piperidyl]piperidine-4-carboxamide" 
+  SAMPL5_063.mol2 
+  1
+  28013
+  1 
+  1
+    3.2701 
+    3.2701 
+    0.0000 
+    2.4071 
+  2
+  3_S_8_5_2_4 
+  8_ANR_3_9_13_38 
+  11_ANS_10_12_14_30 
+  116.942893981934
+  1
+  0.0180560909211636
+  1
+  0
+  1
+  1
+  10
+  2
+ m_depend[18] { 
+  # First column is dependency index #
+  i_m_depend_dependency
+  s_m_depend_property
+  :::
+  1 10 r_lp_tautomer_probability 
+  2 10 i_lp_orig_ion_str 
+  3 10 r_epik_Ionization_Penalty 
+  4 10 r_epik_Ionization_Penalty_Charging 
+  5 10 r_epik_Ionization_Penalty_Neutral 
+  6 10 r_epik_State_Penalty 
+  7 10 i_epik_Tot_Q 
+  8 10 s_st_Chirality_1 
+  9 10 s_st_Chirality_2 
+  10 10 s_st_Chirality_3 
+  11 20 r_mmod_Potential_Energy-OPLS-2005 
+  12 20 b_mmod_Minimization_Converged-OPLS-2005 
+  13 20 r_mmod_RMS_Derivative-OPLS-2005 
+  14 20 i_mmod_Times_Found-OPLS-2005 
+  15 20 r_mmod_Relative_Potential_Energy-OPLS-2005 
+  16 20 b_mmod_Chiralities_Consistent-OPLS-2005 
+  17 20 i_mmod_Conformation-OPLS-2005 
+  18 10 i_mmod_Serial_Number-OPLS-2005 
+  :::
+ } 
+ m_atom[38] { 
+  # First column is atom index #
+  i_m_mmod_type
+  r_m_x_coord
+  r_m_y_coord
+  r_m_z_coord
+  i_m_residue_number
+  i_m_color
+  r_m_charge1
+  r_m_charge2
+  s_m_pdb_residue_name
+  s_m_pdb_atom_name
+  i_m_atomic_number
+  i_m_formal_charge
+  s_m_atom_name
+  i_m_Hcount
+  b_st_NoSrcChirality
+  r_epik_H2O_pKa
+  r_epik_H2O_pKa_uncertainty
+  :::
+  1 3 -1.694460 6.191154 -3.340047 1 2 -0.12000 -0.12000 "MOL " " C1 " 6 0 "C1"  2 <> <> <>
+  2 3 -0.846203 4.909092 -3.336101 1 2 -0.12000 -0.12000 "MOL " " C2 " 6 0 "C2"  2 <> <> <>
+  3 3 -0.464792 4.526596 -1.890955 1 2 0.21000 0.21000 "MOL " " C3 " 6 0 "C3"  1 1 <> <>
+  4 41 0.124555 5.361174 -1.506637 1 21 0.06000 0.06000 "MOL " " H1 " 1 0 "H1"  0 <> <> <>
+  5 3 -1.735148 4.410311 -1.011190 1 2 0.17000 0.17000 "MOL " " C4 " 6 0 "C4"  2 <> <> <>
+  6 32 -2.522141 5.663763 -1.056954 1 43 -0.20000 -0.20000 "MOL " " N1 " 7 1 "N1"  2 <> <> <>
+  7 3 -2.925738 6.043167 -2.429376 1 2 0.17000 0.17000 "MOL " " C5 " 6 0 "C5"  2 <> <> <>
+  8 32 0.420574 3.324409 -1.846027 1 43 -0.10000 -0.10000 "MOL " " N2 " 7 1 "N2"  1 1 <> <>
+  9 3 1.247294 3.253018 -0.611736 1 2 0.15000 0.15000 "MOL " " C6 " 6 0 "C6"  2 <> <> <>
+  10 3 2.309361 2.140900 -0.715240 1 2 -0.12000 -0.12000 "MOL " " C7 " 6 0 "C7"  2 <> <> <>
+  11 3 1.715367 0.758619 -1.061007 1 2 -0.06000 -0.06000 "MOL " " C8 " 6 0 "C8"  1 1 <> <>
+  12 3 0.785457 0.892829 -2.286025 1 2 -0.12000 -0.12000 "MOL " " C9 " 6 0 "C9"  2 <> <> <>
+  13 3 -0.247591 2.026865 -2.142256 1 2 0.15000 0.15000 "MOL " " C10" 6 0 "C10"  2 <> <> <>
+  14 2 1.022787 0.090787 0.142054 1 2 0.50000 0.50000 "MOL " " C11" 6 0 "C11"  0 <> <> <>
+  15 15 0.057045 0.613725 0.693407 1 70 -0.50000 -0.50000 "MOL " " O1 " 8 0 "O1"  0 <>  -1.281    1.117 
+  16 25 1.517763 -1.076675 0.557957 1 43 -0.76000 -0.76000 "MOL " " N3 " 7 0 "N3"  2 <> <> <>
+  17 41 -2.010181 6.425452 -4.357314 1 21 0.06000 0.06000 "MOL " " H2 " 1 0 "H2"  0 <> <> <>
+  18 41 -1.088534 7.034194 -3.004810 1 21 0.06000 0.06000 "MOL " " H3 " 1 0 "H3"  0 <> <> <>
+  19 41 -1.414265 4.110966 -3.813895 1 21 0.06000 0.06000 "MOL " " H4 " 1 0 "H4"  0 <> <> <>
+  20 41 0.050441 5.058236 -3.939031 1 21 0.06000 0.06000 "MOL " " H5 " 1 0 "H5"  0 <> <> <>
+  21 41 -2.376983 3.595326 -1.347432 1 21 0.06000 0.06000 "MOL " " H6 " 1 0 "H6"  0 <> <> <>
+  22 41 -1.473755 4.205052 0.026988 1 21 0.06000 0.06000 "MOL " " H7 " 1 0 "H7"  0 <> <> <>
+  23 44 -3.352787 5.550924 -0.492453 1 21 0.31000 0.31000 "MOL " " H8 " 1 0 "H8"  0 <>   6.617    0.945 
+  24 41 -3.483324 6.979488 -2.391737 1 21 0.06000 0.06000 "MOL " " H9 " 1 0 "H9"  0 <> <> <>
+  25 41 -3.602935 5.286018 -2.827475 1 21 0.06000 0.06000 "MOL " " H10" 1 0 "H10"  0 <> <> <>
+  26 41 1.757166 4.204149 -0.453957 1 21 0.06000 0.06000 "MOL " " H11" 1 0 "H11"  0 <> <> <>
+  27 41 0.609678 3.099272 0.258547 1 21 0.06000 0.06000 "MOL " " H12" 1 0 "H12"  0 <> <> <>
+  28 41 3.033929 2.414296 -1.483559 1 21 0.06000 0.06000 "MOL " " H13" 1 0 "H13"  0 <> <> <>
+  29 41 2.874433 2.086265 0.216516 1 21 0.06000 0.06000 "MOL " " H14" 1 0 "H14"  0 <> <> <>
+  30 41 2.544410 0.109852 -1.349292 1 21 0.06000 0.06000 "MOL " " H15" 1 0 "H15"  0 <> <> <>
+  31 41 1.393613 1.077229 -3.172702 1 21 0.06000 0.06000 "MOL " " H16" 1 0 "H16"  0 <> <> <>
+  32 41 0.270054 -0.050562 -2.472671 1 21 0.06000 0.06000 "MOL " " H17" 1 0 "H17"  0 <> <> <>
+  33 41 -0.965368 1.782195 -1.360028 1 21 0.06000 0.06000 "MOL " " H18" 1 0 "H18"  0 <> <> <>
+  34 41 -0.815096 2.095993 -3.069294 1 21 0.06000 0.06000 "MOL " " H19" 1 0 "H19"  0 <> <> <>
+  35 43 1.091172 -1.545134 1.344290 1 21 0.38000 0.38000 "MOL " " H20" 1 0 "H20"  0 <>  12.474    1.117 
+  36 43 2.312423 -1.488929 0.091153 1 21 0.38000 0.38000 "MOL " " H21" 1 0 "H21"  0 <>  12.474    1.117 
+  37 44 -1.967066 6.412314 -0.666602 1 21 0.31000 0.31000 "MOL " "    " 1 0 ""  0 <>   6.617    0.945 
+  38 44 1.086321 3.462597 -2.593359 1 21 0.29000 0.29000 "MOL " "    " 1 0 ""  0 <>   5.865    2.220 
+  :::
+ } 
+ m_bond[39] { 
+  # First column is bond index #
+  i_m_from
+  i_m_to
+  i_m_order
+  :::
+  1 1 7 1
+  2 1 2 1
+  3 1 17 1
+  4 1 18 1
+  5 2 3 1
+  6 2 19 1
+  7 2 20 1
+  8 3 4 1
+  9 3 5 1
+  10 3 8 1
+  11 5 6 1
+  12 5 21 1
+  13 5 22 1
+  14 6 7 1
+  15 6 23 1
+  16 6 37 1
+  17 7 24 1
+  18 7 25 1
+  19 8 13 1
+  20 8 9 1
+  21 8 38 1
+  22 9 10 1
+  23 9 26 1
+  24 9 27 1
+  25 10 11 1
+  26 10 28 1
+  27 10 29 1
+  28 11 12 1
+  29 11 14 1
+  30 11 30 1
+  31 12 13 1
+  32 12 31 1
+  33 12 32 1
+  34 13 33 1
+  35 13 34 1
+  36 14 15 2
+  37 14 16 1
+  38 16 35 1
+  39 16 36 1
+  :::
+ } 
+} 
+
+f_m_ct { 
+ s_m_title
+ s_m_source_file
+ i_m_source_file_index
+ i_lp_mmshare_version
+ s_lp_label
+ i_lp_orig_ion_str
+ r_epik_Ionization_Penalty
+ r_epik_Ionization_Penalty_Charging
+ r_epik_Ionization_Penalty_Neutral
+ r_epik_State_Penalty
+ i_epik_Tot_Q
+ s_st_Chirality_1
+ s_st_Chirality_2
+ s_st_Chirality_3
+ r_mmod_Potential_Energy-OPLS-2005
+ b_mmod_Minimization_Converged-OPLS-2005
+ r_mmod_RMS_Derivative-OPLS-2005
+ i_mmod_Times_Found-OPLS-2005
+ r_mmod_Relative_Potential_Energy-OPLS-2005
+ b_mmod_Chiralities_Consistent-OPLS-2005
+ i_mmod_Conformation-OPLS-2005
+ i_mmod_Serial_Number-OPLS-2005
+ i_m_ct_format
+ :::
+ "1-[(3~{R})-3-piperidyl]piperidine-4-carboxamide" 
+  SAMPL5_063.mol2 
+  1
+  28013
+  1 
+  1
+    3.2701 
+    3.2701 
+    0.0000 
+    2.4071 
+  2
+  3_R_8_5_2_4 
+  8_ANR_3_9_13_38 
+  11_ANR_10_12_14_30 
+  135.73030090332
+  1
+  0.0466411747038364
+  1
+  0
+  1
+  1
+  11
+  2
+ m_depend[18] { 
+  # First column is dependency index #
+  i_m_depend_dependency
+  s_m_depend_property
+  :::
+  1 10 r_lp_tautomer_probability 
+  2 10 i_lp_orig_ion_str 
+  3 10 r_epik_Ionization_Penalty 
+  4 10 r_epik_Ionization_Penalty_Charging 
+  5 10 r_epik_Ionization_Penalty_Neutral 
+  6 10 r_epik_State_Penalty 
+  7 10 i_epik_Tot_Q 
+  8 10 s_st_Chirality_1 
+  9 10 s_st_Chirality_2 
+  10 10 s_st_Chirality_3 
+  11 20 r_mmod_Potential_Energy-OPLS-2005 
+  12 20 b_mmod_Minimization_Converged-OPLS-2005 
+  13 20 r_mmod_RMS_Derivative-OPLS-2005 
+  14 20 i_mmod_Times_Found-OPLS-2005 
+  15 20 r_mmod_Relative_Potential_Energy-OPLS-2005 
+  16 20 b_mmod_Chiralities_Consistent-OPLS-2005 
+  17 20 i_mmod_Conformation-OPLS-2005 
+  18 10 i_mmod_Serial_Number-OPLS-2005 
+  :::
+ } 
+ m_atom[38] { 
+  # First column is atom index #
+  i_m_mmod_type
+  r_m_x_coord
+  r_m_y_coord
+  r_m_z_coord
+  i_m_residue_number
+  i_m_color
+  r_m_charge1
+  r_m_charge2
+  s_m_pdb_residue_name
+  s_m_pdb_atom_name
+  i_m_atomic_number
+  i_m_formal_charge
+  s_m_atom_name
+  i_m_Hcount
+  b_st_NoSrcChirality
+  r_epik_H2O_pKa
+  r_epik_H2O_pKa_uncertainty
+  :::
+  1 3 -2.476151 5.649679 -3.570830 1 2 -0.12000 -0.12000 "MOL " " C1 " 6 0 "C1"  2 <> <> <>
+  2 3 -1.483924 4.505539 -3.310908 1 2 -0.12000 -0.12000 "MOL " " C2 " 6 0 "C2"  2 <> <> <>
+  3 3 -1.174602 4.353503 -1.797722 1 2 0.21000 0.21000 "MOL " " C3 " 6 0 "C3"  1 1 <> <>
+  4 41 -2.110188 4.076003 -1.308199 1 21 0.06000 0.06000 "MOL " " H1 " 1 0 "H1"  0 <> <> <>
+  5 3 -0.712742 5.730449 -1.246481 1 2 0.17000 0.17000 "MOL " " C4 " 6 0 "C4"  2 <> <> <>
+  6 32 -1.697773 6.799049 -1.529356 1 43 -0.20000 -0.20000 "MOL " " N1 " 7 1 "N1"  2 <> <> <>
+  7 3 -1.969659 6.967276 -2.970984 1 2 0.17000 0.17000 "MOL " " C5 " 6 0 "C5"  2 <> <> <>
+  8 32 -0.165847 3.287021 -1.480223 1 43 -0.10000 -0.10000 "MOL " " N2 " 7 1 "N2"  1 1 <> <>
+  9 3 -0.211340 2.877662 -0.046241 1 2 0.15000 0.15000 "MOL " " C6 " 6 0 "C6"  2 <> <> <>
+  10 3 0.941251 1.927205 0.313487 1 2 -0.12000 -0.12000 "MOL " " C7 " 6 0 "C7"  2 <> <> <>
+  11 3 0.913540 0.668017 -0.568558 1 2 -0.06000 -0.06000 "MOL " " C8 " 6 0 "C8"  1 1 <> <>
+  12 3 0.939930 1.104337 -2.042928 1 2 -0.12000 -0.12000 "MOL " " C9 " 6 0 "C9"  2 <> <> <>
+  13 3 -0.200928 2.085122 -2.365344 1 2 0.15000 0.15000 "MOL " " C10" 6 0 "C10"  2 <> <> <>
+  14 2 2.092606 -0.259622 -0.245075 1 2 0.50000 0.50000 "MOL " " C11" 6 0 "C11"  0 <> <> <>
+  15 15 3.250929 0.130293 -0.374531 1 70 -0.50000 -0.50000 "MOL " " O1 " 8 0 "O1"  0 <>  -1.281    1.117 
+  16 25 1.804505 -1.492110 0.177881 1 43 -0.76000 -0.76000 "MOL " " N3 " 7 0 "N3"  2 <> <> <>
+  17 41 -3.446895 5.398622 -3.140776 1 21 0.06000 0.06000 "MOL " " H2 " 1 0 "H2"  0 <> <> <>
+  18 41 -2.636202 5.767062 -4.643246 1 21 0.06000 0.06000 "MOL " " H3 " 1 0 "H3"  0 <> <> <>
+  19 41 -1.922546 3.593060 -3.715601 1 21 0.06000 0.06000 "MOL " " H4 " 1 0 "H4"  0 <> <> <>
+  20 41 -0.563178 4.692339 -3.865927 1 21 0.06000 0.06000 "MOL " " H5 " 1 0 "H5"  0 <> <> <>
+  21 41 -0.571919 5.708523 -0.167259 1 21 0.06000 0.06000 "MOL " " H6 " 1 0 "H6"  0 <> <> <>
+  22 41 0.247859 6.010539 -1.681796 1 21 0.06000 0.06000 "MOL " " H7 " 1 0 "H7"  0 <> <> <>
+  23 44 -2.565521 6.576530 -1.062038 1 21 0.31000 0.31000 "MOL " " H8 " 1 0 "H8"  0 <>   6.617    0.945 
+  24 41 -1.059166 7.292367 -3.476644 1 21 0.06000 0.06000 "MOL " " H9 " 1 0 "H9"  0 <> <> <>
+  25 41 -2.709857 7.756337 -3.107138 1 21 0.06000 0.06000 "MOL " " H10" 1 0 "H10"  0 <> <> <>
+  26 41 -0.150717 3.742520 0.611466 1 21 0.06000 0.06000 "MOL " " H11" 1 0 "H11"  0 <> <> <>
+  27 41 -1.167758 2.395885 0.164177 1 21 0.06000 0.06000 "MOL " " H12" 1 0 "H12"  0 <> <> <>
+  28 41 1.891728 2.452063 0.201301 1 21 0.06000 0.06000 "MOL " " H13" 1 0 "H13"  0 <> <> <>
+  29 41 0.867141 1.647354 1.365413 1 21 0.06000 0.06000 "MOL " " H14" 1 0 "H14"  0 <> <> <>
+  30 41 -0.017807 0.130442 -0.380612 1 21 0.06000 0.06000 "MOL " " H15" 1 0 "H15"  0 <> <> <>
+  31 41 1.895260 1.576079 -2.280331 1 21 0.06000 0.06000 "MOL " " H16" 1 0 "H16"  0 <> <> <>
+  32 41 0.861545 0.230724 -2.691784 1 21 0.06000 0.06000 "MOL " " H17" 1 0 "H17"  0 <> <> <>
+  33 41 -1.167504 1.587251 -2.272024 1 21 0.06000 0.06000 "MOL " " H18" 1 0 "H18"  0 <> <> <>
+  34 41 -0.080599 2.366591 -3.410649 1 21 0.06000 0.06000 "MOL " " H19" 1 0 "H19"  0 <> <> <>
+  35 43 2.557092 -2.127951 0.399413 1 21 0.38000 0.38000 "MOL " " H20" 1 0 "H20"  0 <>  12.474    1.117 
+  36 43 0.844190 -1.787399 0.275413 1 21 0.38000 0.38000 "MOL " " H21" 1 0 "H21"  0 <>  12.474    1.117 
+  37 44 -1.348823 7.673112 -1.161057 1 21 0.31000 0.31000 "MOL " "    " 1 0 ""  0 <>   6.617    0.945 
+  38 44 0.741929 3.702899 -1.634527 1 21 0.29000 0.29000 "MOL " "    " 1 0 ""  0 <>   5.865    2.220 
+  :::
+ } 
+ m_bond[39] { 
+  # First column is bond index #
+  i_m_from
+  i_m_to
+  i_m_order
+  :::
+  1 1 7 1
+  2 1 2 1
+  3 1 17 1
+  4 1 18 1
+  5 2 3 1
+  6 2 19 1
+  7 2 20 1
+  8 3 4 1
+  9 3 5 1
+  10 3 8 1
+  11 5 6 1
+  12 5 21 1
+  13 5 22 1
+  14 6 7 1
+  15 6 23 1
+  16 6 37 1
+  17 7 24 1
+  18 7 25 1
+  19 8 13 1
+  20 8 9 1
+  21 8 38 1
+  22 9 10 1
+  23 9 26 1
+  24 9 27 1
+  25 10 11 1
+  26 10 28 1
+  27 10 29 1
+  28 11 12 1
+  29 11 14 1
+  30 11 30 1
+  31 12 13 1
+  32 12 31 1
+  33 12 32 1
+  34 13 33 1
+  35 13 34 1
+  36 14 15 2
+  37 14 16 1
+  38 16 35 1
+  39 16 36 1
+  :::
+ } 
+} 
+
+f_m_ct { 
+ s_m_title
+ s_m_source_file
+ i_m_source_file_index
+ i_lp_mmshare_version
+ s_lp_label
+ i_lp_orig_ion_str
+ r_epik_Ionization_Penalty
+ r_epik_Ionization_Penalty_Charging
+ r_epik_Ionization_Penalty_Neutral
+ r_epik_State_Penalty
+ i_epik_Tot_Q
+ s_st_Chirality_1
+ s_st_Chirality_2
+ s_st_Chirality_3
+ r_mmod_Potential_Energy-OPLS-2005
+ b_mmod_Minimization_Converged-OPLS-2005
+ r_mmod_RMS_Derivative-OPLS-2005
+ i_mmod_Times_Found-OPLS-2005
+ r_mmod_Relative_Potential_Energy-OPLS-2005
+ b_mmod_Chiralities_Consistent-OPLS-2005
+ i_mmod_Conformation-OPLS-2005
+ i_mmod_Serial_Number-OPLS-2005
+ i_m_ct_format
+ :::
+ "1-[(3~{R})-3-piperidyl]piperidine-4-carboxamide" 
+  SAMPL5_063.mol2 
+  1
+  28013
+  1 
+  1
+    3.2701 
+    3.2701 
+    0.0000 
+    2.4071 
+  2
+  3_S_8_5_2_4 
+  8_ANR_3_9_13_38 
+  11_ANR_10_12_14_30 
+  129.140380859375
+  1
+  0.000270940770860761
+  1
+  0
+  1
+  1
+  12
+  2
+ m_depend[18] { 
+  # First column is dependency index #
+  i_m_depend_dependency
+  s_m_depend_property
+  :::
+  1 10 r_lp_tautomer_probability 
+  2 10 i_lp_orig_ion_str 
+  3 10 r_epik_Ionization_Penalty 
+  4 10 r_epik_Ionization_Penalty_Charging 
+  5 10 r_epik_Ionization_Penalty_Neutral 
+  6 10 r_epik_State_Penalty 
+  7 10 i_epik_Tot_Q 
+  8 10 s_st_Chirality_1 
+  9 10 s_st_Chirality_2 
+  10 10 s_st_Chirality_3 
+  11 20 r_mmod_Potential_Energy-OPLS-2005 
+  12 20 b_mmod_Minimization_Converged-OPLS-2005 
+  13 20 r_mmod_RMS_Derivative-OPLS-2005 
+  14 20 i_mmod_Times_Found-OPLS-2005 
+  15 20 r_mmod_Relative_Potential_Energy-OPLS-2005 
+  16 20 b_mmod_Chiralities_Consistent-OPLS-2005 
+  17 20 i_mmod_Conformation-OPLS-2005 
+  18 10 i_mmod_Serial_Number-OPLS-2005 
+  :::
+ } 
+ m_atom[38] { 
+  # First column is atom index #
+  i_m_mmod_type
+  r_m_x_coord
+  r_m_y_coord
+  r_m_z_coord
+  i_m_residue_number
+  i_m_color
+  r_m_charge1
+  r_m_charge2
+  s_m_pdb_residue_name
+  s_m_pdb_atom_name
+  i_m_atomic_number
+  i_m_formal_charge
+  s_m_atom_name
+  i_m_Hcount
+  b_st_NoSrcChirality
+  r_epik_H2O_pKa
+  r_epik_H2O_pKa_uncertainty
+  :::
+  1 3 -1.454469 6.232977 -3.722323 1 2 -0.12000 -0.12000 "MOL " " C1 " 6 0 "C1"  2 <> <> <>
+  2 3 -0.833674 4.852714 -3.453210 1 2 -0.12000 -0.12000 "MOL " " C2 " 6 0 "C2"  2 <> <> <>
+  3 3 -0.555464 4.676952 -1.945869 1 2 0.21000 0.21000 "MOL " " C3 " 6 0 "C3"  1 1 <> <>
+  4 41 0.158596 5.458708 -1.680302 1 21 0.06000 0.06000 "MOL " " H1 " 1 0 "H1"  0 <> <> <>
+  5 3 -1.846254 4.927053 -1.126308 1 2 0.17000 0.17000 "MOL " " C4 " 6 0 "C4"  2 <> <> <>
+  6 32 -2.411020 6.262095 -1.429348 1 43 -0.20000 -0.20000 "MOL " " N1 " 7 1 "N1"  2 <> <> <>
+  7 3 -2.713926 6.449619 -2.865779 1 2 0.17000 0.17000 "MOL " " C5 " 6 0 "C5"  2 <> <> <>
+  8 32 0.111009 3.373276 -1.651409 1 43 -0.10000 -0.10000 "MOL " " N2 " 7 1 "N2"  1 1 <> <>
+  9 3 0.890543 3.381696 -0.384965 1 2 0.15000 0.15000 "MOL " " C6 " 6 0 "C6"  2 <> <> <>
+  10 3 1.758066 2.117397 -0.265800 1 2 -0.12000 -0.12000 "MOL " " C7 " 6 0 "C7"  2 <> <> <>
+  11 3 0.903134 0.838753 -0.365001 1 2 -0.06000 -0.06000 "MOL " " C8 " 6 0 "C8"  1 1 <> <>
+  12 3 0.077045 0.883014 -1.665532 1 2 -0.12000 -0.12000 "MOL " " C9 " 6 0 "C9"  2 <> <> <>
+  13 3 -0.760328 2.169635 -1.747527 1 2 0.15000 0.15000 "MOL " " C10" 6 0 "C10"  2 <> <> <>
+  14 2 1.783373 -0.417360 -0.314568 1 2 0.50000 0.50000 "MOL " " C11" 6 0 "C11"  0 <> <> <>
+  15 15 2.640639 -0.616643 -1.172338 1 70 -0.50000 -0.50000 "MOL " " O1 " 8 0 "O1"  0 <>  -1.281    1.117 
+  16 25 1.576787 -1.270897 0.690301 1 43 -0.76000 -0.76000 "MOL " " N3 " 7 0 "N3"  2 <> <> <>
+  17 41 -1.702612 6.329729 -4.779906 1 21 0.06000 0.06000 "MOL " " H2 " 1 0 "H2"  0 <> <> <>
+  18 41 -0.723760 7.013625 -3.505739 1 21 0.06000 0.06000 "MOL " " H3 " 1 0 "H3"  0 <> <> <>
+  19 41 -1.515847 4.084002 -3.816158 1 21 0.06000 0.06000 "MOL " " H4 " 1 0 "H4"  0 <> <> <>
+  20 41 0.089152 4.745781 -4.024822 1 21 0.06000 0.06000 "MOL " " H5 " 1 0 "H5"  0 <> <> <>
+  21 41 -2.607294 4.178079 -1.348135 1 21 0.06000 0.06000 "MOL " " H6 " 1 0 "H6"  0 <> <> <>
+  22 41 -1.644749 4.872743 -0.056382 1 21 0.06000 0.06000 "MOL " " H7 " 1 0 "H7"  0 <> <> <>
+  23 44 -3.261517 6.387907 -0.898120 1 21 0.31000 0.31000 "MOL " " H8 " 1 0 "H8"  0 <>   6.617    0.945 
+  24 41 -3.107813 7.454728 -3.019520 1 21 0.06000 0.06000 "MOL " " H9 " 1 0 "H9"  0 <> <> <>
+  25 41 -3.498765 5.752104 -3.162175 1 21 0.06000 0.06000 "MOL " " H10" 1 0 "H10"  0 <> <> <>
+  26 41 1.538878 4.258086 -0.349603 1 21 0.06000 0.06000 "MOL " " H11" 1 0 "H11"  0 <> <> <>
+  27 41 0.214440 3.452656 0.468117 1 21 0.06000 0.06000 "MOL " " H12" 1 0 "H12"  0 <> <> <>
+  28 41 2.516713 2.127482 -1.050557 1 21 0.06000 0.06000 "MOL " " H13" 1 0 "H13"  0 <> <> <>
+  29 41 2.297926 2.134075 0.682113 1 21 0.06000 0.06000 "MOL " " H14" 1 0 "H14"  0 <> <> <>
+  30 41 0.214360 0.816910 0.481637 1 21 0.06000 0.06000 "MOL " " H15" 1 0 "H15"  0 <> <> <>
+  31 41 0.733641 0.824266 -2.535539 1 21 0.06000 0.06000 "MOL " " H16" 1 0 "H16"  0 <> <> <>
+  32 41 -0.582092 0.015312 -1.719567 1 21 0.06000 0.06000 "MOL " " H17" 1 0 "H17"  0 <> <> <>
+  33 41 -1.496689 2.173467 -0.942866 1 21 0.06000 0.06000 "MOL " " H18" 1 0 "H18"  0 <> <> <>
+  34 41 -1.314452 2.169448 -2.685305 1 21 0.06000 0.06000 "MOL " " H19" 1 0 "H19"  0 <> <> <>
+  35 43 2.139154 -2.107352 0.752538 1 21 0.38000 0.38000 "MOL " " H20" 1 0 "H20"  0 <>  12.474    1.117 
+  36 43 0.865989 -1.083653 1.382083 1 21 0.38000 0.38000 "MOL " " H21" 1 0 "H21"  0 <>  12.474    1.117 
+  37 44 -1.747400 6.969482 -1.146359 1 21 0.31000 0.31000 "MOL " "    " 1 0 ""  0 <>   6.617    0.945 
+  38 44 0.803685 3.265558 -2.379285 1 21 0.29000 0.29000 "MOL " "    " 1 0 ""  0 <>   5.865    2.220 
+  :::
+ } 
+ m_bond[39] { 
+  # First column is bond index #
+  i_m_from
+  i_m_to
+  i_m_order
+  :::
+  1 1 7 1
+  2 1 2 1
+  3 1 17 1
+  4 1 18 1
+  5 2 3 1
+  6 2 19 1
+  7 2 20 1
+  8 3 4 1
+  9 3 5 1
+  10 3 8 1
+  11 5 6 1
+  12 5 21 1
+  13 5 22 1
+  14 6 7 1
+  15 6 23 1
+  16 6 37 1
+  17 7 24 1
+  18 7 25 1
+  19 8 13 1
+  20 8 9 1
+  21 8 38 1
+  22 9 10 1
+  23 9 26 1
+  24 9 27 1
+  25 10 11 1
+  26 10 28 1
+  27 10 29 1
+  28 11 12 1
+  29 11 14 1
+  30 11 30 1
+  31 12 13 1
+  32 12 31 1
+  33 12 32 1
+  34 13 33 1
+  35 13 34 1
+  36 14 15 2
+  37 14 16 1
+  38 16 35 1
+  39 16 36 1
+  :::
+ } 
+} 
+

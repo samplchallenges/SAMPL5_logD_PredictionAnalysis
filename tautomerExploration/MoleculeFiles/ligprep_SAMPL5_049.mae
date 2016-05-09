@@ -1,0 +1,147 @@
+{ 
+ s_m_m2io_version
+ :::
+ 2.0.0 
+} 
+
+f_m_ct { 
+ s_m_title
+ s_m_source_file
+ i_m_source_file_index
+ i_lp_mmshare_version
+ s_lp_label
+ r_lp_tautomer_probability
+ i_lp_orig_ion_str
+ r_epik_Ionization_Penalty
+ r_epik_Ionization_Penalty_Charging
+ r_epik_Ionization_Penalty_Neutral
+ r_epik_State_Penalty
+ i_epik_Tot_Q
+ r_mmod_Potential_Energy-OPLS-2005
+ b_mmod_Minimization_Converged-OPLS-2005
+ r_mmod_RMS_Derivative-OPLS-2005
+ i_mmod_Times_Found-OPLS-2005
+ r_mmod_Relative_Potential_Energy-OPLS-2005
+ b_mmod_Chiralities_Consistent-OPLS-2005
+ i_mmod_Conformation-OPLS-2005
+ i_mmod_Serial_Number-OPLS-2005
+ i_m_ct_format
+ :::
+ "~{N}-(2,3-dichlorophenyl)isoxazole-5-carboxamide" 
+  SAMPL5_049.mol2 
+  1
+  28013
+  1 
+  1
+  1
+    0.0003 
+    0.0000 
+    0.0003 
+   -0.0000 
+  0
+  78.0178756713867
+  1
+  0.000880235573276877
+  1
+  0
+  1
+  1
+  1
+  2
+ m_depend[15] { 
+  # First column is dependency index #
+  i_m_depend_dependency
+  s_m_depend_property
+  :::
+  1 10 r_lp_tautomer_probability 
+  2 10 i_lp_orig_ion_str 
+  3 10 r_epik_Ionization_Penalty 
+  4 10 r_epik_Ionization_Penalty_Charging 
+  5 10 r_epik_Ionization_Penalty_Neutral 
+  6 10 r_epik_State_Penalty 
+  7 10 i_epik_Tot_Q 
+  8 20 r_mmod_Potential_Energy-OPLS-2005 
+  9 20 b_mmod_Minimization_Converged-OPLS-2005 
+  10 20 r_mmod_RMS_Derivative-OPLS-2005 
+  11 20 i_mmod_Times_Found-OPLS-2005 
+  12 20 r_mmod_Relative_Potential_Energy-OPLS-2005 
+  13 20 b_mmod_Chiralities_Consistent-OPLS-2005 
+  14 20 i_mmod_Conformation-OPLS-2005 
+  15 10 i_mmod_Serial_Number-OPLS-2005 
+  :::
+ } 
+ m_atom[22] { 
+  # First column is atom index #
+  i_m_mmod_type
+  r_m_x_coord
+  r_m_y_coord
+  r_m_z_coord
+  i_m_residue_number
+  i_m_color
+  r_m_charge1
+  r_m_charge2
+  s_m_pdb_residue_name
+  s_m_pdb_atom_name
+  i_m_atomic_number
+  s_m_atom_name
+  i_m_Hcount
+  r_epik_H2O_pKa
+  r_epik_H2O_pKa_uncertainty
+  :::
+  1 2 1.758530 -1.259056 -0.236648 1 2 -0.11500 -0.11500 "MOL " " C1 " 6 C1  1 <> <>
+  2 2 2.928259 -1.729485 0.387396 1 2 -0.11500 -0.11500 "MOL " " C2 " 6 C2  1 <> <>
+  3 2 3.189357 -1.417743 1.737610 1 2 0.08500 0.08500 "MOL " " C3 " 6 C3  0 <> <>
+  4 2 2.290143 -0.588883 2.458801 1 2 0.18000 0.18000 "MOL " " C4 " 6 C4  0 <> <>
+  5 2 1.115634 -0.121340 1.824764 1 2 0.18000 0.18000 "MOL " " C5 " 6 C5  0 <> <>
+  6 2 0.851021 -0.461637 0.483828 1 2 -0.11500 -0.11500 "MOL " " C6 " 6 C6  1 <> <>
+  7 57 -0.009893 0.881871 2.669606 1 9 -0.18000 -0.18000 "MOL " "Cl1 " 17 Cl1  0 <> <>
+  8 57 2.627613 -0.106756 4.089027 1 9 -0.18000 -0.18000 "MOL " "Cl2 " 17 Cl2  0 <> <>
+  9 25 4.388171 -1.913656 2.306532 1 43 -0.38500 -0.38500 "MOL " " N1 " 7 N1  1 <> <>
+  10 2 4.461454 -2.804759 3.309358 1 2 0.61500 0.61500 "MOL " " C7 " 6 C7  0 <> <>
+  11 15 3.477811 -3.252455 3.900695 1 70 -0.50000 -0.50000 "MOL " " O1 " 8 O1  0  -0.314    0.603 
+  12 2 5.827260 -3.229182 3.672170 1 2 0.23300 0.23300 "MOL " " C8 " 6 C8  0 <> <>
+  13 2 6.129344 -4.115938 4.665994 1 2 -0.45500 -0.45500 "MOL " " C9 " 6 C9  1 <> <>
+  14 2 7.548774 -4.175866 4.603443 1 2 0.40500 0.40500 "MOL " " C10" 6 C10  1 <> <>
+  15 25 8.044469 -3.393876 3.655509 1 43 -0.41300 -0.41300 "MOL " " N2 " 7 N2  0 <> <>
+  16 16 6.943949 -2.777076 3.047090 1 70 -0.12200 -0.12200 "MOL " " O2 " 8 O2  0 <> <>
+  17 41 1.557311 -1.510059 -1.267792 1 21 0.11500 0.11500 "MOL " " H1 " 1 H1  0 <> <>
+  18 41 3.619567 -2.342928 -0.172345 1 21 0.11500 0.11500 "MOL " " H2 " 1 H2  0 <> <>
+  19 41 -0.046404 -0.101419 0.002481 1 21 0.11500 0.11500 "MOL " " H3 " 1 H3  0 <> <>
+  20 43 5.248233 -1.694898 1.824563 1 21 0.30000 0.30000 "MOL " " H4 " 1 H4  0  10.754    2.220 
+  21 41 5.450879 -4.634717 5.327229 1 21 0.18400 0.18400 "MOL " " H5 " 1 H5  0 <> <>
+  22 41 8.227452 -4.756870 5.210286 1 21 0.05300 0.05300 "MOL " " H6 " 1 H6  0 <> <>
+  :::
+ } 
+ m_bond[23] { 
+  # First column is bond index #
+  i_m_from
+  i_m_to
+  i_m_order
+  :::
+  1 1 6 2
+  2 1 2 1
+  3 1 17 1
+  4 2 3 2
+  5 2 18 1
+  6 3 4 1
+  7 3 9 1
+  8 4 5 2
+  9 4 8 1
+  10 5 6 1
+  11 5 7 1
+  12 6 19 1
+  13 9 10 1
+  14 9 20 1
+  15 10 11 2
+  16 10 12 1
+  17 12 16 1
+  18 12 13 2
+  19 13 14 1
+  20 13 21 1
+  21 14 15 2
+  22 14 22 1
+  23 15 16 1
+  :::
+ } 
+} 
+

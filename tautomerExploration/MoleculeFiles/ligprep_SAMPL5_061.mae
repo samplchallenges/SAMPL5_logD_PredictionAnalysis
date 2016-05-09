@@ -1,0 +1,648 @@
+{ 
+ s_m_m2io_version
+ :::
+ 2.0.0 
+} 
+
+f_m_ct { 
+ s_m_title
+ s_m_source_file
+ i_m_source_file_index
+ i_lp_mmshare_version
+ s_lp_label
+ i_lp_orig_ion_str
+ r_epik_Ionization_Penalty
+ r_epik_Ionization_Penalty_Charging
+ r_epik_Ionization_Penalty_Neutral
+ r_epik_State_Penalty
+ i_epik_Tot_Q
+ s_epik_Chemistry_Notes
+ s_st_Chirality_1
+ r_mmod_Potential_Energy-OPLS-2005
+ b_mmod_Minimization_Converged-OPLS-2005
+ r_mmod_RMS_Derivative-OPLS-2005
+ i_mmod_Times_Found-OPLS-2005
+ r_mmod_Relative_Potential_Energy-OPLS-2005
+ b_mmod_Chiralities_Consistent-OPLS-2005
+ i_mmod_Conformation-OPLS-2005
+ i_mmod_Serial_Number-OPLS-2005
+ i_m_ct_format
+ :::
+ "(2~{S})-2-methyl-2-(2-methylpyrimidin-4-yl)morpholine" 
+  SAMPL5_061.mol2 
+  1
+  28013
+  1 
+  1
+    0.6723 
+    0.0000 
+    0.6723 
+    0.6926 
+  0
+  "This compound contains an electron-poor aromatic ring that is susceptible to covalent hydrolysis at low pH, typically resulting in measured values for nitrogen ring protonation that are around two units higher than predicted values." 
+  8_S_13_6_9_14 
+  64.4493026733398
+  1
+  0.0135021703317761
+  1
+  0
+  1
+  1
+  1
+  2
+ m_depend[16] { 
+  # First column is dependency index #
+  i_m_depend_dependency
+  s_m_depend_property
+  :::
+  1 10 r_lp_tautomer_probability 
+  2 10 i_lp_orig_ion_str 
+  3 10 r_epik_Ionization_Penalty 
+  4 10 r_epik_Ionization_Penalty_Charging 
+  5 10 r_epik_Ionization_Penalty_Neutral 
+  6 10 r_epik_State_Penalty 
+  7 10 i_epik_Tot_Q 
+  8 10 s_st_Chirality_1 
+  9 20 r_mmod_Potential_Energy-OPLS-2005 
+  10 20 b_mmod_Minimization_Converged-OPLS-2005 
+  11 20 r_mmod_RMS_Derivative-OPLS-2005 
+  12 20 i_mmod_Times_Found-OPLS-2005 
+  13 20 r_mmod_Relative_Potential_Energy-OPLS-2005 
+  14 20 b_mmod_Chiralities_Consistent-OPLS-2005 
+  15 20 i_mmod_Conformation-OPLS-2005 
+  16 10 i_mmod_Serial_Number-OPLS-2005 
+  :::
+ } 
+ m_atom[29] { 
+  # First column is atom index #
+  i_m_mmod_type
+  r_m_x_coord
+  r_m_y_coord
+  r_m_z_coord
+  i_m_residue_number
+  i_m_color
+  r_m_charge1
+  r_m_charge2
+  s_m_pdb_residue_name
+  s_m_pdb_atom_name
+  i_m_atomic_number
+  s_m_atom_name
+  i_m_Hcount
+  r_epik_H2O_pKa
+  r_epik_H2O_pKa_uncertainty
+  b_st_NoSrcChirality
+  :::
+  1 3 -3.940578 -2.815803 -2.244174 1 2 -0.06500 -0.06500 "MOL " " C1 " 6 C1  3 <> <> <>
+  2 2 -2.695731 -2.932425 -1.390297 1 2 0.72700 0.72700 "MOL " " C2 " 6 C2  0 <> <> <>
+  3 25 -2.434956 -4.133577 -0.869923 1 43 -0.83900 -0.83900 "MOL " " N1 " 7 N1  0   2.551    2.220  <>
+  4 2 -1.320042 -4.240163 -0.117726 1 2 0.65300 0.65300 "MOL " " C3 " 6 C3  1 <> <> <>
+  5 2 -0.470681 -3.140463 0.112136 1 2 -0.68900 -0.68900 "MOL " " C4 " 6 C4  1 <> <> <>
+  6 2 -0.847856 -1.914081 -0.481722 1 2 0.54900 0.54900 "MOL " " C5 " 6 C5  0 <> <> <>
+  7 25 -1.964254 -1.825897 -1.242390 1 43 -0.83900 -0.83900 "MOL " " N2 " 7 N2  0   2.721    2.220  <>
+  8 3 0.003484 -0.649256 -0.329022 1 2 0.31500 0.31500 "MOL " " C6 " 6 C6  0 <> <> 1
+  9 3 0.294274 -0.393091 1.175071 1 2 0.08000 0.08000 "MOL " " C7 " 6 C7  2 <> <> <>
+  10 26 0.948321 0.896853 1.399941 1 43 -0.78000 -0.78000 "MOL " " N3 " 7 N3  1   7.724    1.157  <>
+  11 3 0.155513 1.991265 0.851470 1 2 0.08000 0.08000 "MOL " " C8 " 6 C8  2 <> <> <>
+  12 3 -0.103696 1.756982 -0.642526 1 2 0.14000 0.14000 "MOL " " C9 " 6 C9  2 <> <> <>
+  13 16 -0.720188 0.485848 -0.834919 1 70 -0.40000 -0.40000 "MOL " " O1 " 8 O1  0 <> <> <>
+  14 3 1.298849 -0.845395 -1.150664 1 2 -0.18000 -0.18000 "MOL " " C10" 6 C10  3 <> <> <>
+  15 41 -4.343076 -1.802700 -2.211706 1 21 0.06000 0.06000 "MOL " " H1 " 1 H1  0 <> <> <>
+  16 41 -3.707552 -3.059598 -3.280714 1 21 0.06000 0.06000 "MOL " " H2 " 1 H2  0 <> <> <>
+  17 41 -4.716990 -3.498113 -1.896440 1 21 0.06000 0.06000 "MOL " " H3 " 1 H3  0 <> <> <>
+  18 41 -1.101057 -5.211190 0.301065 1 21 0.01100 0.01100 "MOL " " H4 " 1 H4  0 <> <> <>
+  19 41 0.423858 -3.242756 0.707611 1 21 0.19700 0.19700 "MOL " " H5 " 1 H5  0 <> <> <>
+  20 41 -0.644692 -0.419052 1.730001 1 21 0.06000 0.06000 "MOL " " H6 " 1 H6  0 <> <> <>
+  21 41 0.913410 -1.190760 1.585243 1 21 0.06000 0.06000 "MOL " " H7 " 1 H7  0 <> <> <>
+  22 43 1.080169 1.040849 2.396177 1 21 0.38000 0.38000 "MOL " " H8 " 1 H8  0 <> <> <>
+  23 41 -0.794787 2.064822 1.381754 1 21 0.06000 0.06000 "MOL " " H9 " 1 H9  0 <> <> <>
+  24 41 0.671325 2.940485 0.997874 1 21 0.06000 0.06000 "MOL " " H10" 1 H10  0 <> <> <>
+  25 41 -0.775887 2.525502 -1.024091 1 21 0.03000 0.03000 "MOL " " H11" 1 H11  0 <> <> <>
+  26 41 0.815185 1.843984 -1.221517 1 21 0.03000 0.03000 "MOL " " H12" 1 H12  0 <> <> <>
+  27 41 1.837048 -1.737748 -0.830365 1 21 0.06000 0.06000 "MOL " " H13" 1 H13  0 <> <> <>
+  28 41 1.073279 -0.961681 -2.211082 1 21 0.06000 0.06000 "MOL " " H14" 1 H14  0 <> <> <>
+  29 41 1.994648 -0.013837 -1.048898 1 21 0.06000 0.06000 "MOL " " H15" 1 H15  0 <> <> <>
+  :::
+ } 
+ m_bond[30] { 
+  # First column is bond index #
+  i_m_from
+  i_m_to
+  i_m_order
+  :::
+  1 1 2 1
+  2 1 15 1
+  3 1 16 1
+  4 1 17 1
+  5 2 7 2
+  6 2 3 1
+  7 3 4 2
+  8 4 5 1
+  9 4 18 1
+  10 5 6 2
+  11 5 19 1
+  12 6 7 1
+  13 6 8 1
+  14 8 13 1
+  15 8 9 1
+  16 8 14 1
+  17 9 10 1
+  18 9 20 1
+  19 9 21 1
+  20 10 11 1
+  21 10 22 1
+  22 11 12 1
+  23 11 23 1
+  24 11 24 1
+  25 12 13 1
+  26 12 25 1
+  27 12 26 1
+  28 14 27 1
+  29 14 28 1
+  30 14 29 1
+  :::
+ } 
+} 
+
+f_m_ct { 
+ s_m_title
+ s_m_source_file
+ i_m_source_file_index
+ i_lp_mmshare_version
+ s_lp_label
+ i_lp_orig_ion_str
+ r_epik_Ionization_Penalty
+ r_epik_Ionization_Penalty_Charging
+ r_epik_Ionization_Penalty_Neutral
+ r_epik_State_Penalty
+ i_epik_Tot_Q
+ s_epik_Chemistry_Notes
+ s_st_Chirality_1
+ r_mmod_Potential_Energy-OPLS-2005
+ b_mmod_Minimization_Converged-OPLS-2005
+ r_mmod_RMS_Derivative-OPLS-2005
+ i_mmod_Times_Found-OPLS-2005
+ r_mmod_Relative_Potential_Energy-OPLS-2005
+ b_mmod_Chiralities_Consistent-OPLS-2005
+ i_mmod_Conformation-OPLS-2005
+ i_mmod_Serial_Number-OPLS-2005
+ i_m_ct_format
+ :::
+ "(2~{S})-2-methyl-2-(2-methylpyrimidin-4-yl)morpholine" 
+  SAMPL5_061.mol2 
+  1
+  28013
+  1 
+  1
+    0.6723 
+    0.0000 
+    0.6723 
+    0.6926 
+  0
+  "This compound contains an electron-poor aromatic ring that is susceptible to covalent hydrolysis at low pH, typically resulting in measured values for nitrogen ring protonation that are around two units higher than predicted values." 
+  8_R_13_6_9_14 
+  60.9051246643066
+  1
+  0.0164422281086445
+  1
+  0
+  1
+  1
+  2
+  2
+ m_depend[16] { 
+  # First column is dependency index #
+  i_m_depend_dependency
+  s_m_depend_property
+  :::
+  1 10 r_lp_tautomer_probability 
+  2 10 i_lp_orig_ion_str 
+  3 10 r_epik_Ionization_Penalty 
+  4 10 r_epik_Ionization_Penalty_Charging 
+  5 10 r_epik_Ionization_Penalty_Neutral 
+  6 10 r_epik_State_Penalty 
+  7 10 i_epik_Tot_Q 
+  8 10 s_st_Chirality_1 
+  9 20 r_mmod_Potential_Energy-OPLS-2005 
+  10 20 b_mmod_Minimization_Converged-OPLS-2005 
+  11 20 r_mmod_RMS_Derivative-OPLS-2005 
+  12 20 i_mmod_Times_Found-OPLS-2005 
+  13 20 r_mmod_Relative_Potential_Energy-OPLS-2005 
+  14 20 b_mmod_Chiralities_Consistent-OPLS-2005 
+  15 20 i_mmod_Conformation-OPLS-2005 
+  16 10 i_mmod_Serial_Number-OPLS-2005 
+  :::
+ } 
+ m_atom[29] { 
+  # First column is atom index #
+  i_m_mmod_type
+  r_m_x_coord
+  r_m_y_coord
+  r_m_z_coord
+  i_m_residue_number
+  i_m_color
+  r_m_charge1
+  r_m_charge2
+  s_m_pdb_residue_name
+  s_m_pdb_atom_name
+  i_m_atomic_number
+  s_m_atom_name
+  i_m_Hcount
+  r_epik_H2O_pKa
+  r_epik_H2O_pKa_uncertainty
+  b_st_NoSrcChirality
+  :::
+  1 3 -3.694013 -3.644782 0.233321 1 2 -0.06500 -0.06500 "MOL " " C1 " 6 C1  3 <> <> <>
+  2 2 -2.582535 -3.032799 -0.592628 1 2 0.72700 0.72700 "MOL " " C2 " 6 C2  0 <> <> <>
+  3 25 -2.583706 -3.304340 -1.899106 1 43 -0.83900 -0.83900 "MOL " " N1 " 7 N1  0   2.551    2.220  <>
+  4 2 -1.585185 -2.767775 -2.630443 1 2 0.65300 0.65300 "MOL " " C3 " 6 C3  1 <> <> <>
+  5 2 -0.589428 -1.958323 -2.050345 1 2 -0.68900 -0.68900 "MOL " " C4 " 6 C4  1 <> <> <>
+  6 2 -0.695790 -1.721729 -0.659911 1 2 0.54900 0.54900 "MOL " " C5 " 6 C5  0 <> <> <>
+  7 25 -1.693605 -2.284135 0.062925 1 43 -0.83900 -0.83900 "MOL " " N2 " 7 N2  0   2.721    2.220  <>
+  8 3 0.336086 -0.897236 0.127085 1 2 0.31500 0.31500 "MOL " " C6 " 6 C6  0 <> <> 1
+  9 3 1.082307 0.173628 -0.716229 1 2 0.08000 0.08000 "MOL " " C7 " 6 C7  2 <> <> <>
+  10 26 0.185598 1.248962 -1.139938 1 43 -0.78000 -0.78000 "MOL " " N3 " 7 N3  1   7.724    1.157  <>
+  11 3 -0.445581 1.879844 0.015931 1 2 0.08000 0.08000 "MOL " " C8 " 6 C8  2 <> <> <>
+  12 3 -1.163903 0.825227 0.871981 1 2 0.14000 0.14000 "MOL " " C9 " 6 C9  2 <> <> <>
+  13 16 -0.251012 -0.210210 1.240645 1 70 -0.40000 -0.40000 "MOL " " O1 " 8 O1  0 <> <> <>
+  14 3 1.362152 -1.857248 0.750832 1 2 -0.18000 -0.18000 "MOL " " C10" 6 C10  3 <> <> <>
+  15 41 -3.990878 -2.974400 1.040685 1 21 0.06000 0.06000 "MOL " " H1 " 1 H1  0 <> <> <>
+  16 41 -4.573851 -3.844985 -0.379252 1 21 0.06000 0.06000 "MOL " " H2 " 1 H2  0 <> <> <>
+  17 41 -3.359922 -4.584874 0.672438 1 21 0.06000 0.06000 "MOL " " H3 " 1 H3  0 <> <> <>
+  18 41 -1.576722 -2.990376 -3.687138 1 21 0.01100 0.01100 "MOL " " H4 " 1 H4  0 <> <> <>
+  19 41 0.203725 -1.548110 -2.655173 1 21 0.19700 0.19700 "MOL " " H5 " 1 H5  0 <> <> <>
+  20 41 1.885410 0.602932 -0.115580 1 21 0.06000 0.06000 "MOL " " H6 " 1 H6  0 <> <> <>
+  21 41 1.573403 -0.275700 -1.578530 1 21 0.06000 0.06000 "MOL " " H7 " 1 H7  0 <> <> <>
+  22 43 0.711007 1.945014 -1.659623 1 21 0.38000 0.38000 "MOL " " H8 " 1 H8  0 <> <> <>
+  23 41 0.307839 2.387847 0.619187 1 21 0.06000 0.06000 "MOL " " H9 " 1 H9  0 <> <> <>
+  24 41 -1.152369 2.642945 -0.310629 1 21 0.06000 0.06000 "MOL " " H10" 1 H10  0 <> <> <>
+  25 41 -1.551192 1.286289 1.780487 1 21 0.03000 0.03000 "MOL " " H11" 1 H11  0 <> <> <>
+  26 41 -2.025332 0.420388 0.340142 1 21 0.03000 0.03000 "MOL " " H12" 1 H12  0 <> <> <>
+  27 41 1.892687 -2.421181 -0.017035 1 21 0.06000 0.06000 "MOL " " H13" 1 H13  0 <> <> <>
+  28 41 2.104674 -1.317937 1.339659 1 21 0.06000 0.06000 "MOL " " H14" 1 H14  0 <> <> <>
+  29 41 0.878320 -2.575315 1.413896 1 21 0.06000 0.06000 "MOL " " H15" 1 H15  0 <> <> <>
+  :::
+ } 
+ m_bond[30] { 
+  # First column is bond index #
+  i_m_from
+  i_m_to
+  i_m_order
+  :::
+  1 1 2 1
+  2 1 15 1
+  3 1 16 1
+  4 1 17 1
+  5 2 7 2
+  6 2 3 1
+  7 3 4 2
+  8 4 5 1
+  9 4 18 1
+  10 5 6 2
+  11 5 19 1
+  12 6 7 1
+  13 6 8 1
+  14 8 13 1
+  15 8 9 1
+  16 8 14 1
+  17 9 10 1
+  18 9 20 1
+  19 9 21 1
+  20 10 11 1
+  21 10 22 1
+  22 11 12 1
+  23 11 23 1
+  24 11 24 1
+  25 12 13 1
+  26 12 25 1
+  27 12 26 1
+  28 14 27 1
+  29 14 28 1
+  30 14 29 1
+  :::
+ } 
+} 
+
+f_m_ct { 
+ s_m_title
+ s_m_source_file
+ i_m_source_file_index
+ i_lp_mmshare_version
+ s_lp_label
+ i_lp_orig_ion_str
+ r_epik_Ionization_Penalty
+ r_epik_Ionization_Penalty_Charging
+ r_epik_Ionization_Penalty_Neutral
+ r_epik_State_Penalty
+ i_epik_Tot_Q
+ s_epik_Chemistry_Notes
+ s_st_Chirality_1
+ r_mmod_Potential_Energy-OPLS-2005
+ b_mmod_Minimization_Converged-OPLS-2005
+ r_mmod_RMS_Derivative-OPLS-2005
+ i_mmod_Times_Found-OPLS-2005
+ r_mmod_Relative_Potential_Energy-OPLS-2005
+ b_mmod_Chiralities_Consistent-OPLS-2005
+ i_mmod_Conformation-OPLS-2005
+ i_mmod_Serial_Number-OPLS-2005
+ i_m_ct_format
+ :::
+ "(2~{S})-2-methyl-2-(2-methylpyrimidin-4-yl)morpholine" 
+  SAMPL5_061.mol2 
+  1
+  28013
+  1 
+  1
+    0.2298 
+    0.2298 
+    0.0000 
+    0.2205 
+  1
+  "This compound contains an electron-poor aromatic ring that is susceptible to covalent hydrolysis at low pH, typically resulting in measured values for nitrogen ring protonation that are around two units higher than predicted values." 
+  8_S_13_6_9_14 
+  61.7490844726562
+  1
+  0.0180788692086935
+  1
+  0
+  1
+  1
+  3
+  2
+ m_depend[16] { 
+  # First column is dependency index #
+  i_m_depend_dependency
+  s_m_depend_property
+  :::
+  1 10 r_lp_tautomer_probability 
+  2 10 i_lp_orig_ion_str 
+  3 10 r_epik_Ionization_Penalty 
+  4 10 r_epik_Ionization_Penalty_Charging 
+  5 10 r_epik_Ionization_Penalty_Neutral 
+  6 10 r_epik_State_Penalty 
+  7 10 i_epik_Tot_Q 
+  8 10 s_st_Chirality_1 
+  9 20 r_mmod_Potential_Energy-OPLS-2005 
+  10 20 b_mmod_Minimization_Converged-OPLS-2005 
+  11 20 r_mmod_RMS_Derivative-OPLS-2005 
+  12 20 i_mmod_Times_Found-OPLS-2005 
+  13 20 r_mmod_Relative_Potential_Energy-OPLS-2005 
+  14 20 b_mmod_Chiralities_Consistent-OPLS-2005 
+  15 20 i_mmod_Conformation-OPLS-2005 
+  16 10 i_mmod_Serial_Number-OPLS-2005 
+  :::
+ } 
+ m_atom[30] { 
+  # First column is atom index #
+  i_m_mmod_type
+  r_m_x_coord
+  r_m_y_coord
+  r_m_z_coord
+  i_m_residue_number
+  i_m_color
+  r_m_charge1
+  r_m_charge2
+  s_m_pdb_residue_name
+  s_m_pdb_atom_name
+  i_m_atomic_number
+  i_m_formal_charge
+  s_m_atom_name
+  i_m_Hcount
+  r_epik_H2O_pKa
+  r_epik_H2O_pKa_uncertainty
+  b_st_NoSrcChirality
+  :::
+  1 3 -3.965629 -2.796448 -2.207177 1 2 -0.06500 -0.06500 "MOL " " C1 " 6 0 "C1"  3 <> <> <>
+  2 2 -2.701862 -2.928227 -1.383747 1 2 0.72700 0.72700 "MOL " " C2 " 6 0 "C2"  0 <> <> <>
+  3 25 -2.425885 -4.140202 -0.897989 1 43 -0.83900 -0.83900 "MOL " " N1 " 7 0 "N1"  0   1.195    2.220  <>
+  4 2 -1.295687 -4.262008 -0.171596 1 2 0.65300 0.65300 "MOL " " C3 " 6 0 "C3"  1 <> <> <>
+  5 2 -0.444647 -3.165181 0.066822 1 2 -0.68900 -0.68900 "MOL " " C4 " 6 0 "C4"  1 <> <> <>
+  6 2 -0.836837 -1.927481 -0.492380 1 2 0.54900 0.54900 "MOL " " C5 " 6 0 "C5"  0 <> <> <>
+  7 25 -1.970403 -1.822926 -1.224155 1 43 -0.83900 -0.83900 "MOL " " N2 " 7 0 "N2"  0   0.691    2.220  <>
+  8 3 0.008424 -0.661310 -0.319773 1 2 0.53940 0.53940 "MOL " " C6 " 6 0 "C6"  0 <> <> 1
+  9 3 0.252764 -0.398640 1.190157 1 2 -0.05440 -0.05440 "MOL " " C7 " 6 0 "C7"  2 <> <> <>
+  10 32 0.908734 0.904461 1.420111 1 43 -0.20000 -0.20000 "MOL " " N3 " 7 1 "N3"  2 <> <> <>
+  11 3 0.127521 2.009560 0.837051 1 2 -0.05440 -0.05440 "MOL " " C8 " 6 0 "C8"  2 <> <> <>
+  12 3 -0.100337 1.754356 -0.658673 1 2 0.36440 0.36440 "MOL " " C9 " 6 0 "C9"  2 <> <> <>
+  13 16 -0.698248 0.473651 -0.850176 1 70 -0.40000 -0.40000 "MOL " " O1 " 8 0 "O1"  0 <> <> <>
+  14 3 1.327786 -0.852361 -1.104079 1 2 -0.18000 -0.18000 "MOL " " C10" 6 0 "C10"  3 <> <> <>
+  15 41 -4.351333 -1.776872 -2.173018 1 21 0.06000 0.06000 "MOL " " H1 " 1 0 "H1"  0 <> <> <>
+  16 41 -3.763168 -3.052120 -3.247298 1 21 0.06000 0.06000 "MOL " " H2 " 1 0 "H2"  0 <> <> <>
+  17 41 -4.743637 -3.463534 -1.834341 1 21 0.06000 0.06000 "MOL " " H3 " 1 0 "H3"  0 <> <> <>
+  18 41 -1.066580 -5.241830 0.220463 1 21 0.01100 0.01100 "MOL " " H4 " 1 0 "H4"  0 <> <> <>
+  19 41 0.460379 -3.279217 0.644225 1 21 0.19700 0.19700 "MOL " " H5 " 1 0 "H5"  0 <> <> <>
+  20 41 -0.696903 -0.404097 1.727844 1 21 0.06000 0.06000 "MOL " " H6 " 1 0 "H6"  0 <> <> <>
+  21 41 0.868925 -1.181649 1.632523 1 21 0.06000 0.06000 "MOL " " H7 " 1 0 "H7"  0 <> <> <>
+  22 44 1.010984 1.056500 2.413845 1 21 0.31000 0.31000 "MOL " " H8 " 1 0 "H8"  0   7.724    1.157  <>
+  23 41 -0.828660 2.087544 1.356480 1 21 0.06000 0.06000 "MOL " " H9 " 1 0 "H9"  0 <> <> <>
+  24 41 0.655037 2.951313 0.990433 1 21 0.06000 0.06000 "MOL " " H10" 1 0 "H10"  0 <> <> <>
+  25 41 -0.770266 2.512150 -1.065223 1 21 0.03000 0.03000 "MOL " " H11" 1 0 "H11"  0 <> <> <>
+  26 41 0.830119 1.840559 -1.219096 1 21 0.03000 0.03000 "MOL " " H12" 1 0 "H12"  0 <> <> <>
+  27 41 1.864903 -1.738374 -0.764610 1 21 0.06000 0.06000 "MOL " " H13" 1 0 "H13"  0 <> <> <>
+  28 41 1.130885 -0.979385 -2.169152 1 21 0.06000 0.06000 "MOL " " H14" 1 0 "H14"  0 <> <> <>
+  29 41 2.015057 -0.015051 -0.993646 1 21 0.06000 0.06000 "MOL " " H15" 1 0 "H15"  0 <> <> <>
+  30 44 1.825030 0.890256 0.994742 1 21 0.31000 0.31000 "MOL " "    " 1 0 ""  0   7.724    1.157  <>
+  :::
+ } 
+ m_bond[31] { 
+  # First column is bond index #
+  i_m_from
+  i_m_to
+  i_m_order
+  :::
+  1 1 2 1
+  2 1 15 1
+  3 1 16 1
+  4 1 17 1
+  5 2 7 2
+  6 2 3 1
+  7 3 4 2
+  8 4 5 1
+  9 4 18 1
+  10 5 6 2
+  11 5 19 1
+  12 6 7 1
+  13 6 8 1
+  14 8 13 1
+  15 8 9 1
+  16 8 14 1
+  17 9 10 1
+  18 9 20 1
+  19 9 21 1
+  20 10 11 1
+  21 10 22 1
+  22 10 30 1
+  23 11 12 1
+  24 11 23 1
+  25 11 24 1
+  26 12 13 1
+  27 12 25 1
+  28 12 26 1
+  29 14 27 1
+  30 14 28 1
+  31 14 29 1
+  :::
+ } 
+} 
+
+f_m_ct { 
+ s_m_title
+ s_m_source_file
+ i_m_source_file_index
+ i_lp_mmshare_version
+ s_lp_label
+ i_lp_orig_ion_str
+ r_epik_Ionization_Penalty
+ r_epik_Ionization_Penalty_Charging
+ r_epik_Ionization_Penalty_Neutral
+ r_epik_State_Penalty
+ i_epik_Tot_Q
+ s_epik_Chemistry_Notes
+ s_st_Chirality_1
+ r_mmod_Potential_Energy-OPLS-2005
+ b_mmod_Minimization_Converged-OPLS-2005
+ r_mmod_RMS_Derivative-OPLS-2005
+ i_mmod_Times_Found-OPLS-2005
+ r_mmod_Relative_Potential_Energy-OPLS-2005
+ b_mmod_Chiralities_Consistent-OPLS-2005
+ i_mmod_Conformation-OPLS-2005
+ i_mmod_Serial_Number-OPLS-2005
+ i_m_ct_format
+ :::
+ "(2~{S})-2-methyl-2-(2-methylpyrimidin-4-yl)morpholine" 
+  SAMPL5_061.mol2 
+  1
+  28013
+  1 
+  1
+    0.2298 
+    0.2298 
+    0.0000 
+    0.2205 
+  1
+  "This compound contains an electron-poor aromatic ring that is susceptible to covalent hydrolysis at low pH, typically resulting in measured values for nitrogen ring protonation that are around two units higher than predicted values." 
+  8_R_13_6_9_14 
+  59.092342376709
+  1
+  0.0264124609529972
+  1
+  0
+  1
+  1
+  4
+  2
+ m_depend[16] { 
+  # First column is dependency index #
+  i_m_depend_dependency
+  s_m_depend_property
+  :::
+  1 10 r_lp_tautomer_probability 
+  2 10 i_lp_orig_ion_str 
+  3 10 r_epik_Ionization_Penalty 
+  4 10 r_epik_Ionization_Penalty_Charging 
+  5 10 r_epik_Ionization_Penalty_Neutral 
+  6 10 r_epik_State_Penalty 
+  7 10 i_epik_Tot_Q 
+  8 10 s_st_Chirality_1 
+  9 20 r_mmod_Potential_Energy-OPLS-2005 
+  10 20 b_mmod_Minimization_Converged-OPLS-2005 
+  11 20 r_mmod_RMS_Derivative-OPLS-2005 
+  12 20 i_mmod_Times_Found-OPLS-2005 
+  13 20 r_mmod_Relative_Potential_Energy-OPLS-2005 
+  14 20 b_mmod_Chiralities_Consistent-OPLS-2005 
+  15 20 i_mmod_Conformation-OPLS-2005 
+  16 10 i_mmod_Serial_Number-OPLS-2005 
+  :::
+ } 
+ m_atom[30] { 
+  # First column is atom index #
+  i_m_mmod_type
+  r_m_x_coord
+  r_m_y_coord
+  r_m_z_coord
+  i_m_residue_number
+  i_m_color
+  r_m_charge1
+  r_m_charge2
+  s_m_pdb_residue_name
+  s_m_pdb_atom_name
+  i_m_atomic_number
+  i_m_formal_charge
+  s_m_atom_name
+  i_m_Hcount
+  r_epik_H2O_pKa
+  r_epik_H2O_pKa_uncertainty
+  b_st_NoSrcChirality
+  :::
+  1 3 -3.718661 -3.605173 0.237198 1 2 -0.06500 -0.06500 "MOL " " C1 " 6 0 "C1"  3 <> <> <>
+  2 2 -2.596085 -3.012363 -0.587864 1 2 0.72700 0.72700 "MOL " " C2 " 6 0 "C2"  0 <> <> <>
+  3 25 -2.597806 -3.289361 -1.892770 1 43 -0.83900 -0.83900 "MOL " " N1 " 7 0 "N1"  0   1.195    2.220  <>
+  4 2 -1.589858 -2.773664 -2.625497 1 2 0.65300 0.65300 "MOL " " C3 " 6 0 "C3"  1 <> <> <>
+  5 2 -0.584888 -1.972439 -2.048258 1 2 -0.68900 -0.68900 "MOL " " C4 " 6 0 "C4"  1 <> <> <>
+  6 2 -0.689269 -1.731038 -0.658419 1 2 0.54900 0.54900 "MOL " " C5 " 6 0 "C5"  0 <> <> <>
+  7 25 -1.697733 -2.271542 0.064570 1 43 -0.83900 -0.83900 "MOL " " N2 " 7 0 "N2"  0   0.691    2.220  <>
+  8 3 0.348598 -0.911629 0.125572 1 2 0.53940 0.53940 "MOL " " C6 " 6 0 "C6"  0 <> <> 1
+  9 3 1.069595 0.176025 -0.715827 1 2 -0.05440 -0.05440 "MOL " " C7 " 6 0 "C7"  2 <> <> <>
+  10 32 0.128833 1.236357 -1.129439 1 43 -0.20000 -0.20000 "MOL " " N3 " 7 1 "N3"  2 <> <> <>
+  11 3 -0.507771 1.863147 0.044364 1 2 -0.05440 -0.05440 "MOL " " C8 " 6 0 "C8"  2 <> <> <>
+  12 3 -1.175089 0.789691 0.918200 1 2 0.36440 0.36440 "MOL " " C9 " 6 0 "C9"  2 <> <> <>
+  13 16 -0.233381 -0.234444 1.248670 1 70 -0.40000 -0.40000 "MOL " " O1 " 8 0 "O1"  0 <> <> <>
+  14 3 1.386139 -1.872238 0.728828 1 2 -0.18000 -0.18000 "MOL " " C10" 6 0 "C10"  3 <> <> <>
+  15 41 -3.948003 -2.973345 1.096057 1 21 0.06000 0.06000 "MOL " " H1 " 1 0 "H1"  0 <> <> <>
+  16 41 -4.627217 -3.708391 -0.357198 1 21 0.06000 0.06000 "MOL " " H2 " 1 0 "H2"  0 <> <> <>
+  17 41 -3.433693 -4.591694 0.603040 1 21 0.06000 0.06000 "MOL " " H3 " 1 0 "H3"  0 <> <> <>
+  18 41 -1.581334 -3.005178 -3.680283 1 21 0.01100 0.01100 "MOL " " H4 " 1 0 "H4"  0 <> <> <>
+  19 41 0.218356 -1.588185 -2.656919 1 21 0.19700 0.19700 "MOL " " H5 " 1 0 "H5"  0 <> <> <>
+  20 41 1.858730 0.640831 -0.122481 1 21 0.06000 0.06000 "MOL " " H6 " 1 0 "H6"  0 <> <> <>
+  21 41 1.566078 -0.244276 -1.589598 1 21 0.06000 0.06000 "MOL " " H7 " 1 0 "H7"  0 <> <> <>
+  22 44 0.626354 1.941477 -1.655135 1 21 0.31000 0.31000 "MOL " " H8 " 1 0 "H8"  0   7.724    1.157  <>
+  23 41 0.249344 2.397898 0.619618 1 21 0.06000 0.06000 "MOL " " H9 " 1 0 "H9"  0 <> <> <>
+  24 41 -1.239866 2.600334 -0.286213 1 21 0.06000 0.06000 "MOL " " H10" 1 0 "H10"  0 <> <> <>
+  25 41 -1.541559 1.237211 1.842130 1 21 0.03000 0.03000 "MOL " " H11" 1 0 "H11"  0 <> <> <>
+  26 41 -2.046334 0.373637 0.412096 1 21 0.03000 0.03000 "MOL " " H12" 1 0 "H12"  0 <> <> <>
+  27 41 1.912014 -2.425613 -0.049908 1 21 0.06000 0.06000 "MOL " " H13" 1 0 "H13"  0 <> <> <>
+  28 41 2.131977 -1.335609 1.315976 1 21 0.06000 0.06000 "MOL " " H14" 1 0 "H14"  0 <> <> <>
+  29 41 0.912651 -2.599903 1.388985 1 21 0.06000 0.06000 "MOL " " H15" 1 0 "H15"  0 <> <> <>
+  30 44 -0.586687 0.831455 -1.717252 1 21 0.31000 0.31000 "MOL " "    " 1 0 ""  0   7.724    1.157  <>
+  :::
+ } 
+ m_bond[31] { 
+  # First column is bond index #
+  i_m_from
+  i_m_to
+  i_m_order
+  :::
+  1 1 2 1
+  2 1 15 1
+  3 1 16 1
+  4 1 17 1
+  5 2 7 2
+  6 2 3 1
+  7 3 4 2
+  8 4 5 1
+  9 4 18 1
+  10 5 6 2
+  11 5 19 1
+  12 6 7 1
+  13 6 8 1
+  14 8 13 1
+  15 8 9 1
+  16 8 14 1
+  17 9 10 1
+  18 9 20 1
+  19 9 21 1
+  20 10 11 1
+  21 10 22 1
+  22 10 30 1
+  23 11 12 1
+  24 11 23 1
+  25 11 24 1
+  26 12 13 1
+  27 12 25 1
+  28 12 26 1
+  29 14 27 1
+  30 14 28 1
+  31 14 29 1
+  :::
+ } 
+} 
+

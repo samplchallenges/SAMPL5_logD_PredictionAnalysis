@@ -1,0 +1,77 @@
+Submission #, Method Name, Submitter, File Name
+1, QM/MM-CGenFF/BLYP/6-31G*, Gerhard Koenig, NIH-MPIKOFO-QMMM-nobatch2.txt
+2, QM/OLYP/DZP/SMD, Gerhard Koenig, NIH-MPIKOFO-OLYP-4.txt
+3, SOMD/AM1BCC-GAFF-TIP3P/MBAR/C, Julien Michel, Batch0-1_C-3.txt
+4, EC-RISM(3-par), Stefan Kast, ECRISM-4.txt
+5, 3D-RISM/PSE-3/pc_MDFT, Tyler Luchko, pse3-pc_MDFT-4.txt
+6, Normal/solvation/ARROW/ARROW-pKa-water-cyclohexane, Leonid Pereyaslavets, InterXInc-4.txt
+7, 3D-RISM/PSE-3/uc, Tyler Luchko, pse3-uc-8.txt
+8, QMOPT/M06/RELPKA/SOLV, Frank Pickard, SOLV_RELPKA_x_QMOPT_M06_20.txt
+9, 3D-RISM/KH/rism, Tyler Luchko, kh-rism-1.txt
+10, MMBAR/None/ABSPKA/SOLV, Frank Pickard, SOLV_ABSPKA_x_MMBAR_01.txt
+11, SOMD/AM1BCC-GAFF-TIP3P/MBAR/A, Julien Michel, Batch0-2_A-1.txt
+12, SOMD/AM1BCC-GAFF-TIP3P/MBAR/C, Julien Michel, Batch0-2_C-3.txt
+13, SOMD/AM1BCC-GAFF-TIP3P/MBAR/D, Julien Michel, Batch0_D-4.txt
+14, QMOPT/M06/ABSPKA/VSOLV, Frank Pickard, VSOLV_ABSPKA_x_QMOPT_M06_21.txt
+15, QMNBB/OLYP/RELPKA/SOLV, Frank Pickard, SOLV_RELPKA_x_QMNBB_OLYP_08.txt
+16, COSMO-RS/COSMOtherm, Andreas Klamt, COSMOlogic.txt
+17, 3D-RISM/PSE-3/pcplus_MDFT, Tyler Luchko, pse3-pcplus_MDFT-6.txt
+18, QMOPT/M06/NOPKA/SOLV, Frank Pickard, SOLV_NOPKA_x_QMOPT_M06_17.txt
+19, Normal/solvation/GAFF/GAFF-Torsional-Restraints-water-cyclohexane, Leonid Pereyaslavets, InterXInc-7.txt
+20, QMNBB/M06/ABSPKA/VSOLV, Frank Pickard, VSOLV_ABSPKA_x_QMNBB_M06_11.txt
+21, QM/M06-2X/6-31+G*/SMD, Gerhard Koenig, NIH-MPIKOFO-M062X-f8892.txt
+22, Normal/solvation/QMPFF3/QMPFF3-water-cyclohexane, Leonid Pereyaslavets, InterXInc-1.txt
+23, Empirical SolventExcludedSurface AtomType Model_2, Diogo Santos Martins, empiricalSES-2.txt
+24, EC-RISM(2-par), Stefan Kast, ECRISM-2.txt
+25, MMBAR/None/RELPKA/VSOLV, Frank Pickard, VSOLV_RELPKA_x_MMBAR_13.txt
+26, MD/CGENFF, Gerhard Koenig, NIH-MPIKOFO-MM-1.txt
+27, QMOPT/M06/NOPKA/VSOLV, Frank Pickard, VSOLV_NOPKA_x_QMOPT_M06_19.txt
+28, QMNBB/M06/ABSPKA/SOLV, Frank Pickard, SOLV_ABSPKA_x_QMNBB_M06_03.txt
+29, 3D-RISM/PSE-3/pcplus_3DRISM, Tyler Luchko, pse3-pcplus_3DRISM-5.txt
+30, Normal/solvation/ARROW/ARROW-water-cyclohexane, Leonid Pereyaslavets, InterXInc-2.txt
+31, QMNBB/OLYP/ABSPKA/VSOLV, Frank Pickard, VSOLV_ABSPKA_x_QMNBB_OLYP_12.txt
+32, MD/solvation/OPLS-AA/TIP4P, Bogdan Iorga, iorgabeckstein-2.txt
+33, MMBAR/None/RELPKA/SOLV, Frank Pickard, SOLV_RELPKA_x_MMBAR_05.txt
+34, QMOPT/M06/ABSPKA/SOLV, Frank Pickard, SOLV_ABSPKA_x_QMOPT_M06_18.txt
+35, 3D-RISM/KH/uc, Tyler Luchko, kh-uc-2.txt
+36, Explicit/solvation/GAFF-DC/H2O-DC/Cyclohexane_UA-DC, Christopher Fennell, exp-env-dicorr-2.txt
+37, SOMD/AM1BCC-GAFF-TIP3P/MBAR/C, Julien Michel, Batch0_C-3.txt
+38, MD/CGENFF, Gerhard Koenig, NIH-MPIKOFO-MM-f8892.txt
+39, Solvation/GAFF/TIP3P/neutral, Caitlin Bannan, MobleySAMPL-1.txt
+40, bp3w91 verticle solvation, Anonymous, ---
+41, MMBAR/None/ABSPKA/VSOLV, Frank Pickard, VSOLV_ABSPKA_x_MMBAR_09.txt
+42, Explicit/solvation/GAFF/H2O-DC/Cyclohexane_UA-DC, Christopher Fennell, exp-env-normal-1.txt
+43, QM/MM-CGenFF/BLYP/6-31G*, Gerhard Koenig, NIH-MPIKOFO-QMMM-f8892.txt
+44, QM/OLYP/DZP/SMD, Gerhard Koenig, NIH-MPIKOFO-OLYP-f8892.txt
+45, Normal/solvation/QMPFF3/QMPFF3-pKa-water-cyclohexane, Leonid Pereyaslavets, InterXInc-3.txt
+46, 3D-RISM/PSE-3/rism, Tyler Luchko, pse3-rism-7.txt
+47, QMNBB/OLYP/RELPKA/VSOLV, Frank Pickard, VSOLV_RELPKA_x_QMNBB_OLYP_16.txt
+48, Extended Solvent-Contact Model, Hwangseo Park, Hwangseo_Park-1.txt
+49, Empirical SolventExcludedSurface AtomType Model_1, Diogo Santos Martins, empiricalSES-1.txt
+50, SOMD/AM1BCC-GAFF-TIP3P/MBAR/B, Julien Michel, Batch0-1_B-2.txt
+51, QMMMNBB/BLYP/ABSPKA/SOLV, Frank Pickard, SOLV_ABSPKA_x_QMMMNBB_BLYP_02.txt
+52, EC-RISM(2-par)/MoKa, Stefan Kast, ECRISM-1.txt
+53, Normal/solvation/MOSCED(SMD), Andrew Paluch, paluch-2.txt
+54, QMNBB/OLYP/ABSPKA/SOLV, Frank Pickard, SOLV_ABSPKA_x_QMNBB_OLYP_04.txt
+55, SOMD/AM1BCC-GAFF-TIP3P/MBAR/D, Julien Michel, Batch0-1_D-4.txt
+56, QMOPT/M06/RELPKA/VSOLV, Frank Pickard, VSOLV_RELPKA_x_QMOPT_M06_22.txt
+57, SOMD/AM1BCC-GAFF-TIP3P/MBAR/D, Julien Michel, Batch0-2_D-4.txt
+58, Normal/solvation/ARROW/ARROW-hydrophobic-correction-pKa-water-cyclohexane, Leonid Pereyaslavets, InterXInc-6.txt
+59, EC-RISM(3-par)/MoKa, Stefan Kast, ECRISM-3.txt
+60, Normal/solvation/M06-2X/6-31G(d) SMD, Andrew Paluch, paluch-1.txt
+61, QM/M06-2X/6-31+G*/SMD, Gerhard Koenig, NIH-MPIKOFO-M062X-3.txt
+62, SEA/TIP3P-Water/Cyclohexane_UA-DC/GAFF-scaled, Emiliano Brini, fieldSEA-GAFFscaled-Submission-2.txt
+63, SOMD/AM1BCC-GAFF-TIP3P/MBAR/B, Julien Michel, Batch0-2_B-2.txt
+64, QMMMNBB/BLYP/RELPKA/SOLV, Frank Pickard, SOLV_RELPKA_x_QMMMNBB_BLYP_06.txt
+65, Normal/solvation/ARROW/ARROW-hydrophobic-correction-water-cyclohexane, Leonid Pereyaslavets, InterXInc-5.txt
+66, QMMMNBB/BLYP/RELPKA/VSOLV, Frank Pickard, VSOLV_RELPKA_x_QMMMNBB_BLYP_14.txt
+67, SOMD/AM1BCC-GAFF-TIP3P/MBAR/A, Julien Michel, Batch0_A-1.txt
+68, MD/solvation/OPLS-AA/TIP4P, Bogdan Iorga, iorgabeckstein-1.txt
+69, SOMD/AM1BCC-GAFF-TIP3P/MBAR/B, Julien Michel, Batch0_B-2.txt
+70, SOMD/AM1BCC-GAFF-TIP3P/MBAR/A, Julien Michel, Batch0-1_A-1.txt
+71, 3D-RISM/PSE-3/pc_3DRISM, Tyler Luchko, pse3-pc_3DRISM-3.txt
+72, QMNBB/M06/RELPKA/VSOLV, Frank Pickard, VSOLV_RELPKA_x_QMNBB_M06_15.txt
+73, Normal/solvation/GAFF/ELBA, Samuel Genheden, genheden-1.txt
+74, QMNBB/M06/RELPKA/SOLV, Frank Pickard, SOLV_RELPKA_x_QMNBB_M06_07.txt
+75, SEA/TIP3P-Water/Cyclohexane_UA-DC/GAFF, Emiliano Brini, fieldSEA-GAFF-Submission-1.txt
+76, QMMMNBB/BLYP/ABSPKA/VSOLV, Frank Pickard, VSOLV_ABSPKA_x_QMMMNBB_BLYP_10.txt

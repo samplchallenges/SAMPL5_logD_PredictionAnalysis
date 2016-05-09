@@ -1,0 +1,171 @@
+{ 
+ s_m_m2io_version
+ :::
+ 2.0.0 
+} 
+
+f_m_ct { 
+ s_m_title
+ s_m_source_file
+ i_m_source_file_index
+ i_lp_mmshare_version
+ s_lp_label
+ i_lp_orig_ion_str
+ r_epik_Ionization_Penalty
+ r_epik_Ionization_Penalty_Charging
+ r_epik_Ionization_Penalty_Neutral
+ r_epik_State_Penalty
+ i_epik_Tot_Q
+ s_epik_Chemistry_Notes
+ r_mmod_Potential_Energy-OPLS-2005
+ b_mmod_Minimization_Converged-OPLS-2005
+ r_mmod_RMS_Derivative-OPLS-2005
+ i_mmod_Times_Found-OPLS-2005
+ r_mmod_Relative_Potential_Energy-OPLS-2005
+ b_mmod_Chiralities_Consistent-OPLS-2005
+ i_mmod_Conformation-OPLS-2005
+ i_mmod_Serial_Number-OPLS-2005
+ i_m_ct_format
+ :::
+ "ethyl 3-amino-4,5,6-trimethyl-thieno[2,3-b]pyridine-2-carboxylate" 
+  SAMPL5_002.mol2 
+  1
+  28013
+  1 
+  1
+    0.0008 
+    0.0000 
+    0.0008 
+    0.0004 
+  0
+  "This compound has an ester and may undergo hydrolysis at high or low pH." 
+  76.6958389282227
+  1
+  0.00516190193593502
+  1
+  0
+  1
+  1
+  1
+  2
+ m_depend[15] { 
+  # First column is dependency index #
+  i_m_depend_dependency
+  s_m_depend_property
+  :::
+  1 10 r_lp_tautomer_probability 
+  2 10 i_lp_orig_ion_str 
+  3 10 r_epik_Ionization_Penalty 
+  4 10 r_epik_Ionization_Penalty_Charging 
+  5 10 r_epik_Ionization_Penalty_Neutral 
+  6 10 r_epik_State_Penalty 
+  7 10 i_epik_Tot_Q 
+  8 20 r_mmod_Potential_Energy-OPLS-2005 
+  9 20 b_mmod_Minimization_Converged-OPLS-2005 
+  10 20 r_mmod_RMS_Derivative-OPLS-2005 
+  11 20 i_mmod_Times_Found-OPLS-2005 
+  12 20 r_mmod_Relative_Potential_Energy-OPLS-2005 
+  13 20 b_mmod_Chiralities_Consistent-OPLS-2005 
+  14 20 i_mmod_Conformation-OPLS-2005 
+  15 10 i_mmod_Serial_Number-OPLS-2005 
+  :::
+ } 
+ m_atom[34] { 
+  # First column is atom index #
+  i_m_mmod_type
+  r_m_x_coord
+  r_m_y_coord
+  r_m_z_coord
+  i_m_residue_number
+  i_m_color
+  r_m_charge1
+  r_m_charge2
+  s_m_pdb_residue_name
+  s_m_pdb_atom_name
+  i_m_atomic_number
+  s_m_atom_name
+  i_m_Hcount
+  r_epik_H2O_pKa
+  r_epik_H2O_pKa_uncertainty
+  :::
+  1 3 -0.477082 8.541316 -0.647056 1 2 -0.18000 -0.18000 "MOL " " C1 " 6 C1  3 <> <>
+  2 3 -1.359427 7.297879 -0.513164 1 2 0.19000 0.19000 "MOL " " C2 " 6 C2  2 <> <>
+  3 16 -0.535030 6.147018 -0.430693 1 70 -0.33000 -0.33000 "MOL " " O1 " 8 O1  0 <> <>
+  4 2 -1.094025 4.925581 -0.306946 1 2 0.62500 0.62500 "MOL " " C3 " 6 C3  0 <> <>
+  5 15 -2.310147 4.730580 -0.258728 1 70 -0.43000 -0.43000 "MOL " " O2 " 8 O2  0 <> <>
+  6 2 -0.109857 3.832336 -0.233681 1 2 -0.06500 -0.06500 "MOL " " C4 " 6 C4  0 <> <>
+  7 2 -0.329855 2.474614 -0.106266 1 2 0.00550 0.00550 "MOL " " C5 " 6 C5  0 <> <>
+  8 2 0.914510 1.709246 -0.069000 1 2 0.17440 0.17440 "MOL " " C6 " 6 C6  0 <> <>
+  9 2 1.229926 0.323182 0.047436 1 2 -0.06480 -0.06480 "MOL " " C7 " 6 C7  0 <> <>
+  10 2 2.588596 -0.099794 0.051084 1 2 -0.29460 -0.29460 "MOL " " C8 " 6 C8  0 <> <>
+  11 2 3.602906 0.885637 -0.062978 1 2 0.22320 0.22320 "MOL " " C9 " 6 C9  0 <> <>
+  12 25 3.360726 2.206633 -0.175424 1 43 -0.50900 -0.50900 "MOL " " N1 " 7 N1  0   4.459    2.220 
+  13 2 2.049879 2.572028 -0.175112 1 2 0.33590 0.33590 "MOL " " C10" 6 C10  0 <> <>
+  14 49 1.581351 4.254724 -0.314304 1 13 -0.06560 -0.06560 "MOL " " S1 " 16 S1  0 <> <>
+  15 3 5.080005 0.528253 -0.068207 1 2 -0.06500 -0.06500 "MOL " " C11" 6 C11  3 <> <>
+  16 3 2.944063 -1.578827 0.174853 1 2 -0.06500 -0.06500 "MOL " " C12" 6 C12  3 <> <>
+  17 3 0.092771 -0.685990 0.166732 1 2 -0.06500 -0.06500 "MOL " " C13" 6 C13  3 <> <>
+  18 25 -1.587193 1.853329 -0.018749 1 43 -0.92000 -0.92000 "MOL " " N2 " 7 N2  2   2.922    2.220 
+  19 41 -1.085646 9.443232 -0.712635 1 21 0.06000 0.06000 "MOL " " H1 " 1 H1  0 <> <>
+  20 41 0.185298 8.646436 0.212551 1 21 0.06000 0.06000 "MOL " " H2 " 1 H2  0 <> <>
+  21 41 0.140936 8.488802 -1.543726 1 21 0.06000 0.06000 "MOL " " H3 " 1 H3  0 <> <>
+  22 41 -1.980958 7.373712 0.380109 1 21 0.03000 0.03000 "MOL " " H4 " 1 H4  0 <> <>
+  23 41 -2.025250 7.216326 -1.373406 1 21 0.03000 0.03000 "MOL " " H5 " 1 H5  0 <> <>
+  24 41 5.709685 1.414195 -0.163625 1 21 0.06000 0.06000 "MOL " " H6 " 1 H6  0 <> <>
+  25 41 5.354879 0.027308 0.860276 1 21 0.06000 0.06000 "MOL " " H7 " 1 H7  0 <> <>
+  26 41 5.310288 -0.131156 -0.905306 1 21 0.06000 0.06000 "MOL " " H8 " 1 H8  0 <> <>
+  27 41 4.013471 -1.778236 0.165740 1 21 0.06000 0.06000 "MOL " " H9 " 1 H9  0 <> <>
+  28 41 2.554325 -1.982113 1.109828 1 21 0.06000 0.06000 "MOL " " H10" 1 H10  0 <> <>
+  29 41 2.509807 -2.140306 -0.652719 1 21 0.06000 0.06000 "MOL " " H11" 1 H11  0 <> <>
+  30 41 0.415074 -1.721099 0.251497 1 21 0.06000 0.06000 "MOL " " H12" 1 H12  0 <> <>
+  31 41 -0.506501 -0.467372 1.050686 1 21 0.06000 0.06000 "MOL " " H13" 1 H13  0 <> <>
+  32 41 -0.550990 -0.625479 -0.710881 1 21 0.06000 0.06000 "MOL " " H14" 1 H14  0 <> <>
+  33 43 -2.440779 2.394640 -0.045774 1 21 0.36000 0.36000 "MOL " " H15" 1 H15  0  11.048    2.220 
+  34 43 -1.682177 0.852341 0.073492 1 21 0.36000 0.36000 "MOL " " H16" 1 H16  0  11.048    2.220 
+  :::
+ } 
+ m_bond[35] { 
+  # First column is bond index #
+  i_m_from
+  i_m_to
+  i_m_order
+  :::
+  1 1 2 1
+  2 1 19 1
+  3 1 20 1
+  4 1 21 1
+  5 2 3 1
+  6 2 22 1
+  7 2 23 1
+  8 3 4 1
+  9 4 5 2
+  10 4 6 1
+  11 6 14 1
+  12 6 7 2
+  13 7 8 1
+  14 7 18 1
+  15 8 13 2
+  16 8 9 1
+  17 9 10 2
+  18 9 17 1
+  19 10 11 1
+  20 10 16 1
+  21 11 12 2
+  22 11 15 1
+  23 12 13 1
+  24 13 14 1
+  25 15 24 1
+  26 15 25 1
+  27 15 26 1
+  28 16 27 1
+  29 16 28 1
+  30 16 29 1
+  31 17 30 1
+  32 17 31 1
+  33 17 32 1
+  34 18 33 1
+  35 18 34 1
+  :::
+ } 
+} 
+

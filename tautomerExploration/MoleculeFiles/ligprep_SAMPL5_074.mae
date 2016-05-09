@@ -1,0 +1,2838 @@
+{ 
+ s_m_m2io_version
+ :::
+ 2.0.0 
+} 
+
+f_m_ct { 
+ s_m_title
+ s_m_source_file
+ i_m_source_file_index
+ i_lp_mmshare_version
+ s_lp_label
+ r_lp_tautomer_probability
+ i_lp_orig_ion_str
+ r_epik_Ionization_Penalty
+ r_epik_Ionization_Penalty_Charging
+ r_epik_Ionization_Penalty_Neutral
+ r_epik_State_Penalty
+ i_epik_Tot_Q
+ s_epik_Chemistry_Notes
+ s_st_Chirality_1
+ s_st_Chirality_2
+ s_st_Chirality_3
+ s_st_Chirality_4
+ r_mmod_Potential_Energy-OPLS-2005
+ b_mmod_Minimization_Converged-OPLS-2005
+ r_mmod_RMS_Derivative-OPLS-2005
+ i_mmod_Times_Found-OPLS-2005
+ r_mmod_Relative_Potential_Energy-OPLS-2005
+ b_mmod_Chiralities_Consistent-OPLS-2005
+ i_mmod_Conformation-OPLS-2005
+ i_mmod_Serial_Number-OPLS-2005
+ i_m_ct_format
+ :::
+ "(2~{R},3~{R},4~{S},5~{R})-2-(6-aminopurin-9-yl)-5-(hydroxymethyl)tetrahydrofuran-3,4-diol" 
+  SAMPL5_074.mol2 
+  1
+  28013
+  1 
+  1
+  1
+    0.0003 
+    0.0000 
+    0.0003 
+   -0.0000 
+  0
+  "This compound contains an acetal/aminal-like group ( X-CH(R)-Y where X, Y are N, S, or O) that may be acid/base labile, releasing an aldehyde." 
+  10_R_18_7_12_11 
+  12_R_22_10_14_13 
+  14_S_21_16_12_15 
+  16_R_18_14_19_17 
+  153.604095458984
+  1
+  0.00817905366420746
+  1
+  0
+  1
+  1
+  1
+  2
+ m_depend[19] { 
+  # First column is dependency index #
+  i_m_depend_dependency
+  s_m_depend_property
+  :::
+  1 10 r_lp_tautomer_probability 
+  2 10 i_lp_orig_ion_str 
+  3 10 r_epik_Ionization_Penalty 
+  4 10 r_epik_Ionization_Penalty_Charging 
+  5 10 r_epik_Ionization_Penalty_Neutral 
+  6 10 r_epik_State_Penalty 
+  7 10 i_epik_Tot_Q 
+  8 10 s_st_Chirality_1 
+  9 10 s_st_Chirality_2 
+  10 10 s_st_Chirality_3 
+  11 10 s_st_Chirality_4 
+  12 20 r_mmod_Potential_Energy-OPLS-2005 
+  13 20 b_mmod_Minimization_Converged-OPLS-2005 
+  14 20 r_mmod_RMS_Derivative-OPLS-2005 
+  15 20 i_mmod_Times_Found-OPLS-2005 
+  16 20 r_mmod_Relative_Potential_Energy-OPLS-2005 
+  17 20 b_mmod_Chiralities_Consistent-OPLS-2005 
+  18 20 i_mmod_Conformation-OPLS-2005 
+  19 10 i_mmod_Serial_Number-OPLS-2005 
+  :::
+ } 
+ m_atom[32] { 
+  # First column is atom index #
+  i_m_mmod_type
+  r_m_x_coord
+  r_m_y_coord
+  r_m_z_coord
+  i_m_residue_number
+  i_m_color
+  r_m_charge1
+  r_m_charge2
+  s_m_pdb_residue_name
+  s_m_pdb_atom_name
+  i_m_atomic_number
+  s_m_atom_name
+  i_m_Hcount
+  r_epik_H2O_pKa
+  r_epik_H2O_pKa_uncertainty
+  b_st_NoSrcChirality
+  :::
+  1 2 -1.474369 -5.053904 1.074607 1 2 0.22000 0.22000 "MOL " " C1 " 6 C1  1 <> <> <>
+  2 25 -2.480494 -5.234139 0.211936 1 43 -0.53000 -0.53000 "MOL " " N1 " 7 N1  0   3.974    0.730  <>
+  3 2 -3.198951 -4.166309 -0.207010 1 2 0.44000 0.44000 "MOL " " C2 " 6 C2  0 <> <> <>
+  4 2 -2.856847 -2.882797 0.287591 1 2 0.15000 0.15000 "MOL " " C3 " 6 C3  0 <> <> <>
+  5 2 -1.766465 -2.844127 1.198184 1 2 0.38000 0.38000 "MOL " " C4 " 6 C4  0 <> <> <>
+  6 25 -1.037463 -3.916677 1.623613 1 43 -0.55000 -0.55000 "MOL " " N2 " 7 N2  0  -0.400    2.220  <>
+  7 25 -1.609179 -1.519639 1.541114 1 43 -0.50000 -0.50000 "MOL " " N3 " 7 N3  0 <> <> <>
+  8 2 -2.591053 -0.850030 0.840437 1 2 0.20000 0.20000 "MOL " " C5 " 6 C5  1 <> <> <>
+  9 25 -3.350827 -1.600405 0.087115 1 43 -0.49000 -0.49000 "MOL " " N4 " 7 N4  0   2.923    2.220  <>
+  10 3 -0.576913 -0.979060 2.477751 1 2 0.45000 0.45000 "MOL " " C6 " 6 C6  1 <> <> 1
+  11 41 -0.576324 -1.670426 3.322160 1 21 0.10000 0.10000 "MOL " " H1 " 1 H1  0 <> <> <>
+  12 3 0.762497 -0.856553 1.740631 1 2 0.20500 0.20500 "MOL " " C7 " 6 C7  1 <> <> 1
+  13 41 0.814605 -1.540483 0.892083 1 21 0.06000 0.06000 "MOL " " H2 " 1 H2  0 <> <> <>
+  14 3 0.734438 0.597651 1.297499 1 2 0.20500 0.20500 "MOL " " C8 " 6 C8  1 <> <> 1
+  15 41 0.142954 0.683544 0.384403 1 21 0.06000 0.06000 "MOL " " H3 " 1 H3  0 <> <> <>
+  16 3 0.001931 1.278210 2.455238 1 2 0.17000 0.17000 "MOL " " C9 " 6 C9  1 <> <> 1
+  17 41 0.697238 1.431663 3.283057 1 21 0.03000 0.03000 "MOL " " H4 " 1 H4  0 <> <> <>
+  18 16 -0.972657 0.311313 2.846496 1 70 -0.40000 -0.40000 "MOL " " O1 " 8 O1  0 <> <> <>
+  19 3 -0.691269 2.591833 2.059827 1 2 0.14500 0.14500 "MOL " " C10" 6 C10  2 <> <> <>
+  20 16 -0.974256 3.356949 3.211802 1 70 -0.65500 -0.65500 "MOL " " O2 " 8 O2  1  -0.689    0.362  <>
+  21 16 2.033494 1.111796 1.063675 1 70 -0.68300 -0.68300 "MOL " " O3 " 8 O3  1  -1.841    0.498  <>
+  22 16 1.848953 -1.139956 2.602572 1 70 -0.68300 -0.68300 "MOL " " O4 " 8 O4  1  -2.303    0.700  <>
+  23 25 -4.200643 -4.374147 -1.071573 1 43 -0.81000 -0.81000 "MOL " " N5 " 7 N5  2 <> <> <>
+  24 41 -0.943297 -5.948030 1.366622 1 21 0.20000 0.20000 "MOL " " H5 " 1 H5  0 <> <> <>
+  25 41 -2.730565 0.219255 0.902214 1 21 0.20000 0.20000 "MOL " " H6 " 1 H6  0 <> <> <>
+  26 41 -0.033353 3.188040 1.427005 1 21 0.06000 0.06000 "MOL " " H7 " 1 H7  0 <> <> <>
+  27 41 -1.603536 2.405848 1.492675 1 21 0.06000 0.06000 "MOL " " H8 " 1 H8  0 <> <> <>
+  28 42 -1.397884 4.159078 2.946415 1 21 0.39000 0.39000 "MOL " " H9 " 1 H9  0  14.060    0.483  <>
+  29 42 1.960950 2.021834 0.818897 1 21 0.41800 0.41800 "MOL " " H10" 1 H10  0  12.602    0.468  <>
+  30 42 2.634786 -0.811938 2.190575 1 21 0.41800 0.41800 "MOL " " H11" 1 H11  0  11.996    0.700  <>
+  31 43 -4.401813 -5.309927 -1.392094 1 21 0.37000 0.37000 "MOL " " H12" 1 H12  0  13.043    0.730  <>
+  32 43 -4.750787 -3.592344 -1.397078 1 21 0.37000 0.37000 "MOL " " H13" 1 H13  0  13.043    0.730  <>
+  :::
+ } 
+ m_bond[34] { 
+  # First column is bond index #
+  i_m_from
+  i_m_to
+  i_m_order
+  :::
+  1 1 6 2
+  2 1 2 1
+  3 1 24 1
+  4 2 3 2
+  5 3 4 1
+  6 3 23 1
+  7 4 9 1
+  8 4 5 2
+  9 5 6 1
+  10 5 7 1
+  11 7 8 1
+  12 7 10 1
+  13 8 9 2
+  14 8 25 1
+  15 10 11 1
+  16 10 18 1
+  17 10 12 1
+  18 12 13 1
+  19 12 14 1
+  20 12 22 1
+  21 14 15 1
+  22 14 16 1
+  23 14 21 1
+  24 16 17 1
+  25 16 18 1
+  26 16 19 1
+  27 19 20 1
+  28 19 26 1
+  29 19 27 1
+  30 20 28 1
+  31 21 29 1
+  32 22 30 1
+  33 23 31 1
+  34 23 32 1
+  :::
+ } 
+} 
+
+f_m_ct { 
+ s_m_title
+ s_m_source_file
+ i_m_source_file_index
+ i_lp_mmshare_version
+ s_lp_label
+ r_lp_tautomer_probability
+ i_lp_orig_ion_str
+ r_epik_Ionization_Penalty
+ r_epik_Ionization_Penalty_Charging
+ r_epik_Ionization_Penalty_Neutral
+ r_epik_State_Penalty
+ i_epik_Tot_Q
+ s_epik_Chemistry_Notes
+ s_st_Chirality_1
+ s_st_Chirality_2
+ s_st_Chirality_3
+ s_st_Chirality_4
+ r_mmod_Potential_Energy-OPLS-2005
+ b_mmod_Minimization_Converged-OPLS-2005
+ r_mmod_RMS_Derivative-OPLS-2005
+ i_mmod_Times_Found-OPLS-2005
+ r_mmod_Relative_Potential_Energy-OPLS-2005
+ b_mmod_Chiralities_Consistent-OPLS-2005
+ i_mmod_Conformation-OPLS-2005
+ i_mmod_Serial_Number-OPLS-2005
+ i_m_ct_format
+ :::
+ "(2~{R},3~{R},4~{S},5~{R})-2-(6-aminopurin-9-yl)-5-(hydroxymethyl)tetrahydrofuran-3,4-diol" 
+  SAMPL5_074.mol2 
+  1
+  28013
+  1 
+  1
+  1
+    0.0003 
+    0.0000 
+    0.0003 
+   -0.0000 
+  0
+  "This compound contains an acetal/aminal-like group ( X-CH(R)-Y where X, Y are N, S, or O) that may be acid/base labile, releasing an aldehyde." 
+  10_S_18_7_12_11 
+  12_R_22_10_14_13 
+  14_S_21_16_12_15 
+  16_R_18_14_19_17 
+  176.490524291992
+  1
+  0.00356828421354294
+  1
+  0
+  1
+  1
+  2
+  2
+ m_depend[19] { 
+  # First column is dependency index #
+  i_m_depend_dependency
+  s_m_depend_property
+  :::
+  1 10 r_lp_tautomer_probability 
+  2 10 i_lp_orig_ion_str 
+  3 10 r_epik_Ionization_Penalty 
+  4 10 r_epik_Ionization_Penalty_Charging 
+  5 10 r_epik_Ionization_Penalty_Neutral 
+  6 10 r_epik_State_Penalty 
+  7 10 i_epik_Tot_Q 
+  8 10 s_st_Chirality_1 
+  9 10 s_st_Chirality_2 
+  10 10 s_st_Chirality_3 
+  11 10 s_st_Chirality_4 
+  12 20 r_mmod_Potential_Energy-OPLS-2005 
+  13 20 b_mmod_Minimization_Converged-OPLS-2005 
+  14 20 r_mmod_RMS_Derivative-OPLS-2005 
+  15 20 i_mmod_Times_Found-OPLS-2005 
+  16 20 r_mmod_Relative_Potential_Energy-OPLS-2005 
+  17 20 b_mmod_Chiralities_Consistent-OPLS-2005 
+  18 20 i_mmod_Conformation-OPLS-2005 
+  19 10 i_mmod_Serial_Number-OPLS-2005 
+  :::
+ } 
+ m_atom[32] { 
+  # First column is atom index #
+  i_m_mmod_type
+  r_m_x_coord
+  r_m_y_coord
+  r_m_z_coord
+  i_m_residue_number
+  i_m_color
+  r_m_charge1
+  r_m_charge2
+  s_m_pdb_residue_name
+  s_m_pdb_atom_name
+  i_m_atomic_number
+  s_m_atom_name
+  i_m_Hcount
+  r_epik_H2O_pKa
+  r_epik_H2O_pKa_uncertainty
+  b_st_NoSrcChirality
+  :::
+  1 2 -1.169225 -4.751117 -0.426133 1 2 0.22000 0.22000 "MOL " " C1 " 6 C1  1 <> <> <>
+  2 25 -2.386658 -5.235637 -0.157631 1 43 -0.53000 -0.53000 "MOL " " N1 " 7 N1  0   3.974    0.730  <>
+  3 2 -3.302830 -4.440758 0.443099 1 2 0.44000 0.44000 "MOL " " C2 " 6 C2  0 <> <> <>
+  4 2 -2.936968 -3.110925 0.769551 1 2 0.15000 0.15000 "MOL " " C3 " 6 C3  0 <> <> <>
+  5 2 -1.610586 -2.735000 0.424740 1 2 0.38000 0.38000 "MOL " " C4 " 6 C4  0 <> <> <>
+  6 25 -0.681949 -3.531138 -0.181586 1 43 -0.55000 -0.55000 "MOL " " N2 " 7 N2  0  -0.400    2.220  <>
+  7 25 -1.473281 -1.426439 0.830445 1 43 -0.50000 -0.50000 "MOL " " N3 " 7 N3  0 <> <> <>
+  8 2 -2.694080 -1.091609 1.379175 1 2 0.20000 0.20000 "MOL " " C5 " 6 C5  1 <> <> <>
+  9 25 -3.590764 -2.042583 1.369645 1 43 -0.49000 -0.49000 "MOL " " N4 " 7 N4  0   2.923    2.220  <>
+  10 3 -0.235808 -0.595232 0.682520 1 2 0.45000 0.45000 "MOL " " C6 " 6 C6  1 <> <> 1
+  11 41 0.130560 -0.813260 -0.321603 1 21 0.10000 0.10000 "MOL " " H1 " 1 H1  0 <> <> <>
+  12 3 0.800138 -0.865071 1.800052 1 2 0.20500 0.20500 "MOL " " C7 " 6 C7  1 <> <> 1
+  13 41 1.683935 -1.344727 1.378155 1 21 0.06000 0.06000 "MOL " " H2 " 1 H2  0 <> <> <>
+  14 3 1.111492 0.549962 2.276011 1 2 0.20500 0.20500 "MOL " " C8 " 6 C8  1 <> <> 1
+  15 41 1.877665 0.986108 1.632798 1 21 0.06000 0.06000 "MOL " " H3 " 1 H3  0 <> <> <>
+  16 3 -0.218014 1.269825 2.047178 1 2 0.17000 0.17000 "MOL " " C9 " 6 C9  1 <> <> 1
+  17 41 -0.938736 0.967974 2.809889 1 21 0.03000 0.03000 "MOL " " H4 " 1 H4  0 <> <> <>
+  18 16 -0.597943 0.751318 0.776158 1 70 -0.40000 -0.40000 "MOL " " O1 " 8 O1  0 <> <> <>
+  19 3 -0.094854 2.799104 1.966686 1 2 0.14500 0.14500 "MOL " " C10" 6 C10  2 <> <> <>
+  20 16 -1.364328 3.392989 2.136204 1 70 -0.65500 -0.65500 "MOL " " O2 " 8 O2  1  -0.689    0.362  <>
+  21 16 1.556768 0.591374 3.620992 1 70 -0.68300 -0.68300 "MOL " " O3 " 8 O3  1  -1.841    0.498  <>
+  22 16 0.309749 -1.670844 2.861814 1 70 -0.68300 -0.68300 "MOL " " O4 " 8 O4  1  -2.303    0.700  <>
+  23 25 -4.514513 -4.950229 0.700744 1 43 -0.81000 -0.81000 "MOL " " N5 " 7 N5  2 <> <> <>
+  24 41 -0.488063 -5.438927 -0.905270 1 21 0.20000 0.20000 "MOL " " H5 " 1 H5  0 <> <> <>
+  25 41 -2.904694 -0.114994 1.790007 1 21 0.20000 0.20000 "MOL " " H6 " 1 H6  0 <> <> <>
+  26 41 0.547857 3.168471 2.766152 1 21 0.06000 0.06000 "MOL " " H7 " 1 H7  0 <> <> <>
+  27 41 0.350001 3.112684 1.021709 1 21 0.06000 0.06000 "MOL " " H8 " 1 H8  0 <> <> <>
+  28 42 -1.269325 4.331692 2.079976 1 21 0.39000 0.39000 "MOL " " H9 " 1 H9  0  14.060    0.483  <>
+  29 42 1.709406 1.492057 3.863485 1 21 0.41800 0.41800 "MOL " " H10" 1 H10  0  12.602    0.468  <>
+  30 42 0.877570 -1.538963 3.606763 1 21 0.41800 0.41800 "MOL " " H11" 1 H11  0  11.996    0.700  <>
+  31 43 -4.722729 -5.904861 0.447581 1 21 0.37000 0.37000 "MOL " " H12" 1 H12  0  13.043    0.730  <>
+  32 43 -5.213059 -4.375366 1.149522 1 21 0.37000 0.37000 "MOL " " H13" 1 H13  0  13.043    0.730  <>
+  :::
+ } 
+ m_bond[34] { 
+  # First column is bond index #
+  i_m_from
+  i_m_to
+  i_m_order
+  :::
+  1 1 6 2
+  2 1 2 1
+  3 1 24 1
+  4 2 3 2
+  5 3 4 1
+  6 3 23 1
+  7 4 9 1
+  8 4 5 2
+  9 5 6 1
+  10 5 7 1
+  11 7 8 1
+  12 7 10 1
+  13 8 9 2
+  14 8 25 1
+  15 10 11 1
+  16 10 18 1
+  17 10 12 1
+  18 12 13 1
+  19 12 14 1
+  20 12 22 1
+  21 14 15 1
+  22 14 16 1
+  23 14 21 1
+  24 16 17 1
+  25 16 18 1
+  26 16 19 1
+  27 19 20 1
+  28 19 26 1
+  29 19 27 1
+  30 20 28 1
+  31 21 29 1
+  32 22 30 1
+  33 23 31 1
+  34 23 32 1
+  :::
+ } 
+} 
+
+f_m_ct { 
+ s_m_title
+ s_m_source_file
+ i_m_source_file_index
+ i_lp_mmshare_version
+ s_lp_label
+ r_lp_tautomer_probability
+ i_lp_orig_ion_str
+ r_epik_Ionization_Penalty
+ r_epik_Ionization_Penalty_Charging
+ r_epik_Ionization_Penalty_Neutral
+ r_epik_State_Penalty
+ i_epik_Tot_Q
+ s_epik_Chemistry_Notes
+ s_st_Chirality_1
+ s_st_Chirality_2
+ s_st_Chirality_3
+ s_st_Chirality_4
+ r_mmod_Potential_Energy-OPLS-2005
+ b_mmod_Minimization_Converged-OPLS-2005
+ r_mmod_RMS_Derivative-OPLS-2005
+ i_mmod_Times_Found-OPLS-2005
+ r_mmod_Relative_Potential_Energy-OPLS-2005
+ b_mmod_Chiralities_Consistent-OPLS-2005
+ i_mmod_Conformation-OPLS-2005
+ i_mmod_Serial_Number-OPLS-2005
+ i_m_ct_format
+ :::
+ "(2~{R},3~{R},4~{S},5~{R})-2-(6-aminopurin-9-yl)-5-(hydroxymethyl)tetrahydrofuran-3,4-diol" 
+  SAMPL5_074.mol2 
+  1
+  28013
+  1 
+  1
+  1
+    0.0003 
+    0.0000 
+    0.0003 
+   -0.0000 
+  0
+  "This compound contains an acetal/aminal-like group ( X-CH(R)-Y where X, Y are N, S, or O) that may be acid/base labile, releasing an aldehyde." 
+  10_R_18_7_12_11 
+  12_S_22_10_14_13 
+  14_S_21_16_12_15 
+  16_R_18_14_19_17 
+  159.460220336914
+  1
+  0.0046971351839602
+  1
+  0
+  1
+  1
+  3
+  2
+ m_depend[19] { 
+  # First column is dependency index #
+  i_m_depend_dependency
+  s_m_depend_property
+  :::
+  1 10 r_lp_tautomer_probability 
+  2 10 i_lp_orig_ion_str 
+  3 10 r_epik_Ionization_Penalty 
+  4 10 r_epik_Ionization_Penalty_Charging 
+  5 10 r_epik_Ionization_Penalty_Neutral 
+  6 10 r_epik_State_Penalty 
+  7 10 i_epik_Tot_Q 
+  8 10 s_st_Chirality_1 
+  9 10 s_st_Chirality_2 
+  10 10 s_st_Chirality_3 
+  11 10 s_st_Chirality_4 
+  12 20 r_mmod_Potential_Energy-OPLS-2005 
+  13 20 b_mmod_Minimization_Converged-OPLS-2005 
+  14 20 r_mmod_RMS_Derivative-OPLS-2005 
+  15 20 i_mmod_Times_Found-OPLS-2005 
+  16 20 r_mmod_Relative_Potential_Energy-OPLS-2005 
+  17 20 b_mmod_Chiralities_Consistent-OPLS-2005 
+  18 20 i_mmod_Conformation-OPLS-2005 
+  19 10 i_mmod_Serial_Number-OPLS-2005 
+  :::
+ } 
+ m_atom[32] { 
+  # First column is atom index #
+  i_m_mmod_type
+  r_m_x_coord
+  r_m_y_coord
+  r_m_z_coord
+  i_m_residue_number
+  i_m_color
+  r_m_charge1
+  r_m_charge2
+  s_m_pdb_residue_name
+  s_m_pdb_atom_name
+  i_m_atomic_number
+  s_m_atom_name
+  i_m_Hcount
+  r_epik_H2O_pKa
+  r_epik_H2O_pKa_uncertainty
+  b_st_NoSrcChirality
+  :::
+  1 2 -1.195014 -4.899603 0.816178 1 2 0.22000 0.22000 "MOL " " C1 " 6 C1  1 <> <> <>
+  2 25 -2.299803 -5.112867 0.092974 1 43 -0.53000 -0.53000 "MOL " " N1 " 7 N1  0   3.974    0.730  <>
+  3 2 -3.179808 -4.101541 -0.093958 1 2 0.44000 0.44000 "MOL " " C2 " 6 C2  0 <> <> <>
+  4 2 -2.897026 -2.840355 0.487715 1 2 0.15000 0.15000 "MOL " " C3 " 6 C3  0 <> <> <>
+  5 2 -1.686104 -2.761248 1.227172 1 2 0.38000 0.38000 "MOL " " C4 " 6 C4  0 <> <> <>
+  6 25 -0.795287 -3.777319 1.421373 1 43 -0.55000 -0.55000 "MOL " " N2 " 7 N2  0  -0.400    2.220  <>
+  7 25 -1.611439 -1.466062 1.687899 1 43 -0.50000 -0.50000 "MOL " " N3 " 7 N3  0 <> <> <>
+  8 2 -2.758713 -0.854621 1.226952 1 2 0.20000 0.20000 "MOL " " C5 " 6 C5  1 <> <> <>
+  9 25 -3.547141 -1.613163 0.511791 1 43 -0.49000 -0.49000 "MOL " " N4 " 7 N4  0   2.923    2.220  <>
+  10 3 -0.505979 -0.903117 2.524105 1 2 0.45000 0.45000 "MOL " " C6 " 6 C6  1 <> <> 1
+  11 41 -0.402365 -1.599891 3.357162 1 21 0.10000 0.10000 "MOL " " H1 " 1 H1  0 <> <> <>
+  12 3 0.802389 -0.704745 1.732154 1 2 0.20500 0.20500 "MOL " " C7 " 6 C7  1 <> <> 1
+  13 41 1.492161 -1.519922 1.955792 1 21 0.06000 0.06000 "MOL " " H2 " 1 H2  0 <> <> <>
+  14 3 1.292484 0.635815 2.254891 1 2 0.20500 0.20500 "MOL " " C8 " 6 C8  1 <> <> 1
+  15 41 1.890134 1.180332 1.522365 1 21 0.06000 0.06000 "MOL " " H3 " 1 H3  0 <> <> <>
+  16 3 0.004183 1.378141 2.637443 1 2 0.17000 0.17000 "MOL " " C9 " 6 C9  1 <> <> 1
+  17 41 0.180770 2.053001 3.476905 1 21 0.03000 0.03000 "MOL " " H4 " 1 H4  0 <> <> <>
+  18 16 -0.906645 0.344205 3.010599 1 70 -0.40000 -0.40000 "MOL " " O1 " 8 O1  0 <> <> <>
+  19 3 -0.596467 2.173098 1.461617 1 2 0.14500 0.14500 "MOL " " C10" 6 C10  2 <> <> <>
+  20 16 -1.549707 3.098878 1.938365 1 70 -0.65500 -0.65500 "MOL " " O2 " 8 O2  1  -0.689    0.362  <>
+  21 16 2.093536 0.457819 3.407631 1 70 -0.68300 -0.68300 "MOL " " O3 " 8 O3  1  -1.841    0.498  <>
+  22 16 0.626527 -0.654449 0.325161 1 70 -0.68300 -0.68300 "MOL " " O4 " 8 O4  1  -2.303    0.700  <>
+  23 25 -4.279002 -4.342005 -0.820632 1 43 -0.81000 -0.81000 "MOL " " N5 " 7 N5  2 <> <> <>
+  24 41 -0.537113 -5.749227 0.925546 1 21 0.20000 0.20000 "MOL " " H5 " 1 H5  0 <> <> <>
+  25 41 -2.998299 0.177631 1.437412 1 21 0.20000 0.20000 "MOL " " H6 " 1 H6  0 <> <> <>
+  26 41 0.183053 2.744951 0.957628 1 21 0.06000 0.06000 "MOL " " H7 " 1 H7  0 <> <> <>
+  27 41 -1.045730 1.519517 0.714238 1 21 0.06000 0.06000 "MOL " " H8 " 1 H8  0 <> <> <>
+  28 42 -1.891774 3.585769 1.203996 1 21 0.39000 0.39000 "MOL " " H9 " 1 H9  0  14.060    0.483  <>
+  29 42 2.334059 1.308195 3.743239 1 21 0.41800 0.41800 "MOL " " H10" 1 H10  0  12.602    0.468  <>
+  30 42 1.476694 -0.590151 -0.082327 1 21 0.41800 0.41800 "MOL " " H11" 1 H11  0  11.996    0.700  <>
+  31 43 -4.431880 -5.259592 -1.212370 1 21 0.37000 0.37000 "MOL " " H12" 1 H12  0  13.043    0.730  <>
+  32 43 -4.949235 -3.602093 -0.972778 1 21 0.37000 0.37000 "MOL " " H13" 1 H13  0  13.043    0.730  <>
+  :::
+ } 
+ m_bond[34] { 
+  # First column is bond index #
+  i_m_from
+  i_m_to
+  i_m_order
+  :::
+  1 1 6 2
+  2 1 2 1
+  3 1 24 1
+  4 2 3 2
+  5 3 4 1
+  6 3 23 1
+  7 4 9 1
+  8 4 5 2
+  9 5 6 1
+  10 5 7 1
+  11 7 8 1
+  12 7 10 1
+  13 8 9 2
+  14 8 25 1
+  15 10 11 1
+  16 10 18 1
+  17 10 12 1
+  18 12 13 1
+  19 12 14 1
+  20 12 22 1
+  21 14 15 1
+  22 14 16 1
+  23 14 21 1
+  24 16 17 1
+  25 16 18 1
+  26 16 19 1
+  27 19 20 1
+  28 19 26 1
+  29 19 27 1
+  30 20 28 1
+  31 21 29 1
+  32 22 30 1
+  33 23 31 1
+  34 23 32 1
+  :::
+ } 
+} 
+
+f_m_ct { 
+ s_m_title
+ s_m_source_file
+ i_m_source_file_index
+ i_lp_mmshare_version
+ s_lp_label
+ r_lp_tautomer_probability
+ i_lp_orig_ion_str
+ r_epik_Ionization_Penalty
+ r_epik_Ionization_Penalty_Charging
+ r_epik_Ionization_Penalty_Neutral
+ r_epik_State_Penalty
+ i_epik_Tot_Q
+ s_epik_Chemistry_Notes
+ s_st_Chirality_1
+ s_st_Chirality_2
+ s_st_Chirality_3
+ s_st_Chirality_4
+ r_mmod_Potential_Energy-OPLS-2005
+ b_mmod_Minimization_Converged-OPLS-2005
+ r_mmod_RMS_Derivative-OPLS-2005
+ i_mmod_Times_Found-OPLS-2005
+ r_mmod_Relative_Potential_Energy-OPLS-2005
+ b_mmod_Chiralities_Consistent-OPLS-2005
+ i_mmod_Conformation-OPLS-2005
+ i_mmod_Serial_Number-OPLS-2005
+ i_m_ct_format
+ :::
+ "(2~{R},3~{R},4~{S},5~{R})-2-(6-aminopurin-9-yl)-5-(hydroxymethyl)tetrahydrofuran-3,4-diol" 
+  SAMPL5_074.mol2 
+  1
+  28013
+  1 
+  1
+  1
+    0.0003 
+    0.0000 
+    0.0003 
+   -0.0000 
+  0
+  "This compound contains an acetal/aminal-like group ( X-CH(R)-Y where X, Y are N, S, or O) that may be acid/base labile, releasing an aldehyde." 
+  10_S_18_7_12_11 
+  12_S_22_10_14_13 
+  14_S_21_16_12_15 
+  16_R_18_14_19_17 
+  130.864654541016
+  1
+  0.0449761338531971
+  1
+  0
+  1
+  1
+  4
+  2
+ m_depend[19] { 
+  # First column is dependency index #
+  i_m_depend_dependency
+  s_m_depend_property
+  :::
+  1 10 r_lp_tautomer_probability 
+  2 10 i_lp_orig_ion_str 
+  3 10 r_epik_Ionization_Penalty 
+  4 10 r_epik_Ionization_Penalty_Charging 
+  5 10 r_epik_Ionization_Penalty_Neutral 
+  6 10 r_epik_State_Penalty 
+  7 10 i_epik_Tot_Q 
+  8 10 s_st_Chirality_1 
+  9 10 s_st_Chirality_2 
+  10 10 s_st_Chirality_3 
+  11 10 s_st_Chirality_4 
+  12 20 r_mmod_Potential_Energy-OPLS-2005 
+  13 20 b_mmod_Minimization_Converged-OPLS-2005 
+  14 20 r_mmod_RMS_Derivative-OPLS-2005 
+  15 20 i_mmod_Times_Found-OPLS-2005 
+  16 20 r_mmod_Relative_Potential_Energy-OPLS-2005 
+  17 20 b_mmod_Chiralities_Consistent-OPLS-2005 
+  18 20 i_mmod_Conformation-OPLS-2005 
+  19 10 i_mmod_Serial_Number-OPLS-2005 
+  :::
+ } 
+ m_atom[32] { 
+  # First column is atom index #
+  i_m_mmod_type
+  r_m_x_coord
+  r_m_y_coord
+  r_m_z_coord
+  i_m_residue_number
+  i_m_color
+  r_m_charge1
+  r_m_charge2
+  s_m_pdb_residue_name
+  s_m_pdb_atom_name
+  i_m_atomic_number
+  s_m_atom_name
+  i_m_Hcount
+  r_epik_H2O_pKa
+  r_epik_H2O_pKa_uncertainty
+  b_st_NoSrcChirality
+  :::
+  1 2 -1.111283 -4.803919 0.217528 1 2 0.22000 0.22000 "MOL " " C1 " 6 C1  1 <> <> <>
+  2 25 -2.364383 -5.226414 0.416962 1 43 -0.53000 -0.53000 "MOL " " N1 " 7 N1  0   3.974    0.730  <>
+  3 2 -3.333292 -4.326193 0.704189 1 2 0.44000 0.44000 "MOL " " C2 " 6 C2  0 <> <> <>
+  4 2 -2.982618 -2.955298 0.786267 1 2 0.15000 0.15000 "MOL " " C3 " 6 C3  0 <> <> <>
+  5 2 -1.612867 -2.654043 0.556504 1 2 0.38000 0.38000 "MOL " " C4 " 6 C4  0 <> <> <>
+  6 25 -0.632599 -3.557305 0.261850 1 43 -0.55000 -0.55000 "MOL " " N2 " 7 N2  0  -0.400    2.220  <>
+  7 25 -1.497473 -1.287524 0.695313 1 43 -0.50000 -0.50000 "MOL " " N3 " 7 N3  0 <> <> <>
+  8 2 -2.779584 -0.849757 0.962294 1 2 0.20000 0.20000 "MOL " " C5 " 6 C5  1 <> <> <>
+  9 25 -3.686936 -1.786745 1.042256 1 43 -0.49000 -0.49000 "MOL " " N4 " 7 N4  0   2.923    2.220  <>
+  10 3 -0.236131 -0.494708 0.518305 1 2 0.45000 0.45000 "MOL " " C6 " 6 C6  1 <> <> 1
+  11 41 0.070730 -0.703007 -0.507914 1 21 0.10000 0.10000 "MOL " " H1 " 1 H1  0 <> <> <>
+  12 3 0.798393 -0.871284 1.597958 1 2 0.20500 0.20500 "MOL " " C7 " 6 C7  1 <> <> 1
+  13 41 0.440439 -1.721537 2.181095 1 21 0.06000 0.06000 "MOL " " H2 " 1 H2  0 <> <> <>
+  14 3 0.899294 0.397787 2.445013 1 2 0.20500 0.20500 "MOL " " C8 " 6 C8  1 <> <> 1
+  15 41 1.787840 0.975497 2.183513 1 21 0.06000 0.06000 "MOL " " H3 " 1 H3  0 <> <> <>
+  16 3 -0.366827 1.179699 2.081111 1 2 0.17000 0.17000 "MOL " " C9 " 6 C9  1 <> <> 1
+  17 41 -1.213248 0.802032 2.658404 1 21 0.03000 0.03000 "MOL " " H4 " 1 H4  0 <> <> <>
+  18 16 -0.531457 0.854132 0.707037 1 70 -0.40000 -0.40000 "MOL " " O1 " 8 O1  0 <> <> <>
+  19 3 -0.225444 2.700866 2.241943 1 2 0.14500 0.14500 "MOL " " C10" 6 C10  2 <> <> <>
+  20 16 -1.502924 3.300959 2.277185 1 70 -0.65500 -0.65500 "MOL " " O2 " 8 O2  1  -0.689    0.362  <>
+  21 16 0.904417 0.073698 3.821701 1 70 -0.68300 -0.68300 "MOL " " O3 " 8 O3  1  -1.841    0.498  <>
+  22 16 2.055705 -1.183908 1.032644 1 70 -0.68300 -0.68300 "MOL " " O4 " 8 O4  1  -2.303    0.700  <>
+  23 25 -4.580852 -4.774803 0.895015 1 43 -0.81000 -0.81000 "MOL " " N5 " 7 N5  2 <> <> <>
+  24 41 -0.388749 -5.574103 -0.009364 1 21 0.20000 0.20000 "MOL " " H5 " 1 H5  0 <> <> <>
+  25 41 -3.029500 0.192784 1.098368 1 21 0.20000 0.20000 "MOL " " H6 " 1 H6  0 <> <> <>
+  26 41 0.272162 2.935030 3.183437 1 21 0.06000 0.06000 "MOL " " H7 " 1 H7  0 <> <> <>
+  27 41 0.376678 3.130676 1.440722 1 21 0.06000 0.06000 "MOL " " H8 " 1 H8  0 <> <> <>
+  28 42 -1.395668 4.235305 2.371467 1 21 0.39000 0.39000 "MOL " " H9 " 1 H9  0  14.060    0.483  <>
+  29 42 0.927837 0.874684 4.322835 1 21 0.41800 0.41800 "MOL " " H10" 1 H10  0  12.602    0.468  <>
+  30 42 2.648700 -1.406513 1.734291 1 21 0.41800 0.41800 "MOL " " H11" 1 H11  0  11.996    0.700  <>
+  31 43 -4.776259 -5.762516 0.823774 1 21 0.37000 0.37000 "MOL " " H12" 1 H12  0  13.043    0.730  <>
+  32 43 -5.320027 -4.120841 1.109046 1 21 0.37000 0.37000 "MOL " " H13" 1 H13  0  13.043    0.730  <>
+  :::
+ } 
+ m_bond[34] { 
+  # First column is bond index #
+  i_m_from
+  i_m_to
+  i_m_order
+  :::
+  1 1 6 2
+  2 1 2 1
+  3 1 24 1
+  4 2 3 2
+  5 3 4 1
+  6 3 23 1
+  7 4 9 1
+  8 4 5 2
+  9 5 6 1
+  10 5 7 1
+  11 7 8 1
+  12 7 10 1
+  13 8 9 2
+  14 8 25 1
+  15 10 11 1
+  16 10 18 1
+  17 10 12 1
+  18 12 13 1
+  19 12 14 1
+  20 12 22 1
+  21 14 15 1
+  22 14 16 1
+  23 14 21 1
+  24 16 17 1
+  25 16 18 1
+  26 16 19 1
+  27 19 20 1
+  28 19 26 1
+  29 19 27 1
+  30 20 28 1
+  31 21 29 1
+  32 22 30 1
+  33 23 31 1
+  34 23 32 1
+  :::
+ } 
+} 
+
+f_m_ct { 
+ s_m_title
+ s_m_source_file
+ i_m_source_file_index
+ i_lp_mmshare_version
+ s_lp_label
+ r_lp_tautomer_probability
+ i_lp_orig_ion_str
+ r_epik_Ionization_Penalty
+ r_epik_Ionization_Penalty_Charging
+ r_epik_Ionization_Penalty_Neutral
+ r_epik_State_Penalty
+ i_epik_Tot_Q
+ s_epik_Chemistry_Notes
+ s_st_Chirality_1
+ s_st_Chirality_2
+ s_st_Chirality_3
+ s_st_Chirality_4
+ r_mmod_Potential_Energy-OPLS-2005
+ b_mmod_Minimization_Converged-OPLS-2005
+ r_mmod_RMS_Derivative-OPLS-2005
+ i_mmod_Times_Found-OPLS-2005
+ r_mmod_Relative_Potential_Energy-OPLS-2005
+ b_mmod_Chiralities_Consistent-OPLS-2005
+ i_mmod_Conformation-OPLS-2005
+ i_mmod_Serial_Number-OPLS-2005
+ i_m_ct_format
+ :::
+ "(2~{R},3~{R},4~{S},5~{R})-2-(6-aminopurin-9-yl)-5-(hydroxymethyl)tetrahydrofuran-3,4-diol" 
+  SAMPL5_074.mol2 
+  1
+  28013
+  1 
+  1
+  1
+    0.0003 
+    0.0000 
+    0.0003 
+   -0.0000 
+  0
+  "This compound contains an acetal/aminal-like group ( X-CH(R)-Y where X, Y are N, S, or O) that may be acid/base labile, releasing an aldehyde." 
+  10_R_18_7_12_11 
+  12_R_22_10_14_13 
+  14_R_21_16_12_15 
+  16_R_18_14_19_17 
+  141.64208984375
+  1
+  0.00336641259491444
+  1
+  0
+  1
+  1
+  5
+  2
+ m_depend[19] { 
+  # First column is dependency index #
+  i_m_depend_dependency
+  s_m_depend_property
+  :::
+  1 10 r_lp_tautomer_probability 
+  2 10 i_lp_orig_ion_str 
+  3 10 r_epik_Ionization_Penalty 
+  4 10 r_epik_Ionization_Penalty_Charging 
+  5 10 r_epik_Ionization_Penalty_Neutral 
+  6 10 r_epik_State_Penalty 
+  7 10 i_epik_Tot_Q 
+  8 10 s_st_Chirality_1 
+  9 10 s_st_Chirality_2 
+  10 10 s_st_Chirality_3 
+  11 10 s_st_Chirality_4 
+  12 20 r_mmod_Potential_Energy-OPLS-2005 
+  13 20 b_mmod_Minimization_Converged-OPLS-2005 
+  14 20 r_mmod_RMS_Derivative-OPLS-2005 
+  15 20 i_mmod_Times_Found-OPLS-2005 
+  16 20 r_mmod_Relative_Potential_Energy-OPLS-2005 
+  17 20 b_mmod_Chiralities_Consistent-OPLS-2005 
+  18 20 i_mmod_Conformation-OPLS-2005 
+  19 10 i_mmod_Serial_Number-OPLS-2005 
+  :::
+ } 
+ m_atom[32] { 
+  # First column is atom index #
+  i_m_mmod_type
+  r_m_x_coord
+  r_m_y_coord
+  r_m_z_coord
+  i_m_residue_number
+  i_m_color
+  r_m_charge1
+  r_m_charge2
+  s_m_pdb_residue_name
+  s_m_pdb_atom_name
+  i_m_atomic_number
+  s_m_atom_name
+  i_m_Hcount
+  r_epik_H2O_pKa
+  r_epik_H2O_pKa_uncertainty
+  b_st_NoSrcChirality
+  :::
+  1 2 -1.745351 -5.102065 1.416281 1 2 0.22000 0.22000 "MOL " " C1 " 6 C1  1 <> <> <>
+  2 25 -2.658428 -5.300970 0.459407 1 43 -0.53000 -0.53000 "MOL " " N1 " 7 N1  0   3.974    0.730  <>
+  3 2 -3.193710 -4.236571 -0.182823 1 2 0.44000 0.44000 "MOL " " C2 " 6 C2  0 <> <> <>
+  4 2 -2.764656 -2.936633 0.184744 1 2 0.15000 0.15000 "MOL " " C3 " 6 C3  0 <> <> <>
+  5 2 -1.791509 -2.878604 1.219165 1 2 0.38000 0.38000 "MOL " " C4 " 6 C4  0 <> <> <>
+  6 25 -1.246234 -3.948110 1.868827 1 43 -0.55000 -0.55000 "MOL " " N2 " 7 N2  0  -0.400    2.220  <>
+  7 25 -1.526282 -1.540895 1.409069 1 43 -0.50000 -0.50000 "MOL " " N3 " 7 N3  0 <> <> <>
+  8 2 -2.327065 -0.883138 0.499442 1 2 0.20000 0.20000 "MOL " " C5 " 6 C5  1 <> <> <>
+  9 25 -3.078085 -1.652895 -0.243190 1 43 -0.49000 -0.49000 "MOL " " N4 " 7 N4  0   2.923    2.220  <>
+  10 3 -0.555208 -0.968681 2.388052 1 2 0.45000 0.45000 "MOL " " C6 " 6 C6  1 <> <> 1
+  11 41 -0.583532 -1.639021 3.248806 1 21 0.10000 0.10000 "MOL " " H1 " 1 H1  0 <> <> <>
+  12 3 0.826863 -0.831758 1.726039 1 2 0.20500 0.20500 "MOL " " C7 " 6 C7  1 <> <> 1
+  13 41 0.876016 -1.391543 0.790076 1 21 0.06000 0.06000 "MOL " " H2 " 1 H2  0 <> <> <>
+  14 3 0.957229 0.671805 1.520391 1 2 0.20500 0.20500 "MOL " " C8 " 6 C8  1 <> <> 1
+  15 41 1.988227 1.017145 1.609652 1 21 0.06000 0.06000 "MOL " " H3 " 1 H3  0 <> <> <>
+  16 3 0.067190 1.244886 2.631501 1 2 0.17000 0.17000 "MOL " " C9 " 6 C9  1 <> <> 1
+  17 41 0.630753 1.203314 3.565800 1 21 0.03000 0.03000 "MOL " " H4 " 1 H4  0 <> <> <>
+  18 16 -1.002660 0.311363 2.719694 1 70 -0.40000 -0.40000 "MOL " " O1 " 8 O1  0 <> <> <>
+  19 3 -0.458621 2.671899 2.395899 1 2 0.14500 0.14500 "MOL " " C10" 6 C10  2 <> <> <>
+  20 16 -0.842962 3.256573 3.622142 1 70 -0.65500 -0.65500 "MOL " " O2 " 8 O2  1  -0.689    0.362  <>
+  21 16 0.488947 1.038696 0.234408 1 70 -0.68300 -0.68300 "MOL " " O3 " 8 O3  1  -1.841    0.498  <>
+  22 16 1.853674 -1.303883 2.576599 1 70 -0.68300 -0.68300 "MOL " " O4 " 8 O4  1  -2.303    0.700  <>
+  23 25 -4.104419 -4.463356 -1.138468 1 43 -0.81000 -0.81000 "MOL " " N5 " 7 N5  2 <> <> <>
+  24 41 -1.359360 -5.994542 1.886617 1 21 0.20000 0.20000 "MOL " " H5 " 1 H5  0 <> <> <>
+  25 41 -2.335345 0.193010 0.401965 1 21 0.20000 0.20000 "MOL " " H6 " 1 H6  0 <> <> <>
+  26 41 0.327511 3.296912 1.971296 1 21 0.06000 0.06000 "MOL " " H7 " 1 H7  0 <> <> <>
+  27 41 -1.294561 2.676178 1.695517 1 21 0.06000 0.06000 "MOL " " H8 " 1 H8  0 <> <> <>
+  28 42 -1.168834 4.127539 3.453315 1 21 0.39000 0.39000 "MOL " " H9 " 1 H9  0  14.060    0.483  <>
+  29 42 0.609442 1.969084 0.120665 1 21 0.41800 0.41800 "MOL " " H10" 1 H10  0  12.602    0.468  <>
+  30 42 2.680103 -1.219952 2.125760 1 21 0.41800 0.41800 "MOL " " H11" 1 H11  0  11.996    0.700  <>
+  31 43 -4.374265 -5.410141 -1.361195 1 21 0.37000 0.37000 "MOL " " H12" 1 H12  0  13.043    0.730  <>
+  32 43 -4.516722 -3.684126 -1.631066 1 21 0.37000 0.37000 "MOL " " H13" 1 H13  0  13.043    0.730  <>
+  :::
+ } 
+ m_bond[34] { 
+  # First column is bond index #
+  i_m_from
+  i_m_to
+  i_m_order
+  :::
+  1 1 6 2
+  2 1 2 1
+  3 1 24 1
+  4 2 3 2
+  5 3 4 1
+  6 3 23 1
+  7 4 9 1
+  8 4 5 2
+  9 5 6 1
+  10 5 7 1
+  11 7 8 1
+  12 7 10 1
+  13 8 9 2
+  14 8 25 1
+  15 10 11 1
+  16 10 18 1
+  17 10 12 1
+  18 12 13 1
+  19 12 14 1
+  20 12 22 1
+  21 14 15 1
+  22 14 16 1
+  23 14 21 1
+  24 16 17 1
+  25 16 18 1
+  26 16 19 1
+  27 19 20 1
+  28 19 26 1
+  29 19 27 1
+  30 20 28 1
+  31 21 29 1
+  32 22 30 1
+  33 23 31 1
+  34 23 32 1
+  :::
+ } 
+} 
+
+f_m_ct { 
+ s_m_title
+ s_m_source_file
+ i_m_source_file_index
+ i_lp_mmshare_version
+ s_lp_label
+ r_lp_tautomer_probability
+ i_lp_orig_ion_str
+ r_epik_Ionization_Penalty
+ r_epik_Ionization_Penalty_Charging
+ r_epik_Ionization_Penalty_Neutral
+ r_epik_State_Penalty
+ i_epik_Tot_Q
+ s_epik_Chemistry_Notes
+ s_st_Chirality_1
+ s_st_Chirality_2
+ s_st_Chirality_3
+ s_st_Chirality_4
+ r_mmod_Potential_Energy-OPLS-2005
+ b_mmod_Minimization_Converged-OPLS-2005
+ r_mmod_RMS_Derivative-OPLS-2005
+ i_mmod_Times_Found-OPLS-2005
+ r_mmod_Relative_Potential_Energy-OPLS-2005
+ b_mmod_Chiralities_Consistent-OPLS-2005
+ i_mmod_Conformation-OPLS-2005
+ i_mmod_Serial_Number-OPLS-2005
+ i_m_ct_format
+ :::
+ "(2~{R},3~{R},4~{S},5~{R})-2-(6-aminopurin-9-yl)-5-(hydroxymethyl)tetrahydrofuran-3,4-diol" 
+  SAMPL5_074.mol2 
+  1
+  28013
+  1 
+  1
+  1
+    0.0003 
+    0.0000 
+    0.0003 
+   -0.0000 
+  0
+  "This compound contains an acetal/aminal-like group ( X-CH(R)-Y where X, Y are N, S, or O) that may be acid/base labile, releasing an aldehyde." 
+  10_S_18_7_12_11 
+  12_R_22_10_14_13 
+  14_R_21_16_12_15 
+  16_R_18_14_19_17 
+  163.503952026367
+  1
+  0.0074993334710598
+  1
+  0
+  1
+  1
+  6
+  2
+ m_depend[19] { 
+  # First column is dependency index #
+  i_m_depend_dependency
+  s_m_depend_property
+  :::
+  1 10 r_lp_tautomer_probability 
+  2 10 i_lp_orig_ion_str 
+  3 10 r_epik_Ionization_Penalty 
+  4 10 r_epik_Ionization_Penalty_Charging 
+  5 10 r_epik_Ionization_Penalty_Neutral 
+  6 10 r_epik_State_Penalty 
+  7 10 i_epik_Tot_Q 
+  8 10 s_st_Chirality_1 
+  9 10 s_st_Chirality_2 
+  10 10 s_st_Chirality_3 
+  11 10 s_st_Chirality_4 
+  12 20 r_mmod_Potential_Energy-OPLS-2005 
+  13 20 b_mmod_Minimization_Converged-OPLS-2005 
+  14 20 r_mmod_RMS_Derivative-OPLS-2005 
+  15 20 i_mmod_Times_Found-OPLS-2005 
+  16 20 r_mmod_Relative_Potential_Energy-OPLS-2005 
+  17 20 b_mmod_Chiralities_Consistent-OPLS-2005 
+  18 20 i_mmod_Conformation-OPLS-2005 
+  19 10 i_mmod_Serial_Number-OPLS-2005 
+  :::
+ } 
+ m_atom[32] { 
+  # First column is atom index #
+  i_m_mmod_type
+  r_m_x_coord
+  r_m_y_coord
+  r_m_z_coord
+  i_m_residue_number
+  i_m_color
+  r_m_charge1
+  r_m_charge2
+  s_m_pdb_residue_name
+  s_m_pdb_atom_name
+  i_m_atomic_number
+  s_m_atom_name
+  i_m_Hcount
+  r_epik_H2O_pKa
+  r_epik_H2O_pKa_uncertainty
+  b_st_NoSrcChirality
+  :::
+  1 2 -1.093907 -4.865318 -0.244090 1 2 0.22000 0.22000 "MOL " " C1 " 6 C1  1 <> <> <>
+  2 25 -2.346528 -5.306730 -0.085805 1 43 -0.53000 -0.53000 "MOL " " N1 " 7 N1  0   3.974    0.730  <>
+  3 2 -3.299613 -4.459188 0.367339 1 2 0.44000 0.44000 "MOL " " C2 " 6 C2  0 <> <> <>
+  4 2 -2.933753 -3.121779 0.661229 1 2 0.15000 0.15000 "MOL " " C3 " 6 C3  0 <> <> <>
+  5 2 -1.567548 -2.795549 0.445693 1 2 0.38000 0.38000 "MOL " " C4 " 6 C4  0 <> <> <>
+  6 25 -0.601652 -3.644933 -0.012033 1 43 -0.55000 -0.55000 "MOL " " N2 " 7 N2  0  -0.400    2.220  <>
+  7 25 -1.437392 -1.470019 0.795724 1 43 -0.50000 -0.50000 "MOL " " N3 " 7 N3  0 <> <> <>
+  8 2 -2.701813 -1.077027 1.184067 1 2 0.20000 0.20000 "MOL " " C5 " 6 C5  1 <> <> <>
+  9 25 -3.618487 -2.007030 1.127185 1 43 -0.49000 -0.49000 "MOL " " N4 " 7 N4  0   2.923    2.220  <>
+  10 3 -0.167001 -0.676546 0.738173 1 2 0.45000 0.45000 "MOL " " C6 " 6 C6  1 <> <> 1
+  11 41 0.279284 -0.936847 -0.222534 1 21 0.10000 0.10000 "MOL " " H1 " 1 H1  0 <> <> <>
+  12 3 0.760923 -0.944635 1.950200 1 2 0.20500 0.20500 "MOL " " C7 " 6 C7  1 <> <> 1
+  13 41 1.680720 -1.421580 1.608507 1 21 0.06000 0.06000 "MOL " " H2 " 1 H2  0 <> <> <>
+  14 3 1.004266 0.457236 2.497138 1 2 0.20500 0.20500 "MOL " " C8 " 6 C8  1 <> <> 1
+  15 41 1.124439 0.470390 3.581451 1 21 0.06000 0.06000 "MOL " " H3 " 1 H3  0 <> <> <>
+  16 3 -0.254215 1.215044 2.055026 1 2 0.17000 0.17000 "MOL " " C9 " 6 C9  1 <> <> 1
+  17 41 -1.071466 0.925220 2.718222 1 21 0.03000 0.03000 "MOL " " H4 " 1 H4  0 <> <> <>
+  18 16 -0.494542 0.680553 0.758419 1 70 -0.40000 -0.40000 "MOL " " O1 " 8 O1  0 <> <> <>
+  19 3 -0.131707 2.747811 2.013122 1 2 0.14500 0.14500 "MOL " " C10" 6 C10  2 <> <> <>
+  20 16 -1.415543 3.334590 2.045742 1 70 -0.65500 -0.65500 "MOL " " O2 " 8 O2  1  -0.689    0.362  <>
+  21 16 2.172607 1.016035 1.922813 1 70 -0.68300 -0.68300 "MOL " " O3 " 8 O3  1  -1.841    0.498  <>
+  22 16 0.183054 -1.758094 2.958947 1 70 -0.68300 -0.68300 "MOL " " O4 " 8 O4  1  -2.303    0.700  <>
+  23 25 -4.546204 -4.926055 0.516219 1 43 -0.81000 -0.81000 "MOL " " N5 " 7 N5  2 <> <> <>
+  24 41 -0.384523 -5.593716 -0.608572 1 21 0.20000 0.20000 "MOL " " H5 " 1 H5  0 <> <> <>
+  25 41 -2.930590 -0.073575 1.512092 1 21 0.20000 0.20000 "MOL " " H6 " 1 H6  0 <> <> <>
+  26 41 0.412352 3.105354 2.887823 1 21 0.06000 0.06000 "MOL " " H7 " 1 H7  0 <> <> <>
+  27 41 0.414204 3.079580 1.129285 1 21 0.06000 0.06000 "MOL " " H8 " 1 H8  0 <> <> <>
+  28 42 -1.319609 4.274257 2.011577 1 21 0.39000 0.39000 "MOL " " H9 " 1 H9  0  14.060    0.483  <>
+  29 42 2.303488 1.881351 2.279327 1 21 0.41800 0.41800 "MOL " " H10" 1 H10  0  12.602    0.468  <>
+  30 42 0.823258 -1.893330 3.640617 1 21 0.41800 0.41800 "MOL " " H11" 1 H11  0  11.996    0.700  <>
+  31 43 -4.752785 -5.888289 0.292148 1 21 0.37000 0.37000 "MOL " " H12" 1 H12  0  13.043    0.730  <>
+  32 43 -5.272991 -4.311336 0.853464 1 21 0.37000 0.37000 "MOL " " H13" 1 H13  0  13.043    0.730  <>
+  :::
+ } 
+ m_bond[34] { 
+  # First column is bond index #
+  i_m_from
+  i_m_to
+  i_m_order
+  :::
+  1 1 6 2
+  2 1 2 1
+  3 1 24 1
+  4 2 3 2
+  5 3 4 1
+  6 3 23 1
+  7 4 9 1
+  8 4 5 2
+  9 5 6 1
+  10 5 7 1
+  11 7 8 1
+  12 7 10 1
+  13 8 9 2
+  14 8 25 1
+  15 10 11 1
+  16 10 18 1
+  17 10 12 1
+  18 12 13 1
+  19 12 14 1
+  20 12 22 1
+  21 14 15 1
+  22 14 16 1
+  23 14 21 1
+  24 16 17 1
+  25 16 18 1
+  26 16 19 1
+  27 19 20 1
+  28 19 26 1
+  29 19 27 1
+  30 20 28 1
+  31 21 29 1
+  32 22 30 1
+  33 23 31 1
+  34 23 32 1
+  :::
+ } 
+} 
+
+f_m_ct { 
+ s_m_title
+ s_m_source_file
+ i_m_source_file_index
+ i_lp_mmshare_version
+ s_lp_label
+ r_lp_tautomer_probability
+ i_lp_orig_ion_str
+ r_epik_Ionization_Penalty
+ r_epik_Ionization_Penalty_Charging
+ r_epik_Ionization_Penalty_Neutral
+ r_epik_State_Penalty
+ i_epik_Tot_Q
+ s_epik_Chemistry_Notes
+ s_st_Chirality_1
+ s_st_Chirality_2
+ s_st_Chirality_3
+ s_st_Chirality_4
+ r_mmod_Potential_Energy-OPLS-2005
+ b_mmod_Minimization_Converged-OPLS-2005
+ r_mmod_RMS_Derivative-OPLS-2005
+ i_mmod_Times_Found-OPLS-2005
+ r_mmod_Relative_Potential_Energy-OPLS-2005
+ b_mmod_Chiralities_Consistent-OPLS-2005
+ i_mmod_Conformation-OPLS-2005
+ i_mmod_Serial_Number-OPLS-2005
+ i_m_ct_format
+ :::
+ "(2~{R},3~{R},4~{S},5~{R})-2-(6-aminopurin-9-yl)-5-(hydroxymethyl)tetrahydrofuran-3,4-diol" 
+  SAMPL5_074.mol2 
+  1
+  28013
+  1 
+  1
+  1
+    0.0003 
+    0.0000 
+    0.0003 
+   -0.0000 
+  0
+  "This compound contains an acetal/aminal-like group ( X-CH(R)-Y where X, Y are N, S, or O) that may be acid/base labile, releasing an aldehyde." 
+  10_R_18_7_12_11 
+  12_S_22_10_14_13 
+  14_R_21_16_12_15 
+  16_R_18_14_19_17 
+  187.096084594727
+  1
+  0.0418240614235401
+  1
+  0
+  1
+  1
+  7
+  2
+ m_depend[19] { 
+  # First column is dependency index #
+  i_m_depend_dependency
+  s_m_depend_property
+  :::
+  1 10 r_lp_tautomer_probability 
+  2 10 i_lp_orig_ion_str 
+  3 10 r_epik_Ionization_Penalty 
+  4 10 r_epik_Ionization_Penalty_Charging 
+  5 10 r_epik_Ionization_Penalty_Neutral 
+  6 10 r_epik_State_Penalty 
+  7 10 i_epik_Tot_Q 
+  8 10 s_st_Chirality_1 
+  9 10 s_st_Chirality_2 
+  10 10 s_st_Chirality_3 
+  11 10 s_st_Chirality_4 
+  12 20 r_mmod_Potential_Energy-OPLS-2005 
+  13 20 b_mmod_Minimization_Converged-OPLS-2005 
+  14 20 r_mmod_RMS_Derivative-OPLS-2005 
+  15 20 i_mmod_Times_Found-OPLS-2005 
+  16 20 r_mmod_Relative_Potential_Energy-OPLS-2005 
+  17 20 b_mmod_Chiralities_Consistent-OPLS-2005 
+  18 20 i_mmod_Conformation-OPLS-2005 
+  19 10 i_mmod_Serial_Number-OPLS-2005 
+  :::
+ } 
+ m_atom[32] { 
+  # First column is atom index #
+  i_m_mmod_type
+  r_m_x_coord
+  r_m_y_coord
+  r_m_z_coord
+  i_m_residue_number
+  i_m_color
+  r_m_charge1
+  r_m_charge2
+  s_m_pdb_residue_name
+  s_m_pdb_atom_name
+  i_m_atomic_number
+  s_m_atom_name
+  i_m_Hcount
+  r_epik_H2O_pKa
+  r_epik_H2O_pKa_uncertainty
+  b_st_NoSrcChirality
+  :::
+  1 2 -1.272143 -4.943842 0.866703 1 2 0.22000 0.22000 "MOL " " C1 " 6 C1  1 <> <> <>
+  2 25 -2.318171 -5.129327 0.054036 1 43 -0.53000 -0.53000 "MOL " " N1 " 7 N1  0   3.974    0.730  <>
+  3 2 -3.157372 -4.097772 -0.198381 1 2 0.44000 0.44000 "MOL " " C2 " 6 C2  0 <> <> <>
+  4 2 -2.895393 -2.845536 0.411671 1 2 0.15000 0.15000 "MOL " " C3 " 6 C3  0 <> <> <>
+  5 2 -1.746941 -2.796006 1.247092 1 2 0.38000 0.38000 "MOL " " C4 " 6 C4  0 <> <> <>
+  6 25 -0.898759 -3.833227 1.509070 1 43 -0.55000 -0.55000 "MOL " " N2 " 7 N2  0  -0.400    2.220  <>
+  7 25 -1.680211 -1.503838 1.718327 1 43 -0.50000 -0.50000 "MOL " " N3 " 7 N3  0 <> <> <>
+  8 2 -2.776938 -0.867683 1.174630 1 2 0.20000 0.20000 "MOL " " C5 " 6 C5  1 <> <> <>
+  9 25 -3.519809 -1.605129 0.391929 1 43 -0.49000 -0.49000 "MOL " " N4 " 7 N4  0   2.923    2.220  <>
+  10 3 -0.636272 -0.971187 2.649244 1 2 0.45000 0.45000 "MOL " " C6 " 6 C6  1 <> <> 1
+  11 41 -0.657937 -1.648808 3.503958 1 21 0.10000 0.10000 "MOL " " H1 " 1 H1  0 <> <> <>
+  12 3 0.757277 -0.858564 1.993950 1 2 0.20500 0.20500 "MOL " " C7 " 6 C7  1 <> <> 1
+  13 41 1.389932 -1.680947 2.329777 1 21 0.06000 0.06000 "MOL " " H2 " 1 H2  0 <> <> <>
+  14 3 1.228804 0.474946 2.549882 1 2 0.20500 0.20500 "MOL " " C8 " 6 C8  1 <> <> 1
+  15 41 1.605556 0.307699 3.560284 1 21 0.06000 0.06000 "MOL " " H3 " 1 H3  0 <> <> <>
+  16 3 -0.061949 1.298654 2.655754 1 2 0.17000 0.17000 "MOL " " C9 " 6 C9  1 <> <> 1
+  17 41 0.048685 2.059295 3.429931 1 21 0.03000 0.03000 "MOL " " H4 " 1 H4  0 <> <> <>
+  18 16 -1.013937 0.313682 3.062543 1 70 -0.40000 -0.40000 "MOL " " O1 " 8 O1  0 <> <> <>
+  19 3 -0.534159 1.961502 1.342471 1 2 0.14500 0.14500 "MOL " " C10" 6 C10  2 <> <> <>
+  20 16 -1.525967 2.926390 1.622582 1 70 -0.65500 -0.65500 "MOL " " O2 " 8 O2  1  -0.689    0.362  <>
+  21 16 2.272201 1.068747 1.797750 1 70 -0.68300 -0.68300 "MOL " " O3 " 8 O3  1  -1.841    0.498  <>
+  22 16 0.736850 -0.861539 0.574486 1 70 -0.68300 -0.68300 "MOL " " O4 " 8 O4  1  -2.303    0.700  <>
+  23 25 -4.199000 -4.310908 -1.013054 1 43 -0.81000 -0.81000 "MOL " " N5 " 7 N5  2 <> <> <>
+  24 41 -0.644381 -5.808467 1.024742 1 21 0.20000 0.20000 "MOL " " H5 " 1 H5  0 <> <> <>
+  25 41 -3.014579 0.167037 1.375254 1 21 0.20000 0.20000 "MOL " " H6 " 1 H6  0 <> <> <>
+  26 41 0.289706 2.486765 0.859795 1 21 0.06000 0.06000 "MOL " " H7 " 1 H7  0 <> <> <>
+  27 41 -0.911881 1.236057 0.623387 1 21 0.06000 0.06000 "MOL " " H8 " 1 H8  0 <> <> <>
+  28 42 -1.784687 3.336997 0.811506 1 21 0.39000 0.39000 "MOL " " H9 " 1 H9  0  14.060    0.483  <>
+  29 42 2.529143 1.873941 2.221380 1 21 0.41800 0.41800 "MOL " " H10" 1 H10  0  12.602    0.468  <>
+  30 42 1.589558 -0.584912 0.273281 1 21 0.41800 0.41800 "MOL " " H11" 1 H11  0  11.996    0.700  <>
+  31 43 -4.339447 -5.223267 -1.421305 1 21 0.37000 0.37000 "MOL " " H12" 1 H12  0  13.043    0.730  <>
+  32 43 -4.838013 -3.555527 -1.215266 1 21 0.37000 0.37000 "MOL " " H13" 1 H13  0  13.043    0.730  <>
+  :::
+ } 
+ m_bond[34] { 
+  # First column is bond index #
+  i_m_from
+  i_m_to
+  i_m_order
+  :::
+  1 1 6 2
+  2 1 2 1
+  3 1 24 1
+  4 2 3 2
+  5 3 4 1
+  6 3 23 1
+  7 4 9 1
+  8 4 5 2
+  9 5 6 1
+  10 5 7 1
+  11 7 8 1
+  12 7 10 1
+  13 8 9 2
+  14 8 25 1
+  15 10 11 1
+  16 10 18 1
+  17 10 12 1
+  18 12 13 1
+  19 12 14 1
+  20 12 22 1
+  21 14 15 1
+  22 14 16 1
+  23 14 21 1
+  24 16 17 1
+  25 16 18 1
+  26 16 19 1
+  27 19 20 1
+  28 19 26 1
+  29 19 27 1
+  30 20 28 1
+  31 21 29 1
+  32 22 30 1
+  33 23 31 1
+  34 23 32 1
+  :::
+ } 
+} 
+
+f_m_ct { 
+ s_m_title
+ s_m_source_file
+ i_m_source_file_index
+ i_lp_mmshare_version
+ s_lp_label
+ r_lp_tautomer_probability
+ i_lp_orig_ion_str
+ r_epik_Ionization_Penalty
+ r_epik_Ionization_Penalty_Charging
+ r_epik_Ionization_Penalty_Neutral
+ r_epik_State_Penalty
+ i_epik_Tot_Q
+ s_epik_Chemistry_Notes
+ s_st_Chirality_1
+ s_st_Chirality_2
+ s_st_Chirality_3
+ s_st_Chirality_4
+ r_mmod_Potential_Energy-OPLS-2005
+ b_mmod_Minimization_Converged-OPLS-2005
+ r_mmod_RMS_Derivative-OPLS-2005
+ i_mmod_Times_Found-OPLS-2005
+ r_mmod_Relative_Potential_Energy-OPLS-2005
+ b_mmod_Chiralities_Consistent-OPLS-2005
+ i_mmod_Conformation-OPLS-2005
+ i_mmod_Serial_Number-OPLS-2005
+ i_m_ct_format
+ :::
+ "(2~{R},3~{R},4~{S},5~{R})-2-(6-aminopurin-9-yl)-5-(hydroxymethyl)tetrahydrofuran-3,4-diol" 
+  SAMPL5_074.mol2 
+  1
+  28013
+  1 
+  1
+  1
+    0.0003 
+    0.0000 
+    0.0003 
+   -0.0000 
+  0
+  "This compound contains an acetal/aminal-like group ( X-CH(R)-Y where X, Y are N, S, or O) that may be acid/base labile, releasing an aldehyde." 
+  10_S_18_7_12_11 
+  12_S_22_10_14_13 
+  14_R_21_16_12_15 
+  16_R_18_14_19_17 
+  164.714080810547
+  1
+  0.000958514225203544
+  1
+  0
+  1
+  1
+  8
+  2
+ m_depend[19] { 
+  # First column is dependency index #
+  i_m_depend_dependency
+  s_m_depend_property
+  :::
+  1 10 r_lp_tautomer_probability 
+  2 10 i_lp_orig_ion_str 
+  3 10 r_epik_Ionization_Penalty 
+  4 10 r_epik_Ionization_Penalty_Charging 
+  5 10 r_epik_Ionization_Penalty_Neutral 
+  6 10 r_epik_State_Penalty 
+  7 10 i_epik_Tot_Q 
+  8 10 s_st_Chirality_1 
+  9 10 s_st_Chirality_2 
+  10 10 s_st_Chirality_3 
+  11 10 s_st_Chirality_4 
+  12 20 r_mmod_Potential_Energy-OPLS-2005 
+  13 20 b_mmod_Minimization_Converged-OPLS-2005 
+  14 20 r_mmod_RMS_Derivative-OPLS-2005 
+  15 20 i_mmod_Times_Found-OPLS-2005 
+  16 20 r_mmod_Relative_Potential_Energy-OPLS-2005 
+  17 20 b_mmod_Chiralities_Consistent-OPLS-2005 
+  18 20 i_mmod_Conformation-OPLS-2005 
+  19 10 i_mmod_Serial_Number-OPLS-2005 
+  :::
+ } 
+ m_atom[32] { 
+  # First column is atom index #
+  i_m_mmod_type
+  r_m_x_coord
+  r_m_y_coord
+  r_m_z_coord
+  i_m_residue_number
+  i_m_color
+  r_m_charge1
+  r_m_charge2
+  s_m_pdb_residue_name
+  s_m_pdb_atom_name
+  i_m_atomic_number
+  s_m_atom_name
+  i_m_Hcount
+  r_epik_H2O_pKa
+  r_epik_H2O_pKa_uncertainty
+  b_st_NoSrcChirality
+  :::
+  1 2 -1.166124 -4.899746 0.460770 1 2 0.22000 0.22000 "MOL " " C1 " 6 C1  1 <> <> <>
+  2 25 -2.456988 -5.245185 0.406528 1 43 -0.53000 -0.53000 "MOL " " N1 " 7 N1  0   3.974    0.730  <>
+  3 2 -3.407029 -4.282642 0.457888 1 2 0.44000 0.44000 "MOL " " C2 " 6 C2  0 <> <> <>
+  4 2 -2.997129 -2.930430 0.570172 1 2 0.15000 0.15000 "MOL " " C3 " 6 C3  0 <> <> <>
+  5 2 -1.593504 -2.713585 0.621582 1 2 0.38000 0.38000 "MOL " " C4 " 6 C4  0 <> <> <>
+  6 25 -0.631189 -3.680019 0.566508 1 43 -0.55000 -0.55000 "MOL " " N2 " 7 N2  0  -0.400    2.220  <>
+  7 25 -1.425596 -1.350773 0.739310 1 43 -0.50000 -0.50000 "MOL " " N3 " 7 N3  0 <> <> <>
+  8 2 -2.705693 -0.833382 0.724144 1 2 0.20000 0.20000 "MOL " " C5 " 6 C5  1 <> <> <>
+  9 25 -3.665870 -1.715843 0.640545 1 43 -0.49000 -0.49000 "MOL " " N4 " 7 N4  0   2.923    2.220  <>
+  10 3 -0.109233 -0.635374 0.808477 1 2 0.45000 0.45000 "MOL " " C6 " 6 C6  1 <> <> 1
+  11 41 0.402790 -0.906008 -0.116162 1 21 0.10000 0.10000 "MOL " " H1 " 1 H1  0 <> <> <>
+  12 3 0.638219 -1.009023 2.105419 1 2 0.20500 0.20500 "MOL " " C7 " 6 C7  1 <> <> 1
+  13 41 0.035515 -1.707948 2.687480 1 21 0.06000 0.06000 "MOL " " H2 " 1 H2  0 <> <> <>
+  14 3 0.728899 0.324464 2.854372 1 2 0.20500 0.20500 "MOL " " C8 " 6 C8  1 <> <> 1
+  15 41 0.587734 0.185465 3.926813 1 21 0.06000 0.06000 "MOL " " H3 " 1 H3  0 <> <> <>
+  16 3 -0.422105 1.133176 2.241892 1 2 0.17000 0.17000 "MOL " " C9 " 6 C9  1 <> <> 1
+  17 41 -1.356242 0.780900 2.683923 1 21 0.03000 0.03000 "MOL " " H4 " 1 H4  0 <> <> <>
+  18 16 -0.364006 0.734999 0.876894 1 70 -0.40000 -0.40000 "MOL " " O1 " 8 O1  0 <> <> <>
+  19 3 -0.324195 2.662213 2.380749 1 2 0.14500 0.14500 "MOL " " C10" 6 C10  2 <> <> <>
+  20 16 -1.596682 3.243432 2.189261 1 70 -0.65500 -0.65500 "MOL " " O2 " 8 O2  1  -0.689    0.362  <>
+  21 16 1.973979 0.979736 2.663671 1 70 -0.68300 -0.68300 "MOL " " O3 " 8 O3  1  -1.841    0.498  <>
+  22 16 1.906017 -1.593145 1.867405 1 70 -0.68300 -0.68300 "MOL " " O4 " 8 O4  1  -2.303    0.700  <>
+  23 25 -4.692315 -4.654847 0.398128 1 43 -0.81000 -0.81000 "MOL " " N5 " 7 N5  2 <> <> <>
+  24 41 -0.460963 -5.716581 0.413281 1 21 0.20000 0.20000 "MOL " " H5 " 1 H5  0 <> <> <>
+  25 41 -2.913294 0.225874 0.778436 1 21 0.20000 0.20000 "MOL " " H6 " 1 H6  0 <> <> <>
+  26 41 0.008077 2.928627 3.384517 1 21 0.06000 0.06000 "MOL " " H7 " 1 H7  0 <> <> <>
+  27 41 0.393761 3.081379 1.674933 1 21 0.06000 0.06000 "MOL " " H8 " 1 H8  0 <> <> <>
+  28 42 -1.515650 4.181733 2.269509 1 21 0.39000 0.39000 "MOL " " H9 " 1 H9  0  14.060    0.483  <>
+  29 42 1.970799 1.789356 3.150630 1 21 0.41800 0.41800 "MOL " " H10" 1 H10  0  12.602    0.468  <>
+  30 42 2.395995 -1.578503 2.675171 1 21 0.41800 0.41800 "MOL " " H11" 1 H11  0  11.996    0.700  <>
+  31 43 -4.929179 -5.632702 0.317207 1 21 0.37000 0.37000 "MOL " " H12" 1 H12  0  13.043    0.730  <>
+  32 43 -5.418106 -3.953508 0.432833 1 21 0.37000 0.37000 "MOL " " H13" 1 H13  0  13.043    0.730  <>
+  :::
+ } 
+ m_bond[34] { 
+  # First column is bond index #
+  i_m_from
+  i_m_to
+  i_m_order
+  :::
+  1 1 6 2
+  2 1 2 1
+  3 1 24 1
+  4 2 3 2
+  5 3 4 1
+  6 3 23 1
+  7 4 9 1
+  8 4 5 2
+  9 5 6 1
+  10 5 7 1
+  11 7 8 1
+  12 7 10 1
+  13 8 9 2
+  14 8 25 1
+  15 10 11 1
+  16 10 18 1
+  17 10 12 1
+  18 12 13 1
+  19 12 14 1
+  20 12 22 1
+  21 14 15 1
+  22 14 16 1
+  23 14 21 1
+  24 16 17 1
+  25 16 18 1
+  26 16 19 1
+  27 19 20 1
+  28 19 26 1
+  29 19 27 1
+  30 20 28 1
+  31 21 29 1
+  32 22 30 1
+  33 23 31 1
+  34 23 32 1
+  :::
+ } 
+} 
+
+f_m_ct { 
+ s_m_title
+ s_m_source_file
+ i_m_source_file_index
+ i_lp_mmshare_version
+ s_lp_label
+ r_lp_tautomer_probability
+ i_lp_orig_ion_str
+ r_epik_Ionization_Penalty
+ r_epik_Ionization_Penalty_Charging
+ r_epik_Ionization_Penalty_Neutral
+ r_epik_State_Penalty
+ i_epik_Tot_Q
+ s_epik_Chemistry_Notes
+ s_st_Chirality_1
+ s_st_Chirality_2
+ s_st_Chirality_3
+ s_st_Chirality_4
+ r_mmod_Potential_Energy-OPLS-2005
+ b_mmod_Minimization_Converged-OPLS-2005
+ r_mmod_RMS_Derivative-OPLS-2005
+ i_mmod_Times_Found-OPLS-2005
+ r_mmod_Relative_Potential_Energy-OPLS-2005
+ b_mmod_Chiralities_Consistent-OPLS-2005
+ i_mmod_Conformation-OPLS-2005
+ i_mmod_Serial_Number-OPLS-2005
+ i_m_ct_format
+ :::
+ "(2~{R},3~{R},4~{S},5~{R})-2-(6-aminopurin-9-yl)-5-(hydroxymethyl)tetrahydrofuran-3,4-diol" 
+  SAMPL5_074.mol2 
+  1
+  28013
+  1 
+  1
+  1
+    0.0003 
+    0.0000 
+    0.0003 
+   -0.0000 
+  0
+  "This compound contains an acetal/aminal-like group ( X-CH(R)-Y where X, Y are N, S, or O) that may be acid/base labile, releasing an aldehyde." 
+  10_R_18_7_12_11 
+  12_R_22_10_14_13 
+  14_S_21_16_12_15 
+  16_S_18_14_19_17 
+  164.714080810547
+  1
+  0.00329702999442816
+  1
+  0
+  1
+  1
+  9
+  2
+ m_depend[19] { 
+  # First column is dependency index #
+  i_m_depend_dependency
+  s_m_depend_property
+  :::
+  1 10 r_lp_tautomer_probability 
+  2 10 i_lp_orig_ion_str 
+  3 10 r_epik_Ionization_Penalty 
+  4 10 r_epik_Ionization_Penalty_Charging 
+  5 10 r_epik_Ionization_Penalty_Neutral 
+  6 10 r_epik_State_Penalty 
+  7 10 i_epik_Tot_Q 
+  8 10 s_st_Chirality_1 
+  9 10 s_st_Chirality_2 
+  10 10 s_st_Chirality_3 
+  11 10 s_st_Chirality_4 
+  12 20 r_mmod_Potential_Energy-OPLS-2005 
+  13 20 b_mmod_Minimization_Converged-OPLS-2005 
+  14 20 r_mmod_RMS_Derivative-OPLS-2005 
+  15 20 i_mmod_Times_Found-OPLS-2005 
+  16 20 r_mmod_Relative_Potential_Energy-OPLS-2005 
+  17 20 b_mmod_Chiralities_Consistent-OPLS-2005 
+  18 20 i_mmod_Conformation-OPLS-2005 
+  19 10 i_mmod_Serial_Number-OPLS-2005 
+  :::
+ } 
+ m_atom[32] { 
+  # First column is atom index #
+  i_m_mmod_type
+  r_m_x_coord
+  r_m_y_coord
+  r_m_z_coord
+  i_m_residue_number
+  i_m_color
+  r_m_charge1
+  r_m_charge2
+  s_m_pdb_residue_name
+  s_m_pdb_atom_name
+  i_m_atomic_number
+  s_m_atom_name
+  i_m_Hcount
+  r_epik_H2O_pKa
+  r_epik_H2O_pKa_uncertainty
+  b_st_NoSrcChirality
+  :::
+  1 2 -1.174441 -4.910127 0.506908 1 2 0.22000 0.22000 "MOL " " C1 " 6 C1  1 <> <> <>
+  2 25 -2.337760 -5.122515 -0.117737 1 43 -0.53000 -0.53000 "MOL " " N1 " 7 N1  0   3.974    0.730  <>
+  3 2 -3.269467 -4.141189 -0.142774 1 2 0.44000 0.44000 "MOL " " C2 " 6 C2  0 <> <> <>
+  4 2 -2.976450 -2.911267 0.497959 1 2 0.15000 0.15000 "MOL " " C3 " 6 C3  0 <> <> <>
+  5 2 -1.699892 -2.826957 1.116925 1 2 0.38000 0.38000 "MOL " " C4 " 6 C4  0 <> <> <>
+  6 25 -0.758179 -3.814514 1.148336 1 43 -0.55000 -0.55000 "MOL " " N2 " 7 N2  0  -0.400    2.220  <>
+  7 25 -1.625587 -1.562234 1.659387 1 43 -0.50000 -0.50000 "MOL " " N3 " 7 N3  0 <> <> <>
+  8 2 -2.843112 -0.979646 1.368197 1 2 0.20000 0.20000 "MOL " " C5 " 6 C5  1 <> <> <>
+  9 25 -3.668093 -1.720923 0.677123 1 43 -0.49000 -0.49000 "MOL " " N4 " 7 N4  0   2.923    2.220  <>
+  10 3 -0.467277 -1.011726 2.436979 1 2 0.45000 0.45000 "MOL " " C6 " 6 C6  1 <> <> 1
+  11 41 -0.352853 -1.691050 3.283024 1 21 0.10000 0.10000 "MOL " " H1 " 1 H1  0 <> <> <>
+  12 3 0.774061 -0.878521 1.530505 1 2 0.20500 0.20500 "MOL " " C7 " 6 C7  1 <> <> 1
+  13 41 0.527677 -1.209807 0.520511 1 21 0.06000 0.06000 "MOL " " H2 " 1 H2  0 <> <> <>
+  14 3 1.037577 0.630685 1.516465 1 2 0.20500 0.20500 "MOL " " C8 " 6 C8  1 <> <> 1
+  15 41 1.358248 0.966422 0.529638 1 21 0.06000 0.06000 "MOL " " H3 " 1 H3  0 <> <> <>
+  16 3 -0.332487 1.214781 1.884856 1 2 0.17000 0.17000 "MOL " " C9 " 6 C9  1 <> <> 1
+  17 41 -0.969142 1.169676 0.999002 1 21 0.03000 0.03000 "MOL " " H4 " 1 H4  0 <> <> <>
+  18 16 -0.797890 0.279317 2.851007 1 70 -0.40000 -0.40000 "MOL " " O1 " 8 O1  0 <> <> <>
+  19 3 -0.328600 2.645171 2.451239 1 2 0.14500 0.14500 "MOL " " C10" 6 C10  2 <> <> <>
+  20 16 -1.616821 3.211065 2.333097 1 70 -0.65500 -0.65500 "MOL " " O2 " 8 O2  1  -0.689    0.362  <>
+  21 16 2.030990 1.025076 2.451108 1 70 -0.68300 -0.68300 "MOL " " O3 " 8 O3  1  -1.841    0.498  <>
+  22 16 1.883632 -1.625995 1.994503 1 70 -0.68300 -0.68300 "MOL " " O4 " 8 O4  1  -2.303    0.700  <>
+  23 25 -4.427481 -4.380597 -0.771864 1 43 -0.81000 -0.81000 "MOL " " N5 " 7 N5  2 <> <> <>
+  24 41 -0.477218 -5.734948 0.490281 1 21 0.20000 0.20000 "MOL " " H5 " 1 H5  0 <> <> <>
+  25 41 -3.107791 0.019889 1.682749 1 21 0.20000 0.20000 "MOL " " H6 " 1 H6  0 <> <> <>
+  26 41 -0.001888 2.661040 3.491596 1 21 0.06000 0.06000 "MOL " " H7 " 1 H7  0 <> <> <>
+  27 41 0.356909 3.273667 1.882027 1 21 0.06000 0.06000 "MOL " " H8 " 1 H8  0 <> <> <>
+  28 42 -1.597412 4.084772 2.693201 1 21 0.39000 0.39000 "MOL " " H9 " 1 H9  0  14.060    0.483  <>
+  29 42 2.151161 1.960370 2.392741 1 21 0.41800 0.41800 "MOL " " H10" 1 H10  0  12.602    0.468  <>
+  30 42 2.656085 -1.321827 1.543308 1 21 0.41800 0.41800 "MOL " " H11" 1 H11  0  11.996    0.700  <>
+  31 43 -4.585134 -5.275549 -1.211248 1 21 0.37000 0.37000 "MOL " " H12" 1 H12  0  13.043    0.730  <>
+  32 43 -5.137959 -3.663525 -0.801528 1 21 0.37000 0.37000 "MOL " " H13" 1 H13  0  13.043    0.730  <>
+  :::
+ } 
+ m_bond[34] { 
+  # First column is bond index #
+  i_m_from
+  i_m_to
+  i_m_order
+  :::
+  1 1 6 2
+  2 1 2 1
+  3 1 24 1
+  4 2 3 2
+  5 3 4 1
+  6 3 23 1
+  7 4 9 1
+  8 4 5 2
+  9 5 6 1
+  10 5 7 1
+  11 7 8 1
+  12 7 10 1
+  13 8 9 2
+  14 8 25 1
+  15 10 11 1
+  16 10 18 1
+  17 10 12 1
+  18 12 13 1
+  19 12 14 1
+  20 12 22 1
+  21 14 15 1
+  22 14 16 1
+  23 14 21 1
+  24 16 17 1
+  25 16 18 1
+  26 16 19 1
+  27 19 20 1
+  28 19 26 1
+  29 19 27 1
+  30 20 28 1
+  31 21 29 1
+  32 22 30 1
+  33 23 31 1
+  34 23 32 1
+  :::
+ } 
+} 
+
+f_m_ct { 
+ s_m_title
+ s_m_source_file
+ i_m_source_file_index
+ i_lp_mmshare_version
+ s_lp_label
+ r_lp_tautomer_probability
+ i_lp_orig_ion_str
+ r_epik_Ionization_Penalty
+ r_epik_Ionization_Penalty_Charging
+ r_epik_Ionization_Penalty_Neutral
+ r_epik_State_Penalty
+ i_epik_Tot_Q
+ s_epik_Chemistry_Notes
+ s_st_Chirality_1
+ s_st_Chirality_2
+ s_st_Chirality_3
+ s_st_Chirality_4
+ r_mmod_Potential_Energy-OPLS-2005
+ b_mmod_Minimization_Converged-OPLS-2005
+ r_mmod_RMS_Derivative-OPLS-2005
+ i_mmod_Times_Found-OPLS-2005
+ r_mmod_Relative_Potential_Energy-OPLS-2005
+ b_mmod_Chiralities_Consistent-OPLS-2005
+ i_mmod_Conformation-OPLS-2005
+ i_mmod_Serial_Number-OPLS-2005
+ i_m_ct_format
+ :::
+ "(2~{R},3~{R},4~{S},5~{R})-2-(6-aminopurin-9-yl)-5-(hydroxymethyl)tetrahydrofuran-3,4-diol" 
+  SAMPL5_074.mol2 
+  1
+  28013
+  1 
+  1
+  1
+    0.0003 
+    0.0000 
+    0.0003 
+   -0.0000 
+  0
+  "This compound contains an acetal/aminal-like group ( X-CH(R)-Y where X, Y are N, S, or O) that may be acid/base labile, releasing an aldehyde." 
+  10_S_18_7_12_11 
+  12_R_22_10_14_13 
+  14_S_21_16_12_15 
+  16_S_18_14_19_17 
+  182.501678466797
+  1
+  0.00261338287964463
+  1
+  0
+  1
+  1
+  10
+  2
+ m_depend[19] { 
+  # First column is dependency index #
+  i_m_depend_dependency
+  s_m_depend_property
+  :::
+  1 10 r_lp_tautomer_probability 
+  2 10 i_lp_orig_ion_str 
+  3 10 r_epik_Ionization_Penalty 
+  4 10 r_epik_Ionization_Penalty_Charging 
+  5 10 r_epik_Ionization_Penalty_Neutral 
+  6 10 r_epik_State_Penalty 
+  7 10 i_epik_Tot_Q 
+  8 10 s_st_Chirality_1 
+  9 10 s_st_Chirality_2 
+  10 10 s_st_Chirality_3 
+  11 10 s_st_Chirality_4 
+  12 20 r_mmod_Potential_Energy-OPLS-2005 
+  13 20 b_mmod_Minimization_Converged-OPLS-2005 
+  14 20 r_mmod_RMS_Derivative-OPLS-2005 
+  15 20 i_mmod_Times_Found-OPLS-2005 
+  16 20 r_mmod_Relative_Potential_Energy-OPLS-2005 
+  17 20 b_mmod_Chiralities_Consistent-OPLS-2005 
+  18 20 i_mmod_Conformation-OPLS-2005 
+  19 10 i_mmod_Serial_Number-OPLS-2005 
+  :::
+ } 
+ m_atom[32] { 
+  # First column is atom index #
+  i_m_mmod_type
+  r_m_x_coord
+  r_m_y_coord
+  r_m_z_coord
+  i_m_residue_number
+  i_m_color
+  r_m_charge1
+  r_m_charge2
+  s_m_pdb_residue_name
+  s_m_pdb_atom_name
+  i_m_atomic_number
+  s_m_atom_name
+  i_m_Hcount
+  r_epik_H2O_pKa
+  r_epik_H2O_pKa_uncertainty
+  b_st_NoSrcChirality
+  :::
+  1 2 -1.344744 -4.523434 -0.787395 1 2 0.22000 0.22000 "MOL " " C1 " 6 C1  1 <> <> <>
+  2 25 -2.459270 -5.069251 -0.288766 1 43 -0.53000 -0.53000 "MOL " " N1 " 7 N1  0   3.974    0.730  <>
+  3 2 -3.191902 -4.379385 0.616257 1 2 0.44000 0.44000 "MOL " " C2 " 6 C2  0 <> <> <>
+  4 2 -2.748456 -3.091324 1.007712 1 2 0.15000 0.15000 "MOL " " C3 " 6 C3  0 <> <> <>
+  5 2 -1.547990 -2.640053 0.394991 1 2 0.38000 0.38000 "MOL " " C4 " 6 C4  0 <> <> <>
+  6 25 -0.805113 -3.331042 -0.518421 1 43 -0.55000 -0.55000 "MOL " " N2 " 7 N2  0  -0.400    2.220  <>
+  7 25 -1.306023 -1.388921 0.919106 1 43 -0.50000 -0.50000 "MOL " " N3 " 7 N3  0 <> <> <>
+  8 2 -2.351539 -1.157733 1.788561 1 2 0.20000 0.20000 "MOL " " C5 " 6 C5  1 <> <> <>
+  9 25 -3.225687 -2.124448 1.882867 1 43 -0.49000 -0.49000 "MOL " " N4 " 7 N4  0   2.923    2.220  <>
+  10 3 -0.144761 -0.504220 0.582940 1 2 0.45000 0.45000 "MOL " " C6 " 6 C6  1 <> <> 1
+  11 41 0.080551 -0.717456 -0.462853 1 21 0.10000 0.10000 "MOL " " H1 " 1 H1  0 <> <> <>
+  12 3 1.046126 -0.732507 1.534732 1 2 0.20500 0.20500 "MOL " " C7 " 6 C7  1 <> <> 1
+  13 41 1.958218 -0.588093 0.954078 1 21 0.06000 0.06000 "MOL " " H2 " 1 H2  0 <> <> <>
+  14 3 0.901201 0.408977 2.531833 1 2 0.20500 0.20500 "MOL " " C8 " 6 C8  1 <> <> 1
+  15 41 1.867056 0.704558 2.943133 1 21 0.06000 0.06000 "MOL " " H3 " 1 H3  0 <> <> <>
+  16 3 0.297180 1.512592 1.652231 1 2 0.17000 0.17000 "MOL " " C9 " 6 C9  1 <> <> 1
+  17 41 1.108933 1.947333 1.065569 1 21 0.03000 0.03000 "MOL " " H4 " 1 H4  0 <> <> <>
+  18 16 -0.564952 0.817332 0.753058 1 70 -0.40000 -0.40000 "MOL " " O1 " 8 O1  0 <> <> <>
+  19 3 -0.461510 2.623120 2.400572 1 2 0.14500 0.14500 "MOL " " C10" 6 C10  2 <> <> <>
+  20 16 -0.544077 3.780661 1.596600 1 70 -0.65500 -0.65500 "MOL " " O2 " 8 O2  1  -0.689    0.362  <>
+  21 16 0.044779 0.076397 3.614474 1 70 -0.68300 -0.68300 "MOL " " O3 " 8 O3  1  -1.841    0.498  <>
+  22 16 1.097303 -2.000094 2.164886 1 70 -0.68300 -0.68300 "MOL " " O4 " 8 O4  1  -2.303    0.700  <>
+  23 25 -4.303612 -4.948619 1.100152 1 43 -0.81000 -0.81000 "MOL " " N5 " 7 N5  2 <> <> <>
+  24 41 -0.808351 -5.128173 -1.503813 1 21 0.20000 0.20000 "MOL " " H5 " 1 H5  0 <> <> <>
+  25 41 -2.447104 -0.243894 2.356725 1 21 0.20000 0.20000 "MOL " " H6 " 1 H6  0 <> <> <>
+  26 41 -1.458636 2.293996 2.694936 1 21 0.06000 0.06000 "MOL " " H7 " 1 H7  0 <> <> <>
+  27 41 0.074102 2.898064 3.309681 1 21 0.06000 0.06000 "MOL " " H8 " 1 H8  0 <> <> <>
+  28 42 -1.018586 4.445979 2.071514 1 21 0.39000 0.39000 "MOL " " H9 " 1 H9  0  14.060    0.483  <>
+  29 42 0.038733 0.794662 4.228682 1 21 0.41800 0.41800 "MOL " " H10" 1 H10  0  12.602    0.468  <>
+  30 42 0.323684 -2.081498 2.703139 1 21 0.41800 0.41800 "MOL " " H11" 1 H11  0  11.996    0.700  <>
+  31 43 -4.573844 -5.869450 0.787299 1 21 0.37000 0.37000 "MOL " " H12" 1 H12  0  13.043    0.730  <>
+  32 43 -4.865808 -4.452185 1.776403 1 21 0.37000 0.37000 "MOL " " H13" 1 H13  0  13.043    0.730  <>
+  :::
+ } 
+ m_bond[34] { 
+  # First column is bond index #
+  i_m_from
+  i_m_to
+  i_m_order
+  :::
+  1 1 6 2
+  2 1 2 1
+  3 1 24 1
+  4 2 3 2
+  5 3 4 1
+  6 3 23 1
+  7 4 9 1
+  8 4 5 2
+  9 5 6 1
+  10 5 7 1
+  11 7 8 1
+  12 7 10 1
+  13 8 9 2
+  14 8 25 1
+  15 10 11 1
+  16 10 18 1
+  17 10 12 1
+  18 12 13 1
+  19 12 14 1
+  20 12 22 1
+  21 14 15 1
+  22 14 16 1
+  23 14 21 1
+  24 16 17 1
+  25 16 18 1
+  26 16 19 1
+  27 19 20 1
+  28 19 26 1
+  29 19 27 1
+  30 20 28 1
+  31 21 29 1
+  32 22 30 1
+  33 23 31 1
+  34 23 32 1
+  :::
+ } 
+} 
+
+f_m_ct { 
+ s_m_title
+ s_m_source_file
+ i_m_source_file_index
+ i_lp_mmshare_version
+ s_lp_label
+ r_lp_tautomer_probability
+ i_lp_orig_ion_str
+ r_epik_Ionization_Penalty
+ r_epik_Ionization_Penalty_Charging
+ r_epik_Ionization_Penalty_Neutral
+ r_epik_State_Penalty
+ i_epik_Tot_Q
+ s_epik_Chemistry_Notes
+ s_st_Chirality_1
+ s_st_Chirality_2
+ s_st_Chirality_3
+ s_st_Chirality_4
+ r_mmod_Potential_Energy-OPLS-2005
+ b_mmod_Minimization_Converged-OPLS-2005
+ r_mmod_RMS_Derivative-OPLS-2005
+ i_mmod_Times_Found-OPLS-2005
+ r_mmod_Relative_Potential_Energy-OPLS-2005
+ b_mmod_Chiralities_Consistent-OPLS-2005
+ i_mmod_Conformation-OPLS-2005
+ i_mmod_Serial_Number-OPLS-2005
+ i_m_ct_format
+ :::
+ "(2~{R},3~{R},4~{S},5~{R})-2-(6-aminopurin-9-yl)-5-(hydroxymethyl)tetrahydrofuran-3,4-diol" 
+  SAMPL5_074.mol2 
+  1
+  28013
+  1 
+  1
+  1
+    0.0003 
+    0.0000 
+    0.0003 
+   -0.0000 
+  0
+  "This compound contains an acetal/aminal-like group ( X-CH(R)-Y where X, Y are N, S, or O) that may be acid/base labile, releasing an aldehyde." 
+  10_R_18_7_12_11 
+  12_S_22_10_14_13 
+  14_S_21_16_12_15 
+  16_S_18_14_19_17 
+  163.503952026367
+  1
+  0.00365927093662322
+  1
+  0
+  1
+  1
+  11
+  2
+ m_depend[19] { 
+  # First column is dependency index #
+  i_m_depend_dependency
+  s_m_depend_property
+  :::
+  1 10 r_lp_tautomer_probability 
+  2 10 i_lp_orig_ion_str 
+  3 10 r_epik_Ionization_Penalty 
+  4 10 r_epik_Ionization_Penalty_Charging 
+  5 10 r_epik_Ionization_Penalty_Neutral 
+  6 10 r_epik_State_Penalty 
+  7 10 i_epik_Tot_Q 
+  8 10 s_st_Chirality_1 
+  9 10 s_st_Chirality_2 
+  10 10 s_st_Chirality_3 
+  11 10 s_st_Chirality_4 
+  12 20 r_mmod_Potential_Energy-OPLS-2005 
+  13 20 b_mmod_Minimization_Converged-OPLS-2005 
+  14 20 r_mmod_RMS_Derivative-OPLS-2005 
+  15 20 i_mmod_Times_Found-OPLS-2005 
+  16 20 r_mmod_Relative_Potential_Energy-OPLS-2005 
+  17 20 b_mmod_Chiralities_Consistent-OPLS-2005 
+  18 20 i_mmod_Conformation-OPLS-2005 
+  19 10 i_mmod_Serial_Number-OPLS-2005 
+  :::
+ } 
+ m_atom[32] { 
+  # First column is atom index #
+  i_m_mmod_type
+  r_m_x_coord
+  r_m_y_coord
+  r_m_z_coord
+  i_m_residue_number
+  i_m_color
+  r_m_charge1
+  r_m_charge2
+  s_m_pdb_residue_name
+  s_m_pdb_atom_name
+  i_m_atomic_number
+  s_m_atom_name
+  i_m_Hcount
+  r_epik_H2O_pKa
+  r_epik_H2O_pKa_uncertainty
+  b_st_NoSrcChirality
+  :::
+  1 2 -1.385051 -5.115118 1.108264 1 2 0.22000 0.22000 "MOL " " C1 " 6 C1  1 <> <> <>
+  2 25 -2.448175 -5.339441 0.328262 1 43 -0.53000 -0.53000 "MOL " " N1 " 7 N1  0   3.974    0.730  <>
+  3 2 -3.223934 -4.299147 -0.056477 1 2 0.44000 0.44000 "MOL " " C2 " 6 C2  0 <> <> <>
+  4 2 -2.879440 -2.996838 0.384211 1 2 0.15000 0.15000 "MOL " " C3 " 6 C3  0 <> <> <>
+  5 2 -1.723984 -2.910699 1.206950 1 2 0.38000 0.38000 "MOL " " C4 " 6 C4  0 <> <> <>
+  6 25 -0.937972 -3.955683 1.599524 1 43 -0.55000 -0.55000 "MOL " " N2 " 7 N2  0  -0.400    2.220  <>
+  7 25 -1.575161 -1.575174 1.508142 1 43 -0.50000 -0.50000 "MOL " " N3 " 7 N3  0 <> <> <>
+  8 2 -2.627517 -0.946442 0.874694 1 2 0.20000 0.20000 "MOL " " C5 " 6 C5  1 <> <> <>
+  9 25 -3.423292 -1.732563 0.198538 1 43 -0.49000 -0.49000 "MOL " " N4 " 7 N4  0   2.923    2.220  <>
+  10 3 -0.485106 -0.991463 2.355413 1 2 0.45000 0.45000 "MOL " " C6 " 6 C6  1 <> <> 1
+  11 41 -0.413600 -1.659832 3.214514 1 21 0.10000 0.10000 "MOL " " H1 " 1 H1  0 <> <> <>
+  12 3 0.847901 -0.823758 1.582827 1 2 0.20500 0.20500 "MOL " " C7 " 6 C7  1 <> <> 1
+  13 41 1.606023 -1.478877 2.014481 1 21 0.06000 0.06000 "MOL " " H2 " 1 H2  0 <> <> <>
+  14 3 1.169291 0.651316 1.793692 1 2 0.20500 0.20500 "MOL " " C8 " 6 C8  1 <> <> 1
+  15 41 1.686526 1.094810 0.941560 1 21 0.06000 0.06000 "MOL " " H3 " 1 H3  0 <> <> <>
+  16 3 -0.217809 1.272241 2.003254 1 2 0.17000 0.17000 "MOL " " C9 " 6 C9  1 <> <> 1
+  17 41 -0.700973 1.352622 1.027643 1 21 0.03000 0.03000 "MOL " " H4 " 1 H4  0 <> <> <>
+  18 16 -0.885296 0.279215 2.773310 1 70 -0.40000 -0.40000 "MOL " " O1 " 8 O1  0 <> <> <>
+  19 3 -0.239341 2.636875 2.712795 1 2 0.14500 0.14500 "MOL " " C10" 6 C10  2 <> <> <>
+  20 16 -1.458274 3.298320 2.447655 1 70 -0.65500 -0.65500 "MOL " " O2 " 8 O2  1  -0.689    0.362  <>
+  21 16 1.989206 0.820139 2.936655 1 70 -0.68300 -0.68300 "MOL " " O3 " 8 O3  1  -1.841    0.498  <>
+  22 16 0.756233 -1.099646 0.194049 1 70 -0.68300 -0.68300 "MOL " " O4 " 8 O4  1  -2.303    0.700  <>
+  23 25 -4.283047 -4.550974 -0.836849 1 43 -0.81000 -0.81000 "MOL " " N5 " 7 N5  2 <> <> <>
+  24 41 -0.810298 -5.989163 1.377228 1 21 0.20000 0.20000 "MOL " " H5 " 1 H5  0 <> <> <>
+  25 41 -2.793452 0.119607 0.928173 1 21 0.20000 0.20000 "MOL " " H6 " 1 H6  0 <> <> <>
+  26 41 -0.092894 2.528905 3.788042 1 21 0.06000 0.06000 "MOL " " H7 " 1 H7  0 <> <> <>
+  27 41 0.563911 3.269820 2.334503 1 21 0.06000 0.06000 "MOL " " H8 " 1 H8  0 <> <> <>
+  28 42 -1.455421 4.129590 2.897464 1 21 0.39000 0.39000 "MOL " " H9 " 1 H9  0  14.060    0.483  <>
+  29 42 2.176843 1.740085 3.043869 1 21 0.41800 0.41800 "MOL " " H10" 1 H10  0  12.602    0.468  <>
+  30 42 1.614010 -1.001801 -0.189966 1 21 0.41800 0.41800 "MOL " " H11" 1 H11  0  11.996    0.700  <>
+  31 43 -4.483329 -5.498176 -1.122283 1 21 0.37000 0.37000 "MOL " " H12" 1 H12  0  13.043    0.730  <>
+  32 43 -4.875282 -3.789771 -1.136286 1 21 0.37000 0.37000 "MOL " " H13" 1 H13  0  13.043    0.730  <>
+  :::
+ } 
+ m_bond[34] { 
+  # First column is bond index #
+  i_m_from
+  i_m_to
+  i_m_order
+  :::
+  1 1 6 2
+  2 1 2 1
+  3 1 24 1
+  4 2 3 2
+  5 3 4 1
+  6 3 23 1
+  7 4 9 1
+  8 4 5 2
+  9 5 6 1
+  10 5 7 1
+  11 7 8 1
+  12 7 10 1
+  13 8 9 2
+  14 8 25 1
+  15 10 11 1
+  16 10 18 1
+  17 10 12 1
+  18 12 13 1
+  19 12 14 1
+  20 12 22 1
+  21 14 15 1
+  22 14 16 1
+  23 14 21 1
+  24 16 17 1
+  25 16 18 1
+  26 16 19 1
+  27 19 20 1
+  28 19 26 1
+  29 19 27 1
+  30 20 28 1
+  31 21 29 1
+  32 22 30 1
+  33 23 31 1
+  34 23 32 1
+  :::
+ } 
+} 
+
+f_m_ct { 
+ s_m_title
+ s_m_source_file
+ i_m_source_file_index
+ i_lp_mmshare_version
+ s_lp_label
+ r_lp_tautomer_probability
+ i_lp_orig_ion_str
+ r_epik_Ionization_Penalty
+ r_epik_Ionization_Penalty_Charging
+ r_epik_Ionization_Penalty_Neutral
+ r_epik_State_Penalty
+ i_epik_Tot_Q
+ s_epik_Chemistry_Notes
+ s_st_Chirality_1
+ s_st_Chirality_2
+ s_st_Chirality_3
+ s_st_Chirality_4
+ r_mmod_Potential_Energy-OPLS-2005
+ b_mmod_Minimization_Converged-OPLS-2005
+ r_mmod_RMS_Derivative-OPLS-2005
+ i_mmod_Times_Found-OPLS-2005
+ r_mmod_Relative_Potential_Energy-OPLS-2005
+ b_mmod_Chiralities_Consistent-OPLS-2005
+ i_mmod_Conformation-OPLS-2005
+ i_mmod_Serial_Number-OPLS-2005
+ i_m_ct_format
+ :::
+ "(2~{R},3~{R},4~{S},5~{R})-2-(6-aminopurin-9-yl)-5-(hydroxymethyl)tetrahydrofuran-3,4-diol" 
+  SAMPL5_074.mol2 
+  1
+  28013
+  1 
+  1
+  1
+    0.0003 
+    0.0000 
+    0.0003 
+   -0.0000 
+  0
+  "This compound contains an acetal/aminal-like group ( X-CH(R)-Y where X, Y are N, S, or O) that may be acid/base labile, releasing an aldehyde." 
+  10_S_18_7_12_11 
+  12_S_22_10_14_13 
+  14_S_21_16_12_15 
+  16_S_18_14_19_17 
+  141.642135620117
+  1
+  0.00585955381393433
+  1
+  0
+  1
+  1
+  12
+  2
+ m_depend[19] { 
+  # First column is dependency index #
+  i_m_depend_dependency
+  s_m_depend_property
+  :::
+  1 10 r_lp_tautomer_probability 
+  2 10 i_lp_orig_ion_str 
+  3 10 r_epik_Ionization_Penalty 
+  4 10 r_epik_Ionization_Penalty_Charging 
+  5 10 r_epik_Ionization_Penalty_Neutral 
+  6 10 r_epik_State_Penalty 
+  7 10 i_epik_Tot_Q 
+  8 10 s_st_Chirality_1 
+  9 10 s_st_Chirality_2 
+  10 10 s_st_Chirality_3 
+  11 10 s_st_Chirality_4 
+  12 20 r_mmod_Potential_Energy-OPLS-2005 
+  13 20 b_mmod_Minimization_Converged-OPLS-2005 
+  14 20 r_mmod_RMS_Derivative-OPLS-2005 
+  15 20 i_mmod_Times_Found-OPLS-2005 
+  16 20 r_mmod_Relative_Potential_Energy-OPLS-2005 
+  17 20 b_mmod_Chiralities_Consistent-OPLS-2005 
+  18 20 i_mmod_Conformation-OPLS-2005 
+  19 10 i_mmod_Serial_Number-OPLS-2005 
+  :::
+ } 
+ m_atom[32] { 
+  # First column is atom index #
+  i_m_mmod_type
+  r_m_x_coord
+  r_m_y_coord
+  r_m_z_coord
+  i_m_residue_number
+  i_m_color
+  r_m_charge1
+  r_m_charge2
+  s_m_pdb_residue_name
+  s_m_pdb_atom_name
+  i_m_atomic_number
+  s_m_atom_name
+  i_m_Hcount
+  r_epik_H2O_pKa
+  r_epik_H2O_pKa_uncertainty
+  b_st_NoSrcChirality
+  :::
+  1 2 -1.343759 -4.609045 -0.648646 1 2 0.22000 0.22000 "MOL " " C1 " 6 C1  1 <> <> <>
+  2 25 -2.517722 -5.126599 -0.270721 1 43 -0.53000 -0.53000 "MOL " " N1 " 7 N1  0   3.974    0.730  <>
+  3 2 -3.334593 -4.408262 0.534663 1 2 0.44000 0.44000 "MOL " " C2 " 6 C2  0 <> <> <>
+  4 2 -2.914029 -3.120862 0.952705 1 2 0.15000 0.15000 "MOL " " C3 " 6 C3  0 <> <> <>
+  5 2 -1.644635 -2.700707 0.470502 1 2 0.38000 0.38000 "MOL " " C4 " 6 C4  0 <> <> <>
+  6 25 -0.815385 -3.421232 -0.339695 1 43 -0.55000 -0.55000 "MOL " " N2 " 7 N2  0  -0.400    2.220  <>
+  7 25 -1.443043 -1.443015 0.993422 1 43 -0.50000 -0.50000 "MOL " " N3 " 7 N3  0 <> <> <>
+  8 2 -2.567973 -1.182697 1.747137 1 2 0.20000 0.20000 "MOL " " C5 " 6 C5  1 <> <> <>
+  9 25 -3.466581 -2.131633 1.756111 1 43 -0.49000 -0.49000 "MOL " " N4 " 7 N4  0   2.923    2.220  <>
+  10 3 -0.238752 -0.586585 0.781222 1 2 0.45000 0.45000 "MOL " " C6 " 6 C6  1 <> <> 1
+  11 41 0.098486 -0.808101 -0.232808 1 21 0.10000 0.10000 "MOL " " H1 " 1 H1  0 <> <> <>
+  12 3 0.799520 -0.872479 1.880035 1 2 0.20500 0.20500 "MOL " " C7 " 6 C7  1 <> <> 1
+  13 41 0.558708 -1.786883 2.425635 1 21 0.06000 0.06000 "MOL " " H2 " 1 H2  0 <> <> <>
+  14 3 0.720587 0.372624 2.753811 1 2 0.20500 0.20500 "MOL " " C8 " 6 C8  1 <> <> 1
+  15 41 1.682556 0.631912 3.198300 1 21 0.06000 0.06000 "MOL " " H3 " 1 H3  0 <> <> <>
+  16 3 0.240282 1.447988 1.769914 1 2 0.17000 0.17000 "MOL " " C9 " 6 C9  1 <> <> 1
+  17 41 1.101297 1.770398 1.180888 1 21 0.03000 0.03000 "MOL " " H4 " 1 H4  0 <> <> <>
+  18 16 -0.644940 0.742959 0.907862 1 70 -0.40000 -0.40000 "MOL " " O1 " 8 O1  0 <> <> <>
+  19 3 -0.453384 2.668058 2.401267 1 2 0.14500 0.14500 "MOL " " C10" 6 C10  2 <> <> <>
+  20 16 -0.423083 3.760497 1.507459 1 70 -0.65500 -0.65500 "MOL " " O2 " 8 O2  1  -0.689    0.362  <>
+  21 16 -0.204643 0.179588 3.809433 1 70 -0.68300 -0.68300 "MOL " " O3 " 8 O3  1  -1.841    0.498  <>
+  22 16 2.098071 -1.012109 1.336930 1 70 -0.68300 -0.68300 "MOL " " O4 " 8 O4  1  -2.303    0.700  <>
+  23 25 -4.503563 -4.950443 0.900218 1 43 -0.81000 -0.81000 "MOL " " N5 " 7 N5  2 <> <> <>
+  24 41 -0.741593 -5.235731 -1.290036 1 21 0.20000 0.20000 "MOL " " H5 " 1 H5  0 <> <> <>
+  25 41 -2.701256 -0.261185 2.295514 1 21 0.20000 0.20000 "MOL " " H6 " 1 H6  0 <> <> <>
+  26 41 -1.481282 2.437961 2.683808 1 21 0.06000 0.06000 "MOL " " H7 " 1 H7  0 <> <> <>
+  27 41 0.073929 2.974323 3.305190 1 21 0.06000 0.06000 "MOL " " H8 " 1 H8  0 <> <> <>
+  28 42 -0.859978 4.494649 1.911711 1 21 0.39000 0.39000 "MOL " " H9 " 1 H9  0  14.060    0.483  <>
+  29 42 -0.211614 0.952511 4.353140 1 21 0.41800 0.41800 "MOL " " H10" 1 H10  0  12.602    0.468  <>
+  30 42 2.699142 -1.205238 2.040280 1 21 0.41800 0.41800 "MOL " " H11" 1 H11  0  11.996    0.700  <>
+  31 43 -4.754151 -5.872112 0.573789 1 21 0.37000 0.37000 "MOL " " H12" 1 H12  0  13.043    0.730  <>
+  32 43 -5.128590 -4.432601 1.501073 1 21 0.37000 0.37000 "MOL " " H13" 1 H13  0  13.043    0.730  <>
+  :::
+ } 
+ m_bond[34] { 
+  # First column is bond index #
+  i_m_from
+  i_m_to
+  i_m_order
+  :::
+  1 1 6 2
+  2 1 2 1
+  3 1 24 1
+  4 2 3 2
+  5 3 4 1
+  6 3 23 1
+  7 4 9 1
+  8 4 5 2
+  9 5 6 1
+  10 5 7 1
+  11 7 8 1
+  12 7 10 1
+  13 8 9 2
+  14 8 25 1
+  15 10 11 1
+  16 10 18 1
+  17 10 12 1
+  18 12 13 1
+  19 12 14 1
+  20 12 22 1
+  21 14 15 1
+  22 14 16 1
+  23 14 21 1
+  24 16 17 1
+  25 16 18 1
+  26 16 19 1
+  27 19 20 1
+  28 19 26 1
+  29 19 27 1
+  30 20 28 1
+  31 21 29 1
+  32 22 30 1
+  33 23 31 1
+  34 23 32 1
+  :::
+ } 
+} 
+
+f_m_ct { 
+ s_m_title
+ s_m_source_file
+ i_m_source_file_index
+ i_lp_mmshare_version
+ s_lp_label
+ r_lp_tautomer_probability
+ i_lp_orig_ion_str
+ r_epik_Ionization_Penalty
+ r_epik_Ionization_Penalty_Charging
+ r_epik_Ionization_Penalty_Neutral
+ r_epik_State_Penalty
+ i_epik_Tot_Q
+ s_epik_Chemistry_Notes
+ s_st_Chirality_1
+ s_st_Chirality_2
+ s_st_Chirality_3
+ s_st_Chirality_4
+ r_mmod_Potential_Energy-OPLS-2005
+ b_mmod_Minimization_Converged-OPLS-2005
+ r_mmod_RMS_Derivative-OPLS-2005
+ i_mmod_Times_Found-OPLS-2005
+ r_mmod_Relative_Potential_Energy-OPLS-2005
+ b_mmod_Chiralities_Consistent-OPLS-2005
+ i_mmod_Conformation-OPLS-2005
+ i_mmod_Serial_Number-OPLS-2005
+ i_m_ct_format
+ :::
+ "(2~{R},3~{R},4~{S},5~{R})-2-(6-aminopurin-9-yl)-5-(hydroxymethyl)tetrahydrofuran-3,4-diol" 
+  SAMPL5_074.mol2 
+  1
+  28013
+  1 
+  1
+  1
+    0.0003 
+    0.0000 
+    0.0003 
+   -0.0000 
+  0
+  "This compound contains an acetal/aminal-like group ( X-CH(R)-Y where X, Y are N, S, or O) that may be acid/base labile, releasing an aldehyde." 
+  10_R_18_7_12_11 
+  12_R_22_10_14_13 
+  14_R_21_16_12_15 
+  16_S_18_14_19_17 
+  130.864654541016
+  1
+  0.0288807731121778
+  1
+  0
+  1
+  1
+  13
+  2
+ m_depend[19] { 
+  # First column is dependency index #
+  i_m_depend_dependency
+  s_m_depend_property
+  :::
+  1 10 r_lp_tautomer_probability 
+  2 10 i_lp_orig_ion_str 
+  3 10 r_epik_Ionization_Penalty 
+  4 10 r_epik_Ionization_Penalty_Charging 
+  5 10 r_epik_Ionization_Penalty_Neutral 
+  6 10 r_epik_State_Penalty 
+  7 10 i_epik_Tot_Q 
+  8 10 s_st_Chirality_1 
+  9 10 s_st_Chirality_2 
+  10 10 s_st_Chirality_3 
+  11 10 s_st_Chirality_4 
+  12 20 r_mmod_Potential_Energy-OPLS-2005 
+  13 20 b_mmod_Minimization_Converged-OPLS-2005 
+  14 20 r_mmod_RMS_Derivative-OPLS-2005 
+  15 20 i_mmod_Times_Found-OPLS-2005 
+  16 20 r_mmod_Relative_Potential_Energy-OPLS-2005 
+  17 20 b_mmod_Chiralities_Consistent-OPLS-2005 
+  18 20 i_mmod_Conformation-OPLS-2005 
+  19 10 i_mmod_Serial_Number-OPLS-2005 
+  :::
+ } 
+ m_atom[32] { 
+  # First column is atom index #
+  i_m_mmod_type
+  r_m_x_coord
+  r_m_y_coord
+  r_m_z_coord
+  i_m_residue_number
+  i_m_color
+  r_m_charge1
+  r_m_charge2
+  s_m_pdb_residue_name
+  s_m_pdb_atom_name
+  i_m_atomic_number
+  s_m_atom_name
+  i_m_Hcount
+  r_epik_H2O_pKa
+  r_epik_H2O_pKa_uncertainty
+  b_st_NoSrcChirality
+  :::
+  1 2 -1.218266 -4.926135 0.731772 1 2 0.22000 0.22000 "MOL " " C1 " 6 C1  1 <> <> <>
+  2 25 -2.257185 -5.105677 -0.090994 1 43 -0.53000 -0.53000 "MOL " " N1 " 7 N1  0   3.974    0.730  <>
+  3 2 -3.118799 -4.084957 -0.308795 1 2 0.44000 0.44000 "MOL " " C2 " 6 C2  0 <> <> <>
+  4 2 -2.886804 -2.849931 0.346912 1 2 0.15000 0.15000 "MOL " " C3 " 6 C3  0 <> <> <>
+  5 2 -1.741384 -2.803007 1.186896 1 2 0.38000 0.38000 "MOL " " C4 " 6 C4  0 <> <> <>
+  6 25 -0.871889 -3.830685 1.413801 1 43 -0.55000 -0.55000 "MOL " " N2 " 7 N2  0  -0.400    2.220  <>
+  7 25 -1.703756 -1.526067 1.704549 1 43 -0.50000 -0.50000 "MOL " " N3 " 7 N3  0 <> <> <>
+  8 2 -2.820073 -0.900965 1.185117 1 2 0.20000 0.20000 "MOL " " C5 " 6 C5  1 <> <> <>
+  9 25 -3.540828 -1.625682 0.370915 1 43 -0.49000 -0.49000 "MOL " " N4 " 7 N4  0   2.923    2.220  <>
+  10 3 -0.681628 -1.004897 2.671249 1 2 0.45000 0.45000 "MOL " " C6 " 6 C6  1 <> <> 1
+  11 41 -0.772861 -1.660585 3.538674 1 21 0.10000 0.10000 "MOL " " H1 " 1 H1  0 <> <> <>
+  12 3 0.715933 -0.974381 2.020411 1 2 0.20500 0.20500 "MOL " " C7 " 6 C7  1 <> <> 1
+  13 41 0.685056 -1.455383 1.041231 1 21 0.06000 0.06000 "MOL " " H2 " 1 H2  0 <> <> <>
+  14 3 1.019458 0.520319 1.911009 1 2 0.20500 0.20500 "MOL " " C8 " 6 C8  1 <> <> 1
+  15 41 1.685522 0.845999 2.712219 1 21 0.06000 0.06000 "MOL " " H3 " 1 H3  0 <> <> <>
+  16 3 -0.353767 1.182407 2.061905 1 2 0.17000 0.17000 "MOL " " C9 " 6 C9  1 <> <> 1
+  17 41 -0.878236 1.168180 1.104273 1 21 0.03000 0.03000 "MOL " " H4 " 1 H4  0 <> <> <>
+  18 16 -1.001165 0.315114 2.983782 1 70 -0.40000 -0.40000 "MOL " " O1 " 8 O1  0 <> <> <>
+  19 3 -0.297572 2.605385 2.637909 1 2 0.14500 0.14500 "MOL " " C10" 6 C10  2 <> <> <>
+  20 16 -1.512593 3.276460 2.379665 1 70 -0.65500 -0.65500 "MOL " " O2 " 8 O2  1  -0.689    0.362  <>
+  21 16 1.578908 0.819548 0.646965 1 70 -0.68300 -0.68300 "MOL " " O3 " 8 O3  1  -1.841    0.498  <>
+  22 16 1.684340 -1.612822 2.828328 1 70 -0.68300 -0.68300 "MOL " " O4 " 8 O4  1  -2.303    0.700  <>
+  23 25 -4.153587 -4.292167 -1.133627 1 43 -0.81000 -0.81000 "MOL " " N5 " 7 N5  2 <> <> <>
+  24 41 -0.571803 -5.781600 0.862097 1 21 0.20000 0.20000 "MOL " " H5 " 1 H5  0 <> <> <>
+  25 41 -3.090710 0.117066 1.426438 1 21 0.20000 0.20000 "MOL " " H6 " 1 H6  0 <> <> <>
+  26 41 -0.088008 2.592671 3.708033 1 21 0.06000 0.06000 "MOL " " H7 " 1 H7  0 <> <> <>
+  27 41 0.498998 3.174444 2.157801 1 21 0.06000 0.06000 "MOL " " H8 " 1 H8  0 <> <> <>
+  28 42 -1.461018 4.146696 2.744940 1 21 0.39000 0.39000 "MOL " " H9 " 1 H9  0  14.060    0.483  <>
+  29 42 1.720648 1.752246 0.589965 1 21 0.41800 0.41800 "MOL " " H10" 1 H10  0  12.602    0.468  <>
+  30 42 2.517655 -1.565862 2.384610 1 21 0.41800 0.41800 "MOL " " H11" 1 H11  0  11.996    0.700  <>
+  31 43 -4.272700 -5.192416 -1.574310 1 21 0.37000 0.37000 "MOL " " H12" 1 H12  0  13.043    0.730  <>
+  32 43 -4.809934 -3.545135 -1.309718 1 21 0.37000 0.37000 "MOL " " H13" 1 H13  0  13.043    0.730  <>
+  :::
+ } 
+ m_bond[34] { 
+  # First column is bond index #
+  i_m_from
+  i_m_to
+  i_m_order
+  :::
+  1 1 6 2
+  2 1 2 1
+  3 1 24 1
+  4 2 3 2
+  5 3 4 1
+  6 3 23 1
+  7 4 9 1
+  8 4 5 2
+  9 5 6 1
+  10 5 7 1
+  11 7 8 1
+  12 7 10 1
+  13 8 9 2
+  14 8 25 1
+  15 10 11 1
+  16 10 18 1
+  17 10 12 1
+  18 12 13 1
+  19 12 14 1
+  20 12 22 1
+  21 14 15 1
+  22 14 16 1
+  23 14 21 1
+  24 16 17 1
+  25 16 18 1
+  26 16 19 1
+  27 19 20 1
+  28 19 26 1
+  29 19 27 1
+  30 20 28 1
+  31 21 29 1
+  32 22 30 1
+  33 23 31 1
+  34 23 32 1
+  :::
+ } 
+} 
+
+f_m_ct { 
+ s_m_title
+ s_m_source_file
+ i_m_source_file_index
+ i_lp_mmshare_version
+ s_lp_label
+ r_lp_tautomer_probability
+ i_lp_orig_ion_str
+ r_epik_Ionization_Penalty
+ r_epik_Ionization_Penalty_Charging
+ r_epik_Ionization_Penalty_Neutral
+ r_epik_State_Penalty
+ i_epik_Tot_Q
+ s_epik_Chemistry_Notes
+ s_st_Chirality_1
+ s_st_Chirality_2
+ s_st_Chirality_3
+ s_st_Chirality_4
+ r_mmod_Potential_Energy-OPLS-2005
+ b_mmod_Minimization_Converged-OPLS-2005
+ r_mmod_RMS_Derivative-OPLS-2005
+ i_mmod_Times_Found-OPLS-2005
+ r_mmod_Relative_Potential_Energy-OPLS-2005
+ b_mmod_Chiralities_Consistent-OPLS-2005
+ i_mmod_Conformation-OPLS-2005
+ i_mmod_Serial_Number-OPLS-2005
+ i_m_ct_format
+ :::
+ "(2~{R},3~{R},4~{S},5~{R})-2-(6-aminopurin-9-yl)-5-(hydroxymethyl)tetrahydrofuran-3,4-diol" 
+  SAMPL5_074.mol2 
+  1
+  28013
+  1 
+  1
+  1
+    0.0003 
+    0.0000 
+    0.0003 
+   -0.0000 
+  0
+  "This compound contains an acetal/aminal-like group ( X-CH(R)-Y where X, Y are N, S, or O) that may be acid/base labile, releasing an aldehyde." 
+  10_S_18_7_12_11 
+  12_R_22_10_14_13 
+  14_R_21_16_12_15 
+  16_S_18_14_19_17 
+  159.460220336914
+  1
+  0.0111375069245696
+  1
+  0
+  1
+  1
+  14
+  2
+ m_depend[19] { 
+  # First column is dependency index #
+  i_m_depend_dependency
+  s_m_depend_property
+  :::
+  1 10 r_lp_tautomer_probability 
+  2 10 i_lp_orig_ion_str 
+  3 10 r_epik_Ionization_Penalty 
+  4 10 r_epik_Ionization_Penalty_Charging 
+  5 10 r_epik_Ionization_Penalty_Neutral 
+  6 10 r_epik_State_Penalty 
+  7 10 i_epik_Tot_Q 
+  8 10 s_st_Chirality_1 
+  9 10 s_st_Chirality_2 
+  10 10 s_st_Chirality_3 
+  11 10 s_st_Chirality_4 
+  12 20 r_mmod_Potential_Energy-OPLS-2005 
+  13 20 b_mmod_Minimization_Converged-OPLS-2005 
+  14 20 r_mmod_RMS_Derivative-OPLS-2005 
+  15 20 i_mmod_Times_Found-OPLS-2005 
+  16 20 r_mmod_Relative_Potential_Energy-OPLS-2005 
+  17 20 b_mmod_Chiralities_Consistent-OPLS-2005 
+  18 20 i_mmod_Conformation-OPLS-2005 
+  19 10 i_mmod_Serial_Number-OPLS-2005 
+  :::
+ } 
+ m_atom[32] { 
+  # First column is atom index #
+  i_m_mmod_type
+  r_m_x_coord
+  r_m_y_coord
+  r_m_z_coord
+  i_m_residue_number
+  i_m_color
+  r_m_charge1
+  r_m_charge2
+  s_m_pdb_residue_name
+  s_m_pdb_atom_name
+  i_m_atomic_number
+  s_m_atom_name
+  i_m_Hcount
+  r_epik_H2O_pKa
+  r_epik_H2O_pKa_uncertainty
+  b_st_NoSrcChirality
+  :::
+  1 2 -1.063202 -4.789473 0.308476 1 2 0.22000 0.22000 "MOL " " C1 " 6 C1  1 <> <> <>
+  2 25 -2.349364 -5.156644 0.302159 1 43 -0.53000 -0.53000 "MOL " " N1 " 7 N1  0   3.974    0.730  <>
+  3 2 -3.312104 -4.215297 0.440479 1 2 0.44000 0.44000 "MOL " " C2 " 6 C2  0 <> <> <>
+  4 2 -2.920260 -2.861335 0.589280 1 2 0.15000 0.15000 "MOL " " C3 " 6 C3  0 <> <> <>
+  5 2 -1.519664 -2.621303 0.579263 1 2 0.38000 0.38000 "MOL " " C4 " 6 C4  0 <> <> <>
+  6 25 -0.543580 -3.565249 0.438215 1 43 -0.55000 -0.55000 "MOL " " N2 " 7 N2  0  -0.400    2.220  <>
+  7 25 -1.370399 -1.262556 0.743210 1 43 -0.50000 -0.50000 "MOL " " N3 " 7 N3  0 <> <> <>
+  8 2 -2.655337 -0.767792 0.825157 1 2 0.20000 0.20000 "MOL " " C5 " 6 C5  1 <> <> <>
+  9 25 -3.604571 -1.662905 0.746499 1 43 -0.49000 -0.49000 "MOL " " N4 " 7 N4  0   2.923    2.220  <>
+  10 3 -0.066370 -0.531041 0.794031 1 2 0.45000 0.45000 "MOL " " C6 " 6 C6  1 <> <> 1
+  11 41 0.473524 -0.859035 -0.095434 1 21 0.10000 0.10000 "MOL " " H1 " 1 H1  0 <> <> <>
+  12 3 0.710240 -0.781801 2.102603 1 2 0.20500 0.20500 "MOL " " C7 " 6 C7  1 <> <> 1
+  13 41 1.502240 -1.510519 1.923666 1 21 0.06000 0.06000 "MOL " " H2 " 1 H2  0 <> <> <>
+  14 3 1.250787 0.602085 2.423873 1 2 0.20500 0.20500 "MOL " " C8 " 6 C8  1 <> <> 1
+  15 41 1.391939 0.760952 3.493973 1 21 0.06000 0.06000 "MOL " " H3 " 1 H3  0 <> <> <>
+  16 3 0.213009 1.556022 1.815484 1 2 0.17000 0.17000 "MOL " " C9 " 6 C9  1 <> <> 1
+  17 41 0.685955 2.481828 1.483035 1 21 0.03000 0.03000 "MOL " " H4 " 1 H4  0 <> <> <>
+  18 16 -0.321098 0.839967 0.701988 1 70 -0.40000 -0.40000 "MOL " " O1 " 8 O1  0 <> <> <>
+  19 3 -0.932487 1.890208 2.790912 1 2 0.14500 0.14500 "MOL " " C10" 6 C10  2 <> <> <>
+  20 16 -1.648916 3.016199 2.330589 1 70 -0.65500 -0.65500 "MOL " " O2 " 8 O2  1  -0.689    0.362  <>
+  21 16 2.502547 0.805535 1.796273 1 70 -0.68300 -0.68300 "MOL " " O3 " 8 O3  1  -1.841    0.498  <>
+  22 16 -0.091984 -1.261302 3.170125 1 70 -0.68300 -0.68300 "MOL " " O4 " 8 O4  1  -2.303    0.700  <>
+  23 25 -4.592233 -4.609305 0.429010 1 43 -0.81000 -0.81000 "MOL " " N5 " 7 N5  2 <> <> <>
+  24 41 -0.348140 -5.590779 0.193366 1 21 0.20000 0.20000 "MOL " " H5 " 1 H5  0 <> <> <>
+  25 41 -2.872414 0.283750 0.945051 1 21 0.20000 0.20000 "MOL " " H6 " 1 H6  0 <> <> <>
+  26 41 -1.606699 1.045968 2.933306 1 21 0.06000 0.06000 "MOL " " H7 " 1 H7  0 <> <> <>
+  27 41 -0.528911 2.144626 3.771254 1 21 0.06000 0.06000 "MOL " " H8 " 1 H8  0 <> <> <>
+  28 42 -2.334148 3.212889 2.951186 1 21 0.39000 0.39000 "MOL " " H9 " 1 H9  0  14.060    0.483  <>
+  29 42 2.785029 1.691788 1.964744 1 21 0.41800 0.41800 "MOL " " H10" 1 H10  0  12.602    0.468  <>
+  30 42 0.467838 -1.442195 3.909613 1 21 0.41800 0.41800 "MOL " " H11" 1 H11  0  11.996    0.700  <>
+  31 43 -4.816213 -5.587399 0.319636 1 21 0.37000 0.37000 "MOL " " H12" 1 H12  0  13.043    0.730  <>
+  32 43 -5.326964 -3.923959 0.530500 1 21 0.37000 0.37000 "MOL " " H13" 1 H13  0  13.043    0.730  <>
+  :::
+ } 
+ m_bond[34] { 
+  # First column is bond index #
+  i_m_from
+  i_m_to
+  i_m_order
+  :::
+  1 1 6 2
+  2 1 2 1
+  3 1 24 1
+  4 2 3 2
+  5 3 4 1
+  6 3 23 1
+  7 4 9 1
+  8 4 5 2
+  9 5 6 1
+  10 5 7 1
+  11 7 8 1
+  12 7 10 1
+  13 8 9 2
+  14 8 25 1
+  15 10 11 1
+  16 10 18 1
+  17 10 12 1
+  18 12 13 1
+  19 12 14 1
+  20 12 22 1
+  21 14 15 1
+  22 14 16 1
+  23 14 21 1
+  24 16 17 1
+  25 16 18 1
+  26 16 19 1
+  27 19 20 1
+  28 19 26 1
+  29 19 27 1
+  30 20 28 1
+  31 21 29 1
+  32 22 30 1
+  33 23 31 1
+  34 23 32 1
+  :::
+ } 
+} 
+
+f_m_ct { 
+ s_m_title
+ s_m_source_file
+ i_m_source_file_index
+ i_lp_mmshare_version
+ s_lp_label
+ r_lp_tautomer_probability
+ i_lp_orig_ion_str
+ r_epik_Ionization_Penalty
+ r_epik_Ionization_Penalty_Charging
+ r_epik_Ionization_Penalty_Neutral
+ r_epik_State_Penalty
+ i_epik_Tot_Q
+ s_epik_Chemistry_Notes
+ s_st_Chirality_1
+ s_st_Chirality_2
+ s_st_Chirality_3
+ s_st_Chirality_4
+ r_mmod_Potential_Energy-OPLS-2005
+ b_mmod_Minimization_Converged-OPLS-2005
+ r_mmod_RMS_Derivative-OPLS-2005
+ i_mmod_Times_Found-OPLS-2005
+ r_mmod_Relative_Potential_Energy-OPLS-2005
+ b_mmod_Chiralities_Consistent-OPLS-2005
+ i_mmod_Conformation-OPLS-2005
+ i_mmod_Serial_Number-OPLS-2005
+ i_m_ct_format
+ :::
+ "(2~{R},3~{R},4~{S},5~{R})-2-(6-aminopurin-9-yl)-5-(hydroxymethyl)tetrahydrofuran-3,4-diol" 
+  SAMPL5_074.mol2 
+  1
+  28013
+  1 
+  1
+  1
+    0.0003 
+    0.0000 
+    0.0003 
+   -0.0000 
+  0
+  "This compound contains an acetal/aminal-like group ( X-CH(R)-Y where X, Y are N, S, or O) that may be acid/base labile, releasing an aldehyde." 
+  10_R_18_7_12_11 
+  12_S_22_10_14_13 
+  14_R_21_16_12_15 
+  16_S_18_14_19_17 
+  176.490524291992
+  1
+  0.00535063957795501
+  1
+  0
+  1
+  1
+  15
+  2
+ m_depend[19] { 
+  # First column is dependency index #
+  i_m_depend_dependency
+  s_m_depend_property
+  :::
+  1 10 r_lp_tautomer_probability 
+  2 10 i_lp_orig_ion_str 
+  3 10 r_epik_Ionization_Penalty 
+  4 10 r_epik_Ionization_Penalty_Charging 
+  5 10 r_epik_Ionization_Penalty_Neutral 
+  6 10 r_epik_State_Penalty 
+  7 10 i_epik_Tot_Q 
+  8 10 s_st_Chirality_1 
+  9 10 s_st_Chirality_2 
+  10 10 s_st_Chirality_3 
+  11 10 s_st_Chirality_4 
+  12 20 r_mmod_Potential_Energy-OPLS-2005 
+  13 20 b_mmod_Minimization_Converged-OPLS-2005 
+  14 20 r_mmod_RMS_Derivative-OPLS-2005 
+  15 20 i_mmod_Times_Found-OPLS-2005 
+  16 20 r_mmod_Relative_Potential_Energy-OPLS-2005 
+  17 20 b_mmod_Chiralities_Consistent-OPLS-2005 
+  18 20 i_mmod_Conformation-OPLS-2005 
+  19 10 i_mmod_Serial_Number-OPLS-2005 
+  :::
+ } 
+ m_atom[32] { 
+  # First column is atom index #
+  i_m_mmod_type
+  r_m_x_coord
+  r_m_y_coord
+  r_m_z_coord
+  i_m_residue_number
+  i_m_color
+  r_m_charge1
+  r_m_charge2
+  s_m_pdb_residue_name
+  s_m_pdb_atom_name
+  i_m_atomic_number
+  s_m_atom_name
+  i_m_Hcount
+  r_epik_H2O_pKa
+  r_epik_H2O_pKa_uncertainty
+  b_st_NoSrcChirality
+  :::
+  1 2 -1.587019 -5.145267 1.351719 1 2 0.22000 0.22000 "MOL " " C1 " 6 C1  1 <> <> <>
+  2 25 -2.524703 -5.363719 0.423267 1 43 -0.53000 -0.53000 "MOL " " N1 " 7 N1  0   3.974    0.730  <>
+  3 2 -3.168262 -4.311695 -0.134546 1 2 0.44000 0.44000 "MOL " " C2 " 6 C2  0 <> <> <>
+  4 2 -2.823069 -3.003700 0.288387 1 2 0.15000 0.15000 "MOL " " C3 " 6 C3  0 <> <> <>
+  5 2 -1.809622 -2.925125 1.281490 1 2 0.38000 0.38000 "MOL " " C4 " 6 C4  0 <> <> <>
+  6 25 -1.157096 -3.981722 1.848629 1 43 -0.55000 -0.55000 "MOL " " N2 " 7 N2  0  -0.400    2.220  <>
+  7 25 -1.634663 -1.583076 1.534620 1 43 -0.50000 -0.50000 "MOL " " N3 " 7 N3  0 <> <> <>
+  8 2 -2.532136 -0.942233 0.705507 1 2 0.20000 0.20000 "MOL " " C5 " 6 C5  1 <> <> <>
+  9 25 -3.255869 -1.727612 -0.048067 1 43 -0.49000 -0.49000 "MOL " " N4 " 7 N4  0   2.923    2.220  <>
+  10 3 -0.659782 -1.002272 2.512577 1 2 0.45000 0.45000 "MOL " " C6 " 6 C6  1 <> <> 1
+  11 41 -0.736013 -1.637623 3.396061 1 21 0.10000 0.10000 "MOL " " H1 " 1 H1  0 <> <> <>
+  12 3 0.772693 -0.899579 1.936084 1 2 0.20500 0.20500 "MOL " " C7 " 6 C7  1 <> <> 1
+  13 41 1.433883 -1.589637 2.461260 1 21 0.06000 0.06000 "MOL " " H2 " 1 H2  0 <> <> <>
+  14 3 1.124401 0.551085 2.248618 1 2 0.20500 0.20500 "MOL " " C8 " 6 C8  1 <> <> 1
+  15 41 1.501023 0.618421 3.270669 1 21 0.06000 0.06000 "MOL " " H3 " 1 H3  0 <> <> <>
+  16 3 -0.236724 1.242098 2.159210 1 2 0.17000 0.17000 "MOL " " C9 " 6 C9  1 <> <> 1
+  17 41 -0.534088 1.340662 1.113198 1 21 0.03000 0.03000 "MOL " " H4 " 1 H4  0 <> <> <>
+  18 16 -1.070653 0.297025 2.822603 1 70 -0.40000 -0.40000 "MOL " " O1 " 8 O1  0 <> <> <>
+  19 3 -0.301345 2.592143 2.889653 1 2 0.14500 0.14500 "MOL " " C10" 6 C10  2 <> <> <>
+  20 16 -1.427616 3.322008 2.451691 1 70 -0.65500 -0.65500 "MOL " " O2 " 8 O2  1  -0.689    0.362  <>
+  21 16 2.092694 1.084659 1.361676 1 70 -0.68300 -0.68300 "MOL " " O3 " 8 O3  1  -1.841    0.498  <>
+  22 16 0.856340 -1.162583 0.542915 1 70 -0.68300 -0.68300 "MOL " " O4 " 8 O4  1  -2.303    0.700  <>
+  23 25 -4.103071 -4.557782 -1.061741 1 43 -0.81000 -0.81000 "MOL " " N5 " 7 N5  2 <> <> <>
+  24 41 -1.113390 -6.028698 1.754039 1 21 0.20000 0.20000 "MOL " " H5 " 1 H5  0 <> <> <>
+  25 41 -2.637666 0.132375 0.673921 1 21 0.20000 0.20000 "MOL " " H6 " 1 H6  0 <> <> <>
+  26 41 -0.330912 2.457571 3.971423 1 21 0.06000 0.06000 "MOL " " H7 " 1 H7  0 <> <> <>
+  27 41 0.582822 3.187604 2.660895 1 21 0.06000 0.06000 "MOL " " H8 " 1 H8  0 <> <> <>
+  28 42 -1.452696 4.146122 2.913815 1 21 0.39000 0.39000 "MOL " " H9 " 1 H9  0  14.060    0.483  <>
+  29 42 2.249866 1.988161 1.590395 1 21 0.41800 0.41800 "MOL " " H10" 1 H10  0  12.602    0.468  <>
+  30 42 1.671863 -0.798286 0.231512 1 21 0.41800 0.41800 "MOL " " H11" 1 H11  0  11.996    0.700  <>
+  31 43 -4.309848 -5.509442 -1.326987 1 21 0.37000 0.37000 "MOL " " H12" 1 H12  0  13.043    0.730  <>
+  32 43 -4.594806 -3.787798 -1.492041 1 21 0.37000 0.37000 "MOL " " H13" 1 H13  0  13.043    0.730  <>
+  :::
+ } 
+ m_bond[34] { 
+  # First column is bond index #
+  i_m_from
+  i_m_to
+  i_m_order
+  :::
+  1 1 6 2
+  2 1 2 1
+  3 1 24 1
+  4 2 3 2
+  5 3 4 1
+  6 3 23 1
+  7 4 9 1
+  8 4 5 2
+  9 5 6 1
+  10 5 7 1
+  11 7 8 1
+  12 7 10 1
+  13 8 9 2
+  14 8 25 1
+  15 10 11 1
+  16 10 18 1
+  17 10 12 1
+  18 12 13 1
+  19 12 14 1
+  20 12 22 1
+  21 14 15 1
+  22 14 16 1
+  23 14 21 1
+  24 16 17 1
+  25 16 18 1
+  26 16 19 1
+  27 19 20 1
+  28 19 26 1
+  29 19 27 1
+  30 20 28 1
+  31 21 29 1
+  32 22 30 1
+  33 23 31 1
+  34 23 32 1
+  :::
+ } 
+} 
+
+f_m_ct { 
+ s_m_title
+ s_m_source_file
+ i_m_source_file_index
+ i_lp_mmshare_version
+ s_lp_label
+ r_lp_tautomer_probability
+ i_lp_orig_ion_str
+ r_epik_Ionization_Penalty
+ r_epik_Ionization_Penalty_Charging
+ r_epik_Ionization_Penalty_Neutral
+ r_epik_State_Penalty
+ i_epik_Tot_Q
+ s_epik_Chemistry_Notes
+ s_st_Chirality_1
+ s_st_Chirality_2
+ s_st_Chirality_3
+ s_st_Chirality_4
+ r_mmod_Potential_Energy-OPLS-2005
+ b_mmod_Minimization_Converged-OPLS-2005
+ r_mmod_RMS_Derivative-OPLS-2005
+ i_mmod_Times_Found-OPLS-2005
+ r_mmod_Relative_Potential_Energy-OPLS-2005
+ b_mmod_Chiralities_Consistent-OPLS-2005
+ i_mmod_Conformation-OPLS-2005
+ i_mmod_Serial_Number-OPLS-2005
+ i_m_ct_format
+ :::
+ "(2~{R},3~{R},4~{S},5~{R})-2-(6-aminopurin-9-yl)-5-(hydroxymethyl)tetrahydrofuran-3,4-diol" 
+  SAMPL5_074.mol2 
+  1
+  28013
+  1 
+  1
+  1
+    0.0003 
+    0.0000 
+    0.0003 
+   -0.0000 
+  0
+  "This compound contains an acetal/aminal-like group ( X-CH(R)-Y where X, Y are N, S, or O) that may be acid/base labile, releasing an aldehyde." 
+  10_S_18_7_12_11 
+  12_S_22_10_14_13 
+  14_R_21_16_12_15 
+  16_S_18_14_19_17 
+  153.604095458984
+  1
+  0.00143917510285974
+  1
+  0
+  1
+  1
+  16
+  2
+ m_depend[19] { 
+  # First column is dependency index #
+  i_m_depend_dependency
+  s_m_depend_property
+  :::
+  1 10 r_lp_tautomer_probability 
+  2 10 i_lp_orig_ion_str 
+  3 10 r_epik_Ionization_Penalty 
+  4 10 r_epik_Ionization_Penalty_Charging 
+  5 10 r_epik_Ionization_Penalty_Neutral 
+  6 10 r_epik_State_Penalty 
+  7 10 i_epik_Tot_Q 
+  8 10 s_st_Chirality_1 
+  9 10 s_st_Chirality_2 
+  10 10 s_st_Chirality_3 
+  11 10 s_st_Chirality_4 
+  12 20 r_mmod_Potential_Energy-OPLS-2005 
+  13 20 b_mmod_Minimization_Converged-OPLS-2005 
+  14 20 r_mmod_RMS_Derivative-OPLS-2005 
+  15 20 i_mmod_Times_Found-OPLS-2005 
+  16 20 r_mmod_Relative_Potential_Energy-OPLS-2005 
+  17 20 b_mmod_Chiralities_Consistent-OPLS-2005 
+  18 20 i_mmod_Conformation-OPLS-2005 
+  19 10 i_mmod_Serial_Number-OPLS-2005 
+  :::
+ } 
+ m_atom[32] { 
+  # First column is atom index #
+  i_m_mmod_type
+  r_m_x_coord
+  r_m_y_coord
+  r_m_z_coord
+  i_m_residue_number
+  i_m_color
+  r_m_charge1
+  r_m_charge2
+  s_m_pdb_residue_name
+  s_m_pdb_atom_name
+  i_m_atomic_number
+  s_m_atom_name
+  i_m_Hcount
+  r_epik_H2O_pKa
+  r_epik_H2O_pKa_uncertainty
+  b_st_NoSrcChirality
+  :::
+  1 2 -1.195972 -4.770469 -0.175768 1 2 0.22000 0.22000 "MOL " " C1 " 6 C1  1 <> <> <>
+  2 25 -2.443670 -5.197493 0.047553 1 43 -0.53000 -0.53000 "MOL " " N1 " 7 N1  0   3.974    0.730  <>
+  3 2 -3.364320 -4.337335 0.542010 1 2 0.44000 0.44000 "MOL " " C2 " 6 C2  0 <> <> <>
+  4 2 -2.970414 -3.002042 0.808285 1 2 0.15000 0.15000 "MOL " " C3 " 6 C3  0 <> <> <>
+  5 2 -1.613743 -2.691186 0.521198 1 2 0.38000 0.38000 "MOL " " C4 " 6 C4  0 <> <> <>
+  6 25 -0.680447 -3.553912 0.023747 1 43 -0.55000 -0.55000 "MOL " " N2 " 7 N2  0  -0.400    2.220  <>
+  7 25 -1.453053 -1.364437 0.853652 1 43 -0.50000 -0.50000 "MOL " " N3 " 7 N3  0 <> <> <>
+  8 2 -2.690874 -0.957084 1.306713 1 2 0.20000 0.20000 "MOL " " C5 " 6 C5  1 <> <> <>
+  9 25 -3.618113 -1.877970 1.303950 1 43 -0.49000 -0.49000 "MOL " " N4 " 7 N4  0   2.923    2.220  <>
+  10 3 -0.184596 -0.582913 0.729847 1 2 0.45000 0.45000 "MOL " " C6 " 6 C6  1 <> <> 1
+  11 41 0.219974 -0.859457 -0.245274 1 21 0.10000 0.10000 "MOL " " H1 " 1 H1  0 <> <> <>
+  12 3 0.725918 -0.901376 1.922291 1 2 0.20500 0.20500 "MOL " " C7 " 6 C7  1 <> <> 1
+  13 41 0.493243 -1.876830 2.352244 1 21 0.06000 0.06000 "MOL " " H2 " 1 H2  0 <> <> <>
+  14 3 0.388672 0.234617 2.874995 1 2 0.20500 0.20500 "MOL " " C8 " 6 C8  1 <> <> 1
+  15 41 -0.526241 -0.010750 3.416939 1 21 0.06000 0.06000 "MOL " " H3 " 1 H3  0 <> <> <>
+  16 3 0.127112 1.398131 1.916921 1 2 0.17000 0.17000 "MOL " " C9 " 6 C9  1 <> <> 1
+  17 41 1.080253 1.815298 1.585595 1 21 0.03000 0.03000 "MOL " " H4 " 1 H4  0 <> <> <>
+  18 16 -0.513816 0.774942 0.803977 1 70 -0.40000 -0.40000 "MOL " " O1 " 8 O1  0 <> <> <>
+  19 3 -0.783509 2.488283 2.504138 1 2 0.14500 0.14500 "MOL " " C10" 6 C10  2 <> <> <>
+  20 16 -0.645884 3.684292 1.767149 1 70 -0.65500 -0.65500 "MOL " " O2 " 8 O2  1  -0.689    0.362  <>
+  21 16 1.429870 0.482898 3.802805 1 70 -0.68300 -0.68300 "MOL " " O3 " 8 O3  1  -1.841    0.498  <>
+  22 16 2.088795 -0.901946 1.539913 1 70 -0.68300 -0.68300 "MOL " " O4 " 8 O4  1  -2.303    0.700  <>
+  23 25 -4.606227 -4.790545 0.757227 1 43 -0.81000 -0.81000 "MOL " " N5 " 7 N5  2 <> <> <>
+  24 41 -0.513004 -5.508499 -0.570280 1 21 0.20000 0.20000 "MOL " " H5 " 1 H5  0 <> <> <>
+  25 41 -2.890565 0.049704 1.643093 1 21 0.20000 0.20000 "MOL " " H6 " 1 H6  0 <> <> <>
+  26 41 -1.825949 2.169707 2.521780 1 21 0.06000 0.06000 "MOL " " H7 " 1 H7  0 <> <> <>
+  27 41 -0.494538 2.705148 3.532849 1 21 0.06000 0.06000 "MOL " " H8 " 1 H8  0 <> <> <>
+  28 42 -1.211902 4.340087 2.145114 1 21 0.39000 0.39000 "MOL " " H9 " 1 H9  0  14.060    0.483  <>
+  29 42 1.181898 1.212360 4.350292 1 21 0.41800 0.41800 "MOL " " H10" 1 H10  0  12.602    0.468  <>
+  30 42 2.607867 -0.848371 2.328941 1 21 0.41800 0.41800 "MOL " " H11" 1 H11  0  11.996    0.700  <>
+  31 43 -4.833312 -5.751960 0.549862 1 21 0.37000 0.37000 "MOL " " H12" 1 H12  0  13.043    0.730  <>
+  32 43 -5.309818 -4.166321 1.124833 1 21 0.37000 0.37000 "MOL " " H13" 1 H13  0  13.043    0.730  <>
+  :::
+ } 
+ m_bond[34] { 
+  # First column is bond index #
+  i_m_from
+  i_m_to
+  i_m_order
+  :::
+  1 1 6 2
+  2 1 2 1
+  3 1 24 1
+  4 2 3 2
+  5 3 4 1
+  6 3 23 1
+  7 4 9 1
+  8 4 5 2
+  9 5 6 1
+  10 5 7 1
+  11 7 8 1
+  12 7 10 1
+  13 8 9 2
+  14 8 25 1
+  15 10 11 1
+  16 10 18 1
+  17 10 12 1
+  18 12 13 1
+  19 12 14 1
+  20 12 22 1
+  21 14 15 1
+  22 14 16 1
+  23 14 21 1
+  24 16 17 1
+  25 16 18 1
+  26 16 19 1
+  27 19 20 1
+  28 19 26 1
+  29 19 27 1
+  30 20 28 1
+  31 21 29 1
+  32 22 30 1
+  33 23 31 1
+  34 23 32 1
+  :::
+ } 
+} 
+
