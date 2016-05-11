@@ -1,3 +1,6 @@
+# Written by Caitlin C Bannan
+# Mobley Group UC Irvine
+# This does essentially the same thing as the AnalyzeCorrections script, but includes a "limitted" error analysis at the bottom. In the "limited" case we only analyze predictions for molecules where correcting for pKa actually changed the logD
 import pickle
 from sigfig.sigfig import *
 import glob

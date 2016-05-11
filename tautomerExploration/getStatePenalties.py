@@ -11,7 +11,7 @@ maeFiles = glob.glob("MoleculeFiles/ligprep_SAMPL5_*.mae")
 kBT = 0.001987207 * 298.15 # In kcal/mol 
 
 # Load file with pKa Corrections already saved
-d = pickle.load(open('dictionary_pKaCorrected.p','rb'))
+d = pickle.load(open('dictionary_Corrected.p','rb'))
 # Create list for output file
 output = ['SAMPL ID, logP, basic pKa, acidic pKa, largest pKa, state penalty\n']
 
@@ -55,7 +55,7 @@ for f in maeFiles:
     print data
     output.append(data+'\n')
 
-fN = open('allLogDs.txt','w')
+fN = open('DataTables/allLogDs.txt','w')
 fN.writelines(output)
 fN.close()
-pickle.dump(d, open('dictionary_statePenalty.p','wb'))
+pickle.dump(d, open('dictionary_Corrected.p','wb'))

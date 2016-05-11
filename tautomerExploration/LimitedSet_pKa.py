@@ -1,3 +1,7 @@
+# Written by Caitlin C Bannan
+# Mobley Group, UC Irvine
+# This script performs error analysis for corrected logD values, considering only those where the logD is different than the logP  
+# These results are compared to predictions from set 16 which did the best by most error metrics
 import pickle
 from sigfig.sigfig import *
 import glob
@@ -9,10 +13,10 @@ bootits = 1000 # number bootstrap iterations
 diff = 0.01
 #========================================================================
 # Load Experimental data and make lists by batch
-Exp = pickle.load(open('experimental.p','rb'))
+Exp = pickle.load(open('../DataFiles/experimental.p','rb'))
 # Load Prediction Dictionary
 database = pickle.load(open('dictionary_pKaCorrected.p','rb'))
-Klamt = pickle.load(open('../predictions_byNum.p','rb'))[16]['data']
+Klamt = pickle.load(open('../DataFiles/predictions.p','rb'))[16]['data']
 
 limit_keys = []
 for k, e in database.items():
