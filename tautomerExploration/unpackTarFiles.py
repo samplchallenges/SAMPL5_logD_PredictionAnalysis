@@ -13,7 +13,7 @@ import sys
 unpackCommand = "/opt/schrodinger/suites2014-4/utilities/structconvert -imae %s -omae %s.mae"
 
 LigPrepCommand = "/opt/schrodinger/suites2014-4/ligprep -imae %s.mae -omae ligprep_%s.maegz -bff 14 -ph 7.4 -retain_i -ac -s 32 -r 1 -epik"
-maeFiles = glob.glob('*.maegz')
+maeFiles = glob.glob('ligprep*.maegz')
 for f in maeFiles:
     # samplID = "SAMPL5_"+f.split('.')[0].split('_')[-1]
     # if os.path.isfile('ligprep_%s_epik.log' % samplID):

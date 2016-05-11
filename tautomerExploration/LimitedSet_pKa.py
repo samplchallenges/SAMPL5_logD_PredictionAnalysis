@@ -6,7 +6,8 @@ import pickle
 from sigfig.sigfig import *
 import glob
 import numpy as np
-import tools
+import imp
+tools = imp.load_source('tools','../DataFiles/tools.py')
 #========================================================================
 # Constants we'll need later:
 bootits = 1000 # number bootstrap iterations
@@ -15,7 +16,7 @@ diff = 0.01
 # Load Experimental data and make lists by batch
 Exp = pickle.load(open('../DataFiles/experimental.p','rb'))
 # Load Prediction Dictionary
-database = pickle.load(open('dictionary_pKaCorrected.p','rb'))
+database = pickle.load(open('dictionary_Corrected.p','rb'))
 Klamt = pickle.load(open('../DataFiles/predictions.p','rb'))[16]['data']
 
 limit_keys = []
@@ -57,7 +58,7 @@ for i, data in enumerate([allLogP, allLogD, allKlamt, limitLogP, limitLogD, limi
     else:
         ddata = data[:, 2]
     # Add error analysis for logP (only changing values)
-    AveErr, RMS, AUE, tau, R, maxErr, percent = tools.stats_array(data[:,0], exp[:,0], exp[:,1], bootits, dataSet[i])
+    AveErr, RMS, AUE, tau, R, maxErr, percent, Rsquared = tools.stats_array(data[:,0], exp[:,0], exp[:,1], bootits, dataSet[i])
     # Get data for QQ plot
     X, Y, slope, dslope = tools.getQQdata(data[:,0], exp[:,0], ddata, exp[:,1], bootits)
     line = dataSet[i]
@@ -65,7 +66,7 @@ for i, data in enumerate([allLogP, allLogD, allKlamt, limitLogP, limitLogD, limi
         line = line + ",\t %s +/- %s" % (round_unc(met[0], met[1]), round_sf(met[1], 1))
     output.append(line+'\n')
 
-fileName ='CompareTo16_%.4f.txt' % diff 
+fileName ='DataTables/CompareTo16_%.4f.txt' % diff 
 f = open(fileName,'w')
 f.writelines(output)
 f.close()
