@@ -1,2 +1,0 @@
-Type of Calculation, AveErr, RMS, AUE, tau, R, maxErr, percent correct sign, error slope 
-Klamt,	 0.5 +/- 0.3,	 2.1 +/- 0.2,	 1.7 +/- 0.2,	 0.73 +/- 0.04,	 0.84 +/- 0.04,	 6.1 +/- 0.8,	 79 +/- 6,	 0.46 +/- 0.07

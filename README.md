@@ -2,9 +2,11 @@
 
 Prediction analysis of distribution coefficient part of the SAMPL5 challenge. 
 
-Caitlin C Bannan
+* Caitlin C Bannan
+* Kalistyn H Burley
+* David L Mobley
 
-David L Mobley
+##### Note: Unless updated this directory is not safe for public publishing because it includes contact information and names of Anonymous submissions.
 
 ### Sub Directories:
 This is a short description, detailed READMEs included inside each.
@@ -40,7 +42,9 @@ An analysis was done taking the average of the 6 best "groups" in the top 10 pre
 ##### Paper
 Tex document and figures required for our paper to be submitted in June 2016. 
 
+##### tautomerExploration
+This directory involves calculations to correct Mobley group predictions of logP to logD using a variety of techniques to enumerate protonation states in water. (With one attempt to enumerate tautomers in cyclohexane)
+
 ### return_results.py
 Used to e-mail participants with data specifically related to their performance in the challenge. 
 
-##### Note: Unless updated this directory is not safe for public publishing because it includes contact information and names of Anonymous submissions.

@@ -224,7 +224,7 @@ def stats_array( calc1, expt1, exptunc1, boot_its, sid = "Number?", noise = True
      
 
 # Metho for making plots comparing calculated and experimental Data
-def ComparePlot(x, y, Title, XLabel, YLabel, xerr, yerr, labels, fileName = 'compare.pdf', limits = None, leg = [1.02, 0.98, 2, 1],expError = 1.0, wOption = 1):
+def ComparePlot(x, y, Title, XLabel, YLabel, xerr, yerr, labels, fileName = 'compare.pdf', limits = None, leg = [1.02, 0.98, 2, 1],expError = 1.0, wOption = 1, symbols = ['ro','bs','gD','rx','bo','gs']): 
     """ Input:
         x, y, xerr, yerr = list of arrays to be plotted 
         Title, XLabel, YLabel = strings for labeling plot
@@ -236,7 +236,6 @@ def ComparePlot(x, y, Title, XLabel, YLabel, xerr, yerr, labels, fileName = 'com
     """
     rcParams.update(JCAMDdict(wOption))
 
-    symbols = ['ro','bs','gD','rx','bo','gs']
     # If limits not provided find the low and high
     if limits == None:
         # adjustment so limits are aleast as big as error bars 
