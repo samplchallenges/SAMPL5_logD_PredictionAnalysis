@@ -14,5 +14,5 @@ Uncertainties in these values are calculated using a bootstrapping technique tha
 * percent: percent of predictions with the correct sign
 * CorrectLipinski: fraction of predictions that correctly guessed rather the logD was within Lipinski's rule, assumes logD in cyclohexane would have the same range as logP in octanol, that is -0.4 to 5.6 log units
  
-Files labeled by batch are the analysis for each prediction set. 
-_byMolecule files are also provided where applicable, these are for analysis of all predictions on a single molecule.
+Predictions were allowed to be submitted for just batch 0, batch 0 and 1, or batch 0, 1, and 2 so analysis is also done for those three options.
+Error analysis was repeated for data sets by molecule, where all predictions for that molecule were considered, these files are labeled with _byMolecule. This analysis was used to determine which molecules were difficult for groups to predict.  
