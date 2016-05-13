@@ -11,8 +11,8 @@ import pickle
 import numpy as np
 # Openeye used to generate iupac names from smiles
 from openeye.oechem import *
-from openeye.oeomega import *
 from openeye.oeiupac import *
+from openeye.oequacpac import *
 
 # Extract lines from SMILES file provided by SAMPL5 challenge
 smilesFile = 'SMILES_by_ID.txt'
@@ -56,11 +56,22 @@ for i, k in enumerate(keys):
     if k in batch2:
         database[k]['batch'] = 2
 
-    # Get iupac name from SMILE string, just incase
-    mol = OEMol()
+    # Get calculated information about the molecule
+    mol = OEGraphMol()
     smile = OEParseSmiles(mol, database[k]['Smiles'])
     if smile:
+        # Add iupac name to dictionary
         database[k]['iupac'] = OECreateIUPACName(mol)
+        
+        # Set tautomer enumeration settings
+        tautomerOptions = OETautomerOptions(100, True) # Max enumerated is 100
+        tautomerOptions.SetCarbonHybridization(True)
+        tautomerOptions.SetMaxZoneSize(50)
+        tautomerOptions.SetApplyWarts(True)
+        tautomerOptions.SetSaveStereo(True)
+        
+        # Save number of tautomers 
+        database[k]['tautomers'] = len([t for t in OEEnumerateTautomers(mol, tautomerOptions) ] )
     else:
         print k, "missing smile?"
 

@@ -224,7 +224,7 @@ def stats_array( calc1, expt1, exptunc1, boot_its, sid = "Number?", noise = True
      
 
 # Metho for making plots comparing calculated and experimental Data
-def ComparePlot(x, y, Title, XLabel, YLabel, xerr, yerr, labels, fileName = 'compare.pdf', limits = None, leg = [1.02, 0.98, 2, 1],expError = 1.0, wOption = 1, symbols = ['ro','bs','gD','rx','bo','gs']): 
+def ComparePlot(x, y, Title, XLabel, YLabel, xerr, yerr, labels, fileName = 'compare.pdf', limits = None, leg = [1.02, 0.98, 2, 1],expError = 1.0, wOption = 1, symbols = ['ro','bs','gD','mx','co','ks']): 
     """ Input:
         x, y, xerr, yerr = list of arrays to be plotted 
         Title, XLabel, YLabel = strings for labeling plot
@@ -273,6 +273,8 @@ def ComparePlot(x, y, Title, XLabel, YLabel, xerr, yerr, labels, fileName = 'com
 
     # Add data to plot for each set
     for i in range(len(x)):
+        if len(x[i]) == 0:
+            continue
         p1 = ax1.errorbar(x[i],y[i], xerr = xerr[i], yerr = yerr[i], fmt = symbols[i], label = labels[i], capsize = 0.5)
         handles.append(p1)
 
@@ -284,7 +286,7 @@ def ComparePlot(x, y, Title, XLabel, YLabel, xerr, yerr, labels, fileName = 'com
     handles.append(yellow)
 
     # Add legend
-    ax1.legend(bbox_to_anchor = (1.02, 0.98), loc = 2, ncol = 1, borderaxespad = 0., handles = handles)
+    ax1.legend(bbox_to_anchor = (leg[0], leg[1]), loc = leg[2], ncol = leg[3], borderaxespad = 0., handles = handles)
 
     savefig(fileName)
 

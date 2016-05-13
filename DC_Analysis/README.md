@@ -21,5 +21,5 @@ and perform general analysis for each prediction set
 * moleculeStats.py: Collets error metrics by molecule from the dictionary already available. Organizes them into a table, in DataFiles as ErrorMetricsByMolecule.txt and creates the histogram plots by error metric.  
 * build_index_table.py: Used to make index_table.csv from original version of the dictionary 
 * StatisticsAnalysis.py: Organizes error analysis from prediction dictionary and creates histograms for each error metric
-
+* tautomerPlots.py: This script makes comparison plots, but color codes by number of tautomers a molecule has. It also does some brief comparisons to the by molecule analysis
 ##### Note: Unless updated this directory is not safe for public publishing because it includes contact information and names of Anonymous submissions. 

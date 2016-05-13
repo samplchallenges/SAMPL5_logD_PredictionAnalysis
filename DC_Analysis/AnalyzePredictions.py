@@ -5,7 +5,6 @@
 
 import pickle
 import sys # Used to exit while testing code
-import glob
 import numpy as np
 import imp
 tools = imp.load_source('tools','../DataFiles/tools.py')
