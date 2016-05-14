@@ -21,6 +21,7 @@ smilelines = f.readlines()
 smilelines = smilelines[1:] # Remove header line
 f.close()
 
+tautOut = ['SAMPL_ID, # of tautomers\n']
 # Add lines to dictionary keyed by SAMPL5 ID
 database = {}
 for line in smilelines:
@@ -71,10 +72,16 @@ for i, k in enumerate(keys):
         tautomerOptions.SetSaveStereo(True)
         
         # Save number of tautomers 
-        database[k]['tautomers'] = len([t for t in OEEnumerateTautomers(mol, tautomerOptions) ] )
+        tauts =len([t for t in OEEnumerateTautomers(mol, tautomerOptions) ] )
+        database[k]['tautomers'] = tauts
+        tautOut.append("%s,\t %i\n" % (k, tauts))
     else:
         print k, "missing smile?"
 
 # make dictionary file with everything and batches file with lists of names in batches for future sorting
 pickle.dump(database,open('../DataFiles/experimental.p','wb'))
 pickle.dump([batch0,batch1,batch2], open('../DataFiles/batches.p','wb'))
+
+f = open("../DataFiles/tautomerNumbers.txt","w")
+f.writelines(tautOut)
+f.close()

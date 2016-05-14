@@ -16,7 +16,9 @@ This directory contains all data files created during this analysis for easy ref
 * ErrorMetricsBySubmission_batch*.txt: data table of error metrics for each submission option batch 0; batches 0 and 1; or batches 0, 1 and 2. 
 * ErrorMetricByMolecule.txt: data table of error analysis for predictions grouped by molecule
 * nullHypothesisData.txt: error analysis results from null hypothesis analysis
+
 * tautomerBatches.txt: We split molecules into new sets based on the number of tautomers they have, this table shows those batches
+* tautomerNumbers.txt: A list of SAMPL5_IDnumbers and the number of tautomers it has, maxed set at 100
 
 ##### tools.py
 A long list of methods that are used in the error analysis for all predictions. 
