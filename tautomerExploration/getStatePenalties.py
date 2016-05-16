@@ -7,7 +7,7 @@ import numpy as np
 import glob
 
 # Location for ligprep file
-maeFiles = glob.glob("MoleculeFiles/ligprep_SAMPL5_*.mae")
+maeFiles = glob.glob("../MoleculeFiles/ligprep_SAMPL5_*.mae")
 kBT = 0.001987207 * 298.15 # In kcal/mol 
 
 # Load file with pKa Corrections already saved

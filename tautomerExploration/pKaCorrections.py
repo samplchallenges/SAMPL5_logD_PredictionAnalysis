@@ -22,7 +22,7 @@ def dataline(line):
 
 dictionary = 'dictionary_allResults.p' # this is the dictionary with Mobley Lab data for each molecule
 database = pickle.load(open(dictionary,'rb'))
-Logs = glob.glob("MoleculeFiles/*_allpKa.log") 
+Logs = glob.glob("../MoleculeFiles/*_allpKa.log") 
 
 # Add keys to dictionary:
 for k,e in database.items():

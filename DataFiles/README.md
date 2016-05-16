@@ -20,6 +20,8 @@ This directory contains all data files created during this analysis for easy ref
 * tautomerBatches.txt: We split molecules into new sets based on the number of tautomers they have, this table shows those batches
 * tautomerNumbers.txt: A list of SAMPL5_IDnumbers and the number of tautomers it has, maxed set at 100
 
+* checkmolTypes.txt: This is a list of the number of molecules by checkmol type represented in the SAMPL5 set
+* checkmolGroups.pdf: This is a visual aid for checkmol functional group types, found on the checkmol website
 ##### tools.py
 A long list of methods that are used in the error analysis for all predictions. 
 Included methods for all error metrics, Lipinski's Rule, bootstrapping with or without experimental noise, methods to make the comparison and QQ plots.

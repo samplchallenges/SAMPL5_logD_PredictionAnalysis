@@ -41,14 +41,11 @@ for metric in metrics:
     title = "Performance by molecule ID"
     # Determine how to sort
     if metric == 'error slope':
-        tools.histPlot(subIDs, vals, dvals, "Submission Number", metric, title, option = 'close to 1', fileName = fileName)
-    elif metric in ['R', 'tau']:
-        tools.histPlot(subIDs, vals, dvals, "Submission Number", metric, title, option = 'reverse', fileName = fileName, absolute = False)
-
+        tools.histPlot(subIDs, vals, dvals, "SAMPL5_IDnumber", metric, title, option = 'close to 1', fileName = fileName)
     elif metric == 'percent':
-        tools.histPlot(subIDs, vals, dvals, "Submission Number", "correct sign (%%)", title, option = 'reverse', fileName = fileName)
+        tools.histPlot(subIDs, vals, dvals, "SAMPL5_IDnumber", "correct sign (%%)", title, option = 'reverse', fileName = fileName)
     else: # All other metrics
-        tools.histPlot(subIDs, vals, dvals, "Submission Number", metric, title, fileName = fileName)
+        tools.histPlot(subIDs, vals, dvals, "SAMPL5_IDnumber", metric, title, fileName = fileName)
 
 output = [openLine+'\n']
 for k in sorted(keys): 

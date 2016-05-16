@@ -12,7 +12,7 @@ import sys
 #allpKaCommand = "/opt/schrodinger/suites2014-4/epik -imae %s.mae -omae %s_allpKa.mae" 
 
 LigPrepCommand = "/opt/schrodinger/suites2014-4/ligprep -imae %s.mae -omae ligprep_%s.maegz -bff 14 -ph 7.4 -retain_i -ac -s 32 -r 1 -epik"
-maeFiles = glob.glob('SAMPL5_*.mae')
+maeFiles = glob.glob('../MoleculeFiles/SAMPL5_*.mae')
 for f in maeFiles:
     samplID = f.split('.')[0]
     if os.path.isfile('ligprep_%s.maegz' % samplID):

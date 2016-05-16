@@ -45,6 +45,10 @@ Tex document and figures required for our paper to be submitted in June 2016.
 ##### tautomerExploration
 This directory involves calculations to correct Mobley group predictions of logP to logD using a variety of techniques to enumerate protonation states in water. (With one attempt to enumerate tautomers in cyclohexane)
 
+##### MoleculeFiles
+This directory has files for each SAMPL5 molecule used in the analysis including 2D images with pKas labeled.
+
 ### return_results.py
 Used to e-mail participants with data specifically related to their performance in the challenge. 
+
 

@@ -34,7 +34,7 @@ for b, batch in enumerate(batches):
         molData[k]['dcalc_stat'] = [calcData[SID]['data'][k][1] for SID in SIDs]
         molData[k]['dcalc_mod'] = [calcData[SID]['data'][k][2] for SID in SIDs]
         molData[k]['calc'] = [calcData[SID]['data'][k][0] for SID in SIDs]
-        
+        molData[k]['batch'] = b
         # Error analysis for this molecule 
         molData[k]['AveErr'], molData[k]['RMS'],molData[k]['AUE'],molData[k]['tau'],molData[k]['R'],molData[k]['maxErr'],molData[k]['percent'], molData[k]['Rsquared'] = tools.stats_array(molData[k]['calc'], molData[k]['exp'], molData[k]['dexp'], bootits, sid = k)
 

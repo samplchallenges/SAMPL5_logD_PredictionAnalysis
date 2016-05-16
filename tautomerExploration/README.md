@@ -25,9 +25,6 @@ Text and pdf files with data stored to be human readable
 ### Plots
 Comparison plots and QQ plots for all correction types
 
-### MoleculeFiles
-This directory has files for each SAMPL5 molecule used in the analysis including 2D images with pKas labeled. 
-
 ### SAMPL5_083
 This molecule was a particularly tricky one, it is a large macrocycle with many different tautomers and protonation states. With the help of Andreas Klamt, we performed analysis on a few different tautomers of this molecule
  
