@@ -24,7 +24,7 @@ aS'We are continuing to explore issues of convergence of the larger molecules in
 p12
 asS'fileName'
 p13
-S'./predictionFiles/56b0df26da016-282-DCStandard-MobleySAMPL-1.txt'
+S'56b0df26da016-282-DCStandard-MobleySAMPL-1.txt'
 p14
 sS'data'
 p15

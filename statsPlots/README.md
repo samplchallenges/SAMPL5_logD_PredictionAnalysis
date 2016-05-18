@@ -16,3 +16,4 @@ Uncertainties in these values are calculated using a bootstrapping technique tha
  
 Predictions were allowed to be submitted for just batch 0, batch 0 and 1, or batch 0, 1, and 2 so analysis is also done for those three options.
 Error analysis was repeated for data sets by molecule, where all predictions for that molecule were considered, these files are labeled with _byMolecule. This analysis was used to determine which molecules were difficult for groups to predict.  
+We attempted to find patterns by checkmol functional group, included are statsplots for those and a second set where only functional groups with at least two molecules were included
