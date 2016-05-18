@@ -5,10 +5,8 @@
 # Stores all collected data in a dictionary that can be used later
 
 import pickle
-import sys
 import glob
-import numpy as np
-import tools
+import commands
 
 def parseFile(fileName, comments = '#', keywords = ['predictions:', 'name:','software:', 'method:']):
     """
@@ -76,7 +74,7 @@ def ParseAllFiles(fileList, numDict = None, sep = '-'):
         data, Dict[subID] = parseFile(f)
         # Save other information to infoDictionary
         Dict[subID]['longID'] = originalID
-        Dict[subID]['fileName'] = f
+        Dict[subID]['fileName'] = f.split('/')[-1]
         Dict[subID]['methodNum'] = Flist[-1].split('.')[0]
         Dict[subID]['data'] = data
 
@@ -87,7 +85,7 @@ def ParseAllFiles(fileList, numDict = None, sep = '-'):
 # Now use methods to parse prediction text files 
 
 # Location of prediction data files:
-preDir = "./predictionFiles/"
+preDir = "../predictionFiles/"
 
 # Load dictionary that converts long ID numbers to short ID numbers (and reverse it)
 IDdict = pickle.load(open('SIDTonum.p','rb'))
@@ -130,5 +128,6 @@ for l in lines[1:]: # Skip header line in file
         regData[key]['isAnonymous'] = anon
         if anon:
             print key, "is Anonymous"
+        commands.getoutput("cp %s/%s %s/%02d_predictions.txt" % (preDir, regData[key]['fileName'], preDir, key))
     
-pickle.dump(regData, open('../DataFiles/predictions.p','wb'))
+#pickle.dump(regData, open('../DataFiles/predictions.p','wb'))
