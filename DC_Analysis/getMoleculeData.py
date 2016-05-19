@@ -27,7 +27,6 @@ for b, batch in enumerate(batches):
     # for each molecule ID save experimental and predicted data and compute error analysis
     for k in batch:
         molData[k] = {}
-        print '\t\t %.2f' % expData[k]['data'][0]
         # Store lists of experimental and calculated values for each molecule
         molData[k]['exp'] = [expData[k]['data'][0] for i in range(len(SIDs))]
         molData[k]['dexp'] = [expData[k]['data'][1] for i in range(len(SIDs))]
@@ -36,7 +35,16 @@ for b, batch in enumerate(batches):
         molData[k]['calc'] = [calcData[SID]['data'][k][0] for SID in SIDs]
         molData[k]['batch'] = b
         # Error analysis for this molecule 
-        molData[k]['AveErr'], molData[k]['RMS'],molData[k]['AUE'],molData[k]['tau'],molData[k]['R'],molData[k]['maxErr'],molData[k]['percent'], molData[k]['Rsquared'] = tools.stats_array(molData[k]['calc'], molData[k]['exp'], molData[k]['dexp'], bootits, sid = k)
+        AveErr, RMS, AUE, tau, R, maxErr, percent, _ = tools.stats_array(molData[k]['calc'], molData[k]['exp'], molData[k]['dexp'], bootits, sid = k)
+
+        # Store error analysis in dictionary
+        molData[k]['AveErr'] = AveErr
+        molData[k]['RMS'] = RMS
+        molData[k]['AUE'] = AUE
+        molData[k]['tau'] = tau
+        molData[k]['R'] = R 
+        molData[k]['maxErr'] = maxErr
+        molData[k]['percent'] = percent 
 
         # QQ plot for this molecule
         X, Y, slope, dslope = tools.getQQdata(molData[k]['calc'], molData[k]['exp'], molData[k]['dcalc_mod'], molData[k]['dexp'], bootits) 

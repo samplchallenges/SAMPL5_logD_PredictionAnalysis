@@ -22,4 +22,6 @@ and perform general analysis for each prediction set
 * build_index_table.py: Used to make index_table.csv from original version of the dictionary 
 * StatisticsAnalysis.py: Organizes error analysis from prediction dictionary and creates histograms for each error metric
 * tautomerPlots.py: This script makes comparison plots, but color codes by number of tautomers a molecule has. It also does some brief comparisons to the by molecule analysis
+* FixLuchko.py: multiplies all of Tyler Luchko's submissions by -1 to fix their human error in calculating transfer free energy
+checkmolTypes.py: This script uses the mol2 molecule files and collects data by checkmol functional group. Used to look for trends what molecules did well and which did poorly. 
 ##### Note: Unless updated this directory is not safe for public publishing because it includes contact information and names of Anonymous submissions. 

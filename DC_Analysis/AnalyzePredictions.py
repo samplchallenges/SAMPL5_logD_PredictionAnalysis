@@ -48,15 +48,16 @@ tools.BoxWhiskerByBatch(moleculeData, batches, {}, title = "Box and Whisker Plot
 # Now get statistics compared to experimental and add it to 
 for num, e in regData.items():
     b = getBatch(e['data'],batches)
+    # if they don't have all three batches print which ones they do have
     if b < 2:
         print num, b
-    continue
 
     # Make Box and Whisker plot
     title = "Box and Whisker Plot for Prediction Set %02d" % num
     tools.BoxWhiskerByBatch(moleculeData, batches, e, "%02d predictions" % num, title, 'SAMPL5_IDnumber', fileName = "../boxPlots/boxplot_%02d.pdf" % num)
 
     print "Analyzing Entry ", num, "..."
+    continue
     calc = [ [e['data'][key][0] for key in batches[i] ] for i in range(b+1) ]
     # statistical error
     statdcalc = [ [e['data'][key][1] for key in batches[i] ] for i in range(b+1) ]
@@ -112,7 +113,6 @@ for num, e in regData.items():
             tools.makeQQplot(X, Y, slope, title, fileName = "../QQPlots/%02d_QQ.pdf" % num)
 
 
-sys.exit(1)
 # Save as pickle files to be used in other files
 pickle.dump(regData, open('../DataFiles/predictions.p','wb'))
 
