@@ -63,6 +63,7 @@ for i, k in enumerate(keys):
     if smile:
         # Add iupac name to dictionary
         database[k]['iupac'] = OECreateIUPACName(mol)
+        database[k]['MW'] = OECalculateMolecularWeight(mol)
         
         # Set tautomer enumeration settings
         tautomerOptions = OETautomerOptions(100, True) # Max enumerated is 100

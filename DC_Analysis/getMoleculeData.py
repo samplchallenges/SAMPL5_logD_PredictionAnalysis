@@ -17,16 +17,17 @@ calcData = pickle.load(open('../DataFiles/predictions.p','rb'))
 
 # create dictionary to store data by molecule
 molData = {}
-
+best = [16, 2, 73, 44, 27, 60, 40, 54, 14, 28, 32, 36, 39, 34, 53, 56, 47, 35, 15, 43, 19, 48, 21, 61, 8, 7, 10, 49, 41, 20, 28]
 for b, batch in enumerate(batches):
     bat = 'batch%i' % b
     print bat
     # Submission IDs that submitted this batch
-    SIDs = [k for k in calcData.keys() if calcData[k].has_key(bat)]
+    # SIDs = [k for k in calcData.keys() if calcData[k].has_key(bat)]
+    SIDs = [k for k in calcData.keys() if k in best]
 
     # for each molecule ID save experimental and predicted data and compute error analysis
     for k in batch:
-        molData[k] = {}
+        molData[k] = {'MW': expData[k]['MW'], 'Smiles': expData[k]['Smiles'], 'iupac': expData[k]['iupac'], 'tautomers': expData[k]['tautomers']}
         # Store lists of experimental and calculated values for each molecule
         molData[k]['exp'] = [expData[k]['data'][0] for i in range(len(SIDs))]
         molData[k]['dexp'] = [expData[k]['data'][1] for i in range(len(SIDs))]
@@ -51,6 +52,6 @@ for b, batch in enumerate(batches):
         molData[k]['error slope'] = [slope, dslope]
         molData[k]['QQdata'] = [X,Y]
         title = "QQ Plot for %s" % k
-        tools.makeQQplot(X, Y, slope, title, fileName = "../QQPlots/%s_QQ.pdf" % k)
+        tools.makeQQplot(X, Y, slope, title, fileName = "../QQPlots/%s_topHalf_QQ.pdf" % k)
 
-pickle.dump(molData, open('../DataFiles/moleculeData.p','wb'))
+pickle.dump(molData, open('../DataFiles/moleculeData_topHalf.p','wb'))

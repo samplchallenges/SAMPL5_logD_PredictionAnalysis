@@ -224,7 +224,7 @@ def stats_array( calc1, expt1, exptunc1, boot_its, sid = "Number?", noise = True
      
 
 # Metho for making plots comparing calculated and experimental Data
-def ComparePlot(x, y, Title, XLabel, YLabel, xerr, yerr, labels, fileName = 'compare.pdf', limits = None, leg = [1.02, 0.98, 2, 1],expError = 1.0, wOption = 1, symbols = ['ro','bs','gD','mx','co','ks']): 
+def ComparePlot(x, y, Title, XLabel, YLabel, xerr, yerr, labels, fileName = 'compare.pdf', limits = None, leg = [1.02, 0.98, 2, 1],expError = 1.0, wOption = 1, symbols = ['ro','bs','gD','mx','co','ks'], ax1 = None): 
     """ Input:
         x, y, xerr, yerr = list of arrays to be plotted 
         Title, XLabel, YLabel = strings for labeling plot
@@ -234,7 +234,6 @@ def ComparePlot(x, y, Title, XLabel, YLabel, xerr, yerr, labels, fileName = 'com
         leg = list of legend settings, in order, both bbox_to_anchor placement, location number, and number of columns 
         expError = shaded region of plot
     """
-    rcParams.update(JCAMDdict(wOption))
 
     # If limits not provided find the low and high
     if limits == None:
@@ -261,14 +260,19 @@ def ComparePlot(x, y, Title, XLabel, YLabel, xerr, yerr, labels, fileName = 'com
         xerr = [xerr]
         yerr = [yerr]
         
-    # Initial Plot settings
-    fig1 = plt.figure(1)
-    ylim(lowLim, highLim)
-    xlim(lowLim, highLim)
-    plt.xlabel(XLabel)
-    plt.ylabel(YLabel)
-    plt.title(Title)
-    ax1 = fig1.add_subplot(111)
+    # Initial Plot settings if axes isn't provided
+    if ax1 == None:
+        ax1Return = False
+        rcParams.update(JCAMDdict(wOption))
+        fig1 = plt.figure(1)
+        ylim(lowLim, highLim)
+        xlim(lowLim, highLim)
+        plt.xlabel(XLabel)
+        plt.ylabel(YLabel)
+        plt.title(Title)
+        ax1 = fig1.add_subplot(111)
+    else:
+        ax1Return = True
     handles = []
 
     # Add data to plot for each set
@@ -286,11 +290,15 @@ def ComparePlot(x, y, Title, XLabel, YLabel, xerr, yerr, labels, fileName = 'com
     handles.append(yellow)
 
     # Add legend
-    ax1.legend(bbox_to_anchor = (leg[0], leg[1]), loc = leg[2], ncol = leg[3], borderaxespad = 0., handles = handles)
+    if leg != None:
+        ax1.legend(bbox_to_anchor = (leg[0], leg[1]), loc = leg[2], ncol = leg[3], borderaxespad = 0., handles = handles)
 
-    savefig(fileName)
-
-    plt.close(fig1)
+    if ax1Return:
+        return ax1
+    else:
+        savefig(fileName)
+        plt.close(fig1)
+        return None
 
 # ===============================================================================
 # Methods from uncertain_check.py David L. Mobley wrote for the SAMPL4 analysis
@@ -387,7 +395,7 @@ def getQQdata(calc, expt, dcalc, dexpt, boot_its):
         slopes.append(a[0])
     return X, Y, slope, numpy.array(slopes).std()
 
-def makeQQplot(X, Y, slope, title, xLabel ="Expected fraction within range" , yLabel ="Fraction of predictions within range", fileName = "QQplot.pdf", uncLabel = 'Model Unc.', leg = [1.02, 0.98, 2, 1] ):
+def makeQQplot(X, Y, slope, title, xLabel ="Expected fraction within range" , yLabel ="Fraction of predictions within range", fileName = "QQplot.pdf", uncLabel = 'Model Unc.', leg = [1.02, 0.98, 2, 1] ax1 = None):
     """
     Provided with experimental and calculated values (and their associated uncertainties) in the form of list like objects. 
 
@@ -395,18 +403,22 @@ def makeQQplot(X, Y, slope, title, xLabel ="Expected fraction within range" , yL
 
     Makes a files of the plot and returns the "error slope" as a float and the figure of the created plot
     """
-    # Get plot parameters for JCAMD
-    rcParams.update(JCAMDdict())
+    if ax1 == None:
+        axReturn = False
+        # Get plot parameters for JCAMD
+        rcParams.update(JCAMDdict())
 
-    # Set up plot
-    fig1 = plt.figure(1)
-    ylim = (0,1)
-    xlim = (0,1)
-    plt.xlabel(xLabel)
-    plt.ylabel(yLabel)
-    plt.title(title)
-    ax1 = fig1.add_subplot(111)
+        # Set up plot
+        fig1 = plt.figure(1)
+        ylim = (0,1)
+        xlim = (0,1)
+        plt.xlabel(xLabel)
+        plt.ylabel(yLabel)
+        plt.title(title)
+        ax1 = fig1.add_subplot(111)
 
+    else:
+        axReturn = True
     # Add data to plot
     p1 = ax1.plot(X,Y,'bo', label = uncLabel)
 
@@ -418,22 +430,22 @@ def makeQQplot(X, Y, slope, title, xLabel ="Expected fraction within range" , yL
 
     # Build Legend 
     handles = [p1,p2,p3]
-    ax1.legend(bbox_to_anchor = (leg[0], leg[1]), loc = leg[2], ncol = leg[3], borderaxespad = 0.)
+    if leg != None:
+        ax1.legend(bbox_to_anchor = (leg[0], leg[1]), loc = leg[2], ncol = leg[3], borderaxespad = 0.)
 
-    # Adjust spacing then save and close figure
-    savefig(fileName) 
-    plt.close(fig1)
+    if axReturn:
+        return ax1
+    else:
+        # Adjust spacing then save and close figure
+        savefig(fileName) 
+        plt.close(fig1)
 
-def histPlot(subIDs, vals, dvals, xLabel, yLabel, title, option = None, fileName = None, absolute = True, widOption = 4):
+def histPlot(subIDs, vals, dvals, xLabel, yLabel, title, option = None, fileName = None, absolute = True, widOption = 4, ax = None):
     """"
     Makes histogram plots of data at IDs with sorted data. Provide settings for plot, including labels and titles. Saved out to fileName. 
     option is the way the data should be sorted, if None it is from smallest to largest vals the other options are reverse (or from largest to smallest vals) or 'close to 1' which sorts based on which value is closest to one.
     """
-    # Get plot parameters for JCAMD
-    parameters = JCAMDdict(widOption, True)
-    parameters['figure.subplot.right'] = 0.9
-    rcParams.update(parameters)
-
+    
     if absolute: # want to compare absolute vlues 
         temp = zip(subIDs, abs(array(vals)), dvals)
     else: # No absolute value:
@@ -456,7 +468,18 @@ def histPlot(subIDs, vals, dvals, xLabel, yLabel, title, option = None, fileName
     metricvals = [vals[subIDs.index(s)] for s in sids]
 
     width = 0.5
-    fig, ax = subplots(2) #Create new empty plot with two subplots (we'll split data)
+
+    # Create plots if axes weren't provided
+    if ax[0] == None:
+        axReturn = False
+        # Get plot parameters for JCAMD
+        parameters = JCAMDdict(widOption, True)
+        parameters['figure.subplot.right'] = 0.9
+        rcParams.update(parameters)
+        fig, ax = subplots(2) #Create new empty plot with two subplots (we'll split data)
+    else:
+        axReturn = True
+
     idx = numpy.arange( len(sids)) #Indices on horizontal axis
     Nsplit = int(len(sids)/2)
 
@@ -482,9 +505,12 @@ def histPlot(subIDs, vals, dvals, xLabel, yLabel, title, option = None, fileName
     ax[1].tick_params(axis='both', which='major', labelsize=8)
     ax[1].tick_params(axis='both', which='minor', labelsize=6)
 
-    # adjust subplot then save and close figure
-    savefig(fileName) 
-    plt.close(fig)
+    if axReturn:
+        return ax
+    else:
+        # adjust subplot then save and close figure
+        savefig(fileName) 
+        plt.close(fig)
 
 
 # DISCLAIMER: I am 100% there is a better way to do this than a for loop through all the data, probably something with comparing arrays, but I didn't want to take the time to figure it out when I first wrote this script

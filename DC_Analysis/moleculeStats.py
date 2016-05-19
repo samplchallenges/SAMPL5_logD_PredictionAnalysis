@@ -11,7 +11,7 @@ import numpy as np
 import imp
 tools = imp.load_source('tools','../DataFiles/tools.py')
 
-M = pickle.load(open('../DataFiles/moleculeData.p','rb'))
+M = pickle.load(open('../DataFiles/moleculeData_topHalf.p','rb'))
 # ================================================================================
 # Make histogram plots by error analysis
 # ================================================================================
@@ -37,7 +37,7 @@ for metric in metrics:
     dvals = [M[k][metric][1] for k in keys]
     # Use tool to sort data and plot it
     print metric, min(vals), max(vals)
-    fileName = "../statsPlots/%s_byMolecule.pdf" % metric
+    fileName = "../statsPlots/%s_byMolecule_topHalf.pdf" % metric
     title = "Performance by molecule ID"
     # Determine how to sort
     if metric == 'error slope':
