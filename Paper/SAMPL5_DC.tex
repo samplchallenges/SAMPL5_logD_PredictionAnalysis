@@ -96,14 +96,19 @@ grestore
 % \subclass{MSC code1 \and MSC code2 \and more}
 \end{abstract}
 
-% For now what I have done is filled in headings and a sentence to describe each paragraph in each section. It looks like with JCAMD we can use any section headings we like so I've tried to stick with the titles as statements concept. 
 
+% ================================================================================================================
+% ================================================================================================================
+% Actual writing starts HERE
+% It looks like with JCAMD we can use any section headings we like so I am trying for titles as statements, but that's a skill I am still working on
+% I have an outline for every section and I'm getting close to having draft content for everything. Please let me know if I'm missing anything, since the outline should have all the important topics
+% I am also trying to put in the placement of where figures and tables go so that I can reference them and know what we're going for. 
 
 \section{Introduction}
 \label{intro}
 SAMPL is a blind challenge, has included solvation free energy in the past
 
-What is a distribution coefficient? Relate to free energy, distiguish from logP
+What is a distribution coefficient? Relate to free energy, distinguish from logP
 
 % I'm looking to see if there are blind challenges that have used logP or logD 
 More detail about why logD
@@ -115,7 +120,7 @@ Possibly brief statement about samples set, site Bas' experimental paper. We pro
 \label{logistics}
 %Timeline and how many total participants - assigned 2 digit i.d, option to be anonymous, worshop
 SAMPL5 began on %DATE
-when the specifications for the challenge became available on the D3R website (ww...).  % add URL. 
+when the specifications for the challenge became available on the D3R website (ww...), these are also provided in the supporting information.  % add URL. 
 The challenge deadline was %DATE
 and experimental results were provided to participants not long after. 
 As in past SAMPL challenges the same group could submit multiple sets of predictions and opt to remain anonymous. 
@@ -223,12 +228,21 @@ A common way to correct between experimentally measured distribution coefficient
 This is a simple correction using the Henderson-Hasselbalch % I need to check spelling
 equation:
 \begin{equation}
-$\log D$
+HH
+\label{HH}
 \end{equation}
 to relate the concentration of neutral species to the charged species at a given pH. 
 Therefore a distribution coefficient can be calculated from a partition coefficient as ... 
-for a basic solute and ...
+for a basic solute and 
+\begin{equation}
+\log D = \log P - log(1+10^{pK_a-pH})
+\label{basic}
+\end{equation}
 for an acidic solute. 
+\begin{equation}
+\log D = \log P - log(1+10^{pH-pK_a})
+\label{acidic}
+\end{equation}
 We use Schrodinger's % look up how to do the o thing
 Epik tool to calculate pKa values for each molecule according to experimental conditions. 
 We then estimated a $\log D$ using the equations above. 
@@ -258,25 +272,59 @@ In the second set, we calculated a correction for the bias between the calculate
 \begin{table}
 % Columns error metrics and row for each prediction set
 \label{groupStats}
-\caption{Error metrics were calculate for each set of predictions, including, root-mean-squared error (RMSE), average unsigned error (AUE), average signed error (ASE), Kendall's tau (tau), and Pearson's R (R). Error slope refers to the slope of data in a QQ-Plot.}
+\caption{Error metrics were calculate for each set of predictions, including, root-mean-squared error (RMSE), average unsigned error (AUE), average signed error (ASE), Kendall's tau (tau), and Pearson's R (R). Error slope refers to the slope of data in a QQ-Plot. These results are for all data provided by the prediction set, for most that is all 53 molecules, the super scripts indicate groups that only submitted batch zero (0) or batch zero and one (1). }
 \end{table}
 
-To compare each prediction set to experiment compare plots, QQ, error metric calculated for each prediction set
+\begin{figure*} % for 2 column use
+% Insert figure
+\caption{These are examples of plots created for each set of predictions. They were chosen to try to represent the average submissions, those that were in the middle by most error metrics. a and b) comparison plots showing how predicted distribution coefficients compared to experiment for both groups. c,d) QQ Plots showing how their actual predictions were distributed compared to expectations given the model uncertainty.}
+\label{examplePlots}       % I think they are all supposed to be named fig:#, but until we decide on an order i'm leaving my labels
+\end{figure*}
 
-To visualize how prediction sets compared to each other, explain histograms
+% To compare each prediction set to experiment compare plots, QQ, error metric calculated for each prediction set
+A total of six error metrics are used to evaluate all sets of predictions: root-mean-squared error (RMSE), average unsigned error (AUE), average signed error (ASE), Pearson's R (R), Kendall's tau (tau), and the slope from the QQ-plot (error slope) (Table \ref{groupStats}). 
+For each group, we also created a plot comparing their predictions to experimental results.
+A few example plots are provided (Fig. \ref{examplePlots}) these represent a typical submission, in that these groups were in the middle of the pack by most error metrics. 
+Comparison and QQ-plots for every submission are available in the supporting information as well as error metric tables broken down by batch. 
 
-Some submissions did not include batch 1 or 2, how many of each and approximately where they were on the histograms...
+% I think the histograms have to be two separate figures or take up an entire page, which seems a little unreasonable. 
+% I'm fixing formatting on these, should have them in the next draft. 
+% Histograms - RMS, AUE, ASE
+\begin{figure*} % for 2 column use
+% Insert figure
+\caption{}
+\label{histogramsAverage}       % I think they are all supposed to be named fig:#, but until we decide on an order i'm leaving my labels
+\end{figure*}
 
-Error Slope, only one participant (two submissions) did a good job with this % cite Andrew Paluch's paper if he is writing one
+% Histograms - R, tau, error slope
+\begin{figure*} % for 2 column use
+% Insert figure
+\caption{}
+\label{histogramsCorrelations}       % I think they are all supposed to be named fig:#, but until we decide on an order i'm leaving my labels
+\end{figure*}
+
+% histograms and batches
+To help visualize all of the error metrics, the data was compiled into a histogram where results are sorted by what would be ideal for that metric (closest to 1 for error slope for example). 
+These metrics are split into measurements of deviation from experiment (Fig. \ref{histogramsAverage}) and correlation with experiment (Fig. \ref{histogramsCorrelations}) distinctions which helped in identifying high performing groups. 
+Most submissions included data for all three batches so these histograms are limited to those submissions. 
+A total of eight submissions from two participants that only included data from batch 0, then an additional 5 submissions from 2 participants with only batches 0 and 1.
+These submissions are indicated in Table \ref{groupStates} for clarity.
+% More about how they would have done...
+% Stefan Kast only submitted batch 0 results with EC-RISM type methods. 
+% Julien Michel's group submitted 4 sets to just 0, 4 to 0 and 1, and 4 to 0, 1, and 2 with the same method labels, I did a quick check, I think they misunderstood the directions and submitted their data for batch 0, batch 0 and 1, and batch 0, 1, and 2, their numbers for the same method labels have identical results in the different submissions for the set of molecules I looked at. I haven't checked everything or asked Stefano, but I think that is what happened. 
+% Gerhard Koenig had one set that they only did batch 0 and 1, but they have 7 other submissions so I think they're fine. 
+%Kast's submissions were mostly middle (to upper middle) of the pack 
+
+% Error Slope, only one participant (two submissions) did a good job with this % cite Andrew Paluch's paper if he is writing one
+In considering the results for the error slope analysis, participants generally tend to do poorly estimating model uncertainty. 
+The top three submissions are the only within uncertainty of 1, submissions 53 and 60 from Andrew Paluch % at location cite paper
+and submission 43 from Gerhard Koenig % at location cite paper. 
+% Double check their methods to see if they specifically comments on model uncertainty
+Only one submission (40) significantly overestimated their model uncertainty. 
+The rest are below 1, indicating a significant underestimation of the model uncertainty. 
+% I will need to elaborate. ... 
 
 % Kendall W if we decide to include it
-\subsection{Null Hypothesis}
-\label{results:2}
-% I need to find a good citation, but I remember talking in Pharm 272 about how a "good" predictive method should do better than any null hypothesis. 
-% good predictive method should be better than a "null" hypothesis. All molecules equally distribute between cyc and water so logD = 0.0
-One way of evaluating predictive models is to compare them to a null hypothesis, or default result of some kind. 
-In the case of distribution coefficients, we chose a null hypothesis where we assume all solute molecules distribute equally between cyclohexane and water, corresponding to a $\log D$ = 0. 
-We performed all error analyses discussed above on this pretend data set as a point of comparison. 
 
 \subsection{Prediction sets that performed most strongly}
 \label{results:2}
@@ -288,42 +336,107 @@ We want to consider how close to experiment RMSE/AUE and how well correlated wit
 
 but really null did best across the board so we have a lot of work to do... best RMSE over 2.0 log units and average around 3.5
 
+\subsection{Null Hypothesis}
+\label{results:3}
+% I need to find a good citation, but I remember talking in Pharm 272 about how a "good" predictive method should do better than any null hypothesis. 
+% good predictive method should be better than a "null" hypothesis. All molecules equally distribute between cyc and water so logD = 0.0
+One way of evaluating predictive models is to compare them to a null hypothesis, or default result of some kind. 
+In the case of distribution coefficients, we chose a null hypothesis where we assume all solute molecules distribute equally between cyclohexane and water, corresponding to a $\log D = 0$. 
+We performed all error analyses discussed above on this pretend data set as a point of comparison. 
+
 
 \subsection{Compounds that were difficult to accurately predict}
-\label{results:3}
+\label{results:4}
 Full error analysis repeated for individual molecules, there aren't very many "simple" molecules, almost all have hetro atoms and rotatable bonds...
 
-about 5-10 worst, I'm looking into if there are # of tuatomer or functional group similarities...
+about 5-10 worst, I'm looking into if there are trends in number of tautomer or functional group similarities...
 
 about 5-10 best, still looking for trends, we know 083, 074. 015 also did poorly amino acid? I don't know why that would cause more problems in general. 
 
 % possibly a paragraph about MW, # of rotatable bonds, or # of tautomers (no tautomer trend yet...)
 
 \subsection{Classes of methods...}
-\label{results:4}
+\label{results:5}
 Broad range of methods, split into classes: MD all atom, MD hybrid, quantum?, Anything similar to COSMO? % I'm still reading and trying to understand methods
 Pie chart by number maybe?
 
 Clear trends on which are doing well? 
 
 \subsection{Mobley group prediction results}
-\label{results:5}
-How did logP do, not bad in general, include our plots
+\label{results:6}
 
-Slight bias for cyclohexane over water, probably because tautomer enumeration will increase concentrations in water?
+% Our comparison plots
+\begin{figure*}
+% insert figure 
+\caption{Plots showing our predictions compared to experiment. a) submission 39 to SAMPL5, with no tautomer correction. b) distribution coefficient corrected from calculated partition coefficient based on pKas. c) distribution coefficient correct from calculated partition coefficient with state penalties }
+\label{myComparisons}       % Give a unique label
+\end{figure*}
 
-pKa corrections
-tautomer corrections
+% How did logP do, not bad in general, include our plots
+We submitted a set of blind predictions (39) to the challenge. 
+Solvation free energies were calculated using GROMACS with GAFF and AM1-BCC charges. 
+The initial set of predictions were partition coefficients, determined from the difference in solvation free energies without correcting for variation in tautomers. 
+39 was within the top 15 %(check this) 
+submissions for all error metrics.  
+% Double check numbers, slight bias for cyclohexane to water from average signed error
 
-Biases, and major shifts for some compounds - tautomers in cyclohexane not being accounted for
+After the challenge we explored how correcting for protonation states would have affected the our initial predictions. 
+The first set of corrections involved calculating the pKa for each molecule using Schrodinger's Epik tool. 
+Next, $\log D$ was calculated using the pKa and partition coefficient determined in submission 39 using eqn. % get reference
+For compounds with more than one pKa, the one which caused the largest change in $\log D$ was used, this would represent the most acidic proton leaving or most basic functional group becoming protonated. % this is a confusing sentence
+This correction showed a slight improvement by most error metrics (Table % ref table) 
+including a decrease in the average error (value) indicating less bias toward concentration. 
+
+For the next set of corrections, we used Schrodinger's Ligprep tool to calculate a state penalty, which gives the relative population of tautomers in water at a given pH. % ick
+The state penalty was used to correct the concentration in the aqueous layer, according to eqn. % reference if I have one
+State penalties improved predictions from the original partition coefficient coefficients and showed a slight improvement over the pKa corrections (Fig. \ref{myComparisons}). 
+% Expand here...
+Both of these correction methods only adjust the concentration in the aqueous layer, however there may be tautomer affects that also affect the concentration in cyclohexane as well. 
+There are a few molecules where the state penalty correction caused a significant bias for the concentration in the aqueous layer (SAMPL5\_050). % I need to double check the others
+One explanation for these extreme examples is that the solute might have other neutral tautomers that would affect the concentration in cyclohexane, which we did not correct for. 
+% add a sentence or two here to conclude this
+
 
 \subsection{Reanalysis of difficult tautomers} % I don't like difficult here
-\label{results:6}
-It was clear from epik and discussions with other SAMPL5 participants (cite Klamt?)  that 050 and 083 had dominant tautomers other than provided SMILE
+\label{results:7}
+% It was clear from epik and discussions with other SAMPL5 participants (cite Klamt?)  that 050 and 083 had dominant tautomers other than provided SMILE
+From our tautomer enumeration and discussions with other SAMPL5 participants % cite Andreas and maybe Frank, look at e-mail
+it became clear that the provided SMILES string may not be the most popular %???
+tautomeric form of the molecule. 
+If we could perfectly calculate solvation free energies and tautomer populations in both solvents, starting tautomer should not effect the final calculated distribution coefficient.  
+Our initial solvation free energy calculations used provided SMILES strings without any consideration of other tautomers.
+To explore how this may have affected our $\log D$ calculation, we decided to repeat a few solvation free energy calculations with different tautomers. 
+We repeated calculations with different tautomers of SAMPL5\_050 and SAMPL5\_083 that could be present in both the water and cyclohexane solutions. 
+To explore how the tautomer used to calculate the solvation free energy might effect the estimate of a distribution coefficient. 
+
+% I got slightly distracted playing with table formatting, I'm working on coding it out and copy and paste it here. 
+\begin{table}
+\begin{tabular}{l | l l | l l}
+\hline
+& \multicolumn{2}{|c|}{SAMPL5\_050} & \multicolumn{2}{c}{SAMPL5\_083} \\
+& tautomer 1 & tautomer 2 & tautomer 1 & tautomer 2 \\
+\hline
+$\Delta G_{hydration}$ & $ 1 \pm 1 $ &  $ 1 \pm 1$ &  $1 \pm 1$ &  $1 \pm 1$ \\
+$\Delta G_{cyclohexane}$ & $ 1 \pm 1 $ &  $ 1 \pm 1$ &  $1 \pm 1$ &  $1 \pm 1$ \\
+$\log P_{cyc/wat}$ & $ 1 \pm 1 $ &  $ 1 \pm 1$ &  $1 \pm 1$ &  $1 \pm 1$ \\
+Correction & $ 1 \pm 1 $ &  $ 1 \pm 1$ &  $1 \pm 1$ &  $1 \pm 1$ \\
+$\log D_{cyc/water}$ & $ 1 \pm 1 $ &  $ 1 \pm 1$ &  $1 \pm 1$ &  $1 \pm 1$ \\
+\hline
+experimental $\log D$ & \multicolumn{2}{|c|}{$1 \pm 1$} & \multicolumn{2}{c}{$1 \pm 1$} \\
+\hline
+\end{tabular}
+\label{tautomerChanges}
+\caption{Simulations with different tautomers...}
+\end{table}
+% Possibly 2d images of the two tautomers...
+
 
 We reran these tautomers to calculate solvation free energies, used state penalty %results in a table probably (or maybe a figure like the one I made for erythromycin in the logP paper)
 
 Generally hard to tell if its tautomer enumeration that isn't good or the solvation free energies
+
+\subsection{Considering how solvent interactions could possibly affect results} % I don't like difficult here
+\label{results:7}
 
 \section{Conclustion}
 \label{conclusions}
@@ -334,7 +447,7 @@ Compare to dGhydration in past SAMPL challenges? using average errors, possibly 
 
 Tautomer and/or pKa predictions are going to be an important part of improving these
 
-We, as a communitte, need to improve error estimation, both how we do and how we evaluate it...
+We, as a communitee, need to improve error estimation, both how we do and how we evaluate it...
 
 logP/logD seem to be good options for future blind challenges
 
@@ -349,7 +462,7 @@ people who set up the automated submission system %they are gods in my opion =]
 
 \end{acknowledgements}
 
-\subsection{Available in supporting info} % This is a list for myself, it will all be zipped or provided with a link to to somewhere on the web
+\subsection{Available in supporting info} % This is a list for myself, it will all be archived or provided with a link to to somewhere on the web
 things provided to participants
 all scripts used for error analysis
 all participant files? Can we include the anonymous one? 
