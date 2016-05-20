@@ -276,7 +276,7 @@ In the second set, we calculated a correction for the bias between the calculate
 \end{table}
 
 \begin{figure*} % for 2 column use
-% Insert figure
+\includegraphics{ExamplePlots.eps}
 \caption{These are examples of plots created for each set of predictions. They were chosen to try to represent the average submissions, those that were in the middle by most error metrics. a and b) comparison plots showing how predicted distribution coefficients compared to experiment for both groups. c,d) QQ Plots showing how their actual predictions were distributed compared to expectations given the model uncertainty.}
 \label{examplePlots}       % I think they are all supposed to be named fig:#, but until we decide on an order i'm leaving my labels
 \end{figure*}
@@ -328,6 +328,11 @@ The rest are below 1, indicating a significant underestimation of the model unce
 
 \subsection{Prediction sets that performed most strongly}
 \label{results:2}
+\begin{figure*} % for 2 column use
+\includegraphics{BestGroups.eps}
+\caption{}
+\label{BestGroups}       % I think they are all supposed to be named fig:#, but until we decide on an order i'm leaving my labels
+\end{figure*}
 We want to consider how close to experiment RMSE/AUE and how well correlated with experiment tau/R
 
 16 did best across both metric, COSMO-RS, brief statement about procedure
@@ -346,10 +351,11 @@ We performed all error analyses discussed above on this pretend data set as a po
 
 
 \subsection{Compounds that were difficult to accurately predict}
+
+% Including the SMILES strings looks terrible in my opinion, maybe we could do 2d images if we have time or something
+% Otherwise maybe I should just include 1 histogram plot of the AUE for the molecules and leave it at that. 
 \label{results:4}
-% I haven't actually made most of the tables yet, but I'm including space for all of them and labels and captions so we can work on those. 
 \begin{table}
-\footnotesize
 \input{MoleculeTable.tex}
 \label{MoleculeTable}
 \caption{A complete list of compounds used in the SAMPL5, sorted by batch. The mean unsigned error, reported in log units, was calculated with all predictions for that compound.} 

@@ -285,7 +285,7 @@ def ComparePlot(x, y, Title, XLabel, YLabel, xerr, yerr, labels, fileName = 'com
     # Insert range for "correct" prediction
     L = numpy.array([lowLim-20, highLim +20])
     ax1.plot(L,L, 'k-', markersize = 6.0)
-    ax1.fill_between(L, L+expError, L-expError, facecolor = 'wheat', alpha = 0.5, label = "Agree within %.1f" % expError)
+    ax1.fill_between(L, L+expError, L-expError, facecolor = 'wheat', alpha = 0.5, label = "Agree within %.1f" % expError, linewidth = 0.0)
     yellow = patches.Patch(color = 'wheat', label = r'$\pm$ %0.1f log units' % expError)
     handles.append(yellow)
 
@@ -395,7 +395,7 @@ def getQQdata(calc, expt, dcalc, dexpt, boot_its):
         slopes.append(a[0])
     return X, Y, slope, numpy.array(slopes).std()
 
-def makeQQplot(X, Y, slope, title, xLabel ="Expected fraction within range" , yLabel ="Fraction of predictions within range", fileName = "QQplot.pdf", uncLabel = 'Model Unc.', leg = [1.02, 0.98, 2, 1] ax1 = None):
+def makeQQplot(X, Y, slope, title, xLabel ="Expected fraction within range" , yLabel ="Fraction of predictions within range", fileName = "QQplot.pdf", uncLabel = 'Model Unc.', leg = [1.02, 0.98, 2, 1], ax1 = None):
     """
     Provided with experimental and calculated values (and their associated uncertainties) in the form of list like objects. 
 
@@ -588,7 +588,7 @@ def JCAMDdict(w = 1, square = False):
             'xtick.labelsize': 8,
             'ytick.labelsize': 8,
             'figure.figsize': [wid, height], 
-            'legend.fontsize': 8, 
+            'legend.fontsize': 6, 
             'font.family':'sans-serif', 
             'font.sans-serif':'arial',
             'lines.markersize': 3,
