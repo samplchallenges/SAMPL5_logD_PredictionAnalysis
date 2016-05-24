@@ -63,10 +63,17 @@ grestore
 
 \title{Blind prediction of cyclohexane-water distribution coefficients from the SAMPL5 challenge}
 \thanks{NSF, green planet (their NSF), anything else?}
+%DLM: I'm not seeing where the "thanks" appears. Here's my standard acknowledgments, and let's actually retain the NIH acknowledgment here as this is somewhat related, plus they provide some of my support
+%"We appreciate financial support from the National Institutes of Health (1R01GM108889-01) and the National Science Foundation (CHE 1352608), and computing support from the UCI GreenPlanet cluster, supported in part by NSF Grant CHE-0840513."
+%DLM: Also we should be sure in acknowledgments to acknowledge everyone who was helpful in any way - i.e. Andreas Klamt surely should be acknowledged, as well as probably Frank Pickard, and possibly people from Schrodinger. Is there anyone else who helped? i.e. did we run into OpenEye bugs and get help from them, or...? 
+%DLM: Also should acknowledge D3R support (their NIH grant). Let me ask Gilson.
 
-\subtitle{I don't think we need a subtitle...}
+%\subtitle{I don't think we need a subtitle...}
+%DLM: Agreed
 
 %\titlerunning{Short form of title}        % if too long for running head
+%DLM: Possible short title
+\titlerunning{SAMPL5 distribution coefficients}
 
 \author{Caitlin C Bannan         \and
         Kalistyn H Burley \and
@@ -76,10 +83,11 @@ grestore
 %\authorrunning{Short form of author list} % if too long for running head
 
 \institute{C. C. Bannan, K. H. Burley, and D. L. Mobley \at University of California, Irvine \\
-              Tel.: +123-45-678910\\
-              Fax: +123-45-678910\\
+              Tel.: +949-824-6383\\
+              Fax: +949-824-2949\\
               \email{dmobley@mobleylab.org}           %  \\
 %             \emph{Present address:} of F. Author  %  if needed
+%DLM: Need to get departments in here somewhere - I'm PharmSci and Chem, you're Chem, Kalli is PharmSci.
 }
 
 \date{Received: date / Accepted: date}
@@ -101,19 +109,30 @@ grestore
 % ================================================================================================================
 % Actual writing starts HERE
 % It looks like with JCAMD we can use any section headings we like so I am trying for titles as statements, but that's a skill I am still working on
+%DLM: Excellent.
 % I have an outline for every section and I'm getting close to having draft content for everything. Please let me know if I'm missing anything, since the outline should have all the important topics
 % I am also trying to put in the placement of where figures and tables go so that I can reference them and know what we're going for. 
 
 \section{Introduction}
 \label{intro}
-SAMPL is a blind challenge, has included solvation free energy in the past
+SAMPL is a blind challenge, has included hydration free energy in the past
+
+%DLM Additions; I can draft any of these you want. LMK.
+Briefly describe value of past hydration challenges and what happened over the years (i.e. very valuable tests; more methods began to agree well with experiment as challenge went on)
+
+Briefly explain problem with continuing hydration challenges (no new measurements, so no ability to select particular types of functionality for follow up or check measured values)
+
+Explain motivation for this challenge and how data was obtained %(very briefly - referencing Bas; I'm asking him for name/authors); the idea of including this is that if people read ONLY ONE paper about the challenge it will likely be this one so we want to be somewhat complete.
+
+%end DLM
 
 What is a distribution coefficient? Relate to free energy, distinguish from logP
 
 % I'm looking to see if there are blind challenges that have used logP or logD 
-More detail about why logD
+%DLM: I did not get anything via twitter.
+More detail about why logD 
 
-Possibly brief statement about samples set, site Bas' experimental paper. We provide a detailed look at our submissions to the SAMPL5 challenge and an analysis of submitted results
+Possibly brief statement about sampl set, cite Bas' experimental paper. We provide a detailed look at our submissions to the SAMPL5 challenge and an analysis of submitted results %DLM: Probably want to put results first, and let's call ours our "reference calculations" rather than "our submissions" to downplay the fact taht we submitted. 
 
 
 \section{Challenge Logistics}
@@ -122,18 +141,29 @@ Possibly brief statement about samples set, site Bas' experimental paper. We pro
 SAMPL5 began on %DATE
 when the specifications for the challenge became available on the D3R website (ww...), these are also provided in the supporting information.  % add URL. 
 The challenge deadline was %DATE
+%DLM: Should be able to pull these from e-mails. Let me know if you need help.
 and experimental results were provided to participants not long after. 
-As in past SAMPL challenges the same group could submit multiple sets of predictions and opt to remain anonymous. 
-A total of 76 prediction sets from 18 participants were submitted and assigned a 2 digit ID number 01 to 76 that will be used throughout this paper. 
-After the challenge was complete, the D3R resource hosted a meeting at University of California, San Diego March 9-11, 2016. %... this needs a more complete idea
+As in past SAMPL challenges, each group could submit multiple sets of predictions.
+There was also the option to remain anonymous.  
+A total of 76 prediction sets from 18 participants or participating groups were submitted and assigned a 2 digit ID number 01 to 76 that will be used throughout this paper. 
+Predictions were analyzed and overview statistics, as well as individual analysis of each submission by various error metrics (as detailed below) were returned to each participant. 
+The challenge culminated with discussions of the results at  the ... workshop, supported by D3R %DLM: fill in details, spell out D3R on first reference
+at the University of California, San Diego March 9-11, 2016.
 
 % Number of molecules, organized into batches with sizes (submit 0, 0-1, or 0-2), what was provided to participants
 The logD part of SAMPL5 consisted of 53 molecules divided into batches 0, 1, and 2 containing 13, 20, and 20 molecules respectively. 
+%DLM: Explain creation of batches somewhere; here if not below. My scripts are on GitHub but I believe I split based on molecular weight while assuring that each batch covered enough dynamic range.
 Participants could submit just batch 0, batches 0 and 1, or batches 0, 1, and 2. 
+The idea was that all participants should attempt predictions on the full set if at all possible, but grouping into batches would allow people with particularly demanding methods (such as polarizable force fields or methods requiring intensive quantum mechanics) to focus on smaller compounds and still be evaluated. 
+%DLM: Probably want to mention how many of the submissions did NOT cover the full set.
 Analysis in this paper will focus on the complete set of molecules, but the separate analysis for batch 0 and batches 0 and 1 is available in the supporting information. % This sentence needs some major rewording, it doesn't make sense
-Molecules were assigned an identifier in the form SAMPL5\_XXX, the complete table can be found below and in the supporting information. 
-Included in the challenge information was the SMILES string for each molecule as well as mol2 and sdf files. % are there more formal ways to refer to mol2 and sdf?
+%DLM: Doesn't seem so bad to me. Just minor tweaks?
+Molecules were assigned an identifier in the form SAMPL5\_XXX; the complete table can be found below and in the supporting information. 
+Included in the challenge information was the SMILES string for each molecule as well as mol2 and sdf files. % are there more formal ways to refer to mol2 and sdf? 
+%DLM: This is acceptable to me. You could do `.mol2` or even \texttt{.mol2}. I guess you could call them TRIPOS `.mol2` files (they invented format) and (somethingorother) sdf files... 
 Also provided were GROMACS, AMBER, and % cms/lmp files? 
+%DESMOND and LAMMPS
+%DLM: We'll need to acknowledge Michael Shirts for his help generating these files. 
 files prepared for each molecule in a solvated box of water or cyclohexane. 
 All information provided to challenge participants is included in supporting information. 
 
@@ -155,34 +185,38 @@ Analysis of model uncertainties then, is an important part of evaluating any mod
 % Error metrics considered, bootstrapping to estimate uncertainty
 Similar to past SAMPL challenges, we considered a large number of error metrics in analyzing all predictions submitted to SAMPL5. 
 For each prediction set we calculate the root-mean-squared error (RMSE), average unsigned error (AUE), average signed error (ASE), Pearson's R (R), Kendall's tau (tau). % I'm still deciding about percent correct sign, I don't really think it provides anything interesting, but we've used it and other literature sources for logP use it... Also for lay out purposes, I like leaving the number of analysis at 6, it makes the histograms fit nicely into two figures. 
+%DLM: It doens't need to be a major focus of the analysis, but we did compute it/distribute it to people, right? If so, we need to mention here. 
 Uncertainty in each metric was calculated as the standard deviation in 1000 bootstrap trials. 
-This bootstrapping technique included variation in the experimental values based on their reported uncertainties. 
+This bootstrapping technique included variation in the experimental values based on their reported uncertainties.  %as described previously (?)
 % This is very short, but I'm not sure what else to include...
 
 % QQ plots and what 'error slope' is
 As discussed above, an important evaluation of a predictive tool is the ability to estimate how well the computational method will agree with experiment. % eh
 As in SAMPL4, a QQ Plot % is there another name for those, I don't think I know what the QQ stands for?
-was created for each prediction set. 
+was created for each prediction set. %DLM: I don't know what QQ stands for either. I like to try and summarize what it means in a sentence or two as that's more helpful I think than the name (which means nothing to me).
 The fraction of predictions in an uncertainty range is plotted against the expected fraction of predictions within that range, assuming a gaussian distribution around the experimental value with the model uncertainty. % I still don't think this is clear, I'm going to try to explain this to someone and see if that helps with how to talk about it
-Then the slope of data in the QQ plot was stored for each prediction, we will refer to this as the "error slope." 
+%DLM: Good idea. 
+Then the slope of data in the QQ plot was stored for each prediction, we will refer to this as the "error slope." %DLM: "slope of data" probably not the most clear, because it doesn't remind what is on which axis. Maybe "slope of the line comparing fraction within a specified actual error vs fraction expected within that error," or similar. (x vs y being the idea)
 An error slope of greater than one indicates that the calculated values are with uncertainty of experiment more often than expected, or in other words the model uncertainty was over estimated. 
 Oppositely, an error slope less than one indicates the model uncertainty was underestimated. % I use the word indicates too often
+%DLM You may want to make friends with a thesaurus... ;) "shows", "suggests", etc.
 
 % By molecule analysis
-Where possible, error analyses were repeated for each molecule where the data set is a complete list of all predicted values for the $\log D$ for that compound. 
+Where possible, error analyses were repeated for each molecule where the data set is a complete list of all predicted values for the $\log D$ for that compound.  %DLM: I don't understand this sentence. Guessing, I think what you're saying is that we also looked at how well all submissions predicted each molecule and applied all (?) of the error metrics on a per-molecule basis...?
 By evaluating each molecule, we can highlight molecules that many groups struggled to accurately predict and possibly highlight trends on where most methods need to improve. 
 % Maybe this should just be mentioned at the end of the paragraph above...
 
 % number of tautomers? checkmol molecules? Kendall W? Nothing yet
+%DLM: Yes, save for if you have spare time... 
 
-\section{Submissions from the Mobley Group}
+\section{Submissions from the Mobley Group} %DLM: Let's say "Standard calculations from the Mobley group"
 \label{methods:1}
 % \paragraph{partition coefficient from solvation free energies} maybe...
 
 % Submission 39 done by KHB blind, following protocol established in the group to calculate logP % Cite Caitlin's paper? 
 % Probably one more paragraph detailing those methods, GAFF AM1-BCC, GROMACS, etc.
 
-We also participated in the challenge, submitting one complete set of predictions before experimental results were provided to the Mobley group. 
+We also participated in the challenge, submitting one complete set of predictions before experimental results were provided to the Mobley group. %DLM: I would say that we participated by submitting a set of reference calculations, briefly explain the reason for these (to allow people to test other protocols with same parameters), and explain that inputs were made available to everyone. 
 In addition, KHB, a graduate student in the Mobley group performed the calculations submitted to the SAMPL5 challenge. 
 CCB and DLM performed a series of other calculations after the challenge, which were not included in the prediction sets. 
 We considered a null hypothesis where all molecules are assumed to distribute equally between cyclohexane and water.
@@ -191,12 +225,13 @@ We also included a number of post challenge corrections for protonation and taut
 
 \subsection{Calculating partition coefficients from solvation free energies}
 \label{methods:2}
-The Mobley group submitted prediction set 39, a calculated partition coefficient between cyclohexane and water. 
+The Mobley group submitted prediction set 39, a calculated partition coefficient between cyclohexane and water. %DLM: I would say the reference set of calculations was assigned submission ID #39. What you have written is correct, I just want to avoid any impression that we're trying to compete (EVEN THOUGH we did these blindly), so retaining the word "reference" rather than "prediction" as much as possible will help with that. 
 Partition coefficients are the ratio of concentrations in a single tautomeric state of a solute distributed between two solvents. 
 Before the challenge, each molecule was taken directly as the provided SMILES string with no further tautomer enumeration.
 As demonstrated in the literature, % add citations
-they are directly proportional to the difference between the solvation free energy for the solute into each solvent. 
-We use previously established and automated protocols to calculate the solvation free energy of each molecule into water and cyclohexane. 
+they are directly proportional to the difference between the solvation free energy for the solute into each solvent. %DLM: What is "they" referring to here? (Grammar). Logical reference would be "molecule", but that's not what you mean.
+We use previously established and automated protocols %DLM: reference
+to calculate the solvation free energy of each molecule into water and cyclohexane. 
 Then the calculated partition coefficient was reported as an estimate for $\log D$. 
 
 To calculate solvation free energies, we used automated tools created by the Mobley lab.
@@ -207,10 +242,10 @@ It convert SMILES strings or IUPAC names of any mixture of compounds to paramete
 All molecular dynamics parameters are identical to previous studies.  % cite logP and relative solubility paper
 The molecule is taken from the solvated box to a non-interacting gas phase in 20 lambda values. 
 Solvation free energies are calculated with Alchemical Analysis tool % citation
-using the multi-state Bennet acceptance ratio to extract free energy difference between the beginning and end state. 
-The partition coefficient was calculated as the difference in the cyclohexane solvation free energy and the hydration free energy.
-Statistical uncertainty was reported as the propagated uncertainty from the solvation free energy calculations. 
-Model uncertainty was estimated to be the same for all molecules and reported as the root-mean-squared error from a recent study on calculating cyclohexane/water partition coefficient, specifically 1.4 log units.
+using the multi-state Bennett acceptance ratio to extract free energy difference between the beginning and end state. 
+The partition coefficient was calculated as the difference between the cyclohexane solvation free energy and the hydration free energy.
+The statistical uncertainty was reported as the propagated uncertainty from the solvation free energy calculations. 
+The model uncertainty was estimated to be the same for all molecules and reported as the root-mean-squared error from a recent study on calculating cyclohexane/water partition coefficient, specifically 1.4 log units.
 
 As a part of this study, we also wanted to verify that a change in the simulation box size does not affect the calculated solvation free energy in cyclohexane. 
 Hydration free energies were previously shown to be independent of box sizes from 2 to 9 nanometers, within calculated uncertainties. % cite box size paper. 
@@ -219,11 +254,15 @@ we calculated the dipole moment for each SAMPL5 molecule.
 % sentence about why we calculated dipole, I'm wrapping my head around it again, but struggling to write it in one or two sentences
 Then the solvation free energy calculations discussed above were repeated with 150, 200, 300, 400, 500, ... % I need to check these numbers
 cyclohexane molecules in the box. 
+%DLM: What did you find? i.e. independent here as well? You need a sentence saying.
+
+%DLM: Somewhere we should also report how accurate we would have expected people's predictions to be, based on the error propagation argument (i.e. on my slides) and past accuracies on hydration (i.e. SAMPL4). I can draft this if you want. LMK.
 
 \subsection{Consideration of tautomers after SAMPL}
 \label{methods:3}
 
-As a follow-up study to our initial SAMPL5 prediction submission we wanted to explore how correcting for changes in protonation or tautomeric state would have affected the partition coefficient predictions we originally submitted. 
+To help understand the results from our initial SAMPL5 prediction submission we explored how correcting for changes in protonation or tautomeric state %to convert logP to logD - probably a good idea to mention this.
+would have affected the partition coefficient predictions we originally submitted. 
 A common way to correct between experimentally measured distribution coefficients and partition coefficients is with pKa values for the solute. % cite propranolol article and probably others, they talk about it in one of the other experimental review papers I have
 This is a simple correction using the Henderson-Hasselbalch % I need to check spelling
 equation:
@@ -244,14 +283,16 @@ for an acidic solute.
 \label{acidic}
 \end{equation}
 We use Schrodinger's % look up how to do the o thing
+%DLM: Possibly \"{o} 
 Epik tool to calculate pKa values for each molecule according to experimental conditions. 
 We then estimated a $\log D$ using the equations above. 
 
-Using pKa values only accounts for one change in protonation, a correct distribution coefficient will include any tautomer of the molecule in both solvents. 
+Using pKa values only accounts for one change in protonation, whereas a correct distribution coefficient should include all relevant tautomers and protonation states of the molecule in both solvents. 
 To correct for all other tautomer states we used Schrodinger's LigPrep to enumerate tautomers for each molecule in the aqueous solution. 
-A part of this analysis includes an energy penalty that relates the population of each tautomer at the given conditions.
-LigPrep can only perform the tautomer enumeration with water or DMSO as a solvent, so we were unable to find tautomers in cyclohexane. 
+A part of this analysis includes an energy penalty that relates to the predicted population of each tautomer at the given conditions.
+LigPrep can only perform the tautomer enumeration with water or DMSO as a solvent, so we were unable to predict tautomers in cyclohexane. 
 % Probably need to expand this a little bit ...
+%DLM: you probably need to say that then these corrections amounted to accounting for the full range of tautomers /protonation states and their populations in water, but assuming the protonation state and tautomer remains fixed at the that used for the simulations when in cyclohexane. 
 
 \subsection{Comparing to fast, structural based partition coefficient calculators} % Something like empirical prediction or fast regression method... 
 \label{methods:4}
@@ -265,20 +306,27 @@ First, the predicted octanol/water partition coefficient was considered an estim
 In the second set, we calculated a correction for the bias between the calculated XlogP values and a set of experimental cyclohexane/water partition coefficients from a previous study. % cite logP paper and Leo/Hasch
 % need a wrap up sentence here. 
 
+%DLM: You may want to assign these different methods some sort of simple memorable name (pnemonic) in the relevant sections to make it easier to refer to in results/discussion.
+
 \section{Results and Discussion}
 \label{results:1}
+
+%DLM: I often like to start Results with sort of a concise summary of the main point. I wonder if this would be a good place to compare performance of the best submissions (i.e. in terms of RMS error) with the error we would have expected based on solvation free energies? 
+%DLM: At the very least, you want to start Results with something interesting as opposed to a list of error metrics. You want people who skip to the results to get to something that grabs them before they get to technical details.
 
 % I haven't actually made most of the tables yet, but I'm including space for all of them and labels and captions so we can work on those. 
 \begin{table}
 \input{groupStats.tex}
 \label{groupStats}
-\caption{Error metrics were calculate for each set of predictions, including, root-mean-squared error (RMSE), average unsigned error (AUE), average signed error (ASE), Kendall's tau (tau), and Pearson's R (R). Error slope refers to the slope of data in a QQ-Plot. Most submissions included all three batches, some only provided batch 0\textsuperscript{a} and others included batch 0 and 1\textsuperscript{b}} 
+\caption{Error metrics were calculate for each set of predictions, including root-mean-squared error (RMSE), average unsigned error (AUE), average signed error (ASE), Kendall's tau (tau), and Pearson's R (R). Error slope refers to the slope of data in a QQ-Plot. Most submissions included all three batches, some only provided batch 0\textsuperscript{a} and others included batch 0 and 1\textsuperscript{b}}  %DLM: Maybe too wordy to say most included all three but some included X and Y... Maybe just, "most submissions contained all three batches as detailed in the text."
 \end{table}
+%DLM: Right-justify the metric fields? It looks funky as is since mostly it's nice neat tables of numbers except for when one has an extra digit or a negative sign... 
 
 \begin{figure*} % for 2 column use
 \includegraphics{ExamplePlots.eps}
 \caption{These are examples of plots created for each set of predictions. They were chosen to try to represent the average submissions, those that were in the middle by most error metrics. a and b) comparison plots showing how predicted distribution coefficients compared to experiment for both groups. c,d) QQ Plots showing how their actual predictions were distributed compared to expectations given the model uncertainty.}
 \label{examplePlots}       % I think they are all supposed to be named fig:#, but until we decide on an order i'm leaving my labels
+%DLM: I think TeX takes care of that for you - i.e. just use labels here and where you refer to them in the text and it will get the numbering right and they'll preserve it. At least, that's what I always do. I never type in actual figure numbers.
 \end{figure*}
 
 % To compare each prediction set to experiment compare plots, QQ, error metric calculated for each prediction set
@@ -304,7 +352,7 @@ Comparison and QQ-plots for every submission are available in the supporting inf
 \end{figure*}
 
 % histograms and batches
-To help visualize all of the error metrics, the data was compiled into a histogram where results are sorted by what would be ideal for that metric (closest to 1 for error slope for example). 
+To help visualize all of the error metrics, the data was compiled into a histogram where results are sorted by what would be ideal for that metric (closest to 1 for error slope for example). %DLM: "Sorted by what would be ideal" is confusing. Sorted from best to worst? 
 These metrics are split into measurements of deviation from experiment (Fig. \ref{histogramsAverage}) and correlation with experiment (Fig. \ref{histogramsCorrelations}) distinctions which helped in identifying high performing groups. 
 Most submissions included data for all three batches so these histograms are limited to those submissions. 
 A total of eight submissions from two participants that only included data from batch 0, then an additional 5 submissions from 2 participants with only batches 0 and 1.
@@ -312,10 +360,12 @@ These submissions are indicated in Table \ref{groupStats} for clarity.
 % More about how they would have done...
 % Stefan Kast only submitted batch 0 results with EC-RISM type methods. 
 % Julien Michel's group submitted 4 sets to just 0, 4 to 0 and 1, and 4 to 0, 1, and 2 with the same method labels, I did a quick check, I think they misunderstood the directions and submitted their data for batch 0, batch 0 and 1, and batch 0, 1, and 2, their numbers for the same method labels have identical results in the different submissions for the set of molecules I looked at. I haven't checked everything or asked Stefano, but I think that is what happened. 
+%DLM: Probably ask.
 % Gerhard Koenig had one set that they only did batch 0 and 1, but they have 7 other submissions so I think they're fine. 
 %Kast's submissions were mostly middle (to upper middle) of the pack 
 
 % Error Slope, only one participant (two submissions) did a good job with this % cite Andrew Paluch's paper if he is writing one
+%DLM: He is, and IIRC he's using a more empirical/trained method which probably has fairly well understood uncertainties.
 In considering the results for the error slope analysis, participants generally tend to do poorly estimating model uncertainty. 
 The top three submissions are the only within uncertainty of 1, submissions 53 and 60 from Andrew Paluch % at location cite paper
 and submission 43 from Gerhard Koenig % at location cite paper. 
@@ -323,10 +373,12 @@ and submission 43 from Gerhard Koenig % at location cite paper.
 Only one submission (40) significantly overestimated their model uncertainty. 
 The rest are below 1, indicating a significant underestimation of the model uncertainty. 
 % I will need to elaborate. ... 
+%DLM: I haven't paid much attention to this part yet since it is not that complete
 
 % Kendall W if we decide to include it
 
 \subsection{Prediction sets that performed most strongly}
+%DLM: "Performed most strongly" probably not good phrasing. "Performed best", "Top performing prediction sets", ...? 
 \label{results:2}
 \begin{figure*} % for 2 column use
 \includegraphics{BestGroups.eps}
@@ -340,6 +392,8 @@ We want to consider how close to experiment RMSE/AUE and how well correlated wit
 14 and 36 also did very well, making "top 10" by at least 3 of those 4 metrics, 14 is one of Frank Pickard's and 36 is Chris Fennell
 
 but really null did best across the board so we have a lot of work to do... best RMSE over 2.0 log units and average around 3.5
+%DLM: I agree with these.
+%DLM: One thing to be careful above about the null though is that it has no predtive power; i.e. if one was trying to design based on log P, the null doesn't give anything to use in design. 
 
 \subsection{Null Hypothesis}
 \label{results:3}
@@ -348,24 +402,29 @@ but really null did best across the board so we have a lot of work to do... best
 One way of evaluating predictive models is to compare them to a null hypothesis, or default result of some kind. 
 In the case of distribution coefficients, we chose a null hypothesis where we assume all solute molecules distribute equally between cyclohexane and water, corresponding to a $\log D = 0$. 
 We performed all error analyses discussed above on this pretend data set as a point of comparison. 
+%DLM: Wouldn't this be where you discuss how methods compare to this null? Seems weird to explain it but not say anything about what one finds by comparing to this. 
 
 
 \subsection{Compounds that were difficult to accurately predict}
 
 % Including the SMILES strings looks terrible in my opinion, maybe we could do 2d images if we have time or something
 % Otherwise maybe I should just include 1 histogram plot of the AUE for the molecules and leave it at that. 
+%DLM: I'm thinking 2D images should be good. These can be generated easily using OpenEYe's depict toolkit. Let me know if you want example code; I can probably find some somewhere. 
+%DLM: I agree SMILES are not helpful because of the chirality in some, ie 65, which makes them too long. 
 \label{results:4}
 \begin{table}
 \input{MoleculeTable.tex}
 \label{MoleculeTable}
 \caption{A complete list of compounds used in the SAMPL5, sorted by batch. The mean unsigned error, reported in log units, was calculated with all predictions for that compound.} 
+%DLM: Table header says AUE, here you refer to as MUE. Pick one and be consistent.
 \end{table}
 
-Full error analysis repeated for individual molecules, there aren't very many "simple" molecules, almost all have hetro atoms and rotatable bonds...
+Full error analysis repeated for individual molecules, there aren't very many "simple" molecules, almost all have hetero atoms and rotatable bonds...
 
 about 5-10 worst, I'm looking into if there are trends in number of tautomer or functional group similarities...
 
 about 5-10 best, still looking for trends, we know 083, 074. 015 also did poorly amino acid? I don't know why that would cause more problems in general. 
+%DLM: If anything I would think amino acids would have received better treatment by the FF since more attention is paid to those parameters. What AA is it? 
 
 % possibly a paragraph about MW, # of rotatable bonds, or # of tautomers (no tautomer trend yet...)
 
@@ -373,8 +432,10 @@ about 5-10 best, still looking for trends, we know 083, 074. 015 also did poorly
 \label{results:5}
 Broad range of methods, split into classes: MD all atom, MD hybrid, quantum?, Anything similar to COSMO? % I'm still reading and trying to understand methods
 Pie chart by number maybe?
+%DLM: This is lower priority - i.e. if you don't get to it, it's OK. 
 
 Clear trends on which are doing well? 
+%DLM: Seems like reasonable diversity, at least that's my take - though I think that it's probably the case that one could do FAIRLY well by doing all-atom MD simulations with a "reasonable" FF such as AMBER GAFF (i.e. our calculations and Fennell's, I think), but then mess it up by having problems with other things (i.e. 
 
 \subsection{Mobley group prediction results}
 \label{results:6}
@@ -400,6 +461,7 @@ Next, $\log D$ was calculated using the pKa and partition coefficient determined
 For compounds with more than one pKa, the one which caused the largest change in $\log D$ was used, this would represent the most acidic proton leaving or most basic functional group becoming protonated. % this is a confusing sentence
 This correction showed a slight improvement by most error metrics (Table % ref table) 
 including a decrease in the average error (value) indicating less bias toward concentration. 
+%DLM: Give numerical values for a metric or two (i.e. one for error and one for corelation) to make "slight" less subjective. 
 
 For the next set of corrections, we used Schrodinger's Ligprep tool to calculate a state penalty, which gives the relative population of tautomers in water at a given pH. % ick
 The state penalty was used to correct the concentration in the aqueous layer, according to eqn. % reference if I have one
@@ -409,6 +471,7 @@ Both of these correction methods only adjust the concentration in the aqueous la
 There are a few molecules where the state penalty correction caused a significant bias for the concentration in the aqueous layer (SAMPL5\_050). % I need to double check the others
 One explanation for these extreme examples is that the solute might have other neutral tautomers that would affect the concentration in cyclohexane, which we did not correct for. 
 % add a sentence or two here to conclude this
+%DLM: I would get specific and give numbers - i.e. pick a couple of the problematic examples and explain that for, i.e., 50, the state penalty takes a log P value of xyz and makes it abc, as compared to the experiemtnal value def+/-whatever; we want to give people an idea of how big an effect we're talking about.
 
 
 \subsection{Reanalysis of difficult tautomers} % I don't like difficult here
@@ -416,10 +479,12 @@ One explanation for these extreme examples is that the solute might have other n
 % It was clear from epik and discussions with other SAMPL5 participants (cite Klamt?)  that 050 and 083 had dominant tautomers other than provided SMILE
 From our tautomer enumeration and discussions with other SAMPL5 participants % cite Andreas and maybe Frank, look at e-mail
 it became clear that the provided SMILES string may not be the most popular %???
+%DLM: Populated. Different from popular. :) 
 tautomeric form of the molecule. 
-If we could perfectly calculate solvation free energies and tautomer populations in both solvents, starting tautomer should not effect the final calculated distribution coefficient.  
+If we could perfectly calculate solvation free energies and tautomer populations in both solvents, the starting tautomer should not effect the final calculated distribution coefficient.  
 Our initial solvation free energy calculations used provided SMILES strings without any consideration of other tautomers.
 To explore how this may have affected our $\log D$ calculation, we decided to repeat a few solvation free energy calculations with different tautomers. 
+%DLM: FIrst part of that sentence is redundant with above? 
 We repeated calculations with different tautomers of SAMPL5\_050 and SAMPL5\_083 that could be present in both the water and cyclohexane solutions. 
 To explore how the tautomer used to calculate the solvation free energy might effect the estimate of a distribution coefficient. 
 
@@ -448,20 +513,26 @@ experimental $\log D$ & \multicolumn{2}{|c|}{$1 \pm 1$} & \multicolumn{2}{c}{$1 
 We reran these tautomers to calculate solvation free energies, used state penalty %results in a table probably (or maybe a figure like the one I made for erythromycin in the logP paper)
 
 Generally hard to tell if its tautomer enumeration that isn't good or the solvation free energies
+%DLM: Yes, though it seems like a clear point is that this is important and that one can't hope to do well for at least some of these cases without a reasonable treatment of protonation states and tautomers, yes?
 
-\subsection{Considering how solvent interactions could possibly affect results} % I don't like difficult here
+%DLM: Do you have my slides? One other quick check to do is to make sure we hit all the main points I hit in my slides. Not that I've covered everythign I should have (far from it!) but rather, people will expect the overview to at least cover what I talked about... :) 
+
+\subsection{Considering how solvent interactions could possibly affect results} 
 \label{results:7}
 
-\section{Conclustion}
+%DLM: What is this section for? is this the "water content" thing? (BTW that SHOULD be mentioned somewhere even if we don't have a final answer yet.)
+
+\section{Conclusions}
 \label{conclusions}
 
 Overall, range of methods and performance
 
 Compare to dGhydration in past SAMPL challenges? using average errors, possibly what methods/FF are top ranked?
+%DLM: Conclusions is never the place for new data/analysis, just recapping what went before/summing up. So if this is here it definitely needs to be earlier as well.
 
 Tautomer and/or pKa predictions are going to be an important part of improving these
 
-We, as a communitee, need to improve error estimation, both how we do and how we evaluate it...
+We, as a community, need to improve error estimation, both how we do and how we evaluate it...
 
 logP/logD seem to be good options for future blind challenges
 
@@ -472,19 +543,20 @@ Chris Fennell
 Samuel Genheden
 D3R team
 people who set up the automated submission system %they are gods in my opion =]
-
+%DLM: Except for the use of hash keys as submission IDs. ;) 
 
 \end{acknowledgements}
 
 \subsection{Available in supporting info} % This is a list for myself, it will all be archived or provided with a link to to somewhere on the web
 things provided to participants
 all scripts used for error analysis
-all participant files? Can we include the anonymous one? 
+all participant files? Can we include the anonymous one? %DLM: Yes, just need to make sure it doesn't say who it's from! But yes, definitely.
 triple check no names/e-mails/institutions/etc in the final submitted data
 all plots not in the paper
 all input/output files for schrodinger calculations
-all input files and results files for 'logP' calculations, tautomer redos, box size simulations (PME too?) 
+all input files and results files for 'logP' calculations, tautomer redos, box size simulations (PME too?)  %DLM: What's the "PME too" part?
 example MDP and run scripts
+%DLM: Looks like rather good list!
  
 
 
