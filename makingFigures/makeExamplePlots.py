@@ -5,6 +5,7 @@
 
 import pickle
 from pylab import *
+import numpy as np
 import imp
 tools = imp.load_source('tools','../DataFiles/tools.py')
 
@@ -113,4 +114,53 @@ savefig('../Paper/BestGroups.eps')
 savefig('BestGroups.pdf')
 close('all')
 
+# ==========================================================================================
+# Make histogram figures
+# ==========================================================================================
+
+# Adjust parameters, these figures will be three histograms across, where each histogram takes two rows
+paramters = tools.JCAMDdict(w = 3, fontsize = 6) 
+width = parameters['figure.figsize'][0]
+parameters['figure.figsize'][1] = width * (np.sqrt(5.0) - 1.0) / 2.4 
+parameters['figure.subplot.right'] = 0.975
+parameters['figure.subplot.left'] = 0.06
+parameters['figure.subplot.top'] = 0.90
+parameters['figure.subplot.hspace'] = 0.2
+parameters['figure.subplot.wspace'] = 0.25
+rcParams.update(parameters)
+
+# Load lists of data for first figure
+mets1 = ['RMS', 'AveErr', 'AUE']
+mets2 = ['tau', 'R', 'error slope']
+
+# Other factors by figure
+files = [ ['ErrorMetrics.pdf', '../Paper/ErrorMetrics.eps'], ['CorrelationMetrics.pdf', '../Paper/CorrelationMetrics.eps'] ]
+options = [ [None, None, None], ['reverse', 'reverse', 'close to 1'] ] 
+absolutes = [True, False]
+
+# Get keys and submission IDs
+keys = [k for k in predictions.keys() if predictions[k].has_key('batch2')]
+subIDs = ["%02d" % k for k in keys]
+
+for idx, metrics in enumerate([mets1, mets2]):
+    # create figure and assign parameters
+    fig = figure(1, frameon = False)
+    fig.suptitle("Error Metrics by Submission ID")
+    axes_list = [ [fig.add_subplot(231), fig.add_subplot(234)], [fig.add_subplot(232), fig.add_subplot(235)], [fig.add_subplot(233), fig.add_subplot(236)] ]     
+
+    # Make histogram for each batch
+    for index, met in enumerate(metrics):
+        # Load values
+        vals = [predictions[k]['batch2'][met][0] for k in keys]
+        dvals = [predictions[k]['batch2'][met][1] for k in keys]
+        
+        # Make plots
+        axes_list[index] = tools.histPlot(subIDs, vals, dvals, "Submission Number", met, '', option = options[idx][index], absolute = absolutes[idx], ax = axes_list[index])
+        axes_list[index][0].set_ylabel(met, labelpad = 0.35, fontsize = 6)
+        axes_list[index][1].set_ylabel(met, labelpad = 0.35, fontsize = 6)
+    # Save and close figure
+    fig.set_frameon(False)
+    savefig(files[idx][0])
+    savefig(files[idx][1])
+    close('all')
 

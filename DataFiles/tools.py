@@ -483,7 +483,8 @@ def histPlot(subIDs, vals, dvals, xLabel, yLabel, title, option = None, fileName
     idx = numpy.arange( len(sids)) #Indices on horizontal axis
     Nsplit = int(len(sids)/2)
 
-    rects = ax[0].bar( idx[0:Nsplit], metricvals[0:Nsplit], width, yerr = metricuncs[0:Nsplit] ) #Create bar plot
+    #Create bar plot
+    rects = ax[0].bar( idx[0:Nsplit], metricvals[0:Nsplit], width, yerr = metricuncs[0:Nsplit], capsize = 0.5, color = 'k', ecolor = 'k') 
     #Add info
     # ax[0].set_xlabel(xLabel)
     ax[0].set_ylabel(yLabel)
@@ -493,8 +494,8 @@ def histPlot(subIDs, vals, dvals, xLabel, yLabel, title, option = None, fileName
     ax[0].tick_params(axis='both', which='major', labelsize=8)
     ax[0].tick_params(axis='both', which='minor', labelsize=6)
     ax[0].set_xlim( idx[0], idx[Nsplit]) #Fix axis limits so we use the whole space
-    #Add second plot
-    rects = ax[1].bar( idx[Nsplit:], metricvals[Nsplit:], width, yerr = metricuncs[Nsplit:] ) #Create bar plot
+    #Create bar plot
+    rects = ax[1].bar( idx[Nsplit:], metricvals[Nsplit:], width, yerr = metricuncs[Nsplit:], capsize = 0.5, color = 'k', ecolor = 'k') 
     #Add info
     ax[1].set_xlabel(xLabel)
     ax[1].set_ylabel(yLabel)
@@ -513,7 +514,7 @@ def histPlot(subIDs, vals, dvals, xLabel, yLabel, title, option = None, fileName
         plt.close(fig)
 
 
-# DISCLAIMER: I am 100% there is a better way to do this than a for loop through all the data, probably something with comparing arrays, but I didn't want to take the time to figure it out when I first wrote this script
+# DISCLAIMER: I am 100% sure there is a better way to do this than a for loop through all the data, probably something with comparing arrays, but I didn't want to take the time to figure it out when I first wrote this script
 def Lipinski(calc, exp, low, high):
     """
     Input: listLike calculated and experimental data you want to compare
@@ -564,7 +565,7 @@ def getLipinskiData(calc, exp, dexp, lowLim, highLim, bootits):
         # Return values and their corresponding uncertainties
     return [correct, corrs.std()], [falsePos, Poss.std()], [falseNeg, Negs.std()]
 
-def JCAMDdict(w = 1, square = False):
+def JCAMDdict(w = 1, square = False, fontsize = 8):
     """
     This method returns a dictionary with the figure settings for JCMD, including font sizes and markersize defaults. Then you can edit the dictionary once you've called this method. 
 
@@ -583,10 +584,10 @@ def JCAMDdict(w = 1, square = False):
         height = wid * (sqrt(5.0) - 1.0) / 2.0
 
     parameters =  {'backend': 'ps', 
-            'axes.labelsize': 8,
-            'font.size': 8,
-            'xtick.labelsize': 8,
-            'ytick.labelsize': 8,
+            'axes.labelsize': fontsize,
+            'font.size': fontsize,
+            'xtick.labelsize': fontsize,
+            'ytick.labelsize': fontsize,
             'figure.figsize': [wid, height], 
             'legend.fontsize': 6, 
             'font.family':'sans-serif', 
