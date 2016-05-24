@@ -13,6 +13,7 @@ tools = imp.load_source('tools','../DataFiles/tools.py')
 predictions = pickle.load(open('../DataFiles/predictions.p','rb'))
 batches = pickle.load(open('../DataFiles/batches.p','rb'))
 experiment = pickle.load(open('../DataFiles/experimental.p','rb'))
+molecules = pickle.load(open('../DataFiles/moleculeData.p','rb'))
 
 # Get experimental data
 e = [ [ experiment[k]['data'][0] for k in batch ] for batch in batches ]
@@ -27,6 +28,7 @@ parameters['figure.subplot.bottom'] = 0.1
 parameters['figure.subplot.top'] = 0.95
 parameters['figure.subplot.hspace'] = 0.35
 parameters['figure.subplot.wspace'] = 0.35
+
 # parameters['legend.labelspacing'] = 0.1
 rcParams.update(parameters)
 fig = figure(1)
@@ -119,7 +121,6 @@ close('all')
 # ==========================================================================================
 
 # Adjust parameters, these figures will be three histograms across, where each histogram takes two rows
-paramters = tools.JCAMDdict(w = 3, fontsize = 6) 
 width = parameters['figure.figsize'][0]
 parameters['figure.figsize'][1] = width * (np.sqrt(5.0) - 1.0) / 2.4 
 parameters['figure.subplot.right'] = 0.975
@@ -133,6 +134,7 @@ parameters['xtick.labelsize'] = 4.5
 parameters['ytick.labelsize'] = 6.
 parameters['xtick.major.size'] = 2.
 parameters['ytick.major.size'] = 2.
+print parameters['figure.figsize']
 
 rcParams.update(parameters)
 
@@ -171,4 +173,45 @@ for idx, metrics in enumerate([mets1, mets2]):
     savefig(files[idx][0])
     savefig(files[idx][1])
     close('all')
+
+# ==========================================================================================
+# Make single histogram for per molecule data
+# ==========================================================================================
+
+# Adjust parameters, these figures will be three histograms across, where each histogram takes two rows
+parameters = tools.JCAMDdict(square = True) 
+parameters['figure.subplot.right'] = 0.95
+parameters['figure.subplot.left'] = 0.12
+parameters['figure.subplot.bottom'] = 0.12
+parameters['figure.subplot.top'] = 0.9
+parameters['figure.subplot.hspace'] = 0.3
+
+parameters['xtick.labelsize'] = 6.
+parameters['ytick.labelsize'] = 6.
+print parameters['figure.figsize']
+
+rcParams.update(parameters)
+
+# Initiate figure
+fig = figure(1, frameon = False)
+fig.suptitle("Average Unsigned Error by Molecule")
+axes = [fig.add_subplot(211), fig.add_subplot(212)]
+
+# Get molecule info
+keys = [k for k in sorted(molecules.keys())]
+SubIDs = [k.split('_')[-1] for k in keys]
+
+# Make histogram for each batch
+# Load values
+vals = [molecules[k]['AUE'][0] for k in keys]
+dvals = [molecules[k]['AUE'][1] for k in keys]
+
+# Make plots
+axes  = tools.histPlot(subIDs, vals, dvals, "SAMPL5_number", 'AUE', '', ax = axes)
+axes[0].set_ylabel('AUE', labelpad = 0.35)
+axes[1].set_ylabel('AUE', labelpad = 0.35)
+
+savefig('moleculeAUE.pdf')
+close('all')
+
 

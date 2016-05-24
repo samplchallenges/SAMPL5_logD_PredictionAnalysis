@@ -484,7 +484,7 @@ def histPlot(subIDs, vals, dvals, xLabel, yLabel, title, option = None, fileName
     Nsplit = int(len(sids)/2)
 
     #Create bar plot
-    rects = ax[0].bar( idx[0:Nsplit], metricvals[0:Nsplit], width, yerr = metricuncs[0:Nsplit], capsize = 0.5, color = 'grey', ecolor = 'grey') 
+    rects = ax[0].bar( idx[0:Nsplit], metricvals[0:Nsplit], width, yerr = metricuncs[0:Nsplit], capsize = 0.5, color = 'grey', ecolor = 'k') 
     #Add info
     # ax[0].set_xlabel(xLabel)
     ax[0].set_ylabel(yLabel)
@@ -495,7 +495,7 @@ def histPlot(subIDs, vals, dvals, xLabel, yLabel, title, option = None, fileName
     ax[0].tick_params(axis='both', which='minor')
     ax[0].set_xlim( idx[0], idx[Nsplit]) #Fix axis limits so we use the whole space
     #Create bar plot
-    rects = ax[1].bar( idx[Nsplit:], metricvals[Nsplit:], width, yerr = metricuncs[Nsplit:], capsize = 0.5, color = 'grey', ecolor = 'grey') 
+    rects = ax[1].bar( idx[Nsplit:], metricvals[Nsplit:], width, yerr = metricuncs[Nsplit:], capsize = 0.5, color = 'grey', ecolor = 'k') 
     #Add info
     ax[1].set_xlabel(xLabel)
     ax[1].set_ylabel(yLabel)
