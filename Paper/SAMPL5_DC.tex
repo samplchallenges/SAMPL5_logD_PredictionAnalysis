@@ -68,10 +68,6 @@ grestore
 %DLM: Also we should be sure in acknowledgments to acknowledge everyone who was helpful in any way - i.e. Andreas Klamt surely should be acknowledged, as well as probably Frank Pickard, and possibly people from Schrodinger. Is there anyone else who helped? i.e. did we run into OpenEye bugs and get help from them, or...? 
 %DLM: Also should acknowledge D3R support (their NIH grant). Let me ask Gilson.
 
-%\subtitle{I don't think we need a subtitle...}
-%DLM: Agreed
-
-%\titlerunning{Short form of title}        % if too long for running head
 %DLM: Possible short title
 \titlerunning{SAMPL5 distribution coefficients}
 
@@ -85,10 +81,10 @@ grestore
 \institute{C. C. Bannan, K. H. Burley, and D. L. Mobley \at University of California, Irvine \\
               Tel.: +949-824-6383\\
               Fax: +949-824-2949\\
-              \email{dmobley@mobleylab.org}           %  \\
-%             \emph{Present address:} of F. Author  %  if needed
+              \email{dmobley@mobleylab.org} }          
+
 %DLM: Need to get departments in here somewhere - I'm PharmSci and Chem, you're Chem, Kalli is PharmSci.
-}
+
 
 \date{Received: date / Accepted: date}
 % The correct dates will be entered by the editor
@@ -108,10 +104,7 @@ grestore
 % ================================================================================================================
 % ================================================================================================================
 % Actual writing starts HERE
-% It looks like with JCAMD we can use any section headings we like so I am trying for titles as statements, but that's a skill I am still working on
-%DLM: Excellent.
-% I have an outline for every section and I'm getting close to having draft content for everything. Please let me know if I'm missing anything, since the outline should have all the important topics
-% I am also trying to put in the placement of where figures and tables go so that I can reference them and know what we're going for. 
+
 
 \section{Introduction}
 \label{intro}
@@ -209,7 +202,9 @@ By evaluating each molecule, we can highlight molecules that many groups struggl
 % number of tautomers? checkmol molecules? Kendall W? Nothing yet
 %DLM: Yes, save for if you have spare time... 
 
-\section{Submissions from the Mobley Group} %DLM: Let's say "Standard calculations from the Mobley group"
+\section{Reference calculations from the Mobley group} 
+%DLM: Let's say "Standard calculations from the Mobley group" reference
+% CCB: I feel like Standard implies a this is what everyone is completing against, like this is the current accepted standard, if that makes sense, I used Reference for now. 
 \label{methods:1}
 % \paragraph{partition coefficient from solvation free energies} maybe...
 
@@ -536,14 +531,15 @@ We, as a community, need to improve error estimation, both how we do and how we 
 
 logP/logD seem to be good options for future blind challenges
 
-\begin{acknowledgements} % this is just a list so we don't forget anyone
+\begin{acknowledgements} % fill in institutes for everyone
 John Chodera and Bas MSKCC
 Andreas Klamt
 Chris Fennell
 Samuel Genheden
+Frank Pickard
 D3R team
-people who set up the automated submission system %they are gods in my opion =]
-%DLM: Except for the use of hash keys as submission IDs. ;) 
+people who set up the automated submission system %they are gods in my opinion =]
+%DLM: Except for the use of hash keys as submission IDs. ;) CCB: haha very true
 
 \end{acknowledgements}
 
@@ -554,7 +550,7 @@ all participant files? Can we include the anonymous one? %DLM: Yes, just need to
 triple check no names/e-mails/institutions/etc in the final submitted data
 all plots not in the paper
 all input/output files for schrodinger calculations
-all input files and results files for 'logP' calculations, tautomer redos, box size simulations (PME too?)  %DLM: What's the "PME too" part?
+all input files and results files for 'logP' calculations, tautomer redos, box size simulations (reaction field?) % CCB: Kalli repeated the box size simulations with reaction field (I don't know what I was thinking with PME, its what I get for adding things out of my head and not with my notes)
 example MDP and run scripts
 %DLM: Looks like rather good list!
  

@@ -8,7 +8,7 @@ import glob
 
 # Luchko's submissions
 numbers = [5, 7, 17, 29, 35, 46, 71]
-
+numbers = [9]
 # get SID
 numToSID = pickle.load(open('numToSID.p','rb'))
 

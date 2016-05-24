@@ -440,7 +440,7 @@ def makeQQplot(X, Y, slope, title, xLabel ="Expected fraction within range" , yL
         savefig(fileName) 
         plt.close(fig1)
 
-def histPlot(subIDs, vals, dvals, xLabel, yLabel, title, option = None, fileName = None, absolute = True, widOption = 4, ax = None):
+def histPlot(subIDs, vals, dvals, xLabel, yLabel, title, option = None, fileName = None, absolute = True, widOption = 4, ax = [None, None]):
     """"
     Makes histogram plots of data at IDs with sorted data. Provide settings for plot, including labels and titles. Saved out to fileName. 
     option is the way the data should be sorted, if None it is from smallest to largest vals the other options are reverse (or from largest to smallest vals) or 'close to 1' which sorts based on which value is closest to one.
@@ -484,18 +484,18 @@ def histPlot(subIDs, vals, dvals, xLabel, yLabel, title, option = None, fileName
     Nsplit = int(len(sids)/2)
 
     #Create bar plot
-    rects = ax[0].bar( idx[0:Nsplit], metricvals[0:Nsplit], width, yerr = metricuncs[0:Nsplit], capsize = 0.5, color = 'k', ecolor = 'k') 
+    rects = ax[0].bar( idx[0:Nsplit], metricvals[0:Nsplit], width, yerr = metricuncs[0:Nsplit], capsize = 0.5, color = 'grey', ecolor = 'grey') 
     #Add info
     # ax[0].set_xlabel(xLabel)
     ax[0].set_ylabel(yLabel)
     ax[0].set_xticks( idx[0:Nsplit]+width/2.) #Make xticks for every bar, centered on bars
     ax[0].set_xticklabels( sids[0:Nsplit] , rotation = 'vertical')
     #Adjust ticks smaller for legibility
-    ax[0].tick_params(axis='both', which='major', labelsize=8)
-    ax[0].tick_params(axis='both', which='minor', labelsize=6)
+    ax[0].tick_params(axis='both', which='major')
+    ax[0].tick_params(axis='both', which='minor')
     ax[0].set_xlim( idx[0], idx[Nsplit]) #Fix axis limits so we use the whole space
     #Create bar plot
-    rects = ax[1].bar( idx[Nsplit:], metricvals[Nsplit:], width, yerr = metricuncs[Nsplit:], capsize = 0.5, color = 'k', ecolor = 'k') 
+    rects = ax[1].bar( idx[Nsplit:], metricvals[Nsplit:], width, yerr = metricuncs[Nsplit:], capsize = 0.5, color = 'grey', ecolor = 'grey') 
     #Add info
     ax[1].set_xlabel(xLabel)
     ax[1].set_ylabel(yLabel)
@@ -503,8 +503,8 @@ def histPlot(subIDs, vals, dvals, xLabel, yLabel, title, option = None, fileName
     ax[1].set_xticklabels( sids[Nsplit:] , rotation = 'vertical')
     ax[1].set_xlim( idx[Nsplit], idx[-1]+1) #Fix axis limits so we use the whole space
     #Adjust ticks smaller for legibility
-    ax[1].tick_params(axis='both', which='major', labelsize=8)
-    ax[1].tick_params(axis='both', which='minor', labelsize=6)
+    ax[1].tick_params(axis='both', which='major')
+    ax[1].tick_params(axis='both', which='minor')
 
     if axReturn:
         return ax
@@ -585,6 +585,8 @@ def JCAMDdict(w = 1, square = False, fontsize = 8):
 
     parameters =  {'backend': 'ps', 
             'axes.labelsize': fontsize,
+            'xtick.labelsize': fontsize,
+            'ytick.labelsize': fontsize,
             'font.size': fontsize,
             'xtick.labelsize': fontsize,
             'ytick.labelsize': fontsize,

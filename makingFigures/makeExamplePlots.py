@@ -125,8 +125,15 @@ parameters['figure.figsize'][1] = width * (np.sqrt(5.0) - 1.0) / 2.4
 parameters['figure.subplot.right'] = 0.975
 parameters['figure.subplot.left'] = 0.06
 parameters['figure.subplot.top'] = 0.90
-parameters['figure.subplot.hspace'] = 0.2
+parameters['figure.subplot.bottom'] = 0.1
+
+parameters['figure.subplot.hspace'] = 0.3
 parameters['figure.subplot.wspace'] = 0.25
+parameters['xtick.labelsize'] = 4.5
+parameters['ytick.labelsize'] = 6.
+parameters['xtick.major.size'] = 2.
+parameters['ytick.major.size'] = 2.
+
 rcParams.update(parameters)
 
 # Load lists of data for first figure
@@ -156,8 +163,9 @@ for idx, metrics in enumerate([mets1, mets2]):
         
         # Make plots
         axes_list[index] = tools.histPlot(subIDs, vals, dvals, "Submission Number", met, '', option = options[idx][index], absolute = absolutes[idx], ax = axes_list[index])
-        axes_list[index][0].set_ylabel(met, labelpad = 0.35, fontsize = 6)
-        axes_list[index][1].set_ylabel(met, labelpad = 0.35, fontsize = 6)
+        axes_list[index][0].set_ylabel(met, labelpad = 0.35)
+        axes_list[index][1].set_ylabel(met, labelpad = 0.35)
+
     # Save and close figure
     fig.set_frameon(False)
     savefig(files[idx][0])

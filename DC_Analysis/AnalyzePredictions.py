@@ -57,7 +57,6 @@ for num, e in regData.items():
     tools.BoxWhiskerByBatch(moleculeData, batches, e, "%02d predictions" % num, title, 'SAMPL5_IDnumber', fileName = "../boxPlots/boxplot_%02d.pdf" % num)
 
     print "Analyzing Entry ", num, "..."
-    continue
     calc = [ [e['data'][key][0] for key in batches[i] ] for i in range(b+1) ]
     # statistical error
     statdcalc = [ [e['data'][key][1] for key in batches[i] ] for i in range(b+1) ]
