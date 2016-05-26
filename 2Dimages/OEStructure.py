@@ -74,6 +74,43 @@ for idx, bat in enumerate(batches):
         output.append("%s & %s & %s & & \\\\ \n" % (keys[0], keys[1], keys[2]))
         output.append("%s & %s & %s & & \\\\ \n" % (l[0], l[1], l[2]))
 
+# ============================================================================================
+# 7 column table
+# Make Better LaTeX table
+output = ['\\begin{tabular}{|c c c c c c c|}\n']
+image = "\\includegraphics[width = 0.14\\textwidth]{2DImages/%s.pdf}"
+aue = "$ %.1f \\pm %.1f $" 
+
+
+for idx, bat in enumerate(batches):
+    output.append('\\hline \n')
+    output.append('\\multicolumn{7}{|c|}{{\\small\\textbf{Batch %i}}}\\\\ \n' % idx)
+    for line_count in range(len(bat)/7):
+        index = line_count*7 # index at beginning of line
+
+        # Assign data for this line
+        keys = [bat[index+i] for i in range(7)]
+        aues = [aue % (molecules[k]['AUE'][0], molecules[k]['AUE'][1]) for k in keys]
+        l = [image % k for k in keys]
+        keys = ['{\\scriptsize '+k.split('_')[-1]+': %s }' % aues[kIdx] for kIdx, k in enumerate(keys)]
+
+        # Add data to next three lines
+        output.append("%s & %s & %s & %s & %s & %s & %s \\\\ \n" % (keys[0], keys[1], keys[2], keys[3], keys[4], keys[5], keys[6]))
+        output.append("%s & %s & %s & %s & %s & %s & %s \\\\ \n" % (l[0], l[1], l[2], l[3], l[4], l[5], l[6]))
+    if idx == 0:
+        keys = [bat[i] for i in range(7,13)]
+    else: # batch 1 and 2
+        keys = [bat[i] for i in range(14,20)]
+
+    aues = [aue % (molecules[k]['AUE'][0], molecules[k]['AUE'][1]) for k in keys]
+    l = [image % k for k in keys]
+    keys = ['{\\scriptsize '+k.split('_')[-1]+': %s }' % aues[kIdx] for kIdx, k in enumerate(keys)]
+
+    output.append("%s & %s & %s & %s & %s & %s & \\\\ \n" % (keys[0], keys[1], keys[2], keys[3], keys[4], keys[5]))
+    output.append("%s & %s & %s & %s & %s & %s & \\\\ \n" % (l[0], l[1], l[2], l[3], l[4], l[5]))
+
+
+
 output.append('\\hline\n')
 output.append('\\end{tabular}\n')
 f = open("../Paper/MoleculeTable.tex", "w")
