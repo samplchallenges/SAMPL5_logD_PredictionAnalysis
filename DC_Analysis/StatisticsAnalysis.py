@@ -16,7 +16,7 @@ regData = pickle.load(open('../DataFiles/predictions.p','rb'))
 # Make histogram plots by error analysis
 # ================================================================================
 metrics = ['AveErr', 'RMS','AUE','tau','R', 'maxErr', 'percent', 'error slope', 'CorrectLipinski', 'compare slope']
-pm = "+/-" 
+pm = "," 
 
 # top line for data files
 openLine = "Submission Number"
@@ -62,14 +62,16 @@ for (bat, batches) in [('batch0', 'batch0'),('batch1', 'batches0-1'),('batch2', 
         line = "%02d" % num
         for m in metrics:
             met = e[bat][m]
-            try:
-                line += ", %s %s %s" % (round_unc(met[0], met[1]), pm, round_sf(met[1], 1))
-            except:
-                line += ", %.0f %s %.0f" % (met[0], pm, met[1])
-                print num, met, m
+            # try:
+                # line += ", %s %s %s" % (round_unc(met[0], met[1]), pm, round_sf(met[1], 1))
+            # except:
+                # line += ", %.0f %s %.0f" % (met[0], pm, met[1])
+                # print num, met, m
+            line += ", %.5f %s %.5f" % (met[0], pm, met[1])
+
         output.append(line+'\n')
 
     # Save file
-    fN = open("../DataFiles/ErrorMetricsBySubmission_%s.txt" % batches,'w')
+    fN = open("../DataFiles/ErrorMetricsBySubmission_%s_fullprecision.txt" % batches,'w')
     fN.writelines(output)
     fN.close()

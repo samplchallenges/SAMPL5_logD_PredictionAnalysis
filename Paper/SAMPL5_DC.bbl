@@ -1,0 +1,81 @@
+\begin{thebibliography}{10}
+\providecommand{\url}[1]{{#1}}
+\providecommand{\urlprefix}{URL }
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{DOI \discretionary{}{}{}#1}\else
+  \providecommand{\doi}{DOI \discretionary{}{}{}\begingroup
+  \urlstyle{rm}\Url}\fi
+
+\bibitem{Berendsen:1995gro}
+H.J.C. Berendsen, D.~Van Der~Spoel, R.~van Drunen, Comput. Phys. Commun.
+  \textbf{91}(1-3), 43 (1995)
+
+\bibitem{Hess:2008db}
+B.~Hess, C.~Kutzner, D.~van~der Spoel, E.~Lindahl, J. Chem. Theory Comput.
+  \textbf{4}(3), 435 (2008)
+
+\bibitem{Lindahl:2001gro3}
+E.~Lindahl, B.~Hess, D.~van~der Spoel, J. Mol. Model. \textbf{7}(8), 306 (2001)
+
+\bibitem{vanderSpoel:2005hz}
+D.~van~der Spoel, E.~Lindahl, B.~Hess, G.~Groenhof, A.E. Mark, H.J.C.
+  Berendsen, J. Comput. Chem. \textbf{26}(16), 1701 (2005)
+
+\bibitem{Pronk:2013ef}
+S.~Pronk, S.~P{\'a}ll, R.~Schulz, P.~Larsson, P.~Bjelkmar, R.~Apostolov, M.R.
+  Shirts, J.C. Smith, P.M. Kasson, D.~van~der Spoel, B.~Hess, E.~Lindahl,
+  Bioinformatics (Oxford, England) \textbf{29}(7), 845 (2013)
+
+\bibitem{Pall:2014gb}
+S.~P{\'a}ll, M.J. Abraham, C.~Kutzner, B.~Hess, E.~Lindahl, in \emph{Solving
+  Software Challenges for Exascale}, vol. 8759 (Springer International
+  Publishing, Stockholm, Sweden, 2014), pp. 3--27
+
+\bibitem{Abraham:2015gj}
+M.J. Abraham, T.~Murtola, R.~Schulz, S.~P{\'a}ll, J.C. Smith, B.~Hess,
+  E.~Lindahl, SoftwareX \textbf{1-2}, 19 (2015)
+
+\bibitem{Wang:2004dev}
+J.~Wang, R.M. Wolf, J.W. Caldwell, P.A. Kollman, D.A. Case, Journal of
+  Computational Chemistry \textbf{25}(9), 1157 (2004)
+
+\bibitem{Jakalian:2000ki}
+A.~Jakalian, B.L. Bush, D.B. Jack, C.I. Bayly, Journal of Computational
+  Chemistry \textbf{21}(2), 132 (2000)
+
+\bibitem{Jakalian:2002bd}
+A.~Jakalian, D.B. Jack, C.I. Bayly, Journal of Computational Chemistry
+  \textbf{23}(16), 1623 (2002)
+
+\bibitem{Liu:2016kb}
+S.~Liu, S.~Cao, K.~Hoang, K.L. Young, A.S. Paluch, D.L. Mobley, Journal of
+  Chemical Theory and Computation \textbf{12}(4), 1930 (2016)
+
+\bibitem{Klimovich:2010jm}
+P.V. Klimovich, D.L. Mobley, Journal of Computer-Aided Molecular Design
+  \textbf{24}(4), 307 (2010)
+
+\bibitem{Klimovich:2015er}
+P.V. Klimovich, M.R. Shirts, D.L. Mobley, Journal of Computer-Aided Molecular
+  Design \textbf{29}(5), 397 (2015)
+
+\bibitem{Parameswaran:2014kq}
+S.~Parameswaran, D.L. Mobley, Journal of Computer-Aided Molecular Design
+  \textbf{28}(8), 825 (2014)
+
+\bibitem{RenxiaoWang:1997fa}
+R.~Wang, Y.~Fu, L.~Lai, Journal of Chemical Information and Modeling
+  \textbf{37}(3), 615 (1997)
+
+\bibitem{Wang:2000kk}
+R.~Wang, Y.~Gao, L.~Lai, Perspectives in Drug Discovery and Design
+  \textbf{19}(1), 47 (2000)
+
+\bibitem{Leo:1971wu}
+A.~Leo, C.~Hansch, D.~Elkins, Chemical Reviews \textbf{71}(6), 525 (1971)
+
+\bibitem{Mobley:2014gu}
+D.L. Mobley, K.L. Wymer, N.M. Lim, J.P. Guthrie, Journal of Computer-Aided
+  Molecular Design \textbf{28}(3), 135 (2014)
+
+\end{thebibliography}
