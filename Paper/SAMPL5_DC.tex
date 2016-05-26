@@ -315,11 +315,10 @@ In contrast, here there are very few submissions with an RMSE less than 2.5 log 
 % concluding sentence?
  
 \begin{table}
+\footnotesize
 \input{groupStats.tex}
 \label{groupStats}
-\caption{Error metrics were calculate for each set of predictions, including root-mean-squared error (RMSE), average unsigned error (AUE), average signed error (ASE), Kendall's tau (tau), and Pearson's R (R). Error slope refers to the slope of data in a QQ Plot. \\
-\textsuperscript{a} reported results for only batch 0 \\
-\textsuperscript{b} reported results for only batch 0 and batch 1}
+\caption{Error metrics were calculate for each set of predictions, including root-mean-squared error (RMSE), average unsigned error (AUE), average signed error (ASE), Kendall's tau (tau), and Pearson's R (R). Error slope refers to the slope of data in a QQ Plot. Indicated submissions only included batch 0\textsuperscript{a} or batches 0 and 1\textsuperscript{b}.} 
 \end{table}
 %DLM: Right-justify the metric fields? It looks funky as is since mostly it's nice neat tables of numbers except for when one has an extra digit or a negative sign... 
 
@@ -370,15 +369,13 @@ The rest are below 1, indicating a significant underestimation of the model unce
 % I will need to elaborate. ... 
 %DLM: I haven't paid much attention to this part yet since it is not that complete
 
-% Kendall W if we decide to include it
 
-\subsection{Prediction sets that performed most strongly}
-%DLM: "Performed most strongly" probably not good phrasing. "Performed best", "Top performing prediction sets", ...? 
+\subsection{Top performing submissions} 
 \label{results:2}
-\begin{figure*} % for 2 column use
+\begin{figure*} 
 \includegraphics{BestGroups.eps}
 \caption{}
-\label{BestGroups}       % I think they are all supposed to be named fig:#, but until we decide on an order i'm leaving my labels
+\label{BestGroups}      
 \end{figure*}
 We want to consider how close to experiment RMSE/AUE and how well correlated with experiment tau/R
 
@@ -386,32 +383,27 @@ We want to consider how close to experiment RMSE/AUE and how well correlated wit
 
 14 and 36 also did very well, making "top 10" by at least 3 of those 4 metrics, 14 is one of Frank Pickard's and 36 is Chris Fennell
 
+\subsection{Null Hypothesis}
+\label{results:3}
+
+One way of evaluating predictive models is to compare them to a null hypothesis, or default result of some kind. % This probably needs a citation, I haven't looked for anything, but I'm mostly recalling talking about it in your class 
+In the case of distribution coefficients, we chose a null hypothesis where we assume all solute molecules distribute equally between cyclohexane and water, corresponding to a $\log D = 0$. 
+We performed all error analyses discussed above on this pretend data set as a point of comparison. 
+%DLM: Wouldn't this be where you discuss how methods compare to this null? Seems weird to explain it but not say anything about what one finds by comparing to this. 
+% CCB: yes, I moved things around a lot while outlining, must have forgotten to move that point. 
+
 but really null did best across the board so we have a lot of work to do... best RMSE over 2.0 log units and average around 3.5
 %DLM: I agree with these.
 %DLM: One thing to be careful above about the null though is that it has no predtive power; i.e. if one was trying to design based on log P, the null doesn't give anything to use in design. 
 
-\subsection{Null Hypothesis}
-\label{results:3}
-% I need to find a good citation, but I remember talking in Pharm 272 about how a "good" predictive method should do better than any null hypothesis. 
-% good predictive method should be better than a "null" hypothesis. All molecules equally distribute between cyc and water so logD = 0.0
-One way of evaluating predictive models is to compare them to a null hypothesis, or default result of some kind. 
-In the case of distribution coefficients, we chose a null hypothesis where we assume all solute molecules distribute equally between cyclohexane and water, corresponding to a $\log D = 0$. 
-We performed all error analyses discussed above on this pretend data set as a point of comparison. 
-%DLM: Wouldn't this be where you discuss how methods compare to this null? Seems weird to explain it but not say anything about what one finds by comparing to this. 
-
 
 \subsection{Compounds that were difficult to accurately predict}
 
-% Including the SMILES strings looks terrible in my opinion, maybe we could do 2d images if we have time or something
-% Otherwise maybe I should just include 1 histogram plot of the AUE for the molecules and leave it at that. 
-%DLM: I'm thinking 2D images should be good. These can be generated easily using OpenEYe's depict toolkit. Let me know if you want example code; I can probably find some somewhere. 
-%DLM: I agree SMILES are not helpful because of the chirality in some, ie 65, which makes them too long. 
 \label{results:4}
 \begin{table}
 \input{MoleculeTable.tex}
 \label{MoleculeTable}
 \caption{A complete list of compounds used in the SAMPL5, sorted by batch. The average unsigned error, reported in log units, was calculated with all predictions for that compound.} 
-%DLM: Table header says AUE, here you refer to as MUE. Pick one and be consistent.
 \end{table}
 
 Full error analysis repeated for individual molecules, there aren't very many "simple" molecules, almost all have hetero atoms and rotatable bonds...
@@ -563,4 +555,5 @@ example MDP and run scripts
 
 % things that I might add, as time allows
 % number of tautomers? checkmol molecules? Kendall W? Nothing yet
+% Kendall W if we decide to include it
 

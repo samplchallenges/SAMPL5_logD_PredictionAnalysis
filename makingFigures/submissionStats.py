@@ -9,7 +9,7 @@ import pickle
 predictions = pickle.load(open('../DataFiles/predictions.p','rb'))
 
 # Set up first few lines in table
-output = ["\\footnotesize\n", "\\begin{tabular}{l l l l l l l}\n", "\\hline\n"]
+output = ["\\footnotesize\n", "\\begin{tabular}{l r r r r r r}\n", "\\hline\n"]
 # Add table headers
 output.append("ID & Ave. err. & RMS & AUE & tau & R & Err. slope \\\\ \n")
 output.append("\\hline\n")
@@ -50,6 +50,7 @@ for k in sorted(predictions.keys()):
 # Add end of tabular information
 output.append("\\hline \n")
 output.append("\\end{tabular}\n")
+# output.append("\\textsuperscript{a} submission included only molecules in batch 0. \\textsuperscript{b} submission included only molecules in batches 0 and 1. \n")
 
 f = open("../Paper/groupStats.tex", "w")
 f.writelines(output)
