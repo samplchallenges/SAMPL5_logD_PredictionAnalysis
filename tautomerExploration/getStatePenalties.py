@@ -3,6 +3,7 @@
 # This script reads results from ligprep calculations (Schrodinger tool) and saves the state penalty for the first tautomer in each file. 
 
 import pickle
+import sys
 import numpy as np
 import glob
 
@@ -51,7 +52,7 @@ for f in maeFiles:
     # Start line for output file
     data = samplID
     for k in ['LogD_calc', 'LogD_baseCorrected','LogD_acidCorrected','LogD_oneCorrected','logD_stateCorrected']:
-        data = data +', %.2f' % d[samplID][k][0]
+        data = data +', %.4f' % d[samplID][k][0]
     print data
     output.append(data+'\n')
 

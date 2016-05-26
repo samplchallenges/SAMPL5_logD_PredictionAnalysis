@@ -8,3 +8,5 @@ This directory has files for each SAMPL5 molecule that were used in pKa and taut
 * *_allpKa*: Output files created with Schrodinger's Epik tool by calling "epik -imae *.mae -omae *_allpKa.mae"
 * *_pKa.png: A 2D image of the molecule with individual pKas labeled
 * ligprep*.*: Files created with Schrodinger's Ligprep tool by calling "ligprep -imae *.mae -omae ligprep_*.maegz -bff 14 -pH 7.4 -retain_i -ac -s 32 -r 1 -epik" and then calling "utilities/structconvert -imae ligprep_*.maegz -omae ligprep_*.mae"
+
+There is also an extra file for ligprep_SAMPL5_083_conformer2 which is actually the second tautomer. That ligprep analysis was performed mannually in Maestro with the SMILES string for the second tautomer. 
