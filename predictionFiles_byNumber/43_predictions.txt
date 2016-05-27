@@ -1,0 +1,94 @@
+# Results for distribution coefficients
+# 
+# This file will be automatically parsed. It must contain the following four elements: predictions, name of method, software listing, and method description. These elements must be provided in the order shown, with their respective headers.
+#
+# The data in each prediction line should be structured as follows, with all four fields provided.
+# Compound ID, log D, log D SEM, log D model uncertainty
+# The list of predictions must begin with the "Predictions:" keyword, as illustrated here, and (except in the case of standardization runs) predictions for all of Batch 0, Batches 0-1, or Batches 0-2 must be provided. Compound order is unimportant
+
+Predictions:
+SAMPL5_002,1.81,1.33,2.3
+SAMPL5_003,3.29,1.02,2.3
+SAMPL5_004,4.01,1.55,2.3
+SAMPL5_005,0.87,1.46,2.3
+SAMPL5_006,-2.44,0.42,2.3
+SAMPL5_007,-2.25,3.46,2.3
+SAMPL5_010,-2.20,1.84,2.3
+SAMPL5_011,-5.01,1.61,2.3
+SAMPL5_013,-6.15,3.08,2.3
+SAMPL5_015,-2.60,1.56,2.3
+SAMPL5_017,6.90,0.82,2.3
+SAMPL5_019,3.01,1.63,2.3
+SAMPL5_020,3.61,0.79,2.3
+SAMPL5_021,0.85,0.94,2.3
+SAMPL5_024,-0.19,1.17,2.3
+SAMPL5_026,-1.20,1.09,2.3
+SAMPL5_027,-2.88,0.79,2.3
+SAMPL5_033,2.36,1.10,2.3
+SAMPL5_037,-1.69,0.63,2.3
+SAMPL5_042,-7.44,1.93,2.3
+SAMPL5_044,1.91,1.55,2.3
+SAMPL5_045,-1.97,0.43,2.3
+SAMPL5_046,-0.25,1.34,2.3
+SAMPL5_047,-1.00,0.82,2.3
+SAMPL5_048,-2.71,1.14,2.3
+SAMPL5_049,-3.38,1.21,2.3
+SAMPL5_050,-1.75,2.05,2.3
+SAMPL5_055,-2.86,1.25,2.3
+SAMPL5_056,-5.92,2.21,2.3
+SAMPL5_058,1.54,0.95,2.3
+SAMPL5_059,-1.68,1.34,2.3
+SAMPL5_060,-5.60,0.81,2.3
+SAMPL5_061,-1.21,1.54,2.3
+SAMPL5_063,-5.64,0.87,2.3
+SAMPL5_065,-6.53,1.22,2.3
+SAMPL5_067,-2.42,2.69,2.3
+SAMPL5_068,2.17,2.15,2.3
+SAMPL5_069,0.55,1.69,2.3
+SAMPL5_070,3.48,1.15,2.3
+SAMPL5_071,-2.22,1.88,2.3
+SAMPL5_072,2.11,0.87,2.3
+SAMPL5_074,-11.07,1.90,2.3
+SAMPL5_075,2.82,1.27,2.3
+SAMPL5_080,-6.29,2.43,2.3
+SAMPL5_081,-4.78,0.78,2.3
+SAMPL5_082,7.43,0.78,2.3
+SAMPL5_083,1.01,5.27,2.3
+SAMPL5_084,-1.12,2.23,2.3
+SAMPL5_085,-6.68,1.47,2.3
+SAMPL5_086,4.77,1.13,2.3
+SAMPL5_088,-3.76,9.99,9.99
+SAMPL5_090,1.61,1.04,2.3
+SAMPL5_092,-4.060,9.99,9.99
+
+
+# Please provide an informal but informative name of the method used. The "Name:" keyword is required, as shown here.
+Name:
+QM/MM-CGenFF/BLYP/6-31G*
+
+#
+# List all major software packages used and their versions
+# The "Software:" keyword is required.
+Software:
+CHARMM 
+Q-CHEM
+
+
+# Methodology and computational details.
+# Level of details should be roughly equivalent to that used in a publication.
+# Please include the values of key parameters, with units, and explain how statistical uncertainties were estimated.
+# Use as many lines of text as you need.
+# All text following the "Method:" keyword will be regarded as part of your free text methods description.
+Method:
+
+QM/MM free energies with CGenFF/BLYP/6-31G*
+
+MM trajectores were analysed with Q-Chem, using the BLYP functional and the 6-31G* basis set on the solute. The solvent was treated explicitly using MM. 
+The trajectories of the solute in water and cyclohexane were generated with CHARMM and the CHARMM General Force field. The underlying trajectories 
+were 1-5ns long and frames were saved every 1ps. To increase sampling, Hamiltonian Replica exchange was used between the lambda points. The water simulations 
+were conduced in cubic boxes with a box length between 38.55 and 38.75 Angstrom, using 1906 TIP3P water molecules.The free energy analysis was conducted 
+with the Zwanzig equation, using the solute-solute and solute-solvent interactions. Statistical uncertainties were calculated by 
+using block averages from 0.5ns blocks (or 500 snapshots). Molecules 88 and 92 were replaced by simple QM results. 
+ 
+
+

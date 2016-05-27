@@ -1,0 +1,103 @@
+# Results for distribution coefficients
+# Compound ID, log D, log D SEM, log D model
+Predictions:
+SAMPL5_002, 1.52199313625, 0.01, 0.6
+SAMPL5_003, 1.53872125378, 0.01, 0.6
+SAMPL5_004, 1.98250385241, 0.01, 0.6
+SAMPL5_005, -1.47266355682, 0.01, 0.6
+SAMPL5_006, -6.19401149499, 0.01, 0.6
+SAMPL5_007, 1.89846626709, 0.01, 0.6
+SAMPL5_010, -1.70139072251, 0.01, 0.6
+SAMPL5_011, -1.10758727248, 0.01, 0.6
+SAMPL5_013, 0.567097433612, 0.01, 0.6
+SAMPL5_015, -2.80665980647, 0.01, 0.6
+SAMPL5_017, 1.28295153766, 0.01, 0.6
+SAMPL5_019, 0.250254799192, 0.01, 0.6
+SAMPL5_020, -5.28303938268, 0.01, 0.6
+SAMPL5_021, 2.99663133992, 0.01, 0.6
+SAMPL5_024, 3.66747123188, 0.01, 0.6
+SAMPL5_026, -5.90272155168, 0.01, 0.6
+SAMPL5_027, -2.22849737512, 0.01, 0.6
+SAMPL5_033, 4.98957606709, 0.01, 0.6
+SAMPL5_037, -3.28607964493, 0.01, 0.6
+SAMPL5_042, -3.21265684271, 0.01, 0.6
+SAMPL5_044, -3.13042121078, 0.01, 0.6
+SAMPL5_045, -0.86006497523, 0.01, 0.6
+SAMPL5_046, -3.01302027614, 0.01, 0.6
+SAMPL5_047, 2.72213904125, 0.01, 0.6
+SAMPL5_048, 1.90450886188, 0.01, 0.6
+SAMPL5_049, 2.68382024574, 0.01, 0.6
+SAMPL5_050, -2.30824424996, 0.01, 0.6
+SAMPL5_055, -2.2200779837, 0.01, 0.6
+SAMPL5_056, 2.81422963428, 0.01, 0.6
+SAMPL5_058, 1.83449913208, 0.01, 0.6
+SAMPL5_059, -1.67292587807, 0.01, 0.6
+SAMPL5_060, -2.33034998781, 0.01, 0.6
+SAMPL5_061, 2.07796743693, 0.01, 0.6
+SAMPL5_063, -2.13343638139, 0.01, 0.6
+SAMPL5_065, 3.88936593873, 0.01, 0.6
+SAMPL5_067, 1.25402434381, 0.01, 0.6
+SAMPL5_068, 1.1755975239, 0.01, 0.6
+SAMPL5_069, 3.10758684192, 0.01, 0.6
+SAMPL5_070, 5.0090478826, 0.01, 0.6
+SAMPL5_071, 1.15659694452, 0.01, 0.6
+SAMPL5_072, 3.41120096634, 0.01, 0.6
+SAMPL5_074, -6.09859418916, 0.01, 0.6
+SAMPL5_075, -1.19968313881, 0.01, 0.6
+SAMPL5_080, -3.47492845865, 0.01, 0.6
+SAMPL5_081, -9.66699405136, 0.01, 0.6
+SAMPL5_082, 5.92940343519, 0.01, 0.6
+SAMPL5_083, 4.61031355798, 0.01, 0.6
+SAMPL5_084, 3.78003259975, 0.01, 0.6
+SAMPL5_085, -2.39268758128, 0.01, 0.6
+SAMPL5_086, 3.80664893266, 0.01, 0.6
+SAMPL5_088, -2.37229545675, 0.01, 0.6
+SAMPL5_090, 3.52815766812, 0.01, 0.6
+SAMPL5_092, 1.5280453005, 0.01, 0.6
+
+
+# Informal but informative name of the method used.
+Name
+3D-RISM/KH/uc
+
+# List all major software packages used and their versions
+# The "Software:" keyword is required.
+Software:
+Open Babel 2.3.2
+AmberTools 15
+Python 3.4
+Pandas 17.1
+statsmodels 0.6.1
+
+# Methodology and computational details.
+Method:
+
+Distribution coefficients were calculated for all solutes using the difference in solvation free energy (SFE) at infinite dilution in water and cyclohexane as calculated by the 3D-reference interaction site model (3D-RISM) [1,2]. Parameters for solute topologies and coordinates from the General Amber Force Field (GAFF) [3] were assigned with the antechamber, parmchk2 and tleap programs in AmberTools 15 [4], starting from the provided .mol2 files. No attempt was made to predict tautomer or protonation state.
+
+Solvent Models
+
+Bulk solvent properties for use in 3D-RISM calculations were produced with rism1d in AmberTools 15 using the Kovalenko-Hirata (KH) [5] closure. Water was represented with the cSPC/E water model [7] while a united atom model was developed for cyclohexane. An initial parameterization for cyclohexane used typical united atom Lennard-Jones parameters but was found to give a negative isothermal compressibility, indicating an unphysical solution. An alternate model was developed by calculating XRISM [8,9] solutions for a range of larger sigma and epsilon values and using these solutions to calculate free energies for a training set of 84 solutes in cyclohexane [10] when using the Universal Correction (UC) [11] with the 3D-RISM procedure described below. SMILES strings for all training set solutes were obtained from PubChem and converted to .mol2 files using OpenBabel 2.3.2 [12]. Topologies and coordinates were then assigned as described for the SAMPL5 solutes. Values of sigma = 4.3 to 5.3 A and epsilon = 0.8, 0.988 and 1.4 kcal/mol were used for cyclohexane and the final parameters of sigma = 4.7 A and epsilon = 1.4 kcal/mol were selected. SFEs from these parameters and corrected with UC compared well against the training data, with root mean squared error (RMSE) = 0.652 kcal/mol, mean unsigned error = 0.545 kcal/mol, R^2 = 0.829 and a slope of 0.815. In addition, the isothermal compressibility was 0.51 1/GPa, close to the experimental value of 1.120 1/GPa [13], and the radial distribution function was in good agreement with molecular dynamics simulations and neutron and X-ray diffraction results [14].
+
+3D-RISM
+
+SFE were calculated using the rism3d.snglpnt program in AmberTools 15 [7]. A 0.3 A grid spacing was used for the solvent box with a minimum 30 A buffer distance between the solute and the box edge. A 30 A cut off was used for solvent-solute interactions, beyond which Lennard-Jones interactions were truncated and electrostatic interactions were interpolated from a sparse grid. The 3D-RISM equation was coupled with the KH closure and solved to a residual tolerance of 10e-10. The large solvent box size and low residual tolerance provide a numerical accuracy of at least 0.01 kcal/mol. SFEs were calculated by applying UC to the closed form analytic expression for the KH closure [5]. UC coefficients for cyclohexane were determined using our training data, as described above, and coefficients for cSPC/E were determined in previous work [17]. To assess the model accuracy, the above procedure was applied to calculate partition coefficients for neutral amino acid side chain analogues [15]. The error estimates for our SAMPL5 predictions are taken from the RMSE in this test set.
+
+References
+[1]	A. Kovalenko and F. Hirata, J. Chem. Phys. 110, 10095 (1999).
+[2]	D. Beglov and B. Roux, J. Phys. Chem. B 101, 7821 (1997).
+[3]	J. Wang, R. M. Wolf, J. W. Caldwell, P. A. Kollman, and D. A. Case, J. Comput. Chem. 25, 1157 (2004).
+[4]	D. A. Case, V. Babin, J. T. Berryman, R. M. Betz, Q. Cai, D. S. Cerutti, T. E. Cheatham, T. A. Darden, R. E. Duke, H. Gohlke, A. W. Goetz, S. Gusarov, N. Homeyer, P. Janowski, J. Kaus, I. Kolossváry, A. Kovalenko, T. S. Lee, S. Le Grand, T. Luchko, R. Luo, B. Madej, K. Merz, F. Paesani, D. R. Roe, A. E. Roitberg, C. Sagui, R. Salomon-Ferrer, G. Seabra, C. Simmerling, W. Smith, J. M. Swails, R. C. Walker, J. Wang, R. M. Wolf, X. Wu, and P. A. Kollman, AMBER 15 (University of California, San Francisco, University of California, San Francisco, n.d.).
+[5]	A. Kovalenko and F. Hirata, J. Chem. Phys. 112, 10391 (2000).
+[6]	S. M. Kast and T. Kloss, J. Chem. Phys. 129, 236101 (2008).
+[7]	T. Luchko, S. Gusarov, D. R. Roe, C. Simmerling, D. A. Case, J. Tuszynski, and A. Kovalenko, J. Chem. Theory Comput. 6, 607 (2010).
+[8]	D. Chandler and H. C. Andersen, J. Chem. Phys. 57, 1930 (1972).
+[9]	F. Hirata and P. J. Rossky, Chem. Phys. Lett. 83, 329 (1981).
+[10]	J. Li, T. Zhu, G. D. Hawkins, P. Winget, D. A. Liotard, C. J. Cramer, and D. G. Truhlar, Theor. Chem. Acc. 103, 9 (1999).
+[11]	D. S. Palmer, A. I. Frolov, E. L. Ratkova, and M. V. Fedorov, J. Phys. Condens. Matter 22, 492101 (2010).
+[12]	N. M. O’Boyle, M. Banck, C. A. James, C. Morley, T. Vandermeersch, and G. R. Hutchison, J. Cheminformatics 3, 33 (2011).
+[13]	E. Aicart, G. Tardajos, and M. Diaz Pena, J. Chem. Eng. Data 25, 140 (1980).
+[14]	A. V. Anikeenko, A. V. Kim, and N. N. Medvedev, J. Struct. Chem. 51, 1090 (2010).
+[15]	A. Radzicka and R. Wolfenden, Biochemistry (Mosc.) 27, 1664 (1988).
+[16]	V. Sergiievskyi, G. Jeanmairet, M. Levesque, and D. Borgis, J. Chem. Phys. 143, 184116 (2015).
+[17]	J. Johnson, D. A. Case, T. Yamazaki, S. Gusarov, A. Kovalenko, and T. Luchko, (Submitted.).
+

@@ -113,6 +113,7 @@ f.close()
 
 # Where I want a copy of these stored. 
 SIdirectory = "~/Google\ Drive/Research/SAMPL/predictionFiles/"
+SIdirectory = '../predictionFiles_byNumber/'
 for l in lines[1:]: # Skip header line in file
     # strip information
     info = [s.strip() for s in l.split(',')]
@@ -132,4 +133,4 @@ for l in lines[1:]: # Skip header line in file
             print key, "is Anonymous"
         commands.getoutput("cp %s/%s %s/%02d_predictions.txt" % (preDir, regData[key]['fileName'], SIdirectory, key))
     
-pickle.dump(regData, open('../DataFiles/predictions.p','wb'))
+#pickle.dump(regData, open('../DataFiles/predictions.p','wb'))

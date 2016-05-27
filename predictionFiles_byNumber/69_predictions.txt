@@ -1,0 +1,38 @@
+# Results for Batch 0  B
+# Protocol B: COUL + LJ + FUNC + LRC
+# SAMPL  D, Std Err
+Predictions:
+SAMPL5_015,-38.700,0.140,1.03
+SAMPL5_080,-3.735,0.238,1.03
+SAMPL5_058,0.896,0.265,1.03
+SAMPL5_059,-0.644,0.080,1.03
+SAMPL5_020,3.468,0.408,1.03
+SAMPL5_045,-2.140,0.022,1.03
+SAMPL5_070,-3.945,0.008,1.03
+SAMPL5_068,3.673,0.156,1.03
+SAMPL5_003,1.863,0.072,1.03
+SAMPL5_017,3.696,0.906,1.03
+SAMPL5_055,-0.265,0.157,1.03
+SAMPL5_037,-19.986,0.230,1.03
+SAMPL5_061,-12.322,0.020,1.03
+#
+Name:
+SOMD/AM1BCC-GAFF-TIP3P/MBAR/B
+#
+Software: 
+Sire 15.01
+#
+Method:
+All the simulations were performed with Sire 15.1/OpenMM 6.3  (https://github.com/michellab/Sire, 10.1021/ct300857j), using single topology relative free energy calculations and multistate Bennet acceptance ratio (MBAR) (doi:10.1063/1.2978177)  to evaluate free energy changes in cyclohexane and water phase. A two step protocol was followed, with partial charges of the compound turned off firstly, which was followed by a second calculation where Lennard-Jones interactions were removed. The absolute free energy of hydration and solvation in cyclohexane was obtained by subtracting the free energy change for this process in solution from the  free energy in vacuum. Hence, the distribution coefficient was calcualted as the difference from  absolute hydration free energy and absolute free energy of solvation in cyclohexane divided by the Boltzmann factor times 2.303.
+
+Each discharging step was divided into 9 equidistant lambda windows. For the vanishing step, 11 equidistant lambda windows were used, and an additional window was added at 0.950, to capture large fluctuations in in the free energy changes towards the end of the decoupling process. Every lambda simulation were normally run for 4 ns,  with all bonds constrained, to allow the usage of hydrogen mass repartitioning (HMR) protocol (10.1021/ct5010406), setting the simulation time step to 4 fs, both for water and bound state. All the simulations were performed at 298 K and 1 atm, in the NPT ensemble, with the atom-based Barker Watts reaction field cutoff. The temperature control was achieved with an Andersen thermostat, with a coupling constant of 10 ps-1. A Monte Carlo barostat was used for the pressure control, attempting isotropic box edge scaling every 100 fs.  The non-bonded cutoff was set to 12 Angstrom and a dielectric constant of 78.3 was used for the electrostatic interactions. Each step was run twice, in order to enhance consistency of results. Furhtermore for molecules 71, 56, 42, 7, 13, 19, 92, 65, 24 and 88, the vanishing step was 6 ns long, to reach a better convergence of results. From the absolute free energies two indipendent  distribution coefficients were calcualted. The final distribution coefficient was calculated averaging these values. Thus, the standard error was computed as the ratio of the standard deviation of the distribution coefficient for each run divided by the square root of the number of the runs.
+
+For each compound the protonation state was considered. In particular compound: 15, 70, 61, 37, 72, 60, 63, 26, 10, 11, 81, 67, 82, 65, 69, 75, 86 and 84 were modeled as charged at pH 7.4. 
+For this compounds the provided .mol2 files were used to build solvated boxes in cyclohexane and water, using tLeap. The final cubic box measured on average 30 Angstrom along each edge, with TIP3P water molecules and GAFF cyclohexane. The resulting systems were energy minimized for 200 steepest decent steps, and equilibrated at 300 K and 1 atm for 10 ps using Sander. Finally a 2 ns molecular dynamics simulation was run with Sire, in order to reach a stable box density of approximately 1 g/cc.
+All the other molecules were simulated with the provided files.
+
+The absolute free energies obtained by use of the above protocol were corrected to account for specific errors:
+
+Protocol A) A correction term for missing no cutoff interactions in Coulombic potential in vacuum simulations
+Protocol B) A correction term for missing long-range dispersion interactions was evaluated for each guest in water and in the solvated host, and the difference was added to the free energy of binding.  
+

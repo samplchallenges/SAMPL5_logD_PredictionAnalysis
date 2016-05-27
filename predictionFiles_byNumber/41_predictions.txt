@@ -1,0 +1,90 @@
+Predictions:
+SAMPL5_002,      2.969, 1.33, 2.3
+SAMPL5_003,      2.910, 1.02, 2.3
+SAMPL5_004,      4.256, 1.55, 2.3
+SAMPL5_005,     -1.569, 1.46, 2.3
+SAMPL5_006,     -1.356, 0.42, 2.3
+SAMPL5_007,      4.185, 3.46, 2.3
+SAMPL5_010,     -2.745, 1.84, 2.3
+SAMPL5_011,     -7.234, 1.61, 2.3
+SAMPL5_013,     -4.361, 3.08, 2.3
+SAMPL5_015,     -3.028, 1.56, 2.3
+SAMPL5_017,      6.347, 0.82, 2.3
+SAMPL5_019,      2.544, 1.63, 2.3
+SAMPL5_020,     -1.928, 0.79, 2.3
+SAMPL5_021,      1.459, 0.94, 2.3
+SAMPL5_024,      5.204, 1.17, 2.3
+SAMPL5_026,      1.686, 1.09, 2.3
+SAMPL5_027,      1.158, 0.79, 2.3
+SAMPL5_033,      5.439, 1.10, 2.3
+SAMPL5_037,     -1.687, 0.63, 2.3
+SAMPL5_042,     -5.959, 1.93, 2.3
+SAMPL5_044,      3.555, 1.55, 2.3
+SAMPL5_045,     -2.177, 0.43, 2.3
+SAMPL5_046,      2.280, 1.34, 2.3
+SAMPL5_047,     -0.208, 0.82, 2.3
+SAMPL5_048,     -2.573, 1.14, 2.3
+SAMPL5_049,     -0.748, 1.21, 2.3
+SAMPL5_050,     -7.649, 2.05, 2.3
+SAMPL5_055,      0.836, 1.25, 2.3
+SAMPL5_056,     -2.791, 2.21, 2.3
+SAMPL5_058,     -2.683, 0.95, 2.3
+SAMPL5_059,      0.814, 1.34, 2.3
+SAMPL5_060,     -4.842, 0.81, 2.3
+SAMPL5_061,      0.490, 1.54, 2.3
+SAMPL5_063,     -3.169, 0.87, 2.3
+SAMPL5_065,     -1.161, 1.22, 2.3
+SAMPL5_067,      3.526, 2.69, 2.3
+SAMPL5_068,      1.107, 2.15, 2.3
+SAMPL5_069,      2.209, 1.69, 2.3
+SAMPL5_070,      6.030, 1.15, 2.3
+SAMPL5_071,      0.916, 1.88, 2.3
+SAMPL5_072,      4.855, 0.87, 2.3
+SAMPL5_074,    -10.299, 1.90, 2.3
+SAMPL5_075,      2.627, 1.27, 2.3
+SAMPL5_080,     -6.355, 2.43, 2.3
+SAMPL5_081,     -3.082, 0.78, 2.3
+SAMPL5_082,      8.393, 0.78, 2.3
+SAMPL5_083,     -5.622, 5.27, 2.3
+SAMPL5_084,      1.706, 2.23, 2.3
+SAMPL5_085,     -7.243, 1.47, 2.3
+SAMPL5_086,      7.522, 1.13, 2.3
+SAMPL5_088,     -4.229, 1.60, 2.3
+SAMPL5_090,      2.558, 1.04, 2.3
+SAMPL5_092,     -1.761, 0.00, 2.3
+
+Name:
+MMBAR/None/ABSPKA/VSOLV
+
+Software:
+CHARMM v.40a2
+
+Method:
+CHARMM/CGenFF/BAR
+
+We used CHARMM with the CHARMM General Force field for all simulations. MD simulations and free energy simulations in both water and cyclohexane were employed 
+to determine the solvation free  energy difference between the two phases. First, the charges of the solute were turned to zero, using six lambda points 
+(0.00, 0.10, 0.25, 0.50, 0.75 and 1.00). Then the van der Waals interactions were turned off in 24 lambda points using soft core potentials as implemented in 
+the PERT module of CHARMM (lambda = 0.00, 1/23, 2/23 ... 1.00). For molecules 65, 83 and 92, an additional lambda point was introduced at lambda=0.978. To 
+increase sampling, Hamiltonian Replica exchange was used between the lambda points.  The water simulations were conduced in cubic boxes with a box length 
+between 38.55 and 38.75 Angstrom, using 1906 TIP3P water molecules. At least six potassium and six chlorine ions were used in each water box, plus additional ions 
+to achieve charge neutrality. The cyclohexane simulations were conduced in cubic boxes with a box length between 39.93 and 40.18 Angstrom, using 337 cyclohexane 
+molecules. Periodic boundary conditions and particle mesh Ewald were employed in all simulations. The total simulation length for each free energy simulation was 
+2-5ns. Trajectories were saved every 1ps and replica exchange attempts happened every 1ps. A temperature of 300 Kelvin was maintained using a Nose-Hoover thermostat. 
+Free energy differences were calculated using Bennett's acceptance ratio method, as implemented in the FREN module of CHARMM. Statistical uncertainties were 
+calculated by using block averages from 0.5ns blocks.
+
+Absolute pKa calculations were performed in an effort to obtain the free energy
+differences between the various ionization states for certain molecules.
+Tautomers were also generated. All pKa calculations were done using
+M062X/6-31+G*/SMD level of theory.  The free energy of a gas phase proton
+was calculated analytically (-6.28 kcal/mol) and the experimental value of
+the proton solvation was used as suggested by Tissandier et al. (-265.9
+kcal/mol). A correction to change from a standard state of one atmosphere
+to one molar was also employed (kT * ln(24.46)). No pKa corrections or
+tautomerizations were attempted for molecule 83.
+
+Vertical solvation free energies were performed using an optimized gas phase
+geometry at the M062X/6-31+G* level of theory.
+
+

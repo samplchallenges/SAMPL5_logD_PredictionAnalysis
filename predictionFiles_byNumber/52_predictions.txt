@@ -1,0 +1,41 @@
+# Results for distribution coefficients, Batch-0
+# 
+# Compound ID, log D, log D SEM, log D model uncertainty
+Predictions:
+SAMPL5_003,  -4.19, 0.9, 1.8
+SAMPL5_015, -10.67, 0.9, 1.8
+SAMPL5_017,  -0.18, 0.9, 1.8
+SAMPL5_020,  -1.06, 0.9, 1.8
+SAMPL5_037,  -2.32, 0.9, 1.8
+SAMPL5_045,  -4.83, 0.9, 1.8
+SAMPL5_055,  -8.04, 0.9, 1.8
+SAMPL5_058,  -6.94, 0.9, 1.8
+SAMPL5_059,  -4.29, 0.9, 1.8
+SAMPL5_061,  -7.14, 0.9, 1.8
+SAMPL5_068,  -2.82, 0.9, 1.8
+SAMPL5_070,  10.02, 0.9, 1.8
+SAMPL5_080,  -5.33, 0.9, 1.8
+#
+Name:
+EC-RISM(2-par)/MoKa
+#
+Software:
+Amber 12
+Gromacs 4.6.3
+RDKit 2013_09_2
+Gaussian 03 Rev E.01
+Gaussian 09 Rev A.02
+3D-RISM (inhouse development)
+EC-RISM (inhouse development)
+MoKa 2.6
+Corina 3.49
+#
+Method:
+Distribution coefficients were estimated by combining statistical-mechanical calculations using a modified EC-RISM solvation model (JPCB 112, 4337, 2008) for neutral forms of the compounds in both water (mSPC/E, JCAMD 24, 343, 2010 and cyclohexane (united atom, JCC 22, 1205, 2001), combined with an empirical estimate of pKa/b values of the most abundant neutral tautomers at pH 7.4 using MoKa, and Corina for generating 3D structures. If the relative abundance of tautomers were comparable, only the globally optimal tautomer from EC-RISM calculations (see below) was selected for further investigation.
+The key equations evaluated were:
+(1) If no deprotonation sites were detected or pKb < pKa
+logD = logP - log(1+10^(14-pKb-7.4)),
+(2) otherwise
+logD = logP - log(1+10^(7.4-pKa)).
+logP was computed from the difference of solvation free energies of species between cyclohexanol and water. Solvation free energies within the EC-RISM context are given by the difference of vacuum and solution electronic energy plus a 3D RISM-derived estimate of the excess chemical potential (my^ex). Here we first adjust the original PSE-2 closure expression (JCP 129, 236101, 2008) with a partial molar volume (PMV) correction using available data from the Minnesota Solvation Database for water and cyclohexane solvation free energies. For water and cyclohexane a two-parameter model (scaling my^ex and PMV) was chosen, yielding independent estimates of the model error of 1.2 kcal/mol (neutrals) for water and 0.8 kcal/mol for cyclohexane. Applying the optimized water parameters to the subset of cyclohexane data for which water solvation free energies are also available, yields an error of 1.5 kcal/mol for water. These errors (1.5 and 0.8 kcal/mol) together with the MoKa pK error estimate of 0.9 (JCIM 47, 2172, 2007) give a propagation estimate of the total model error of at least 1.8 for logD. The statistical error estimate resulting from computing the RMSD between a 2-parameter and a 3-parameter cyclohexane model is around 0.9 for logD.
+Technically, (1) the conformations of all species were first sampled by generating a set of 200 geometries using a distance geometry embedding scheme with the default settings of RDKit. (2) Geometry optimization was performed in effective dielectric environments representing both phases using the ALPB model in Amber with GAFF 1.5 and AM1-BCC charges. (3) Clustering using RDKit with the criteria to select structures with max. 5 kcal/mol of their force field energy above the global minimum and structural RMSD < 0.5 Angstroems was followed by (4) quantum-chemical optimization in the respective PCM solvent (Gaussian 09) by B3LYP/6-311+G(d,p). (5) Only the globally optimal structure was subjected to further EC-RISM/3D-RISM treatment. For cyclohexane, we assumed gas and solution phase geometries to be identical whereas a relaxation term was accounted for in the case of water. (6) EC-RISM calculations in water were done by MP2/6-311+G(d,p)/PSE-2 (Gaussian 03 as quantum chemistry package). (7) 3D-RISM/PSE-2 was sufficient for the uncharged united atom cyclohexane model. The corresponding solvent site susceptibility was constructed by extracting intermolecular and intramolecular correlation functions from explicit MD simulations of pure cyclohexane using Gromacs.

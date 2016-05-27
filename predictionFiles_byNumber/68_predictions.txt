@@ -1,0 +1,197 @@
+# Results for distribution coefficients
+# 
+# This file will be automatically parsed. It must contain the following four elements: predictions, name of method, software listing, and method description. These elements must be provided in the order shown, with their respective headers.
+#
+# The data in each prediction line should be structured as follows, with all four fields provided.
+# Compound ID, log D, log D SEM, log D model uncertainty
+# The list of predictions must begin with the "Predictions:" keyword, as illustrated here, and (except in the case of standardization runs) predictions for all of Batch 0, Batches 0-1, or Batches 0-2 must be provided. Compound order is unimportant
+
+Predictions:
+SAMPL5_002, +3.14, 0.11, 1.3
+SAMPL5_003, +5.71, 0.09, 1.3
+SAMPL5_004, +4.19, 0.11, 0.9
+SAMPL5_005, -1.41, 0.13, 0.9
+SAMPL5_006, +0.80, 0.11, 1.3
+SAMPL5_007, +3.85, 0.11, 1.1
+SAMPL5_010, -0.18, 0.10, 0.9
+SAMPL5_011, +0.48, 0.10, 0.9
+SAMPL5_013, +3.84, 0.13, 1.3
+SAMPL5_015, -0.17, 0.12, 1.1
+SAMPL5_017, +5.89, 0.11, 1.1
+SAMPL5_019, +2.09, 0.11, 0.9
+SAMPL5_020, +1.22, 0.10, 1.1
+SAMPL5_021, -0.35, 0.09, 1.3
+SAMPL5_024, +5.05, 0.13, 1.3
+SAMPL5_026, +0.26, 0.10, 0.9
+SAMPL5_027, -0.43, 0.09, 0.9
+SAMPL5_033, +5.90, 0.12, 0.9
+SAMPL5_037, -7.58, 0.11, 1.3
+SAMPL5_042, +4.38, 0.12, 0.9
+SAMPL5_044, +5.75, 0.11, 1.1
+SAMPL5_045, -0.00, 0.09, 1.1
+SAMPL5_046, +0.52, 0.18, 1.3
+SAMPL5_047, -0.16, 0.14, 0.9
+SAMPL5_048, +3.55, 0.11, 1.1
+SAMPL5_049, +2.55, 0.10, 0.9
+SAMPL5_050, +2.57, 0.09, 1.1
+SAMPL5_055, +1.42, 0.08, 1.1
+SAMPL5_056, +0.90, 0.10, 0.9
+SAMPL5_058, +4.66, 0.09, 1.3
+SAMPL5_059, +1.47, 0.08, 0.9
+SAMPL5_060, +1.64, 0.09, 1.1
+SAMPL5_061, -0.25, 0.22, 0.9
+SAMPL5_063, -5.04, 0.10, 0.9
+SAMPL5_065, +8.17, 0.18, 0.9
+SAMPL5_067, +3.27, 0.13, 0.9
+SAMPL5_068, +6.51, 0.11, 0.9
+SAMPL5_069, +2.12, 0.12, 0.9
+SAMPL5_070, +5.27, 0.11, 0.9
+SAMPL5_071, +1.99, 0.10, 0.9
+SAMPL5_072, +4.44, 0.12, 0.9
+SAMPL5_074, -4.21, 0.11, 0.9
+SAMPL5_075, +2.65, 0.14, 0.9
+SAMPL5_080, -1.43, 0.08, 1.3
+SAMPL5_081, -2.50, 0.11, 0.9
+SAMPL5_082, +8.52, 0.14, 0.9
+SAMPL5_083, -4.69, 0.68, 1.3
+SAMPL5_084, +3.10, 0.15, 0.9
+SAMPL5_085, +0.33, 0.10, 1.3
+SAMPL5_086, +2.89, 0.19, 0.9
+SAMPL5_088, +0.15, 0.12, 0.9
+SAMPL5_090, +8.04, 0.12, 1.1
+SAMPL5_092, +3.80, 0.17, 0.9
+#
+# Please provide an informal but informative name of the method used. The "Name:" keyword is required, as shown here.
+Name:
+MD/solvation/OPLS-AA/TIP4P
+
+#
+# List all major software packages used and their versions
+# The "Software:" keyword is required.
+Software:
+Gromacs 4.6.6
+mol2ff  unreleased development version
+CACTVS  3.433 http://xemistry.com/
+MDPOW   0.6-dev  https://github.com/Becksteinlab/MDPOW
+GromacsWrapper 0.4.1-dev https://github.com/Becksteinlab/GromacsWrapper
+
+# Methodology and computational details.
+# Level of details should be roughly equivalent to that used in a publication.
+# Please include the values of key parameters, with units, and explain how statistical uncertainties were estimated.
+# Use as many lines of text as you need.
+# All text following the "Method:" keyword will be regarded as part of your free text methods description.
+Method:
+
+The work submitted here is the result of a joint collaboration between the
+laboratories of Oliver Beckstein (Arizona State University, AZ, USA) and Bogdan
+Iorga (CNRS-ICSN, Gif-sur-Yvette, France).
+
+Distribution coefficients were estimated from the difference in solvation free
+energies of the solute (in its provided protonation and tautomer state, with
+the exception of compound SAMPL5_042 for which two tautomeric states were
+evaluated) in water and cyclohexane at infinite dilution, calculated from
+all-atom explicit solvent molecular dynamics (MD) simulations.
+
+Parametrization
+
+Interactions were parametrized with the OPLS-AA force field and the TIP4P water
+model. Parameters were assigned by chemical similarity matching using mol2ff
+(unreleased), which makes use of the CACTVS toolkit, and parametrization of
+missing atom types.
+
+The predictions reported in our two submissions are the same, except
+for compounds SAMPL5_042 and SAMPL5_085. For SAMPL5_042, the
+prediction 1 (this file) corresponds to a parametrization involving
+the aromatic form (3-hydroxy-pyridazine) of the heterocycle, whereas
+the prediction 2 corresponds to the parametrization of the
+non-aromatic form of the heterocycle, as provided in the SAMPL5
+dataset. For SAMPL5_085, the prediction 1 (this file) corresponds to a
+parametrization of the hydantoin using the urea and amide parameters,
+whereas the prediction 2 corresponds to a parametrization using the
+uracil parameters.
+
+From the parametrization point of view, the compounds from the SAMPL5 dataset
+can be classified in four groups:
+
+- group 1 (chemical moieties available in the OPLS-AA force field): 04, 10, 11,
+  19, 26, 27, 49, 56, 61, 63, 65, 67, 69, 70, 71, 72, 74, 75, 81, 82, 84, 86,
+  88
+  
+- group 2 (chemical moieties absent from the OPLS-AA force field, that have
+  been parameterized during this work): 05, 33, 42, 47, 59, 68, 92
+  
+- group 3 (parametrization of fused rings using the parameters of individual
+  rings): 07, 15, 17, 20, 44, 45, 48, 50, 55, 60, 90
+  
+- group 4 (a combination of the issues mentioned above, chemical moieties
+  difficult to parameterize, conformational issues): 02, 03, 06, 13, 21, 24,
+  37, 46, 58, 80, 83, 85
+
+
+In this SAMPL5 challenge we have tentatively evaluated the parametrization of
+fused rings (for which no parameters are available in the OPLS-AA force field)
+using the parameters of the individual rings. We haven't validated yet this
+approach, but if it proves to be pertinent it will greatly facilitate the
+parametrization of new heterocyclic systems, extending the modularity and the
+transferability of the parameters, which is the main philosophy of the OPLS-AA
+force field.
+
+We have also applied the protocol described very recently (Dodda et al., JCTC,
+2015, 11, 4273, DOI: 10.1021/acs.jctc.5b00414) for the generation of CM5
+charges. Our preliminary validation results (carried out on thiophene and
+2-methyl-thiophene, for which experimental values of hydration free energies
+are available) are very promising, showing an error in the prediction of about
+0.43 and 0.02 kcal/mol, respectively.
+
+
+Simulation Protocol
+
+The provided mol2 files were used to build solvated boxes with a single solute
+molecule in each solvent. Simulations were performed under periodic boundary
+conditions in a rhombic dodecahedral simulation box. Box sizes were chosen so that
+there were at least 1.5 nm between the solute at any box edge for the
+cyclohexane simulations and 1.0 nm for water as solvent.
+
+MDPOW (based on GromacsWrapper and Gromacs) was used to automate the generation
+of input files for Gromacs. The simulations followed our previous work on
+SAMPL3 and SAMPL4. In short, each system was energy minimized with the steepest
+descent minimizer and relaxed with a 100 ps MD run with a 0.1 fs time step in
+the NPT ensemble, followed by a 15 ns NPT MD at 2 fs time step for
+equilibration (except SAMPL5_083 where we only ran for 1.5 ns; see below). Both
+simulations used Berendsen pressure coupling (P=1 bar) and Langevin dynamics
+for temperature control (T=300 K). The final conformation of the equilibration
+simulation was taken as the starting point for windowed alchemical solvation
+free energy calculations with Gromacs. For all compounds calculations were
+broken into 5 lambda windows for Coulomb decharging and 16 windows for
+Lennard-Jones (VDW) decoupling. LJ decoupling used soft-cores with alpha=0.5,
+power=1, and sigma=0.3. We made use of Gromacs "couple-intramol = no" feature
+whereby only intra-molecular interactions between solute and solvent are
+changed with lambda, so that the simulations directly yield solvation free
+energies without need of a calculation in vacuoo. Each window was run for 5 ns
+in NVT (except SAMPL5_083 where we only ran for 0.5 ns; see below) and all data
+were used for subsequent analysis using thermodynamic integration (TI) (using
+Simpson's rule as implemented in SciPy). The statistical error on the hydration
+free energy was estimated from the errors of the individual windows, which in
+turn were calculated taking into account the variance and the correlation time
+of the data. Errors from TI windows were propagated analytically through
+Simpson's rule (Newton-Coates formula for the 3rd interpolating Lagrange
+polynomial) and summation of Coulomb and LJ terms.  The distribution
+coefficients were directly calculated from the solvation free energies in water
+and cyclohexane as
+
+  log D = (\Delta G_w - \Delta G_c)/kT log e
+
+No attempt has been made in these calculations to predict likely protonation
+states of the compounds, or how their pKa or possible changes in protonation
+state might be likely to impact the distribution coefficients.
+
+Compound SAMPL5_083 deserves a special mention. For time reasons before the
+submission deadline, the simulations for this compound were ran only for 1.5 ns
+(Equilibrium) and 0.5 ns (FEP). Even the standard conditions would probably
+have not been enough to sample the conformational flexibility of this very big
+and quite flexible macrocycle. The prediction submitted for this compound
+corresponds to the conformation provided within the SAMPL5 dataset, but we have
+already generated several other very different conformations for this compound,
+which very likely will lead to different values predicted for log D. These
+alternative conformations were not simulated because of lack of time before the
+submission deadline.

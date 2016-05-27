@@ -1,0 +1,90 @@
+# SAMPL5 Distribution coefficients 
+#
+# Compound ID, log D, log D SEM, log D model uncertainty
+Predictions:
+SAMPL5_075,   3.959,   0.000,    2.24
+SAMPL5_003,   2.303,   0.000,    2.24
+SAMPL5_046,   1.692,   0.000,    2.24
+SAMPL5_065,   5.866,   0.000,    2.24
+SAMPL5_061,   0.564,   0.000,    2.24
+SAMPL5_013,  -5.337,   0.000,    2.24
+SAMPL5_021,  -0.105,   0.000,    2.24
+SAMPL5_092,   8.552,   0.000,    2.24
+SAMPL5_019,   3.236,   0.000,    2.24
+SAMPL5_056,  -0.979,   0.000,    2.24
+SAMPL5_048,   0.080,   0.000,    2.24
+SAMPL5_083,   5.069,   0.000,    2.24
+SAMPL5_085,   0.071,   0.000,    2.24
+SAMPL5_084,   8.349,   0.000,    2.24
+SAMPL5_070,   8.928,   0.000,    2.24
+SAMPL5_047,  -0.608,   0.000,    2.24
+SAMPL5_071,   3.521,   0.000,    2.24
+SAMPL5_063,   0.686,   0.000,    2.24
+SAMPL5_081,  -0.867,   0.000,    2.24
+SAMPL5_010,  -1.686,   0.000,    2.24
+SAMPL5_024,   5.467,   0.000,    2.24
+SAMPL5_015,  -2.908,   0.000,    2.24
+SAMPL5_072,   7.476,   0.000,    2.24
+SAMPL5_033,   8.814,   0.000,    2.24
+SAMPL5_004,   5.082,   0.000,    2.24
+SAMPL5_049,   0.729,   0.000,    2.24
+SAMPL5_050,  -4.417,   0.000,    2.24
+SAMPL5_005,  -0.736,   0.000,    2.24
+SAMPL5_007,   2.997,   0.000,    2.24
+SAMPL5_090,   2.323,   0.000,    2.24
+SAMPL5_042,  -2.535,   0.000,    2.24
+SAMPL5_058,   1.254,   0.000,    2.24
+SAMPL5_069,   1.385,   0.000,    2.24
+SAMPL5_059,  -2.700,   0.000,    2.24
+SAMPL5_044,   0.172,   0.000,    2.24
+SAMPL5_020,   4.351,   0.000,    2.24
+SAMPL5_055,  -3.695,   0.000,    2.24
+SAMPL5_002,   1.925,   0.000,    2.24
+SAMPL5_086,   6.502,   0.000,    2.24
+SAMPL5_027,  -5.070,   0.000,    2.24
+SAMPL5_037,   2.740,   0.000,    2.24
+SAMPL5_074, -11.637,   0.000,    2.24
+SAMPL5_045,   1.236,   0.000,    2.24
+SAMPL5_011,  -1.291,   0.000,    2.24
+SAMPL5_082,  10.432,   0.000,    2.24
+SAMPL5_060,  -4.905,   0.000,    2.24
+SAMPL5_080,  -2.243,   0.000,    2.24
+SAMPL5_017,   2.786,   0.000,    2.24
+SAMPL5_068,   1.266,   0.000,    2.24
+SAMPL5_006,   0.623,   0.000,    2.24
+SAMPL5_026,  -1.260,   0.000,    2.24
+SAMPL5_088,   2.980,   0.000,    2.24
+SAMPL5_067,   3.897,   0.000,    2.24
+#
+# Please provide an informal but informative name of the method used. The "Name:" keyword is required, as shown here.
+Name:
+Empirical SolventExcludedSurface AtomType Model_2 
+#
+# List all major software packages used and their versions
+# The "Software:" keyword is required.
+Software:
+MSMS 2.2.6.1
+R 3.1.1
+OpenBabel 2.3.2
+Python 2.7
+# Methodology and computational details.
+Method:
+Two empirical models were built to estimate the free energy of solvation
+in cyclohexane (solG_chex) and in water (solG_wat).
+Prediction of solG_wat values consisted in a linear regression model
+using the solvent excluded surface (SES) area of each atom type. A total
+of 9 atom types were used. MSMS was used to calculate SES areas, with a probe
+radius of 1.5 angstroms. The sum of absolute atomic partial charges
+multiplied by the SES area of the corresponding atom, was also included as
+an explanatory variable. OpenBabel was used to calculate partial charges.
+The FreeSolv-0.32 database was used to build this model.
+The linear model for solG_chex only used a single explanatory variable,
+the SES area of the molecule. The same probe radius was used (1.5 A).
+This model was built on data from doi:10.3390/i6010119, but making use
+of solG_wat predictions, because the reported energies are for cyclohexane-
+water partition, instead of pure solG_chex data.
+LogD values were calculated using the following formula:
+    logD = (solG_chex - solG_wat) / K
+where K = -2.303*RT, T = 293
+The provided .mol2 files were used unchanged, ignoring possible changes in
+protonation states and conformations. The same applied while training data.

@@ -1,0 +1,75 @@
+# Results for distribution coefficients
+# 
+Predictions:
+SAMPL5_002, 4.61, 0.05, 1.2
+SAMPL5_003, 4.78, 0.04, 1.2
+SAMPL5_004, 7.97, 0.08, 1.2
+SAMPL5_005, 3.6, 0.1, 1.2
+SAMPL5_006, 2.74, 0.06, 1.2
+SAMPL5_007, 7.0, 0.1, 1.2
+SAMPL5_010, 1.21, 0.04, 1.2
+SAMPL5_011, 4.27, 0.06, 1.2
+SAMPL5_013, 3.58, 0.05, 1.2
+SAMPL5_015, 2.12, 0.05, 1.2
+SAMPL5_017, 9.5, 0.1, 1.2
+SAMPL5_019, 6.44, 0.06, 1.2
+SAMPL5_020, 1, 2, 1.2
+SAMPL5_021, 6.10, 0.05, 1.2
+SAMPL5_024, 6.63, 0.07, 1.2
+SAMPL5_026, 1.37, 0.07, 1.2
+SAMPL5_027, 0.05, 0.04, 1.2
+SAMPL5_033, 7.19, 0.06, 1.2
+SAMPL5_037, -1.74, 0.04, 1.2
+SAMPL5_042, 2.02, 0.06, 1.2
+SAMPL5_044, 3.95, 0.08, 1.2
+SAMPL5_045, 0.17, 0.04, 1.2
+SAMPL5_046, 4.30, 0.06, 1.2
+SAMPL5_047, 6.14, 0.07, 1.2
+SAMPL5_048, 4.83, 0.09, 1.2
+SAMPL5_049, 4.01, 0.04, 1.2
+SAMPL5_050, 1.80, 0.09, 1.2
+SAMPL5_055, 0.63, 0.04, 1.2
+SAMPL5_056, 5.49, 0.04, 1.2
+SAMPL5_058, 3.43, 0.04, 1.2
+SAMPL5_059, 1.19, 0.04, 1.2
+SAMPL5_060, 1.24, 0.05, 1.2
+SAMPL5_061, 3.0, 0.3, 1.2
+SAMPL5_063, -1.91, 0.06, 1.2
+SAMPL5_065, 9.3, 0.1, 1.2
+SAMPL5_067, 5.5, 0.1, 1.2
+SAMPL5_068, 7.4, 0.1, 1.2
+SAMPL5_069, 5.6, 0.1, 1.2
+SAMPL5_070, 7.11, 0.05, 1.2
+SAMPL5_071, 4.4, 0.1, 1.2
+SAMPL5_072, 5.70, 0.06, 1.2
+SAMPL5_074, -1.73, 0.08, 1.2
+SAMPL5_075, 5.1, 0.1, 1.2
+SAMPL5_080, -1.8, 0.5, 1.2
+SAMPL5_081, -0.3, 0.2, 1.2
+SAMPL5_082, 10.11, 0.09, 1.2
+SAMPL5_083, 13, 1, 1.2
+SAMPL5_084, 6.1, 0.2, 1.2
+SAMPL5_085, 0.94, 0.04, 1.2
+SAMPL5_086, 6.5, 0.2, 1.2
+SAMPL5_088, 1.33, 0.08, 1.2
+SAMPL5_090, 7.09, 0.08, 1.2
+SAMPL5_092, 6.4, 0.2, 1.2
+#
+# An informal but informative name of the method used. 
+Name:
+Explicit/solvation/GAFF/H2O-DC/Cyclohexane_UA-DC
+#
+# All major software packages used and their versions
+Software:
+GROMACS 5.0.4
+AmberTools 14
+#
+# Methodology and computational details.
+Method:
+These distribution coefficients were estimated using Thermodynamic Integration of classical explicit molecular simulations. These involved construction of a thermodynamic cycle connecting the cyclohexane and aqueous phases through transformation to the vapor state. What distinguishes these calculations from other similar solvation free energy calculations is the nature of the surrounding phases. Both the cyclohexane and water phases were the result of a model optimization to better capture the dielectric constant of the given liquid. This involved general polarization of the water model and the introduction of a permanent dipole moment on a united atom cyclohexane model to model induced moments within the liquid. The solute is treated with the standard GAFF force field with AM1-BCC partial charges. In general, we expect the solutes to systematically favor distribution into the cyclohexane phase, as the AM1-BCC partial charges tend to be underpolarized for electric field calculations in condensed phases.  
+#
+The provided .mol2 files, in their given tautomeric state only, were used to generate single model solutes that were solvated in rhombic dodecahedral boxes of the phase of interest. The simulation box size was variable and depended upon having at least 12 Å of solvent between the solute and a periodic boundary box edge. The water solvent used was the dielectrically corrected H2O-DC model. The cyclohexane solvent used was a specially optimized united-atom model of cyclohexane that properly captures the experimental density, dielectric constant and enthalpy of vaporization. As stated above, the solutes were represented using the GAFF force field with AM1-BCC partial charges. These solute parameters were assigned using antechamber and parmchk2, and the molecule was converted to GROMACS form using acpype.py. 
+#
+Free energy calculation protocols were taken from previous work in our group on solvation free energy calculations, with minor updates for GROMACS 5.0.4. Solvation free energy calculations were broken into 26 lambda states, with six lambda values used for discharging the solute molecule and another 20 for decoupling Lennard-Jones interactions with the remainder of the system. Each solvated system was simulated separately at each lambda value by minimizing in GROMACS with the steepest descents algorithm, equilibrated under NVT (berendsen thermostate) for 100 ps, equilibrated under NPT conditions for 200 ps (Langevin thermostat and Parrinello-Rahman barostat), this before an extended 5 ns of NPT sampling for each lambda value simulation. 
+#
+Statistical analysis was done following procedures previously utilized by our group (errors from block averages and error accumulation over the integration process). The predicted distribution coefficients simply come from subtraction of the solvation free energies in the various states, with error propogated to the log(D) value. The systematic error reported comes from a mean absolute error estimate from previous calculations in our group using this set of solvent and solute models.
