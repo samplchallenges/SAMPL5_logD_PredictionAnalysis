@@ -121,6 +121,7 @@ close('all')
 # ==========================================================================================
 
 # Adjust parameters, these figures will be three histograms across, where each histogram takes two rows
+parameters = tools.JCAMDdict(3, square = True) 
 width = parameters['figure.figsize'][0]
 parameters['figure.figsize'][1] = width * (np.sqrt(5.0) - 1.0) / 2.4 
 parameters['figure.subplot.right'] = 0.975

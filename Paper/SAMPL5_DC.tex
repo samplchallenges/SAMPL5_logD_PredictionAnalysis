@@ -386,6 +386,13 @@ We want to consider how close to experiment RMSE/AUE and how well correlated wit
 \subsection{Null Hypothesis}
 \label{results:3}
 
+\begin{table}
+\footnotesize
+\input{otherPredictions.tex}
+\label{otherPredictions}
+\caption{} 
+\end{table}
+
 One way of evaluating predictive models is to compare them to a null hypothesis, or default result of some kind. % This probably needs a citation, I haven't looked for anything, but I'm mostly recalling talking about it in your class 
 In the case of distribution coefficients, we chose a null hypothesis where we assume all solute molecules distribute equally between cyclohexane and water, corresponding to a $\log D = 0$. 
 We performed all error analyses discussed above on this pretend data set as a point of comparison. 
@@ -430,9 +437,9 @@ Clear trends on which are doing well?
 
 % Our comparison plots
 \begin{figure*}
-% insert figure 
+\includegraphics{MobleyPlots.eps}
 \caption{Plots showing our predictions compared to experiment. a) submission 39 to SAMPL5, with no tautomer correction. b) distribution coefficient corrected from calculated partition coefficient based on pKas. c) distribution coefficient correct from calculated partition coefficient with state penalties }
-\label{myComparisons}       % Give a unique label
+\label{MobleyPlots}       
 \end{figure*}
 
 % How did logP do, not bad in general, include our plots
@@ -442,6 +449,14 @@ The initial set of predictions were partition coefficients, determined from the 
 39 was within the top 15 %(check this) 
 submissions for all error metrics.  
 % Double check numbers, slight bias for cyclohexane to water from average signed error
+
+\begin{table}
+\footnotesize
+\input{MobleyStats.tex}
+\label{MobleyStats}
+\caption{} 
+\end{table}
+
 
 After the challenge we explored how correcting for protonation states would have affected the our initial predictions. 
 The first set of corrections involved calculating the pKa for each molecule using Schr\"{o}dinger's Epik tool. 
@@ -489,7 +504,7 @@ $\log P_{cyc/wat}$ & $ 1.20 \pm 0.04 $ &  $ -6.04 \pm 0.03$ &  $1.21 \pm 0.09$ &
 Correction & \multicolumn{1}{c}{$ -11.902 $} &  \multicolumn{1}{c}{$ -0.453$} &  \multicolumn{1}{c}{$ -0.488 $} &  \multicolumn{1}{c}{$ -6.53 $} \\
 $\log D_{cyc/water}$ & $ -10.70 \pm 0.04 $ &  $ -6.50 \pm 0.03$ &  $0.72 \pm 0.09$ &  $-4.0 \pm 0.2$ \\
 \hline
-experimental $\log D$ & \multicolumn{2}{|c|}{$1 \pm 1$} & \multicolumn{2}{c}{$1 \pm 1$} \\
+experimental $\log D$ & \multicolumn{2}{|c|}{$-3.2 \pm 0.6$} & \multicolumn{2}{c}{$-1.9 \pm 0.4 $} \\
 \hline
 \end{tabular}
 \label{tautomerChanges}

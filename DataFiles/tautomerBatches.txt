@@ -1,4 +1,5 @@
 # tautomer batches
+# Here I devided the molecules by number of tautomer, to make plots and explore rather number of tautomers affected accuracy
 1 tautomer
 SAMPL5_058, SAMPL5_075, SAMPL5_072, SAMPL5_003, SAMPL5_080, SAMPL5_082, SAMPL5_067, SAMPL5_070, SAMPL5_068, SAMPL5_090, SAMPL5_037
 2-4 tautomers

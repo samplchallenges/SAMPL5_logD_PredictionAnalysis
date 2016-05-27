@@ -38,6 +38,7 @@ labels = ['original "logP"', 'Pickard corrections', 'Epik State Penalty', 'large
 
 short = ['original','Pickard','Epik','pKa_largest','pKa_acidic','pKa_basic']
 
+base = {}
 for idx, logDkey in enumerate(['LogD_calc', 'logD_PickardCorrected', 'logD_stateCorrected', 'LogD_oneCorrected', 'LogD_acidCorrected','LogD_baseCorrected']):
     print labels[idx]
 
@@ -52,13 +53,22 @@ for idx, logDkey in enumerate(['LogD_calc', 'logD_PickardCorrected', 'logD_state
     # Perform error analysis
     statCalc = calc[0] + calc[1] + calc[2]
     AveErr, RMS, AUE, tau, R, maxErr, percent, Rsquared = tools.stats_array(statCalc, statExp, dStatExp, bootits, short[idx])
+    base[logDkey] = {}
+    base[logDkey]['AveErr'] = AveErr
+    base[logDkey]['RMS'] = RMS
+    base[logDkey]['AUE'] = AUE
+    base[logDkey]['tau'] = tau
+    base[logDkey]['R'] = R
+    base[logDkey]['maxErr'] = maxErr
+    base[logDkey]['percent'] = percent  
 
     # Get data for QQ plot
     X, Y, slope, dslope = tools.getQQdata(statCalc, statExp, dStatCalc, dStatExp, bootits)
     # Make and save QQ plot
     title = "QQ Plot for %s" % labels[idx]
     tools.makeQQplot(X, Y, slope, title, fileName = "Plots/QQ_%s.pdf" % short[idx])
-
+    base[logDkey]['error slope'] = [slope, dslope]
+      
     # Organize data to print into table
     line = labels[idx]
     for met in [AveErr, RMS, AUE, tau, R, maxErr, percent, [slope,dslope]]:
@@ -173,3 +183,4 @@ f = open('DataTables/ErrorAnalysis_LogDCorrections.txt','w')
 f.writelines(output)
 f.close()
 
+pickle.dump(base, open('CorrectionStats.p', 'wb'))

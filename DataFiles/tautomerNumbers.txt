@@ -1,3 +1,4 @@
+# These numbers came from openeye's tautomer enumeration, it counts the number of tautomers each molecule has without performing an energy comparison. 
 SAMPL_ID, # of tautomers
 SAMPL5_002,	 14
 SAMPL5_003,	 1

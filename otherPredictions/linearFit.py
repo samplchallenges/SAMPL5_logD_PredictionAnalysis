@@ -19,7 +19,7 @@ from openeye.oemolprop import *
 from openeye.oeiupac import *
 
 # Load old dictionary
-data = pickle.load(open('dictionary_logPpaper.p','rb'))
+data = pickle.load(open('dictionary_Leo1971paper.p','rb'))
 # Using only one prediction so I'm calling it e to match the old code:
 e = {}
 for cid, entry in data.items():
