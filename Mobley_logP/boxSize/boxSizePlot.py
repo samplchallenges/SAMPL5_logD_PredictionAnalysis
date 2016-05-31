@@ -7,7 +7,11 @@ data = pickle.load(open('boxSizeData.p','rb'))
 
 # Get parameters for plot
 parameters = tools.JCAMDdict(1)
+parameters['figure.subplot.right'] = 0.95
+
+rcParams.update(parameters)
 fig = figure(1)
+fig.suptitle('Box size affect on solvation free energy')
 xlabel('Box Edge (nm)')
 ylabel('Solvation Free Energy (kcal/mol)')
 ylim(18.25, 19.75)
