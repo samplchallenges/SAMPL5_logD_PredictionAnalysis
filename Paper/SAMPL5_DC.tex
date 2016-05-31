@@ -124,6 +124,25 @@ Conclusions: tautomeric enumeration,
 \section{Introduction}
 \label{intro}
 SAMPL is a blind challenge, has included hydration free energy in the past
+?
+Partition and distribution coefficients are important physical properties which can provide a valuable opportunity for testing computational methods and molecular models. This year's Statistical Assessment of Modeling of Proteins and Ligand (SAMPL) challenge focuses on prediction of cyclohexane-water distribution coefficients, and here, we discuss the results of this SAMPL5 challenge. This focus on distribution coefficients replaces the focus on hydration free energies which has been a fixture of the past five challenges (SAMPL0-4) [refs 1-6 of SAMPL4 overview paper and reference that paper].  
+?
+The new focus on distribution coefficients in SAMPL5 was motivated in part by recognizing the benefits brought by hydration prediction in the prior SAMPL challenges, while also observing that it is impractical to sustain a series of blind challenges to predict a property which is no longer measured experimentally on any regular basis. The lack of ongoing experimental work on hydration free energies means that it has been increasingly difficult to find unpublished or obscure hydration free energies to form the basis of a blind challenge, and is of course impossible to design a challenge focusing on particular compounds, functional groups, or chemical classes where new hydration free energy data would be particularly helpful. But, hydration free energies have been tremendously helpful over the years as well, as they are a simple physical property which is relatively straightforward to calculate via a variety of methods, and even can be calculated quite precisely with demanding free energy calculations based on molecular dynamics. Thus, the SAMPL challenges have driven real improvements in a variety of methods for calculating hydration free energies [ref SAMPL4 overview paper]; over the period these challenges run, a wide range of methods began to achieve considerable success at predicting hydration free energies.
+?
+Thus, for SAMPL5, we sought to design a challenge based on predicting a physical property which should be fairly straightforward to calculate like hydration or solvation free energies, but could also be measured more easily in the future to provide the basis for a new series of blind challenges. Ultimately, the organizers settled on cyclohexane-water distribution coefficients, and were able to partner with Genentech to conduct a series of measurements of distribution coefficients on drug-like compounds, as discussed elsewhere in this issue [ref Bas]. Since distribution coefficients can be estimated from solvation free energies, they can be computed in a similar way to hydration free energies, and thus are tractable for calculations. They do, however, introduce some new complexities such as pKa issues which have been largely avoided in previous hydration free energy studies in SAMPL. Measurement is also straightforward enough that future distribution coefficient challenges can be deliberately designed to focus on issues that merit attention to move the field forward.
+?
+Overall, we believe the outcome of the present SAMPL5 challenge highlights the very real potential benefits of this type of experimental data to improve computational methods, force fields, sampling algorithms, and treatment of protonation states and tautomers -- issues that will all be highly relevant for nominally more challenging problems like physical predictions of protiein-ligand binding affinities. 
+?
+%DLM Additions; I can draft any of these you want. LMK.
+Briefly describe value of past hydration challenges and what happened over the years (i.e. very valuable tests; more methods began to agree well with experiment as challenge went on)
+?
+Briefly explain problem with continuing hydration challenges (no new measurements, so no ability to select particular types of functionality for follow up or check measured values)
+?
+Explain motivation for this challenge and how data was obtained %(very briefly - referencing Bas; I'm asking him for name/authors); the idea of including this is that if people read ONLY ONE paper about the challenge it will likely be this one so we want to be somewhat complete.
+?
+%end DLM
+
+SAMPL is a blind challenge, has included hydration free energy in the past
 
 %DLM Additions; I can draft any of these you want. LMK.
 Briefly describe value of past hydration challenges and what happened over the years (i.e. very valuable tests; more methods began to agree well with experiment as challenge went on)
