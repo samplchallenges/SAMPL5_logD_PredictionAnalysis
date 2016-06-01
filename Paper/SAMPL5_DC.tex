@@ -119,50 +119,42 @@ Conclusions: tautomeric enumeration,
 
 % ======================================================================================================
 % Actual writing starts HERE
-% CCB: I'm trying to remove comments so that anything with a comment indicates a question or something that still needs to be added
+% I've tried to remove your comments (that I addressed) and any I was using to help with outlining. Any left over comments should indicate questions or things I know I need to add (such as citations I haven't found yet). 
 
 \section{Introduction}
 \label{intro}
-SAMPL is a blind challenge, has included hydration free energy in the past
-?
-Partition and distribution coefficients are important physical properties which can provide a valuable opportunity for testing computational methods and molecular models. This year's Statistical Assessment of Modeling of Proteins and Ligand (SAMPL) challenge focuses on prediction of cyclohexane-water distribution coefficients, and here, we discuss the results of this SAMPL5 challenge. This focus on distribution coefficients replaces the focus on hydration free energies which has been a fixture of the past five challenges (SAMPL0-4) [refs 1-6 of SAMPL4 overview paper and reference that paper].  
-?
-The new focus on distribution coefficients in SAMPL5 was motivated in part by recognizing the benefits brought by hydration prediction in the prior SAMPL challenges, while also observing that it is impractical to sustain a series of blind challenges to predict a property which is no longer measured experimentally on any regular basis. The lack of ongoing experimental work on hydration free energies means that it has been increasingly difficult to find unpublished or obscure hydration free energies to form the basis of a blind challenge, and is of course impossible to design a challenge focusing on particular compounds, functional groups, or chemical classes where new hydration free energy data would be particularly helpful. But, hydration free energies have been tremendously helpful over the years as well, as they are a simple physical property which is relatively straightforward to calculate via a variety of methods, and even can be calculated quite precisely with demanding free energy calculations based on molecular dynamics. Thus, the SAMPL challenges have driven real improvements in a variety of methods for calculating hydration free energies [ref SAMPL4 overview paper]; over the period these challenges run, a wide range of methods began to achieve considerable success at predicting hydration free energies.
-?
-Thus, for SAMPL5, we sought to design a challenge based on predicting a physical property which should be fairly straightforward to calculate like hydration or solvation free energies, but could also be measured more easily in the future to provide the basis for a new series of blind challenges. Ultimately, the organizers settled on cyclohexane-water distribution coefficients, and were able to partner with Genentech to conduct a series of measurements of distribution coefficients on drug-like compounds, as discussed elsewhere in this issue [ref Bas]. Since distribution coefficients can be estimated from solvation free energies, they can be computed in a similar way to hydration free energies, and thus are tractable for calculations. They do, however, introduce some new complexities such as pKa issues which have been largely avoided in previous hydration free energy studies in SAMPL. Measurement is also straightforward enough that future distribution coefficient challenges can be deliberately designed to focus on issues that merit attention to move the field forward.
-?
-Overall, we believe the outcome of the present SAMPL5 challenge highlights the very real potential benefits of this type of experimental data to improve computational methods, force fields, sampling algorithms, and treatment of protonation states and tautomers -- issues that will all be highly relevant for nominally more challenging problems like physical predictions of protiein-ligand binding affinities. 
-?
-%DLM Additions; I can draft any of these you want. LMK.
-Briefly describe value of past hydration challenges and what happened over the years (i.e. very valuable tests; more methods began to agree well with experiment as challenge went on)
-?
-Briefly explain problem with continuing hydration challenges (no new measurements, so no ability to select particular types of functionality for follow up or check measured values)
-?
-Explain motivation for this challenge and how data was obtained %(very briefly - referencing Bas; I'm asking him for name/authors); the idea of including this is that if people read ONLY ONE paper about the challenge it will likely be this one so we want to be somewhat complete.
-?
-%end DLM
 
-SAMPL is a blind challenge, has included hydration free energy in the past
+This year's Statistical Assessment of Modeling of Proteins and Ligand (SAMPL) challenge focuses on prediction of cyclohexane-water distribution coefficients. 
+This focus on distribution coefficients replaces the focus on hydration free energies which has been a fixture of the past five challenges (SAMPL0-4) \cite{Mobley:2014gu,Geballe:2012fc,Geballe:2010jr,Klimovich:2010jm,Mobley:2009iu,Mobley:2012jwa,Nicholls:2008cx}.
+Due to a lack of ongoing experimental work, hydration free energies are no longer a practical property for blind challenges. 
+It has become increasingly difficult to find unpublished or obscure hydration free energies and therefore impossible to design a challenge focusing on particular compounds, functional groups or chemical classes. 
+The past SAMPL challenges have driven real improvements in a variety of methods for calculating hydration free energy \cite{Mobley:2014gu}, so we sought to include a similar physical property in SAMPL5. 
+The organizers settled on cyclohexane-water distribution coefficients, and thanks to a partnership with Genetech, were able to conduct a series of measurements on drug-like compounds, discussed in detail in this issue %ref Bas' paper
+Measurement is also straightforward enough that future distribution coefficient challenges can be deliberately designed to focus on issues that merit attention to move the field forward.
 
-%DLM Additions; I can draft any of these you want. LMK.
-Briefly describe value of past hydration challenges and what happened over the years (i.e. very valuable tests; more methods began to agree well with experiment as challenge went on)
+Partition and distribution coefficients are important physical properties which can provide a valuable opportunity for testing computational methods and molecular models. % cite one of the experimental review papers
+Distribution coefficients describe how all forms of a solute distributes itself across two immiscible solvents. 
+In this case,
+\begin{equation}
+D = \frac{\sum_i [X_i]_{cyc}}{\sum_i [X_i]_{aq}}
+\label{deflogD}
+\end{equation}
+where $X_i$ represents a single tautomeric state in one of the solvents and results are reported as the logarithm of this ratio ($\log D$). % probably should cite something here
+These are more complicated than partition coefficients ($\log P$), which are limited to a single, typically neutral tautomer \cite{Leo:1971wu}.
+$\log P$ is proportional to the transfer free energy, which can be calculated from solvation free energies. % cite all the computational logP papers. 
+All tautomers will need to be included to accurately calculate $\log D$, introducing some new complexities avoided in previous hydration free energy studies in SAMPL. 
+Accurate tautomer enumeration in both solvents will be an important part of predicting $\log D$. 
 
-Briefly explain problem with continuing hydration challenges (no new measurements, so no ability to select particular types of functionality for follow up or check measured values)
+% I still can't find any obvious logP or logD challenges, I'll do more googling, but I'm leaving that paragraph out for now. 
 
-Explain motivation for this challenge and how data was obtained %(very briefly - referencing Bas; I'm asking him for name/authors); the idea of including this is that if people read ONLY ONE paper about the challenge it will likely be this one so we want to be somewhat complete.
+Here we discuss results for the SAMPL5 challenge, highlighting difficulties that were common among submissions.
+We perform a number of error analyses to determine the best methods.
+We also include details for a set of reference calculations we performed estimating $\log D$ as the cyclohexane/water partition coefficient as well as a series of follow-up studies focusing on the importance of tautomers in estimating $\log D$.  
+Overall, we believe the outcome of the present SAMPL5 challenge highlights the potential benefits of this type of experimental data to improve computational methods, force fields, sampling algorithms, and treatment of protonation states and tautomers.
+Many of these issues will be highly relevant for nominally more challenging problems, such as predictions of protein-ligand binding affinities. 
 
-%end DLM
-
-What is a distribution coefficient? Relate to free energy, distinguish from logP
-
-% I'm looking to see if there are blind challenges that have used logP or logD 
-%DLM: I did not get anything via twitter.
-More detail about why logD 
-
-Possibly brief statement about sampl set, cite Bas' experimental paper. We provide a detailed look at our submissions to the SAMPL5 challenge and an analysis of submitted results %DLM: Probably want to put results first, and let's call ours our "reference calculations" rather than "our submissions" to downplay the fact taht we submitted. 
-
-% I assume that D3R will come up somewhere in the introduction so I'm using the acronym throughout
-Drug Design Data Resource (D3R)
+% I feel like D3R should have come up in the intro... I'm not sure where though. I'm put this here as a reminder to change the first occurrence to their full name. 
+% Drug Design Data Resource (D3R)
 
 \section{Challenge Logistics}
 \label{logistics}
@@ -210,7 +202,7 @@ but the root mean squared error was around 1.4 log units.
 An important part of creating predictive models is the ability to know when it will fail. 
 Analysis of model uncertainties then, is an important part of evaluating any model. 
 
-\section{Error metrics} % this is not a statement...
+\section{Error metrics} % probably need a different section title here.... 
 \label{analysisMethods}
 
 Similar to past SAMPL challenges, we considered a large number of error metrics in analyzing all predictions submitted to SAMPL5. 
@@ -218,18 +210,18 @@ Each error metric was calculated for all submissions, by batch and distributed t
 Here we will focus primarily on six error metrics: the root-mean-squared error (RMSE), average unsigned error (AUE), average signed error (ASE), Pearson's R (R), Kendall's tau (tau), and the `error slope' explained in depth below. 
 We also calculated maximum absolute error and percent of predictions with the correct sign which are not included in the analysis here, but were provided to challenge participants and available in the supporting information.
 Uncertainty in each metric was calculated as the standard deviation in 1000 bootstrap trials. 
-As described previously, this bootstrapping technique included variation in the experimental values based on their reported uncertainties. % Cite SAMPL4 and anything else?
+As described previously, this bootstrapping technique included variation in the experimental values based on their reported uncertainties\cite{Mobley:2014gu}. % Cite anything else?
 
 As discussed above, an important evaluation of a predictive tool is the ability to estimate how well and when a computational method will agree with experiment. 
-As in SAMPL4, a quantile-quantile plot (QQ Plot) was created for each prediction set. % cite stats paper that describes them in depth
-QQ Plots show how the distribution of predictions with their model uncertainty compare to expectation, assuming a gaussian distribution. 
-For example, consider the number of predictions within one standard deviation of the expected value, the value on the x-axis represents the normal distribution, or 0.68, the value on the y-axis will represent the fraction of predictions that are within one model uncertainty of the experimental value.  % read again with a set of fresh eyes
-A regression analysis helps summarize these results, assuming a y-intercept of zero.
+As in SAMPL4 \cite{Mobley:2014gu}, a quantile-quantile plot (QQ Plot) was created for each prediction set. % cite stats paper that describes them in depth and  
+QQ Plots compare a normal distribution with how well a set of predictions agree with experiment according to the model uncertainty. 
+For example, consider the number of predictions within one standard deviation of the expected value, the value on the x-axis represents the normal distribution (0.68) and the value on the y-axis will represent the fraction of predictions that are within one model uncertainty of the experimental value.  % read again with a set of fresh eyes
+A regression analysis helps summarize these results.
 The `error slope' is the slope of the line comparing the fraction of predictions within range of experiment to the expected fraction in a normal distribution.
 An error slope of greater than one indicates that the calculated values are within uncertainty of experiment more often than expected, or in other words the model uncertainty was over estimated. 
 Oppositely, an error slope less than one suggests the model uncertainty was underestimated. 
 
-The last goal of prediction analysis was to identify any individual molecules where predicting distribution coefficients was difficult. 
+The last goal of prediction analysis was to identify any individual molecules where most of the methods failed to accurately estimate the distribution coefficient. 
 To accomplish this a data set was created for each molecule consisting of all predictions submitted for that molecule, then all the error metrics discussed above were calculated for each molecule. 
 Here we will primarily focus on just average unsigned error for molecules, but all other error metrics were provided to participants and available in supporting information. 
 
@@ -277,7 +269,7 @@ Polar solutes are more likely to significantly affect long range interactions so
 SAMPL5\_024 had the largest dipole moment so it was used as the solute for the box size investigation. 
 The solvation free energy calculations were set up as described above, changing the number of cyclohexane molecules from 100 to 500.  
 % I'm still not completely clear on how using reaction field affects the calculation, I know they change the way coulomb interactions are calculated at a longer distance?
-Our calculations above are performed with pme coulomb interactions, here we also repeated the solvation free energy calculations with reaction field coulomb interactions assigning the dielectric coefficient for cyclohexane, 2.043. % cite CRC for number
+Our calculations above are performed with pme coulomb interactions, here we also repeated the solvation free energy calculations with reaction field coulomb interactions assigning the dielectric coefficient for cyclohexane, 2.043 \cite{crc}.
 \begin{figure} 
 \includegraphics{boxSize.eps}
 \caption{This is a figure for the box size study}
@@ -291,7 +283,7 @@ The input, results, molecular dynamics parameter files, and tables of solvation 
 
 To help understand the results from our partition coefficient calculations could have been improved, we considered corrections for changes in the solutes protonation or tautomeric states.  
 Distribution coefficients different from partition coefficients in that they include all forms of the solute in both solvents. 
-A common way to correct between experimentally measured distribution coefficients and partition coefficients is with pKa values for the solute. % cite propranolol article and other main paper in intro from log P paper
+A common way to correct between experimentally measured distribution coefficients and partition coefficients is with pKa values for the solute. 
 This is a simple correction using the Henderson-Hasselbalch 
 equation:
 \begin{equation}
@@ -310,11 +302,11 @@ Alternatively for an acid solute (or HX in eqn. \ref{HH}) we would instead use:
 \log D = \log P - log(1+10^{pH-pK_a})
 \label{acidic}
 \end{equation}
-We use Schr\"{o}dinger's Epik tool % citation
+We use Schr\"{o}dinger's Epik tool % citations
 to calculate pKa values for each molecule according to experimental conditions. 
 We then estimated a $\log D$ using the equations above. 
 Using pKa values only accounts for one change in protonation, whereas a correct distribution coefficient should include all relevant tautomers and protonation states of the molecule in both solvents. 
-To correct for all other tautomer states we used Schr\"{o}dinger's LigPrep % citation
+To correct for all other tautomer states we used Schr\"{o}dinger's LigPrep % citations
 to enumerate tautomers for each molecule in the aqueous solution. 
 The results of the enumeration includes a energetic "state penalty" which relates the population of that tautomer to all others. 
 This state penalty can be converted into log units and used as a correction term to convert $\log P$ to $\log D$:
@@ -338,19 +330,16 @@ For the rest of this paper we will refer to the octanol/water partition coeffici
 
 \section{Results and Discussion}
 \label{results:1}
+% Since there is so much diversity in the better performing methods this is more of a paragraph about the variety of submission. I thought it would be a good way to open results and gives some context. 
+% I'm still working on exactly how to group and word this - you should probably skip it on this read. 
+Cyclohexane/water distribution coefficients were predicted by a broad range of methods for the SAMPL5 challenge. 
+A large portion of predictions used alchemical molecular dynamics simulations to estimate the solvation free energy in explicit solvent using fixed-charge all-atom force fields, all-atom/course-grained hybrid force fields, and polarizing force fields. 
+Other methods include 3D-RISM, EC-RISM, COSMO-RS, QM/MM, ... 
 
-% Since there is so much diversity in the best performing methods this is more of a paragraph or two about the variety of submission. I thought it would be a good way to open results and gives some context. 
-Broad range of methods, split into classes: MD all atom, MD hybrid, quantum?, Anything similar to COSMO? % I'm still reading and trying to understand methods
-Pie chart by number maybe?
-%DLM: This is lower priority - i.e. if you don't get to it, it's OK. 
-Clear trends on which are doing well? 
-%DLM: Seems like reasonable diversity, at least that's my take - though I think that it's probably the case that one could do FAIRLY well by doing all-atom MD simulations with a "reasonable" FF such as AMBER GAFF (i.e. our calculations and Fennell's, I think), but then mess it up by having problems with other things (i.e. 
-
-% I think this does fit here as a segway into "this is how everyone did this time"
-Past SAMPL challenges have involved hydration free energy calculations, but this is the first to include any partitioning between multiple solvents. 
-Distribution coefficients can be related to transfer free energy between solvents, which allows us to estimate an expected uncertainties from errors in past hydration free energy calculations. 
-In SAMPL4 \cite{Mobley:2014gu}, the average root-mean-squared error (RMSE) for the top half of submissions was about 1.5 kcal/mol which would correspond to 1.54 log units. 
-In contrast, here there are very few submissions with an RMSE less than 2.5 log units. 
+SAMPL5 is the first to include distribution coefficients, but we can estimate how well we expect submissions to do based on past SAMPL challenges which included hydration free energies. 
+Distribution coefficients can be related to transfer free energy between solvents, which allows us to estimate an expected performance from root-mean-squared errors (RMSE) in past hydration free energy calculations. 
+In SAMPL4 \cite{Mobley:2014gu}, the average RMSE for the best half of submissions was about 1.5 kcal/mol which would correspond to 1.54 log units error in a distribution coefficient. 
+In contrast, only five submissions had an RMSE less than 2.5 log units. 
  
 \begin{table}
 \scriptsize
@@ -358,7 +347,7 @@ In contrast, here there are very few submissions with an RMSE less than 2.5 log 
 \label{groupStats}
 \caption{Error metrics were calculate for each set of predictions, including root-mean-squared error (RMSE), average unsigned error (AUE), average signed error (ASE), Kendall's tau (tau), and Pearson's R (R). Error slope refers to the slope of data in a QQ Plot. Indicated submissions only included batch 0\textsuperscript{a} or batches 0 and 1\textsuperscript{b}.} 
 \end{table}
-%CCB: I right justified, it looks a little better, I had to take it down another font size to fit on one page, but I think if we could put the caption to the side instead of under the table it would fit with one font size up, one of the SAMPL4 tables was like that, we can probably just leave it for the editors. 
+%CCB: I right justified, it looks a little better, I had to take it down another font size to fit on one page, but I think if we could put the caption to the side instead of under the table it would fit with one font size up, one of the SAMPL4 tables was like that, we can probably just leave it as is for submission and adjust if we need to later. 
 
 \begin{figure*} % for 2 column use
 \includegraphics{ExamplePlots.eps} % I think they want file names (not labels) to be figure numbers, but that might just be if you're using word... I read it somewhere
@@ -395,10 +384,10 @@ In considering the results for the error slope analysis, participants generally 
 The top three submissions are the only within uncertainty of 1.
 Andrew Paluch from Miami University used conservative estimates based on results in previous calculations for solubility and hydration free energy for submissions 53 and 60. % cite paper
 Gerhard Koenig from Max-Planck-Institut fuer Kohlenforschung provided no explicit discussion of model uncertainty with submission 43. % cite paper if submitting
-Only submission 40 significantly overestimated their model uncertainty, with no explicit discussion of model uncertainty provided. % anonymous
+Only submission 40 significantly overestimated their model uncertainty.
 % is it better to say nothing than to say they didn't include a discussion? 
-The rest are below 1, indicating a significant underestimation of the model uncertainty. 
-% Concluding sentence about estimating uncertainty being important 
+All other submissions have an error slope below one, indicating a significant underestimation of the model uncertainty. 
+% maybe one more sentence about improving error calculations. 
 
 \subsection{Top performing submissions} 
 \label{results:2}
@@ -407,11 +396,20 @@ The rest are below 1, indicating a significant underestimation of the model unce
 \caption{}
 \label{BestGroups}      
 \end{figure*}
-We want to consider how close to experiment RMSE/AUE and how well correlated with experiment tau/R
 
-16 did best across both metric, COSMO-RS, brief statement about procedure
-
-14 and 36 also did very well, making "top 10" by at least 3 of those 4 metrics, 14 is one of Frank Pickard's and 36 is Chris Fennell
+In order to determine which submissions performed the best, we will group error metrics into two categories. 
+How well the predictions directly agree with experiment (RMSE and AUE) and then how well correlated the predictions are with experiment (tau and R). 
+Unlike past SAMPL challenges, there does appear to be one submission which performs the best by all of these metrics, submission 16. 
+There are two additional submissions which performed in the top by these four metrics, 14 and 36. 
+Each of these submission results compared to experiment are shown in figure \ref{BestGroups}. 
+For submission 16, Andreas Klamt from COSMOlogic used Conductor-Like-Screening Model for Real Solvents (COSMO-RS) to compute a partition coefficient for each solute from the difference in chemical potentials for the solute in each solvent. % cite Andreas' paper, I assume he will have one.
+To find distribution coefficients, calculations for the formation of different protonation states, zwitter ions, and tautomers were performed in COSMO-RS for relevant molecules. 
+For submission 14, Frank Pickard from the National Institute of Health used a quantum mechanical calculation in implicit solvent 
+% I'm not quite understanding this one here is what the method section for this submission says:
+% Gaussian was used to optimize geometries using M062x/6-31+G*.  Water and cyclohexane phases were modeled using the SMD implicit solvent model. Initial geometries were generated by taking trajectories generated using CHARMM/CGENFF, and then clustered using mass weighted RMSD. Ten clusters were generated this way for each molecule and for each solvent. Once structures were minimized, a frequency calculation was performed to correct to the Gibbs free energy. Additionally, a single point correct at the M062X/6-311++G** level of theory was performed to correct for basis set deficiencies.
+%  Absolute pKa calculations were performed in an effort to obtain the free energy differences between the various ionization states for certain molecules. Tautomers were also generated. All pKa calculations were done using M062X/6-31+G*/SMD level of theory.  The free energy of a gas phase proton was calculated analytically (-6.28 kcal/mol) and the experimental value of the proton solvation was used as suggested by Tissandier et al. (-265.9 kcal/mol). A correction to change from a standard state of one atmosphere to one molar was also employed (kT * ln(24.46)). No pKa corrections or tautomerizations were attempted for molecule 83.
+For submission 36, Christopher Fennell from Oklahoma State University estimated $\log D$ as a partition coefficient, calculated from the difference in alchemical solvation free energies where the solute was parameterized with the dielectrically corrected GAFF force field, water was the dielectrically corrected H2O-DC model, and cyclohexane was a specially optimized united-atom model. % cite Chris's paper
+Further details for each of these submissions can be found in this issue so only a brief explanation of each method was provided here. 
 
 \subsection{`other methods'} % I decided to group the xlogp methods results in here, I think it makes sense, but I'm struggling to come up with a good section title.
 \label{results:3}
@@ -436,7 +434,6 @@ $XlogP_{oct}$ would be in the top few submissions by tau and R, but in the botto
 However, with a simple correction factor trained on experimental cyclohexane/water partition coefficients \cite{Leo:1971wu}, $XlogP_{corr}$ has a better RMSE and AUE than any other submission. 
 We do not wish to suggest that regression trained tools are the best mechanism for predicting distribution coefficients, instead, this indicates a need for improvement for the more physical methods. % also don't love the wording, but I don't want to leave the idea that we are suggesting to use linear regression instead of physical methods. ...
 
-
 \subsection{Mobley group prediction results}
 \label{results:6}
 
@@ -455,103 +452,122 @@ The initial set of predictions were partition coefficients, determined from the 
 submissions for all error metrics.  
 % Double check numbers, slight bias for cyclohexane to water from average signed error
 
-
-% These numbers are way closer to each other than I remember, I remembered state penalty corrections improving most of the error metrics (even if it was within error bars...) I'm going to check the scripts again and make sure something didn't get messed up. 
+% These numbers are way closer to each other than I remember, I remembered state penalty corrections improving most of the error metrics (even if it was within error bars...) 
+% which is also what you had in the D3R talk, I'm going to check the scripts again and make sure something didn't get messed up. 
 \begin{table}
 \footnotesize
-\input{MobleyStats.tex}
+\begin{tabular}{| l |l |l | l |} 
+\hline 
+Metric & $\log P$ & $pK_a$ & state \\ 
+\hline 
+AveErr & $ 1.6 \pm 0.3$ & $ 0.7 \pm 0.3 $ & $ 0.5 \pm 0.4 $ \\ 
+RMSE & $ 2.6 \pm 0.2$ & $ 2.4 \pm 0.2 $ & $ 2.6 \pm 0.3 $ \\ 
+AUE & $ 2.1 \pm 0.2$ & $ 2.0 \pm 0.2 $ & $ 2.1 \pm 0.2 $ \\ 
+tau & $ 0.49 \pm 0.08$ & $ 0.65 \pm 0.07 $ & $ 0.65 \pm 0.06 $ \\ 
+R & $ 0.6 \pm 0.1$ & $ 0.78 \pm 0.07 $ & $ 0.77 \pm 0.06 $ \\ 
+\hline
+\end{tabular}
 \label{MobleyStats}
 \caption{} 
 \end{table}
 
 After the challenge we explored how correcting for protonation states would have affected the our initial predictions. 
 The first set of corrections involved calculating the pKa for each molecule using Schr\"{o}dinger's Epik tool. 
-Next, $\log D$ was calculated using the pKa and partition coefficient determined in submission 39 using eqn. % get reference
-For compounds with more than one pKa, the one which caused the largest change in $\log D$ was used, this would represent the most acidic proton leaving or most basic functional group becoming protonated. % this is a confusing sentence
-This correction showed a slight improvement by most error metrics (Table % ref table) 
-including a decrease in the average error (value) indicating less bias toward concentration. 
-%DLM: Give numerical values for a metric or two (i.e. one for error and one for corelation) to make "slight" less subjective. 
+Next, $\log D$ was calculated using the pKa and partition coefficient determined in submission 39 using equation \ref{acidic} for acidic solutes and equation \ref{basic} for basic. 
+We assumed only one change in protonation state occurred so only one $pK_a$ was used either the most acidic or basic. 
+This does not account for zwitterions or other neutral tautomers. 
+This correction showed a slight improvement by most error metrics (Table \ref{MobleyStats}) 
+including a decrease in the average error from $1.6 \pm 0.3$ to $0.7 \pm 0.3$ indicating less bias toward concentration in cyclohexane. 
 
-For the next set of corrections, we used Schr\"{o}dinger's Ligprep tool to calculate a state penalty, which gives the relative population of tautomers in water at a given pH. % ick
-The state penalty was used to correct the concentration in the aqueous layer, according to eqn. % reference if I have one
-State penalties improved predictions from the original partition coefficient coefficients and showed a slight improvement over the pKa corrections (Fig. \ref{myComparisons}). 
-% Expand here...
-Both of these correction methods only adjust the concentration in the aqueous layer, however there may be tautomer affects that also affect the concentration in cyclohexane as well. 
-There are a few molecules where the state penalty correction caused a significant bias for the concentration in the aqueous layer (SAMPL5\_050). % I need to double check the others
+For the next set of corrections, we used Schr\"{o}dinger's Ligprep tool to calculate a state penalty, which gives the relative population of tautomers in water at the given pH 7.4.
+The state penalty was used to correct the concentration in the aqueous layer, according to equation \ref{statepenalty}.
+State penalties improvements from the original partition coefficient coefficients for tau ($0.49 \pm 0.08$ to $0.65 \pm 0.06$) and R ($0.6 \pm 0.1$ to $0.77 \pm 0.06$), but no change in RMSE or AUE.  
+Both of these correction methods only adjust the concentration in the aqueous layer, however there may be tautomer affects that also affect the concentration in cyclohexane as well.
+Outliers and Molecules with significant changes in $\log D$ were indicated by number in figure \ref{mobleyPlots}. 
+SAMPL\_050 for example, had an initial $\log P$ value of $1.20 \pm 0.04$ which was decreased significantly to -9.78 with the pKa correction and 10.70 with the state penalty correction compared to the experimental value $-3.2 \pm 0.6$. 
+SAMPL\_060 and SAMPL\_060 also changed by more than 3 log units during these corrections. 
 One explanation for these extreme examples is that the solute might have other neutral tautomers that would affect the concentration in cyclohexane, which we did not correct for. 
-% add a sentence or two here to conclude this
-%DLM: I would get specific and give numbers - i.e. pick a couple of the problematic examples and explain that for, i.e., 50, the state penalty takes a log P value of xyz and makes it abc, as compared to the experiemtnal value def+/-whatever; we want to give people an idea of how big an effect we're talking about.
+
 
 % I moved this down so we could address our tautomer reruns and the simulation with 074 in water with the discussion of individual molecules, it felt more logical that way. Like here are ones that did poorly and some possible reasons as to why. 
 \subsection{Examining individual molecules}
+\label{results:7}
+With only 53 molecules, it is difficult to find statistically significant trends; compared to past SAMPL challenges, this set of molecules is much more complex. 
+They are on average larger, more flexible, and contain multiple functional groups per compound. 
+For each molecule, we organized a data set of predicted distribution coefficients and compared them to the experimental values, calculating the average unsigned error for each (Table \ref{MoleculeTable}). 
+In general, molecules with an AUE less than 2.0 log units (SAMPL5\_ 003, 045, and 059) are slightly more rigid than other molecules and they are all in batch 0. 
+We tried grouping molecules by functional group, molecular mass, and estimated number of tautomers. 
+The only trend found in this process was that all five carboxylic acids (SAMPL5\_ 010, 011, 015, 026, and 060) are in the bottom ten molecules by AUE and RMSE. 
+This could be due to a lack of accurate or proper attention given to the affect of protonation state changes. 
+Among the bottom compounds, perhaps unsurprisingly, was SAMPL5\_083 which is a large macrocycle and SAMPL5\_050, both have many tautomeric forms. 
+% Can/should we cite the D3R meeting?
+Most submissions had significant errors in predicting SAMPL5\_074, despite the fact that it is relatively small, rigid, and has no other significant tautomers. 
+Below we will explore the reason some of these molecules may have been difficult to accurately predict a distribution coefficient. 
 
-Full error analysis repeated for individual molecules, there aren't very many "simple" molecules, almost all have hetero atoms and rotatable bonds...
-
-about 5-10 worst, I'm looking into if there are trends in number of tautomer or functional group similarities...
-
-about 5-10 best, still looking for trends, we know 083, 074. 015 also did poorly amino acid? I don't know why that would cause more problems in general. 
-
-% It was clear from epik and discussions with other SAMPL5 participants (cite Klamt?)  that 050 and 083 had dominant tautomers other than provided SMILE
+\paragraph{Provided SMILES strings may not be the most populated tautomeric form of the molecule.}
 From our tautomer enumeration and discussions with other SAMPL5 participants % cite Andreas and maybe Frank, look at e-mail
-it became clear that the provided SMILES string may not be the most popular %???
-%DLM: Populated. Different from popular. :) 
-tautomeric form of the molecule. 
+it became clear that accurately estimating $\log D$ for molecules with many tautomers was difficult. 
 If we could perfectly calculate solvation free energies and tautomer populations in both solvents, the starting tautomer should not effect the final calculated distribution coefficient.  
 Our initial solvation free energy calculations used provided SMILES strings without any consideration of other tautomers.
 To explore how this may have affected our $\log D$ calculation, we decided to repeat a few solvation free energy calculations with different tautomers. 
-%DLM: FIrst part of that sentence is redundant with above? 
-We repeated calculations with different tautomers of SAMPL5\_050 and SAMPL5\_083 that could be present in both the water and cyclohexane solutions. 
-To explore how the tautomer used to calculate the solvation free energy might effect the estimate of a distribution coefficient. 
-
-% I got slightly distracted playing with table formatting, I'm working on coding it out and copy and paste it here. 
+We used SAMPL5\_050 and SAMPL5\_083 as examples since both have other neutral tautomers that could be present in both the water and cyclohexane solutions. 
 \begin{table}
-\begin{tabular}{l | l l | l l}
+\begin{tabular}{| l | l l | l l |}
 \hline
-& \multicolumn{2}{|c|}{SAMPL5\_050} & \multicolumn{2}{c}{SAMPL5\_083} \\
+& \multicolumn{2}{|c|}{SAMPL5\_050} & \multicolumn{2}{|c|}{SAMPL5\_083} \\
 & tautomer 1 & tautomer 2 & tautomer 1 & tautomer 2 \\
 \hline
 $\Delta G_{hydration}$ & $ 11.45 \pm 0.04 $ &  $ 21.50 \pm 0.03$ &  $33.98 \pm 0.07$ &  $32.68 \pm 0.1$ \\
 $\Delta G_{cyclohexane}$ & $ 13.09 \pm 0.04 $ &  $ 13.25 \pm 0.04$ &  $35.6 \pm 0.1$ &  $36.1 \pm 0.2$ \\
 $\log P_{cyc/wat}$ & $ 1.20 \pm 0.04 $ &  $ -6.04 \pm 0.03$ &  $1.21 \pm 0.09$ &  $2.5 \pm 0.2$ \\
-Correction & \multicolumn{1}{c}{$ -11.902 $} &  \multicolumn{1}{c}{$ -0.453$} &  \multicolumn{1}{c}{$ -0.488 $} &  \multicolumn{1}{c}{$ -6.53 $} \\
+Correction & \multicolumn{1}{c}{$ -11.902 $} &  \multicolumn{1}{c|}{$ -0.453$} &  \multicolumn{1}{c}{$ -0.488 $} &  \multicolumn{1}{c|}{$ -6.53 $} \\
 $\log D_{cyc/water}$ & $ -10.70 \pm 0.04 $ &  $ -6.50 \pm 0.03$ &  $0.72 \pm 0.09$ &  $-4.0 \pm 0.2$ \\
 \hline
-experimental $\log D$ & \multicolumn{2}{|c|}{$-3.2 \pm 0.6$} & \multicolumn{2}{c}{$-1.9 \pm 0.4 $} \\
+experimental $\log D$ & \multicolumn{2}{|c|}{$-3.2 \pm 0.6$} & \multicolumn{2}{|c|}{$-1.9 \pm 0.4 $} \\
 \hline
 \end{tabular}
 \label{tautomerChanges}
-\caption{Simulations with different tautomers...}
+\caption{} % Need a caption
 \end{table}
-% Possibly 2d images of the two tautomers...
+% Possibly 2d images of the two tautomers?
+For both SAMPL5\_050 and SAMPL5\_083 there were significant changes in there calculated solvation free energies and partition coefficients for the two different tautomers (Table \ref{tautomerChanges}). 
+Distribution coefficients were calculated from the $\log P$ and state penalties calculated with Schr\"{o}dinger's LigPrep tool. 
+In both cases the $\log D$ is still significantly different from the experimental values. 
+Since both the calculated solvation free energies and tautomer enumeration is needed to estimate the distribution coefficient, it is impossible for us to know which calculation introduces more error into our estimate.  
 
-
-We reran these tautomers to calculate solvation free energies, used state penalty %results in a table probably (or maybe a figure like the one I made for erythromycin in the logP paper)
-
-Generally hard to tell if its tautomer enumeration that isn't good or the solvation free energies
-%DLM: Yes, though it seems like a clear point is that this is important and that one can't hope to do well for at least some of these cases without a reasonable treatment of protonation states and tautomers, yes?
-
-%DLM: Do you have my slides? One other quick check to do is to make sure we hit all the main points I hit in my slides. Not that I've covered everythign I should have (far from it!) but rather, people will expect the overview to at least cover what I talked about... :) 
-
-\subsection{Considering how solvent interactions could possibly affect results} 
-\label{results:7}
-
-%DLM: What is this section for? is this the "water content" thing? (BTW that SHOULD be mentioned somewhere even if we don't have a final answer yet.)
+\paragraph{Solvents are not completely immiscible.} 
+Though it is very small, ... M, the concentration of water in cyclohexane may affect how a solute is distributed across the two solvents. 
+This will be particularly important for solutes with many polar groups; and is suggested as one reason it was difficult to accurate estimate the $\log D$ for SAMPL5\_074.
+We performed a new calculation of solvation free energy of SAMPL5\_074 into cyclohexane with water also in the solution. 
+This simulation was set-up with Solvation Toolkit as described above with 1 solute, 150 cyclohexane, and 7 water molecules. 
+Due to a slightly concentration miscalculation and the limit of box size, this is about 100 times more concentrated water to cyclohexane than is determined experimentally. 
+We treat this example as a proof of concept that the presence of water in the cyclohexane phase could dramatically affect the computed distribution coefficient. 
+% I will insert a table with numbers here
+There is a significant change in the computed solvation free energy for SAMPL5\_074 into cyclohexane with water than without. 
+This dramatically improves the estimation for $\log D$, proving that the presence of water in the cyclohexane layer could have dramatic affects on the calculated distribution coefficients. 
+Further simulations would be needed to conclude how varying the concentration of water in cyclohexane would affect these calculations. 
+The box sizes are relatively small, so local concentrations of water could be different near a polar solute than in bulk cyclohexane. % This is mostly intuition, but I probably should cite something here. 
 
 \section{Conclusions}
 \label{conclusions}
 
-Overall, range of methods and performance
+% Overall, range of methods and performance
+% Compare to dGhydration in past SAMPL challenges? using average errors, possibly what methods/FF are top ranked?
+Similar to past SAMPL challenges, a broad range of methods were used to compute distribution coefficients with varying success. 
+The performance of top methods in SAMPL5 seem to be significantly worse than we might anticipate from hydration free energy calculations in SAMPL4. 
+There are many explanations for this supposed dip in performance. 
+The molecules in SAMPL5 were larger, more flexible than those in past SAMPL challenges.
+Partition coefficients are directly proportional to a simple transfer free energy, which is how the anticipated errors were estimated.
+However, distribution coefficients add a layer of complexity with the need to account for other protonation states and tautomers. 
+Accurately accounting for tautomers is a vital part of accurately calculating $\log D$. 
+Considering which molecules were the most difficult to calculate, tautomer enumeration is clearly a place that needs improvement. 
 
-Compare to dGhydration in past SAMPL challenges? using average errors, possibly what methods/FF are top ranked?
-
-Tautomer and/or pKa predictions are going to be an important part of improving these
-
-We, as a community, need to improve error estimation, both how we do and how we evaluate it...
+% We, as a community, need to improve error estimation, both how we do and how we evaluate it...
 
 logP/logD seem to be good options for future blind challenges
 
 \begin{acknowledgements} % fill in institutes for everyone
-John Chodera and Bas MSKCC
+John Chodera and Bas MSKCC % get Bas' full name 
 Andreas Klamt
 Chris Fennell
 Samuel Genheden
@@ -585,4 +601,5 @@ example MDP and run scripts
 % number of tautomers? checkmol molecules? Kendall W? Nothing yet
 % Kendall W if we decide to include it
 % possibly a paragraph about MW, # of rotatable bonds, or # of tautomers (no tautomer trend yet...)
+% More information on different methods with slightly more detail and/or quantitative distribution of the different methods. 
 
