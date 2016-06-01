@@ -6,6 +6,37 @@
   \providecommand{\doi}{DOI \discretionary{}{}{}\begingroup
   \urlstyle{rm}\Url}\fi
 
+\bibitem{Mobley:2014gu}
+D.L. Mobley, K.L. Wymer, N.M. Lim, J.P. Guthrie, Journal of Computer-Aided
+  Molecular Design \textbf{28}(3), 135 (2014)
+
+\bibitem{Geballe:2012fc}
+M.T. Geballe, J.P. Guthrie, Journal of Computer-Aided Molecular Design
+  \textbf{26}(5), 489 (2012)
+
+\bibitem{Geballe:2010jr}
+M.T. Geballe, A.G. Skillman, A.~Nicholls, J.P. Guthrie, P.J. Taylor, Journal of
+  Computer-Aided Molecular Design \textbf{24}(4), 259 (2010)
+
+\bibitem{Klimovich:2010jm}
+P.V. Klimovich, D.L. Mobley, Journal of Computer-Aided Molecular Design
+  \textbf{24}(4), 307 (2010)
+
+\bibitem{Mobley:2009iu}
+D.L. Mobley, C.I. Bayly, M.D. Cooper, K.A. Dill, The Journal of Physical
+  Chemistry B \textbf{113}(14), 4533 (2009)
+
+\bibitem{Mobley:2012jwa}
+D.L. Mobley, S.~Liu, D.S. Cerutti, W.C. Swope, J.E. Rice, Journal of
+  Computer-Aided Molecular Design \textbf{26}(5), 551 (2012)
+
+\bibitem{Nicholls:2008cx}
+A.~Nicholls, D.L. Mobley, J.P. Guthrie, J.D. Chodera, C.I. Bayly, M.D. Cooper,
+  V.S. Pande, Journal of Medicinal Chemistry \textbf{51}(4), 769 (2008)
+
+\bibitem{Leo:1971wu}
+A.~Leo, C.~Hansch, D.~Elkins, Chemical Reviews \textbf{71}(6), 525 (1971)
+
 \bibitem{Berendsen:1995gro}
 H.J.C. Berendsen, D.~Van Der~Spoel, R.~van Drunen, Comput. Phys. Commun.
   \textbf{91}(1-3), 43 (1995)
@@ -51,10 +82,6 @@ A.~Jakalian, D.B. Jack, C.I. Bayly, Journal of Computational Chemistry
 S.~Liu, S.~Cao, K.~Hoang, K.L. Young, A.S. Paluch, D.L. Mobley, Journal of
   Chemical Theory and Computation \textbf{12}(4), 1930 (2016)
 
-\bibitem{Klimovich:2010jm}
-P.V. Klimovich, D.L. Mobley, Journal of Computer-Aided Molecular Design
-  \textbf{24}(4), 307 (2010)
-
 \bibitem{Klimovich:2015er}
 P.V. Klimovich, M.R. Shirts, D.L. Mobley, Journal of Computer-Aided Molecular
   Design \textbf{29}(5), 397 (2015)
@@ -63,6 +90,9 @@ P.V. Klimovich, M.R. Shirts, D.L. Mobley, Journal of Computer-Aided Molecular
 S.~Parameswaran, D.L. Mobley, Journal of Computer-Aided Molecular Design
   \textbf{28}(8), 825 (2014)
 
+\bibitem{crc}
+W.M. Haynes, \emph{CRC handbook of chemistry and physics} (CRC press, 2014)
+
 \bibitem{RenxiaoWang:1997fa}
 R.~Wang, Y.~Fu, L.~Lai, Journal of Chemical Information and Modeling
   \textbf{37}(3), 615 (1997)
@@ -70,12 +100,5 @@ R.~Wang, Y.~Fu, L.~Lai, Journal of Chemical Information and Modeling
 \bibitem{Wang:2000kk}
 R.~Wang, Y.~Gao, L.~Lai, Perspectives in Drug Discovery and Design
   \textbf{19}(1), 47 (2000)
-
-\bibitem{Leo:1971wu}
-A.~Leo, C.~Hansch, D.~Elkins, Chemical Reviews \textbf{71}(6), 525 (1971)
-
-\bibitem{Mobley:2014gu}
-D.L. Mobley, K.L. Wymer, N.M. Lim, J.P. Guthrie, Journal of Computer-Aided
-  Molecular Design \textbf{28}(3), 135 (2014)
 
 \end{thebibliography}

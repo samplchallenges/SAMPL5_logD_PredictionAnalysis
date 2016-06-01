@@ -551,8 +551,6 @@ The box sizes are relatively small, so local concentrations of water could be di
 \section{Conclusions}
 \label{conclusions}
 
-% Overall, range of methods and performance
-% Compare to dGhydration in past SAMPL challenges? using average errors, possibly what methods/FF are top ranked?
 Similar to past SAMPL challenges, a broad range of methods were used to compute distribution coefficients with varying success. 
 The performance of top methods in SAMPL5 seem to be significantly worse than we might anticipate from hydration free energy calculations in SAMPL4. 
 There are many explanations for this supposed dip in performance. 
@@ -562,22 +560,28 @@ However, distribution coefficients add a layer of complexity with the need to ac
 Accurately accounting for tautomers is a vital part of accurately calculating $\log D$. 
 Considering which molecules were the most difficult to calculate, tautomer enumeration is clearly a place that needs improvement. 
 
-% We, as a community, need to improve error estimation, both how we do and how we evaluate it...
+We asked participants to estimate two forms of uncertainty, statistical uncertainty and model uncertainty, which should predict how well their calculation will agree with experiment. 
+An important part of making prediction tools usable is accurately knowing how good a prediction will be. % this wording isn't great
+Almost every participant significantly underestimated their model uncertainty. 
+The importance to improve error estimations as a community has been addressed in past SAMPL challenges \cite{Mobley:2014gu}. % I haven't carefully read all of the SAMPL papers, but I know you talk about it in depth in SAMPL4
 
-logP/logD seem to be good options for future blind challenges
+Distribution coefficients provided a physical property that can be related to free energy and measured experimentally with relative ease. 
+They have highlighted issues, such as tautomer enumeration, that need to be improved.
+The ability to create new, completely blind data sets make distribution coefficients a great option for future challenges. 
 
 \begin{acknowledgements} % fill in institutes for everyone
-John Chodera and Bas MSKCC % get Bas' full name 
-Andreas Klamt
-Chris Fennell
-Samuel Genheden
-Frank Pickard
-Michael Shirts - reference calculation and input format conversion
-Schr\"{o}dinger people % They didn't really get involved until Art started using Jaguar, which we're not talking about at all. 
-% CCB: You mentioned open eye in your comments, everything I did with openeye I got from scripts you gave me or with their python cookbooks online
-D3R team % I assume we will still acknowledge the resource. 
-people who set up the automated submission system %they are gods in my opinion =]
-Maybe something at the end like and all D3R Workshop participants?  I bounced ideas back and forth with a lot of people while we were there...
+\item John Chodera and Bas MSKCC % get Bas' full name 
+\item Andreas Klamt
+\item Chris Fennell
+\item Samuel Genheden
+\item Frank Pickard
+\item Michael Shirts - reference calculation and input format conversion
+\item Schr\"{o}dinger people % They didn't really get involved until Art started using Jaguar, which we're not talking about at all. 
+\item You mentioned open eye in your comments, everything I did with openeye I got from scripts you gave me or with their python cookbooks online
+\item D3R team % I assume we will still acknowledge the resource. 
+\item Maybe something at the end like and all D3R Workshop participants?  I bounced ideas back and forth with a lot of people while we were there... not all of them people submitted predictions and not all of them are people's who's name I remember... 
+\item Should we also thank Genetech people who let Bas do measurements there?
+\item people who set up the automated submission system %they are gods in my opinion =]
 %DLM: Except for the use of hash keys as submission IDs. ;) CCB: haha very true - Are there people besides Mike Chiu who did this?
 
 \end{acknowledgements}

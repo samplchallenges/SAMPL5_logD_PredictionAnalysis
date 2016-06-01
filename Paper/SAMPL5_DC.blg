@@ -1,46 +1,46 @@
-This is BibTeX, Version 0.99d (TeX Live 2015)
+This is BibTeX, Version 0.99d (TeX Live 2011)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: SAMPL5_DC.aux
 The style file: spphys.bst
 Database file #1: SAMPL5_DC.bib.bib
-You've used 18 entries,
+You've used 24 entries,
             2812 wiz_defined-function locations,
-            728 strings with 8328 characters,
-and the built_in function-call counts, 7050 in all, are:
-= -- 426
-> -- 252
+            764 strings with 9496 characters,
+and the built_in function-call counts, 9153 in all, are:
+= -- 540
+> -- 330
 < -- 2
-+ -- 99
-- -- 78
-* -- 442
-:= -- 786
++ -- 129
+- -- 102
+* -- 574
+:= -- 1026
 add.period$ -- 0
-call.type$ -- 18
+call.type$ -- 24
 change.case$ -- 0
 chr.to.int$ -- 0
-cite$ -- 18
-duplicate$ -- 803
-empty$ -- 695
-format.name$ -- 96
-if$ -- 1559
+cite$ -- 24
+duplicate$ -- 1039
+empty$ -- 920
+format.name$ -- 125
+if$ -- 2032
 int.to.chr$ -- 0
-int.to.str$ -- 18
-missing$ -- 206
-newline$ -- 62
-num.names$ -- 18
-pop$ -- 317
+int.to.str$ -- 24
+missing$ -- 271
+newline$ -- 80
+num.names$ -- 24
+pop$ -- 416
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 186
+skip$ -- 234
 stack$ -- 0
-substring$ -- 207
-swap$ -- 549
+substring$ -- 260
+swap$ -- 700
 text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 0
-while$ -- 39
-width$ -- 20
-write$ -- 151
+while$ -- 50
+width$ -- 26
+write$ -- 198
