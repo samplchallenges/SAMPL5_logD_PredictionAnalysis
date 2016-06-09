@@ -88,10 +88,9 @@ M.K.G. has an equity interest in and is a cofounder and scientiﬁc advisor of Ver
 	\and
 	K. H. Burley \at Department of Pharmaceutical Sciences, University of California, Irvine
 	\and
-	M. Chiu \at % institution? also is there other funding sources we should be adding for him?
-	%DLM: At UCSD. No funding sources to add I don't think, I think he's a permanent staffer there. 
+	M. Chiu \at Qualcomm Institute, University of California, San Diego
 	\and
-	M. K. Gilson \at University of California, San Diego % Check department
+	M. K. Gilson \at Skaggs School of Pharmacy and Pharmaceutical Sciences, University of California, San Diego 
 	\and
 	D. L. Mobley \at Department of Chemistry and Department of Pharmaceutical Sciences, University of California, Irvine\\
 		147 Bison Modular, Irvine, CA 92697
@@ -130,13 +129,11 @@ Conclusions: tautomeric enumeration,
 \label{intro}
 
 This year's Statistical Assessment of Modeling of Proteins and Ligand (SAMPL) challenge focuses on prediction of cyclohexane-water distribution coefficients. 
-This focus on distribution coefficients replaces the previous emphasis on hydration free energies which has been a fixture of the past five challenges (SAMPL0-4) \cite{Mobley:2014gu,Geballe:2012fc,Geballe:2010jr,Klimovich:2010jm,Mobley:2009iu,Mobley:2012jwa,Nicholls:2008cx}.
-%DLM: Two "focus"es in same sentence, changed one to "emphasis" to avoid seeming repetitive.
+The inclusion of distribution coefficients replaces the previous focus on hydration free energies which was a fixture of the past five challenges (SAMPL0-4) \cite{Mobley:2014gu,Geballe:2012fc,Geballe:2010jr,Klimovich:2010jm,Mobley:2009iu,Mobley:2012jwa,Nicholls:2008cx}.
 Due to a lack of ongoing experimental work, hydration free energies are no longer a practical property for blind challenges. 
 It has become increasingly difficult to find unpublished or obscure hydration free energies and therefore impossible to design a challenge focusing on particular compounds, functional groups or chemical classes. 
 The past SAMPL challenges have driven real improvements in a variety of methods for calculating hydration free energy \cite{Mobley:2014gu}, so we sought to include a similar physical property in SAMPL5. 
-The organizers settled on cyclohexane-water distribution coefficients, and thanks to a partnership with Genentech, this led to a series of measurements on drug-like compounds, discussed in detail in this issue. %ref Bas' paper
-%DLM made wording change to make it not sound like organizers did measurements.
+The Drug Design Data Resource (D3R), organizers for SAMPL5, settled on cyclohexane-water distribution coefficients, and thanks to a partnership with Genentech, this led to a series of measurements on drug-like compounds, discussed in detail in this issue. %ref Bas' paper
 Measurement is also straightforward enough that future distribution coefficient challenges can be deliberately designed to focus on issues that merit attention to move the field forward.
 
 Partition and distribution coefficients are important physical properties which can provide a valuable opportunity for testing computational methods and molecular models. % cite one of the experimental review papers
@@ -147,57 +144,45 @@ D = \frac{\sum_i [X_i]_{cyc}}{\sum_i [X_i]_{aq}}
 \label{deflogD}
 \end{equation}
 where $X_i$ represents a single protonation or tautomeric state of the solute in one of the solvents, and the sum runs over all protonation and tautomeric states. 
-%DLM: There was no explanation of what the sum was over. Clarified and split explanation into two sentences.
-Results are reported as the logarithm of this ratio ($\log D$). % probably should cite something here
-These are more complicated than partition coefficients ($\log P$), which are for only the neutral species of the compound \cite{Leo:1971wu}.
-%DLM: I don't think $log P$ is really for a single tautomer, right? I think it's just for the neutral species. Otherwise one would actually have to MEASURE the tautomer ratios in each solvent in order to get the log P, right? 
-%DLM: It's possible I'm just confused, but I don't THINK so.
-If only a single tautomer of the neutral form is relevant, $\log P$ is proportional to the transfer free energy, and can be calculated from solvation free energies. % cite all the computational logP papers. 
-In contrast, all tautomers will need to be included to accurately calculate $\log D$.
-%DLM: I tried to add a bit of transition between the last couple sentences to connect them, as it seemed like the paragraph was jumping between log P and log D without really saying what was going on. Hopefully it helps.
+Results are reported as the logarithm of this ratio ($\log D$). % probably should cite something here or on the sentence above
+These are more complicated than partition coefficients ($\log P$), which are for only a single molecular species of the compound \cite{Leo:1971wu}.
+$\log P$ is proportional to the transfer free energy, and can be calculated from solvation free energies. % cite all the computational logP papers. 
+In contrast, all tautomers will need to be included to accurately calculate $\log D$, which can be estimated from a calculated $\log P$ and the relative populations of tautomers in each solvent. 
+% I added that you can estimate logD from logP so it's clear why we brought up partition coefficients. 
  This complexity brings some new complexities to the SAMPL challenge which were avoided in previous hydration free energy challenges. 
 Here, accurate tautomer enumeration in both solvents may be an important part of predicting $\log D$. 
-
-% I still can't find any obvious logP or logD challenges, I'll do more googling, but I'm leaving that paragraph out for now. 
-%DLM: Yes, may not be any. 
 
 Here we discuss results for the SAMPL5 challenge, highlighting difficulties that were common among submissions.
 We perform a number of error analyses to determine the best methods.
 We also include details for a set of reference calculations we performed estimating $\log D$ as the cyclohexane/water partition coefficient as well as a series of follow-up studies focusing on the importance of tautomers in estimating $\log D$.  
+
+Here we give an overview of the analysis done for the SAMPL5 challenge, including the compounds considered, overall performance of submissions, and the metrics used for analysis. 
+We also include details for sets of reference calculations we performed that include 
 Overall, we believe the outcome of the present SAMPL5 challenge highlights the potential benefits of this type of experimental data to improve computational methods, force fields, sampling algorithms, and treatment of protonation states and tautomers.
 Many of these issues will be highly relevant for nominally more challenging problems, such as predictions of protein-ligand binding affinities.
 %DLM: I'm not a huge fan of making the last part of the intro being a list of things that are going to be talked about. But I do like the "Overall, we believe..." and "Many of these..." sentences which seem to belong. Maybe the list part can be replaced with something more like:
 %"Here, we give an overview of the analysis done for the SAMPL challenge, including the compounds considered, overall performance of participants, and the metrics used for analysis. We also discuss a set of reference calculations we did that help shed some light into the importance of different physical effects. Overall..."
  
-
-% I feel like D3R should have come up in the intro... I'm not sure where though. I'm put this here as a reminder to change the first occurrence to their full name. 
-% Drug Design Data Resource (D3R)
-
 \section{Challenge Logistics}
 \label{logistics}
 SAMPL5 began on September 15, 2015
 when the specifications for the challenge became available on the D3R website (http://drugdesigndata.org), these are also provided in the supporting information.  
-The challenge deadline was February 1, 2016  % I think it technically got extended, but this is the date that is still on the website, should I include the "new" deadline?
-%DLM: Yes. Do you need me to look it up? 
+The challenge deadline was February 2, 2016  % found e-mail, just a 24 hour extension
 and experimental results were provided to participants not long after. 
 As in past SAMPL challenges, each group could submit multiple sets of predictions.
 There was also the option to remain anonymous.  
-A total of 76 prediction sets from 18 participants or participating groups were submitted and assigned a 2 digit ID number 01 to 76 that will be used throughout this paper. 
-%DLM: "random 2 digit ID"? These are not in submission order, right? 
+A total of 76 prediction sets from 18 participants or participating groups were submitted and assigned a random 2 digit ID number 01 to 76 that will be used throughout this paper. 
 Predictions were analyzed and overview statistics, as well as individual analysis of each submission by various error metrics (as detailed below) were returned to each participant. 
 The challenge culminated with discussions of participants experiences and results at the 1st Annual D3R Workshop at the University of California, San Diego March 9-11, 2016.
-%DLM: Do they call it "first annual"? For some reason I thought they hadn't totally decided how often the workshops would be. 
+%DLM: Do they call it "first annual"? For some reason I thought they hadn't totally decided how often the workshops would be. - yep that is what their website called it. 
 
-% CCB: I thought it made more sense to have the table of molecules earlier, that way we can refer to it and it gives the diversity of molecules when people are reading about the challenge in general. 
-%DLM: Yes.
-\label{results:4}
 \begin{table}
 \input{MoleculeTable.tex}
 \label{MoleculeTable}
-\caption{A complete list of compounds used in the SAMPL5, sorted by batch. The average unsigned error, reported in log units, was calculated with all predictions for that compound.} 
+\caption{A complete list of compounds used in the SAMPL5, sorted by batch. The average unsigned error, reported in log units, was calculated with all submitted predictions for that compound.} 
 \end{table}
 
-For the prediction of distribution coefficients in SAMPL5, a total of 53 molecules were considered. 
+For the prediction of distribution coefficients in SAMPL5, a total of 53 molecules were considered (Table \ref{MoleculeTable}). 
 Molecules were assigned an identifier in the form SAMPL5\_XXX; the complete table can be found below and in the supporting information. 
 The 53 molecules were divided into batches 0, 1, and 2 containing 13, 20, and 20 molecules respectively. 
 We wanted each batch to have a similar dynamic range and for the molecules to increase in size across batches, so on average the smallest molecules are in batch 0 and the largest in batch 2. 
@@ -210,16 +195,12 @@ The idea was that all participants should attempt predictions on the full set if
 Eight submissions from two participants submitted results for only batch 0, an additional five submissions from two participants provided only batch 0 and batch 1.
 Here we focus on the results for the complete set of molecules (batches 0, 1, and 2). 
 Separate analysis for the other submission options (batch 0 or batches 0 and 1) is available in the supporting information.
-Included in the challenge information was the SMILES string for each molecule as well as mol2 and SDfiles. 
-All information provided to challenge participants is included in the supporting information. 
-%DLM: Not quite sure what those last two sentences are doing here/in this paragraph. Do they belong somewhere else? They are on a different topic, as the rest of the paragraph is about batches and submissions.
 
 Participants were asked to report a cyclohexane/water distribution coefficient for each molecule. 
 As discussed above, distribution coefficients are the ratio of concentrations for all forms of the solute in cyclohexane and the aqueous layer. 
 During the experimental measurements, the water layer was an aqueous buffer at pH 7.4. 
 We also required participants to provide two estimates for uncertainty, a statistical uncertainty for their computational method and a model uncertainty that estimates agreement with experiment.  
 The statistical uncertainty was intended to be the variation expected over repeated calculations of the same value. 
-%DLM: "computational calculations" seems redundant, changed.
 The model uncertainty, on the other hand, was intended to provide an estimate of how well the calculated value will agree with experiment. 
 For example, in a recent study we computed cyclohexane/water partition coefficients using alchemical solvation free energy calculations in GROMACS where the statistical uncertainties were around 0.05
 but the root mean squared error was around 1.4 log units. 
@@ -227,8 +208,11 @@ but the root mean squared error was around 1.4 log units.
 An important part of creating predictive models is the ability to know when they will be unreliable or fail. 
 Thus, analysis of model uncertainties is an important part of evaluating any model. 
 
-%\section{Error metrics} % probably need a different section title here.... 
-%DLM:
+%Included in the challenge information was the SMILES string for each molecule as well as mol2 and SDfiles. 
+%All information provided to challenge participants is included in the supporting information. 
+%DLM: Not quite sure what those last two sentences are doing here/in this paragraph. Do they belong somewhere else? They are on a different topic, as the rest of the paragraph is about batches and submissions.
+
+
 \section{Analysis of Submission Performance}
 \label{analysisMethods}
 
@@ -241,8 +225,7 @@ As described previously, this bootstrapping technique also included variation in
 
 As discussed above, an important evaluation of a predictive tool is the ability to predict the accuracy of a computational method -- that is, how well the calculated values are likely to agree with experiment -- not just its statistical error.  
 As in SAMPL4 \cite{Mobley:2014gu}, a quantile-quantile plot (QQ Plot) was created for each prediction set. % cite stats paper that describes them in depth 
-QQ Plots compare a normal distribution with how well a set of predictions agree with experiment according to the model uncertainty. 
-%DLM: Rephrase that "QQ Plots" sentence, as it's not comprehensible to me. :) Maybe, "QQ plots look at the distribution of errors (calculated minus experiment) and compare the frequency with which errors of a particular number of standard deviations occur with the expected frequency distribution based on the provided model uncertainties. (?) 
+QQ Plots compare the fraction of a normal distribution within a number of standard deviations to the distribution of errors (calculated minus experiment) that are within that number of model uncertainties. % CCB: I think this is an improvement
 For example, consider the number of predictions within one standard deviation of the expected value; if the samples are drawn from a normal distribution, then $~0.68$ of the values ought to fall within one standard deviation, so the value on the x-axis is $0.68$. The value on the y-axis will represent the fraction of predictions that are within one model uncertainty of the experimental value.  If the model uncertainty is accurate, then this ought also to correspond to a value of $0.68$.
 A linear regression analysis helps summarize these results.
 The `error slope' is the slope of the line comparing the fraction of predictions within a specified range of experiment to the expected fraction from a normal distribution.
@@ -265,49 +248,38 @@ We also included post challenge analysis of protonation and tautomeric states as
 
 \subsection{Calculating partition coefficients from solvation free energies}
 \label{methods:2}
-% Can you (and how would you) cite a paper that is still in review? I've written this assuming we can point to my logP paper, but it's not actually available yet.
-%DLM: You just cite it without stating the journal. Sometimes we also then need to submit a pdf along with this paper. Then we hopefully introduce the full citation info at revisions/proofs stage. 
-Partition coefficients are the ratio of concentrations of a solute in a single tautomeric state distributed between two solvents. 
-%DLM: Above sentence seems out of place. Didn't we say that already? It seems disconnected to what's after, too. EIther strike, or add a transition/connection, such as "While the challenge focused on distribution coefficients, we decided to estimate these in a very straightforward way by assuming that each compound only has a single neutral tautomeric state which distributes between the two solvents, and to calculate partition coefficients and use these as direct estimates of the distribution coefficients. Thus, before the challenge..."
-%Remember, you want to try to have the first sentence of each paragraph explain the point of the paragraph (as much as you can). 
-Before the challenge, each molecule was taken directly as the provided SMILES string with no further tautomer enumeration.
-As demonstrated in the literature, % cite previous logP from free energy in logP paper and mine
+We decided to estimate distribution coefficients, more simplistically, by assuming only a single neutral tautomer of each solute and calculated $\log P$ from a difference in solvation free energies. 
+Before the challenge, each molecule was taken directly as the provided SMILES string.
+As demonstrated in the literature, % cite one of the logP papers referred to above. 
 partition coefficients are directly proportional to the difference between the solvation free energy for the solute into each solvent. 
-We use previously established and automated protocols %logP paper, 
+We use previously established and automated protocols \cite{Bannan:2016lp} 
 to calculate the solvation free energy of each molecule into water and cyclohexane. 
 Then the calculated partition coefficient was reported as an estimate for $\log D$. 
 
 To calculate solvation free energies, we used automated tools created by the Mobley lab.
 Molecular dynamics simulations were performed in GROMACS  \cite{Berendsen:1995gro,Hess:2008db,Lindahl:2001gro3,vanderSpoel:2005hz,Pronk:2013ef,Pall:2014gb,Abraham:2015gj}
 with the General AMBER Force Field (GAFF) \cite{Wang:2004dev} with AM1-BCC charges\cite{Jakalian:2000ki,Jakalian:2002bd}.
-Topology and coordinate files for the solvated boxes with 1 solute molecule and 500 cyclohexane or 1000 water molecules were built using the Solvation Toolkit. % cite logP paper
-These files were then converted to AMBER, DESMOND, and LAMMPS formats and provided to SAMPL5 participants. % citation for file formats?
-%DLM: Unnecessary to cite for file formats.
+Topology and coordinate files for the solvated boxes with 1 solute molecule and 500 cyclohexane or 1000 water molecules were built using the Solvation Toolkit \cite{Bannan:2016lp}.
+These files were then converted to AMBER, DESMOND, and LAMMPS formats and provided to SAMPL5 participants. 
 The Solvation Toolkit takes advantage of many open source Python modules and is available at https://github.com/MobleyLab/SolvationToolkit.
 It converts SMILES strings or IUPAC names of any mixture of small organic compounds to parameterized molecules and builds topology and coordinate files for a variety of simulation packages. 
-All molecular dynamics parameters are identical to previous studies \cite{Liu:2016kb,Klimovich:2010jm}. % add logP paper to cite
+All molecular dynamics parameters are identical to previous studies \cite{Liu:2016kb,Klimovich:2010jm,Bannan:2016lp}.
 The molecule is taken from the solvated box to a non-interacting gas phase in 20 lambda values. 
-Solvation free energies are calculated with Alchemical Analysis tool \cite{Klimovich:2015er}
-using the multi-state Bennett acceptance ratio to extract free energy difference between the beginning and end state. 
+Solvation free energies are calculated with Alchemical Analysis tool \cite{Klimovich:2015er} using the multi-state Bennett acceptance ratio to extract free energy difference between the beginning and end state. 
 The partition coefficient was calculated as the difference between the cyclohexane solvation free energy and the hydration free energy.
 The statistical uncertainty was reported as the propagated uncertainty from the solvation free energy calculations. 
-The model uncertainty was estimated to be the same for all molecules and reported as the root-mean-squared error from a recent study on calculating cyclohexane/water partition coefficient, specifically 1.4 log units. % cite logP paper
+The model uncertainty was estimated to be the same for all molecules and reported as the root-mean-squared error from a recent study on calculating cyclohexane/water partition coefficient, specifically 1.4 log units \cite{Bannan:2016lp}.
 These were assigned submission ID 39 and included in the error analysis performed on all submissions.
 
 \paragraph{Simulation box size does not affect the calculated solvation free energy.} 
 Hydration free energies were previously shown to be independent of box sizes from 2 to 9 nanometers, within calculated uncertainties \cite{Parameswaran:2014kq}. 
-% are there calculations where box size effects the results? Should we be citing a paper related to that?
-%DLM: I don't think a cite is needed. Presumably there was some work in the old literature (especially before Ewald) on finite-size effects, but I've never gone hunting for it. 
 Polar solutes are more likely to significantly affect long range interactions so we calculated the dipole moment of each SAMPL5 molecule using the position and charges on atoms in the mol2 files. 
 SAMPL5\_024 had the largest dipole moment so it was used as the solute for the box size investigation. 
 The solvation free energy calculations were set up as described above, changing the number of cyclohexane molecules from 100 to 500.  
-% I'm still not completely clear on how using reaction field affects the calculation, I know they change the way coulomb interactions are calculated at a longer distance?
-%DLM: Reponsded in Slack: https://mobleylab.slack.com/archives/D1AAMLGNT/p1465240626000006
 Our calculations above are performed with PME coulomb interactions; here we also repeated the solvation free energy calculations with reaction field coulomb interactions assigning the dielectric coefficient for cyclohexane, 2.043 \cite{crc}.
 \begin{figure} 
 \includegraphics{boxSize.eps}
-\caption{This is a figure for the box size study}
-%DLM: Edit caption.
+\caption{}
 \label{boxSizes}  
 \end{figure}
 We found that for 2.5 to 4.5 nm box edges there is no significant change in the calculated solvation free energy for SAMPL5\_024 in cyclohexane. 
@@ -323,35 +295,33 @@ A common way to convert between experimentally measured distribution coefficient
 This is a simple correction using the Henderson-Hasselbalch 
 equation:
 \begin{equation}
-pH = pK_a + \log \frac{X}{HX}
+pH = pK_a + \log \frac{[X]}{[HX]}
 \label{HH}
 \end{equation}
 to relate the concentration of neutral species to the charged species at a given pH. 
 This correction will depend on if the neutral solute is acidic or basic. 
-%DLM: Is there an assumption which needs to be stated for this next equation, i.e., this yields the correct $\log D$ if the solute has only a single titratable site and that site is acidic, and that protonation state effects apply only in water. (I think those are the assumptions made?) 
-The equation used to calculate a distribution coefficient ($\log D$) from a partition coefficient ($\log P$) for a basic solute (or X in eqn. \ref{HH}) is below  
+The equation used to calculate a distribution coefficient ($\log D$) from a partition coefficient ($\log P$) for a basic solute (or $X$ in eqn. \ref{HH}) is below  
 \begin{equation}
 \log D = \log P - log(1+10^{pK_a-pH})
 \label{basic}
 \end{equation}
-Alternatively for an acid solute (or HX in eqn. \ref{HH}) we would instead use:
+Alternatively for an acid solute (or $HX$ in eqn. \ref{HH}) we would instead use:
 \begin{equation}
 \log D = \log P - log(1+10^{pH-pK_a})
 \label{acidic}
 \end{equation}
 We use Schr\"{o}dinger's Epik tool % citations
 to estimate pKa values for each molecule according to experimental conditions. 
-We then calculated a $\log D$ using the equations above. 
-%DLM: Usage of "calculate" vs "estimate" - I'll post in Slack as this may be of general interest. https://mobleylab.slack.com/archives/writing/p1465241755000007 The point: We needed to swap "calculate" vs "estimate" here. 
+We then estimated $\log D$ using the equations above, accounting for just one change in protonation state.
+For acidic solutes, the smallest acidic pKa was used with equation \ref{acidic}, oppositely for basic solutes the largest basic pKa was used with equation \ref{basic} to estimate $\log D$ from $\log P$. 
+% I think I made this more clear.  
 Using pKa values only accounts for one change in protonation, whereas a correct distribution coefficient should include all relevant tautomers and protonation states of the molecule in both solvents. 
-%DLM: Are you going to be reporting all of these approaches below? If so, they may need names and may need to be distinguished more clearly hre. (Sorry for asking a question but I haven't read the below yet and may forget to come back.)
 To correct for all other tautomer states we used Schr\"{o}dinger's LigPrep % citations
 to enumerate tautomers for each molecule in the aqueous solution. 
 The results of the enumeration includes a energetic "state penalty" which relates the population of that tautomer to all others. 
 This state penalty can be converted into log units and used as a correction term to convert $\log P$ to $\log D$:
 \begin{equation}
-\log D = \log P + \frac{-E_{\mathrm{state penalty}}}{k_BT \ln (10)}
-%DLM: You need to make your space in "statepenalty" show up somehow. One option I think is \mathrm{} for, er, "math roman" I think. The other is to escape it somehow - I think maybe it's a slash and then a period (?) to make a space in an equation.
+\log D = \log P + \frac{-E_{state\ penalty}}{k_BT \ln (10)}
 \label{statepenalty}
 \end{equation}
 where $k_B$ is Boltzmann constant and T is temperature. 

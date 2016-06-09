@@ -1,0 +1,77 @@
+Submission #, Last Name, First Name, Institution, Method Name, Method Category
+01, Gerhard, Koenig, Max-Planck-Institut fuer Kohlenforschung, ['QM/MM-CGenFF/BLYP/6-31G*'], QM/MM explicit solvent 
+02, Gerhard, Koenig, Max-Planck-Institut fuer Kohlenforschung, ['QM/OLYP/DZP/SMD'], QM/NBB 
+03, Julien, Michel, University of Edinburgh, ['SOMD/AM1BCC-GAFF-TIP3P/MBAR/C'], MD explicit solvent atomistic FF 
+04, Stefan, Kast, TU Dortmund, ['EC-RISM(3-par)'], RISM 
+05, Tyler, Luchko, California State University-Northridge, ['3D-RISM/PSE-3/pc_MDFT'], RISM 
+06, Leonid, Pereyaslavets, InterX Inc, ['Normal/solvation/ARROW/ARROW-pKa-water-cyclohexane'], MD Polarizable FF 
+07, Tyler, Luchko, California State University-Northridge, ['3D-RISM/PSE-3/uc'], RISM 
+08, Frank, Pickard, NIH, ['QMOPT/M06/RELPKA/SOLV'], QM implicit solvent 
+09, Tyler, Luchko, California State University-Northridge, ['3D-RISM/KH/rism'], RISM 
+10, Frank, Pickard, NIH, ['MMBAR/None/ABSPKA/SOLV'], MD explicit solvent atomistic FF 
+11, Julien, Michel, University of Edinburgh, ['SOMD/AM1BCC-GAFF-TIP3P/MBAR/A'], MD explicit solvent atomistic FF 
+12, Julien, Michel, University of Edinburgh, ['SOMD/AM1BCC-GAFF-TIP3P/MBAR/C'], MD explicit solvent atomistic FF 
+13, Julien, Michel, University of Edinburgh, ['SOMD/AM1BCC-GAFF-TIP3P/MBAR/D'], MD explicit solvent atomistic FF 
+14, Frank, Pickard, NIH, ['QMOPT/M06/ABSPKA/VSOLV'], QM implicit solvent 
+15, Frank, Pickard, NIH, ['QMNBB/OLYP/RELPKA/SOLV'], QM/NBB 
+16, Andreas, Klamt, COSMOlogic, ['COSMO-RS/COSMOtherm'], COSMO-RS 
+17, Tyler, Luchko, California State University-Northridge, ['3D-RISM/PSE-3/pcplus_MDFT'], RISM 
+18, Frank, Pickard, NIH, ['QMOPT/M06/NOPKA/SOLV'], QM implicit solvent 
+19, Leonid, Pereyaslavets, InterX Inc, ['Normal/solvation/GAFF/GAFF-Torsional-Restraints-water-cyclohexane'], MD explicit solvent atomistic FF 
+20, Frank, Pickard, NIH, ['QMNBB/M06/ABSPKA/VSOLV'], QM/NBB 
+21, Gerhard, Koenig, Max-Planck-Institut fuer Kohlenforschung, ['QM/M06-2X/6-31+G*/SMD'], QM/MM implicit solvent 
+22, Leonid, Pereyaslavets, InterX Inc, ['Normal/solvation/QMPFF3/QMPFF3-water-cyclohexane'], MD Polarizable FF 
+23, Diogo, Santos Martins, University of Porto, ['Empirical SolventExcludedSurface AtomType Model_2'], empirically trained 
+24, Stefan, Kast, TU Dortmund, ['EC-RISM(2-par)'], RISM 
+25, Frank, Pickard, NIH, ['MMBAR/None/RELPKA/VSOLV'], MD explicit solvent atomistic FF 
+26, Gerhard, Koenig, Max-Planck-Institut fuer Kohlenforschung, ['MD/CGENFF'], MD explicit solvent atomistic FF 
+27, Frank, Pickard, NIH, ['QMOPT/M06/NOPKA/VSOLV'], QM implicit solvent 
+28, Frank, Pickard, NIH, ['QMNBB/M06/ABSPKA/SOLV'], QM/NBB 
+29, Tyler, Luchko, California State University-Northridge, ['3D-RISM/PSE-3/pcplus_3DRISM'], RISM 
+30, Leonid, Pereyaslavets, InterX Inc, ['Normal/solvation/ARROW/ARROW-water-cyclohexane'], MD Polarizable FF 
+31, Frank, Pickard, NIH, ['QMNBB/OLYP/ABSPKA/VSOLV'], QM/NBB 
+32, Bogdan, Iorga, CNRS-ICSN, ['MD/solvation/OPLS-AA/TIP4P'], MD explicit solvent atomistic FF 
+33, Frank, Pickard, NIH, ['MMBAR/None/RELPKA/SOLV'], MD explicit solvent atomistic FF 
+34, Frank, Pickard, NIH, ['QMOPT/M06/ABSPKA/SOLV'], QM implicit solvent 
+35, Tyler, Luchko, California State University-Northridge, ['3D-RISM/KH/uc'], RISM 
+36, Christopher, Fennell, Oklahoma State University, ['Explicit/solvation/GAFF-DC/H2O-DC/Cyclohexane_UA-DC'], MD explicit solvent atomistic FF 
+37, Julien, Michel, University of Edinburgh, ['SOMD/AM1BCC-GAFF-TIP3P/MBAR/C'], MD explicit solvent atomistic FF 
+38, Gerhard, Koenig, Max-Planck-Institut fuer Kohlenforschung, ['MD/CGENFF'], MD explicit solvent atomistic FF 
+39, Caitlin, Bannan, UCI, ['Solvation/GAFF/TIP3P/neutral'], MD explicit solvent atomistic FF 
+40, ANONYMOUS, ANONYMOUS, ANONYMOUS, ['bp3w91 verticle solvation'], QM implicit solvent 
+41, Frank, Pickard, NIH, ['MMBAR/None/ABSPKA/VSOLV'], MD explicit solvent atomistic FF 
+42, Christopher, Fennell, Oklahoma State University, ['Explicit/solvation/GAFF/H2O-DC/Cyclohexane_UA-DC'], MD explicit solvent atomistic FF 
+43, Gerhard, Koenig, Max-Planck-Institut fuer Kohlenforschung, ['QM/MM-CGenFF/BLYP/6-31G*'], QM/MM explicit solvent 
+44, Gerhard, Koenig, Max-Planck-Institut fuer Kohlenforschung, ['QM/OLYP/DZP/SMD'], QM/MM implicit solvent 
+45, Leonid, Pereyaslavets, InterX Inc, ['Normal/solvation/QMPFF3/QMPFF3-pKa-water-cyclohexane'], MD Polarizable FF 
+46, Tyler, Luchko, California State University-Northridge, ['3D-RISM/PSE-3/rism'], RISM 
+47, Frank, Pickard, NIH, ['QMNBB/OLYP/RELPKA/VSOLV'], QM/NBB 
+48, Hwangseo, Park, Sejong University, ['Extended Solvent-Contact Model', 'Genetic Algorithm'], empirically trained 
+49, Diogo, Santos Martins, University of Porto, ['Empirical SolventExcludedSurface AtomType Model_1'], empirically trained 
+50, Julien, Michel, University of Edinburgh, ['SOMD/AM1BCC-GAFF-TIP3P/MBAR/B'], MD explicit solvent atomistic FF 
+51, Frank, Pickard, NIH, ['QMMMNBB/BLYP/ABSPKA/SOLV'], QM/MM explicit solvent 
+52, Stefan, Kast, TU Dortmund, ['EC-RISM(2-par)/MoKa'], RISM 
+53, Andrew, Paluch, Miami University, ['Normal/solvation/MOSCED(SMD)'], empirical training with QM calculations 
+54, Frank, Pickard, NIH, ['QMNBB/OLYP/ABSPKA/SOLV'], QM/NBB 
+55, Julien, Michel, University of Edinburgh, ['SOMD/AM1BCC-GAFF-TIP3P/MBAR/D'], MD explicit solvent atomistic FF 
+56, Frank, Pickard, NIH, ['QMOPT/M06/RELPKA/VSOLV'], QM implicit solvent 
+57, Julien, Michel, University of Edinburgh, ['SOMD/AM1BCC-GAFF-TIP3P/MBAR/D'], MD explicit solvent atomistic FF 
+58, Leonid, Pereyaslavets, InterX Inc, ['Normal/solvation/ARROW/ARROW-hydrophobic-correction-pKa-water-cyclohexane'], MD Polarizable FF 
+59, Stefan, Kast, TU Dortmund, ['EC-RISM(3-par)/MoKa'], RISM 
+60, Andrew, Paluch, Miami University, ['Normal/solvation/M06-2X/6-31G(d) SMD'], empirical training with QM calculations 
+61, Gerhard, Koenig, Max-Planck-Institut fuer Kohlenforschung, ['QM/M06-2X/6-31+G*/SMD'], QM/MM implicit solvent 
+62, Emiliano, Brini, SUNY Stony Brook, ['SEA/TIP3P-Water/Cyclohexane_UA-DC/GAFF-scaled'], free energy calculation of rigid solute in implicit solvent 
+63, Julien, Michel, University of Edinburgh, ['SOMD/AM1BCC-GAFF-TIP3P/MBAR/B'], MD explicit solvent atomistic FF 
+64, Frank, Pickard, NIH, ['QMMMNBB/BLYP/RELPKA/SOLV'], QM/MM explicit solvent 
+65, Leonid, Pereyaslavets, InterX Inc, ['Normal/solvation/ARROW/ARROW-hydrophobic-correction-water-cyclohexane'], MD Polarizable FF 
+66, Frank, Pickard, NIH, ['QMMMNBB/BLYP/RELPKA/VSOLV'], QM/MM explicit solvent 
+67, Julien, Michel, University of Edinburgh, ['SOMD/AM1BCC-GAFF-TIP3P/MBAR/A'], MD explicit solvent atomistic FF 
+68, Bogdan, Iorga, CNRS-ICSN, ['MD/solvation/OPLS-AA/TIP4P'], MD explicit solvent atomistic FF 
+69, Julien, Michel, University of Edinburgh, ['SOMD/AM1BCC-GAFF-TIP3P/MBAR/B'], MD explicit solvent atomistic FF 
+70, Julien, Michel, University of Edinburgh, ['SOMD/AM1BCC-GAFF-TIP3P/MBAR/A'], MD explicit solvent atomistic FF 
+71, Tyler, Luchko, California State University-Northridge, ['3D-RISM/PSE-3/pc_3DRISM'], RISM 
+72, Frank, Pickard, NIH, ['QMNBB/M06/RELPKA/VSOLV'], QM/NBB 
+73, Samuel, Genheden, Gothenburg University, ['Normal/solvation/GAFF/ELBA'], MD explicit solvent AA/coarse-grained FF 
+74, Frank, Pickard, NIH, ['QMNBB/M06/RELPKA/SOLV'], QM/NBB 
+75, Emiliano, Brini, SUNY Stony Brook, ['SEA/TIP3P-Water/Cyclohexane_UA-DC/GAFF'], free energy calculation of rigid solute in implicit solvent 
+76, Frank, Pickard, NIH, ['QMMMNBB/BLYP/ABSPKA/VSOLV'], QM/MM explicit solvent 

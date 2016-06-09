@@ -55,7 +55,7 @@ def parseFile(fileName, comments = '#', keywords = ['predictions:', 'name:','sof
             
     return data, other
 
-def ParseAllFiles(fileList, numDict = None, sep = '-'):
+def ParseAllFiles(fileList, numDict = None, sep = '_'):
     """
     Takes a list of files and creates a dictionary with information and data
     data is at key 'data' all other information is specified
@@ -65,17 +65,10 @@ def ParseAllFiles(fileList, numDict = None, sep = '-'):
     for i,f in enumerate(fileList):
         Flist = f.split(sep)
         # submission ID assigned from randomly assigned identifier
-        originalID = Flist[0].split('/')[-1]
-        if numDict != None:
-            subID = numDict[originalID]
-        else:
-            subID = originalID
+        subID = int(Flist[0].strip())
         # Use parseFile method to extract data
         data, Dict[subID] = parseFile(f)
         # Save other information to infoDictionary
-        Dict[subID]['longID'] = originalID
-        Dict[subID]['fileName'] = f.split('/')[-1]
-        Dict[subID]['methodNum'] = Flist[-1].split('.')[0]
         Dict[subID]['data'] = data
 
     # Return both dictionaries
@@ -85,16 +78,13 @@ def ParseAllFiles(fileList, numDict = None, sep = '-'):
 # Now use methods to parse prediction text files 
 
 # Location of prediction data files:
-preDir = "../predictionFiles/"
-
-# Load dictionary that converts long ID numbers to short ID numbers (and reverse it)
-IDdict = pickle.load(open('SIDTonum.p','rb'))
+preDir = "../predictionFiles_byNumber/"
 
 # Parse and save all standard DC results
 # Note: Mobley group was the only one to submit standard results...
-StanFiles = glob.glob('%s/*DCStandard-*.txt' % preDir)
-stanData = ParseAllFiles(StanFiles)
-pickle.dump(stanData, open('../DataFiles/StandardPredictions.p','wb'))
+#StanFiles = glob.glob('%s/*DCStandard-*.txt' % preDir)
+#stanData = ParseAllFiles(StanFiles)
+#pickle.dump(stanData, open('../DataFiles/StandardPredictions.p','wb'))
 
 # Parse results for all regular DC predictions
 RegFiles = glob.glob('%s/*DC-*.txt' % preDir)
