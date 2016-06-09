@@ -4,22 +4,21 @@ Prediction analysis of distribution coefficient part of the SAMPL5 challenge.
 
 * Caitlin C Bannan
 * Kalistyn H Burley
+* Michael Chui
+* Michael K Gilson
 * David L Mobley
 
 ##### Note: Unless updated this directory is not safe for public publishing because it includes contact information and names of Anonymous submissions.
-
-### Sub Directories:
-This is a short description, detailed READMEs included inside each.
+I am triple checking this now, we should be able to make it public by the time we submit the paper
 
 ##### DataFiles
 Contains all pickled data files so they can be easily accessed in one place. 
 Also includes all text data tables and the tools modules so they can be easily accessed. 
 
-##### organizeExpData
+##### SubmissionAnalysisScripts 
+Contains scripts used to create a dictionary with all experimental data and predictions submitted to SAMPL5
 Contains scripts and text files required to generate dictionary with experimental results, SMILES string, eMolecule ID, IUPAC name, and batch number for each solute molecule
-
-##### DC_Analysis 
-Contains scripts and text files used to create a dictionary with all data from predictions submitted to SAMPL5
+Includes all error analysis and scripts to make plots for all submissions
 
 ##### QQPlots, ComparePlots, and boxPlots
 Each plot type has one for each prediction set (and batch in the case of box and whisker plots). 

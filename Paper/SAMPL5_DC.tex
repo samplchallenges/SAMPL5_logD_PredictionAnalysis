@@ -103,7 +103,8 @@ M.K.G. has an equity interest in and is a cofounder and scientiﬁc advisor of Ver
 \maketitle
 
 \begin{abstract}
-% Outline for abstract:
+range -3.9 to 2.5 log units (6.4 range)
+
 describe DC part of SAMPL5 challenge
 
 We analyze submissions and provide reference calculations
@@ -111,7 +112,11 @@ We analyze submissions and provide reference calculations
 Results, range of RMSE or AUE? Better or worse than expected from past sample challenges?
 
 Conclusions: tautomeric enumeration,  
-%DLM: Would it help if I drafted this or are you just saving for last? 
+
+
+In the recent SAMPL5 challenge, participants submitted predictions for cyclohexane/water distribution coefficients. 
+Distribution coefficients ($\log D$) replace the hydration free energies that were a central part of the past five SAMPL challenges.
+Here, we analyze submissions by a variety of error metrics and provide details for a number of reference calculations we performed. 
 
 \keywords{distribution coefficient \and blind challenge \and free energy } 
 % CCB: these were options provided by the template, I don't know what they're for.
@@ -291,7 +296,7 @@ The input, results, molecular dynamics parameter files, and tables of solvation 
 
 To help understand how the results from our partition coefficient calculations could have been improved, we considered corrections for changes in the solutes' protonation or tautomeric states.  
 Distribution coefficients differ from partition coefficients in that they include all forms of the solute in both solvents. 
-A common way to convert between experimentally measured distribution coefficients and partition coefficients is with pKa values for the solute. 
+A common way to convert between experimentally measured distribution coefficients and partition coefficients is with pKa values for the solute. % cite something
 This is a simple correction using the Henderson-Hasselbalch 
 equation:
 \begin{equation}
@@ -299,22 +304,23 @@ pH = pK_a + \log \frac{[X]}{[HX]}
 \label{HH}
 \end{equation}
 to relate the concentration of neutral species to the charged species at a given pH. 
-This correction will depend on if the neutral solute is acidic or basic. 
-The equation used to calculate a distribution coefficient ($\log D$) from a partition coefficient ($\log P$) for a basic solute (or $X$ in eqn. \ref{HH}) is below  
+This correction assumes the solute only has one other relevant protonation state and changes for acidic and basic molecules. 
+Zwitterions and other neutral tautomers are not taken into account. 
+The equation used to calculate a distribution coefficient ($\log D$) from a partition coefficient ($\log P$) for a basic solute (or $X$ in equation \ref{HH}) is below  
 \begin{equation}
 \log D = \log P - log(1+10^{pK_a-pH})
 \label{basic}
 \end{equation}
-Alternatively for an acid solute (or $HX$ in eqn. \ref{HH}) we would instead use:
+Alternatively for an acid solute (or $HX$ in equation. \ref{HH}) we would instead use:
 \begin{equation}
 \log D = \log P - log(1+10^{pH-pK_a})
 \label{acidic}
 \end{equation}
 We use Schr\"{o}dinger's Epik tool % citations
 to estimate pKa values for each molecule according to experimental conditions. 
-We then estimated $\log D$ using the equations above, accounting for just one change in protonation state.
+We then estimated $\log D$ using the equations above, accounting for just one change in protonation state, meaning each solute was taken to be either acidic or basic.
 For acidic solutes, the smallest acidic pKa was used with equation \ref{acidic}, oppositely for basic solutes the largest basic pKa was used with equation \ref{basic} to estimate $\log D$ from $\log P$. 
-% I think I made this more clear.  
+
 Using pKa values only accounts for one change in protonation, whereas a correct distribution coefficient should include all relevant tautomers and protonation states of the molecule in both solvents. 
 To correct for all other tautomer states we used Schr\"{o}dinger's LigPrep % citations
 to enumerate tautomers for each molecule in the aqueous solution. 
@@ -340,9 +346,9 @@ For the rest of this paper we will refer to the octanol/water partition coeffici
 
 \section{Results and Discussion}
 \label{results:1}
-% Since there is so much diversity in the better performing methods this is more of a paragraph about the variety of submission. I thought it would be a good way to open results and gives some context. 
 A broad range of methods were used for the 76 submissions predicting cyclohexane/water distribution coefficients for the SAMPL5 challenge. 
 Many of these predictions used alchemical molecular dynamics simulations to estimate the solvation free energy in explicit solvent using several classes of force fields, including fixed-charge all-atom force fields, all-atom/coarse-grained hybrid force fields, and polarizable force fields. 
+One participant used Semi-Explicit Assembly, an alchemical solvation free energy method for a rigid solute in an implicit solvent. 
 A variety of quantum mechanics (QM) methods were also used including QM/molecular mechanics (QM/MM) with implicit or explicit solvent, QM with non-Boltzmann Bennett free energy calculations, and QM energy calculations with a single optimized molecular geometry. 
 Two participants used variations on the reference interaction-site model (RISM). % Maybe I should expand on this. 
 %DLM: I'd add another clause, maybe something like ", an integral equation approach for analytically (?) predicting solvation free energies." 
