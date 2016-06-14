@@ -50,12 +50,12 @@ for d in directories:
     box[d] = {}
     files = glob.glob("%s/*/results.pickle" % d)
     for f in files:
-        num = int(f.split('/')[1].split('cyc')[-1])
+        num = f.split('/')[1].split('cyc')[-1]
         print num
         box[d][num] = {}
         
         # Get box size
-        size = c.getoutput('tail -n 1 %s/cyc%i/mol.gro' % (d, num))
+        size = c.getoutput('tail -n 1 %s/cyc%s/prod.0.gro' % (d, num))
         size = float(size.strip().split(' ')[0].strip())
         box[d][num]['size'] = size
 

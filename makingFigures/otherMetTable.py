@@ -8,8 +8,8 @@ import imp
 import sys
 tools = imp.load_source('tools','../DataFiles/tools.py')
 
-null = pickle.load(open('../otherPredictions/NullData.p'))
-xlogp = pickle.load(open('../otherPredictions/XLogP_predictions.p'))
+null = pickle.load(open('../xLogPandNull/NullData.p'))
+xlogp = pickle.load(open('../xLogPandNull/XLogP_predictions.p'))
 # =================================================================================
 # Make LaTeX table with my results
 

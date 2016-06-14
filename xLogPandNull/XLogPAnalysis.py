@@ -40,11 +40,12 @@ for cid in keys:
         e['data'] = {}
         e['data+'] = {}
     e['data'][cid] = [xlogP, 0.37]
-    e['data+'][cid] = [xlogP - 1.45, 0.37] 
+    # e['data+'][cid] = [xlogP - 1.45, 0.37] 
+    e['data+'][cid] = [xlogP*0.7241 - 1.0306]
 
 # Make Box and Whisker plots for each set of predictions
-tools.BoxWhiskerByBatch(moleculeData, batches, e, predLabel = "XlogP Prediction", title = "XlogP Predictions Box and Whisker Plot", xAxis = "SAMPL5_IDnumber", fileName = "XLogP_boxPlot.pdf", Datakey = 'data')
-tools.BoxWhiskerByBatch(moleculeData, batches, e, predLabel = "XlogP Prediction", title = "XlogP Predictions plus Linear Fit Box and Whisker Plot", xAxis = "SAMPL5_IDnumber", fileName = "XLogP_linear_boxPlot.pdf", Datakey = 'data+')
+# tools.BoxWhiskerByBatch(moleculeData, batches, e, predLabel = "XlogP Prediction", title = "XlogP Predictions Box and Whisker Plot", xAxis = "SAMPL5_IDnumber", fileName = "XLogP_boxPlot.pdf", Datakey = 'data')
+# tools.BoxWhiskerByBatch(moleculeData, batches, e, predLabel = "XlogP Prediction", title = "XlogP Predictions plus Linear Fit Box and Whisker Plot", xAxis = "SAMPL5_IDnumber", fileName = "XLogP_linear_boxPlot.pdf", Datakey = 'data+')
 
 # Organize by batch
 allExp = [ [Exp[k]['data'][0] for k in b] for b in batches ]
@@ -80,7 +81,7 @@ e['error slope'] = [slope, dslope]
 e['QQdata'] = [X,Y]
 # Make and save QQ plot
 title = "QQ Plot from Openeye's XLogP tool"
-tools.makeQQplot(X, Y, slope, title, fileName = "XLogP_QQ.pdf")
+# tools.makeQQplot(X, Y, slope, title, fileName = "XLogP_QQ.pdf")
 
 X2, Y2, slope2, dslope2 = tools.getQQdata(statCalc2, statExp, dStatCalc, dStatExp, bootits)
 # Store 'error slope'
@@ -88,7 +89,7 @@ e['error slope+'] = [slope2, dslope2]
 e['QQdata+'] = [X2,Y2]
 # Make and save QQ plot
 title = "QQ Plot from Openeye's XLogP tool plus intercept correction"
-tools.makeQQplot(X2, Y2, slope2, title, fileName = "XLogP_linear_QQ.pdf")
+# tools.makeQQplot(X2, Y2, slope2, title, fileName = "XLogP_linear_QQ.pdf")
 
 
 

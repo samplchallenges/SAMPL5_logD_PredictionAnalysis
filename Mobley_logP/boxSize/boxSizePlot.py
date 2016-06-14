@@ -36,14 +36,15 @@ for d, entry in data.items():
         xs.append(edge)
         ys.append(dG)
         yerr.append(ddG)
-
-        output.append('%s, %i, %.2f, %.3f, %.3f\n' % (d, num, edge, dG, ddG))
+        
+        number = int(num.split('_')[0])
+        output.append('%s, %i, %.2f, %.3f, %.3f\n' % (d, number, edge, dG, ddG))
 
     if d == 'pme':
         sym = 'ro-'
     else:
         sym ='ks-'
-
+    
     p = ax.errorbar(xs, ys, yerr = yerr, fmt = sym, label = d, capsize = 0.5)
     handles.append(p)
 

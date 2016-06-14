@@ -34,11 +34,64 @@ D.L. Mobley, S.~Liu, D.S. Cerutti, W.C. Swope, J.E. Rice, Journal of
 A.~Nicholls, D.L. Mobley, J.P. Guthrie, J.D. Chodera, C.I. Bayly, M.D. Cooper,
   V.S. Pande, Journal of Medicinal Chemistry \textbf{51}(4), 769 (2008)
 
+\bibitem{Rustenburg:sampl5}
+A.S. Rustenburg, J.~Dancer, B.~Lin, D.F. Ortwine, D.L. Mobley, J.D. Chodera, in
+  prep  (2016)
+
 \bibitem{Leo:1971wu}
 A.~Leo, C.~Hansch, D.~Elkins, Chemical Reviews \textbf{71}(6), 525 (1971)
 
+\bibitem{Young:2011gs}
+R.J. Young, D.V.S. Green, C.N. Luscombe, A.P. Hill, Drug discovery today
+  \textbf{16}(17-18), 822 (2011)
+
+\bibitem{Essex:1992bd}
+J.W. Essex, C.A. Reynolds, W.G. Richards, J. Am. Chem. Soc. \textbf{114}(10),
+  3634 (1992)
+
+\bibitem{Best:1999ix}
+S.A. Best, K.M. Merz~Jr, C.H. Reynolds, J. Phys. Chem. B \textbf{103}(4), 714
+  (1999)
+
+\bibitem{JohnEEksterowicz:1997cj}
+J.E. Eksterowicz, J.L. Miller, P.A. Kollman, J. Phys. Chem. B \textbf{101}(50),
+  10971 (1997)
+
+\bibitem{Jorgensen:1989ga}
+W.L. Jorgensen, Accounts of Chemical Research \textbf{22}, 187 (1989)
+
+\bibitem{Jorgensen:1990ha}
+W.L. Jorgensen, J.M. Briggs, L.~Contreras, Journal of Physical {\ldots}
+  \textbf{94}(4), 1683 (1990)
+
+\bibitem{Garrido:2009hz}
+N.M. Garrido, A.J. Queimada, M.~Jorge, E.A. Macedo, I.G. Economou, Journal of
+  Chemical Theory and Computation \textbf{5}(9), 2436 (2009)
+
+\bibitem{Garrido:2011es}
+N.M. Garrido, M.~Jorge, A.J. Queimada, J.R.B. Gomes, I.G. Economou, E.A.
+  Macedo, Physical Chemistry Chemical Physics \textbf{13}(38), 17384 (2011)
+
+\bibitem{Garrido:2012gc}
+N.M. Garrido, I.G. Economou, A.J. Queimada, M.~Jorge, E.A. Macedo, AIChE J.
+  \textbf{58}(6), 1929 (2012)
+
+\bibitem{Yang:2013io}
+L.~Yang, A.~Ahmed, S.I. Sandler, Journal of Computational Chemistry
+  \textbf{34}(4), 284 (2013)
+
+\bibitem{Michel:2007gw}
+J.~Michel, M.~Orsi, J.W. Essex, J. Phys. Chem. B \textbf{112}(3), 657 (2007)
+
+\bibitem{Genheden:2016jj}
+S.~Genheden, Journal of Chemical Theory and Computation \textbf{12}(1), 297
+  (2016)
+
 \bibitem{Bannan:2016lp}
 C.C. Bannan, G.~Calabr\'{o}, D.Y. Kyu, D.L. Mobley, in review  (2016)
+
+\bibitem{Wilk:1968cm}
+M.B. Wilk, R.~Gnanadesikan, Biometrika \textbf{55}(1), 1 (1968)
 
 \bibitem{Berendsen:1995gro}
 H.J.C. Berendsen, D.~Van Der~Spoel, R.~van Drunen, Comput. Phys. Commun.
@@ -96,6 +149,22 @@ S.~Parameswaran, D.L. Mobley, Journal of Computer-Aided Molecular Design
 \bibitem{crc}
 W.M. Haynes, \emph{CRC handbook of chemistry and physics} (CRC press, 2014)
 
+\bibitem{epik}
+{\bf{Schr\"{o}dinger Release 2014-4}}: Epik, version 3.0, {S}chr\"{o}dinger,
+  {LLC}, {N}ew {Y}ork, {NY}, 2014
+
+\bibitem{Shelley:2007ku}
+J.C. Shelley, A.~Cholleti, L.L. Frye, J.R. Greenwood, M.R. Timlin, M.~Uchimaya,
+  Journal of Computer-Aided Molecular Design \textbf{21}(12), 681 (2007)
+
+\bibitem{Greenwood:2010hh}
+J.R. Greenwood, D.~Calkins, A.P. Sullivan, J.C. Shelley, Journal of
+  Computer-Aided Molecular Design \textbf{24}(6-7), 591 (2010)
+
+\bibitem{ligprep}
+{\bf{Schr\"{o}dinger Release 2014-4}}: Ligprep, version 3.2, {S}chr\"{o}dinger,
+  {LLC}, {N}ew {Y}ork, {NY}, 2014
+
 \bibitem{RenxiaoWang:1997fa}
 R.~Wang, Y.~Fu, L.~Lai, Journal of Chemical Information and Modeling
   \textbf{37}(3), 615 (1997)
@@ -103,5 +172,40 @@ R.~Wang, Y.~Fu, L.~Lai, Journal of Chemical Information and Modeling
 \bibitem{Wang:2000kk}
 R.~Wang, Y.~Gao, L.~Lai, Perspectives in Drug Discovery and Design
   \textbf{19}(1), 47 (2000)
+
+\bibitem{Paluch:sampl5}
+A.~Paluch, in prep  (2016)
+
+\bibitem{Konig:sampl5}
+G.~K\"{o}nig, ..., W.~Thiel, B.R. Brooks, in prep  (2016)
+
+\bibitem{Klamt:sampl5}
+A.~Klamt, F.~Eckert, J.~Reinisch, K.~Wichmann, in prep  (2016)
+
+\bibitem{Pickard:sampl5}
+F.C. Pickard~IV, ..., B.R. Brooks, in prep  (2016)
+
+\bibitem{Fennell:sampl5}
+C.J. Fennell, in prep  (2016)
+
+\bibitem{ChrisFennell:sampl5pc}
+C.J. Fennell.
+\newblock Personal Communication (2016)
+
+\bibitem{AndreasKlamt:sampl5pc}
+A.~Klamt.
+\newblock Personal Communication (2016)
+
+\bibitem{FrankPickard:sampl5pc}
+F.C. Pickard~IV.
+\newblock Personal Communication (2016)
+
+\bibitem{Black:1948bs}
+C.~Black, G.G. Joris, H.S. Taylor, The Journal of Chemical Physics
+  \textbf{16}(5), 538 (1948)
+
+\bibitem{VMD}
+W.~Humphrey, A.~Dalke, K.~Schulten, Journal of Molecular Graphics
+  \textbf{14}(1), 33 (1996)
 
 \end{thebibliography}

@@ -7,11 +7,11 @@ import pickle
 from pylab import *
 import numpy as np
 import imp
-tools = imp.load_source('tools','../DataFiles/tools.py')
+tools = imp.load_source('tools','tools.py')
 
 # Load data
 experiment = pickle.load(open('../DataFiles/experimental.p','rb'))
-data = pickle.load(open('../tautomerExploration/dictionary_Corrected.p','rb'))
+data = pickle.load(open('../Mobley_logP/tautomerExploration/dictionary_Corrected.p','rb'))
 
 keys = [k for k in sorted(data.keys())]
 # Get experimental data
@@ -43,13 +43,13 @@ xLabel = r'Experimental $\log D$'
 yLabel = r'Predicted $\log D$'
 fig.suptitle("Comparing methods for correcting partition coefficients")
 
-ax1 = tools.ComparePlot([e,e], [pKa, logP], "", xLabel, yLabel, [de,de], [dlogD, dlogD], [r'$\log D$ by pKa', r'$\log P$'], limits = [-10, 8], leg = [0.02, 0.98, 2, 1], expError = 1.0, ax1 = fig.add_subplot(121), symbols = ['ro', 'b^' ])
+ax1 = tools.ComparePlot([e,e], [pKa, logP], "", xLabel, yLabel, [de,de], [dlogD, dlogD], [r'$\log D$ by pKa', r'$\log P$'], limits = [-10, 8], leg = [0.02, 0.98, 2, 1], expError = 1.0, ax1 = fig.add_subplot(121), symbols = ['k^', 'ro' ], white_fill = True)
 ax1.set_xlim(-13, 8)
 ax1.set_ylim(-13, 8)
 ax1.set_xlabel(xLabel)
 ax1.set_ylabel(yLabel)
 
-ax2 = tools.ComparePlot([e,e], [taut, pKa], "", xLabel, yLabel, [de,de], [dlogD, dlogD], [r'$\log D$ by state penalty', r'$\log D$ by pKa' ], limits = [-10, 8], leg = [0.02, 0.98, 2, 1], expError = 1.0, ax1 = fig.add_subplot(122), symbols = ['kd', 'ro'])
+ax2 = tools.ComparePlot([e,e], [taut, pKa], "", xLabel, yLabel, [de,de], [dlogD, dlogD], [r'$\log D$ by state penalty', r'$\log D$ by pKa' ], limits = [-10, 8], leg = [0.02, 0.98, 2, 1], expError = 1.0, ax1 = fig.add_subplot(122), symbols = ['bs', 'k^'], white_fill = True)
 ax2.set_xlim(-13, 8)
 ax2.set_ylim(-13, 8)
 ax2.set_xlabel(xLabel)
@@ -107,7 +107,7 @@ output = ['\\begin{tabular}{| l |l |l | l |} \n',
         '\\hline \n']
 
 
-stats = pickle.load(open('../tautomerExploration/CorrectionStats.p', 'rb'))
+stats = pickle.load(open('../Mobley_logP/tautomerExploration/CorrectionStats.p', 'rb'))
 for met in ['AveErr', 'RMS', 'AUE', 'tau', 'R']:
     logP = stats['LogD_calc'][met]
     pKa = stats['LogD_oneCorrected'][met]

@@ -3,44 +3,44 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: SAMPL5_DC.aux
 The style file: spphys.bst
 Database file #1: SAMPL5_DC.bib.bib
-You've used 25 entries,
+You've used 53 entries,
             2812 wiz_defined-function locations,
-            769 strings with 9703 characters,
-and the built_in function-call counts, 9426 in all, are:
-= -- 553
-> -- 343
+            926 strings with 14663 characters,
+and the built_in function-call counts, 17749 in all, are:
+= -- 1016
+> -- 611
 < -- 2
-+ -- 134
-- -- 106
-* -- 588
-:= -- 1061
-add.period$ -- 0
-call.type$ -- 25
-change.case$ -- 0
++ -- 242
+- -- 186
+* -- 1043
+:= -- 2013
+add.period$ -- 3
+call.type$ -- 53
+change.case$ -- 2
 chr.to.int$ -- 0
-cite$ -- 25
-duplicate$ -- 1073
-empty$ -- 948
-format.name$ -- 130
-if$ -- 2090
+cite$ -- 53
+duplicate$ -- 2042
+empty$ -- 1869
+format.name$ -- 229
+if$ -- 3958
 int.to.chr$ -- 0
-int.to.str$ -- 25
-missing$ -- 280
-newline$ -- 83
-num.names$ -- 25
-pop$ -- 434
+int.to.str$ -- 53
+missing$ -- 529
+newline$ -- 170
+num.names$ -- 51
+pop$ -- 871
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 239
+skip$ -- 455
 stack$ -- 0
-substring$ -- 260
-swap$ -- 716
+substring$ -- 445
+swap$ -- 1284
 text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 0
-while$ -- 51
-width$ -- 27
-write$ -- 205
+while$ -- 94
+width$ -- 55
+write$ -- 417

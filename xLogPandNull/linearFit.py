@@ -45,11 +45,11 @@ dcalc = [0.37 for num in nums]
 # Use tools to plot data  
 title = "OpenEye's XLogP compared to Leo Hansch LogPcyc"
 # Using larger of the two uncertainties for this plot
-tools.ComparePlot(allExp, calc, title, "Experimental logD", "Predicted logD", dallExp, dcalc, [''], "logPpaper_XLogP_compare.pdf")
+# tools.ComparePlot(allExp, calc, title, "Experimental logD", "Predicted logD", dallExp, dcalc, [''], "logPpaper_XLogP_compare.pdf")
 
 # Make the linear fit:
-y = np.array(calc)
-x = np.array(allExp)
+x = np.array(calc)
+y = np.array(allExp)
 m, b = np.linalg.lstsq(np.vstack( [x, np.ones(len(allExp))]).T, y)[0]
 print "Linear fit of x=experiment and y = XlogP gives slope = %.4f and intercept = %.4f" % (m,b)
 b_dif = np.average(y-x)
