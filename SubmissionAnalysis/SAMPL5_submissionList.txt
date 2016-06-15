@@ -1,4 +1,4 @@
-Submission #, Last Name, First Name, Institution, Method Name, Method Category
+Submission #, First Name, Last Name, Institution, Method Name, Method Category
 01, Gerhard, Koenig, Max-Planck-Institut fuer Kohlenforschung, ['QM/MM-CGenFF/BLYP/6-31G*'], QM/MM explicit solvent 
 02, Gerhard, Koenig, Max-Planck-Institut fuer Kohlenforschung, ['QM/OLYP/DZP/SMD'], QM/NBB 
 03, Julien, Michel, University of Edinburgh, ['SOMD/AM1BCC-GAFF-TIP3P/MBAR/C'], MD explicit solvent atomistic FF 

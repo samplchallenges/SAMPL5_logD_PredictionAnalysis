@@ -55,7 +55,7 @@ def parseFile(fileName, comments = '#', keywords = ['predictions:', 'name:','sof
             
     return data, other
 
-def ParseAllFiles(fileList, numDict = None, sep = '_'):
+def ParseAllFiles(fileList, numDict = None):
     """
     Takes a list of files and creates a dictionary with information and data
     data is at key 'data' all other information is specified
@@ -63,7 +63,8 @@ def ParseAllFiles(fileList, numDict = None, sep = '_'):
     Dict = {}
     # Parse file list
     for i,f in enumerate(fileList):
-        Flist = f.split(sep)
+        fileName = f.split('/')[-1]
+        Flist = fileName.split('_')
         # submission ID assigned from randomly assigned identifier
         subID = int(Flist[0].strip())
         # Use parseFile method to extract data
@@ -87,8 +88,8 @@ preDir = "../predictionFiles_byNumber/"
 #pickle.dump(stanData, open('../DataFiles/StandardPredictions.p','wb'))
 
 # Parse results for all regular DC predictions
-RegFiles = glob.glob('%s/*DC-*.txt' % preDir)
-regData = ParseAllFiles(RegFiles,IDdict )
+RegFiles = glob.glob('%s/*.txt' % preDir)
+regData = ParseAllFiles(RegFiles)
 
 # ====================================================================
 # Add user information to dictionary from SAMPL5_users.csv 
@@ -96,31 +97,21 @@ regData = ParseAllFiles(RegFiles,IDdict )
 # only DC prediction information is included
 # and one organization name was edited to remove commas
 
-UserInfoFile = "SAMPL5_users.csv"
+UserInfoFile = "SAMPL5_submissionList.txt"
 f = open(UserInfoFile)
 lines = f.readlines()
 f.close()
 
 # Where I want a copy of these stored. 
 SIdirectory = "~/Google\ Drive/Research/SAMPL/predictionFiles/"
-SIdirectory = '../predictionFiles_byNumber/'
 for l in lines[1:]: # Skip header line in file
     # strip information
     info = [s.strip() for s in l.split(',')]
+    key = int(info[0])
 
-    # The only time this isn't true is for Standard submissions 
-    if IDdict.has_key(info[5]):
-        key = IDdict[info[5]] # get short number from id dictionary
+    # Added data about entry to dictionary entry
+    regData[key]['firstName'] = info[1]
+    regData[key]['lastName'] = info[2]
+    regData[key]['Organization'] = info[3]
 
-        # Added data about entry to dictionary entry
-        regData[key]['firstName'] = info[0]
-        regData[key]['lastName'] = info[1]
-        regData[key]['email'] = info[2]
-        regData[key]['Organization'] = info[3]
-        anon = int(info[4]) == 1
-        regData[key]['isAnonymous'] = anon
-        if anon:
-            print key, "is Anonymous"
-        commands.getoutput("cp %s/%s %s/%02d_predictions.txt" % (preDir, regData[key]['fileName'], SIdirectory, key))
-    
-#pickle.dump(regData, open('../DataFiles/predictions.p','wb'))
+pickle.dump(regData, open('../DataFiles/predictions.p','wb'))

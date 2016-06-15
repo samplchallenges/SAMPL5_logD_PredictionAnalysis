@@ -1,6 +1,7 @@
 import imp
 tools = imp.load_source('tools','../../DataFiles/tools.py')
 import pickle
+import numpy as np
 from pylab import *
 
 data = pickle.load(open('boxSizeData.p','rb'))
@@ -46,6 +47,11 @@ for d, entry in data.items():
         sym ='ks-'
     
     p = ax.errorbar(xs, ys, yerr = yerr, fmt = sym, label = d, capsize = 0.5)
+    print d
+    print min(ys), max(ys)
+    print max(ys) - min(ys)
+    print np.average(ys), np.std(ys)
+    print min(xs), max(xs)
     handles.append(p)
 
 ax.legend(bbox_to_anchor = (0.02, 0.98), loc = 2, ncol = 1, borderaxespad = 0., handles = handles)
