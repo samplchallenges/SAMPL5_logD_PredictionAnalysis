@@ -142,9 +142,9 @@ D = \frac{\sum_i [X_i]_{cyc}}{\sum_i [X_i]_{aq}}
 where $X_i$ represents a single protonation or tautomeric state of the solute in one of the solvents, and the sum runs over all protonation and tautomeric states \cite{Young:2011gs}. 
 Results are reported as the logarithm of this ratio ($\log D$). 
 These are more complicated than partition coefficients ($\log P$), which measure the concentration of the neutral solute in both solvents \cite{Leo:1971wu}.
-If only one tautomer is relevant, $\log P$ is proportional to the transfer free energy, and can be calculated from solvation free energies \cite{Essex:1992bd,Best:1999ix,JohnEEksterowicz:1997cj,Jorgensen:1989ga,Jorgensen:1990ha,Garrido:2009hz,Garrido:2011es,Garrido:2012gc,Yang:2013io,Michel:2007gw,Genheden:2016jj}. 
-In contrast, all charged and neutral forms of the solute will need to be included to accurately calculate $\log D$, which can be estimated from a calculated $\log P$ and the relative populations of tautomers in each solvent. 
-Accurate tautomer enumeration in both solvents may be an important part of predicting $\log D$, introducing new complexities to the SAMPL challenge which were avoided in previous hydration free energy challenges. . 
+Specifically, if only one tautomer is relevant, $\log P$ is proportional to the transfer free energy, and can be calculated from solvation free energies \cite{Essex:1992bd,Best:1999ix,JohnEEksterowicz:1997cj,Jorgensen:1989ga,Jorgensen:1990ha,Garrido:2009hz,Garrido:2011es,Garrido:2012gc,Yang:2013io,Michel:2007gw,Genheden:2016jj}. 
+In contrast, all relevant charged and neutral forms of the solute will need to be included to accurately calculate $\log D$, which can be estimated from a calculated $\log P$ and the relative populations of protonation states and tautomers in each solvent. 
+Thus, accurate tautomer enumeration in both solvents may be an important part of predicting $\log D$, introducing new complexities to the SAMPL challenge which were avoided in previous hydration free energy challenges.
 
 Here we give an overview of the analysis done for the SAMPL5 challenge, including the compounds considered, overall performance of submissions, and the metrics used for analysis. 
 We also include details for a set of reference calculations we performed estimating $\log D$ as the cyclohexane/water partition coefficient as well as a series of follow-up studies focusing on the importance of tautomers in estimating $\log D$.
@@ -154,14 +154,13 @@ Many of these issues will be highly relevant for nominally more challenging prob
 \section{Challenge Logistics}
 \label{logistics}
 SAMPL5 began on September 15, 2015
-when the specifications for the challenge became available on the D3R website (http://drugdesigndata.org), these are also provided in the supporting information.  
+when the specifications and input files for the challenge were made available on the D3R website (http://drugdesigndata.org); these are also provided in the supporting information.  
 The challenge deadline was February 2, 2016 and experimental results were provided to participants not long after. 
 As in past SAMPL challenges, each group could submit multiple sets of predictions.
 There was also the option to remain anonymous.  
 A total of 76 prediction sets from 18 participants or participating groups were submitted and assigned a random 2 digit ID number 01 to 76 that will be used throughout this paper. 
 Predictions were analyzed and overview statistics, as well as individual analysis of each submission by various error metrics (as detailed below) were returned to each participant. 
 The challenge culminated with discussions of participants experiences and results at the 1st Annual D3R Workshop at the University of California, San Diego March 9-11, 2016.
-%DLM: Do they call it "first annual"? For some reason I thought they hadn't totally decided how often the workshops would be. - yep that is what their website called it. 
 
 \begin{table}
 \input{MoleculeTable.tex}
