@@ -174,23 +174,23 @@ The 53 molecules were divided into batches 0, 1, and 2 containing 13, 20, and 20
 We wanted each batch to have a similar dynamic range and for the molecules to increase in size across batches, so on average the smallest molecules are in batch 0 and the largest in batch 2. 
 To ensure each batch had adequate dynamic range, the molecular weight and estimated octanol/water partition coefficient were computed for each compound. 
 These partition coefficients were estimated with OpenEye's $\log P$ calculator. Molecules were then assigned to bins by estimated partition coefficient, and assigned to batches based on molecular weight. 
-Specifically, the smallest molecules from each partition coefficient bin were added to batch 0, then batch 1, and the rest of the molecules compromise batch 2.
+Specifically, the smallest molecules from each partition coefficient bin were added to batch 0, then batch 1, and the rest of the molecules comprise batch 2.
 
 Participants could submit partial sets of predictions as long as they included full consecutive batches; that is, they could submit batch 0, batches 0 and 1, or batches 0, 1, and 2. 
 The idea was that all participants should attempt predictions on the full set if at all possible, but grouping into batches would allow people with particularly demanding methods (such as polarizable force fields or methods requiring intensive quantum mechanics) to focus on smaller compounds and still be evaluated. 
-Eight submissions from two participants submitted results for only batch 0, an additional five submissions from two participants provided only batch 0 and batch 1.
+Eight submissions from two participants included results for only batch 0, and an additional five submissions from two participants provided only batch 0 and batch 1.
 Here we focus on the results for the complete set of molecules (batches 0, 1, and 2). 
 Separate analysis for the other submission options (batch 0 or batches 0 and 1) is available in the supporting information.
 
 Participants were asked to report a cyclohexane/water distribution coefficient for each molecule. 
-As discussed above, distribution coefficients are the ratio of concentrations for all forms of the solute in cyclohexane and the aqueous layer. 
-During the experimental measurements, the water layer was an aqueous buffer at pH 7.4. 
+As discussed above, distribution coefficients are the ratio of concentrations for all forms of the solute in the cyclohexane and aqueous layers, at a specified pH. 
+In this case, experiments were done with the water layer consisting of a buffered aqueous solution at pH 7.4. 
 We also required participants to provide two estimates for uncertainty, a statistical uncertainty for their computational method and a model uncertainty that estimates agreement with experiment.  
 The statistical uncertainty was intended to be the variation expected over repeated calculations of the same value. 
 The model uncertainty, on the other hand, was intended to provide an estimate of how well the calculated value will agree with experiment. 
 For example, in a recent study we computed cyclohexane/water partition coefficients using alchemical solvation free energy calculations in GROMACS where the statistical uncertainties were around 0.05
-but the root mean squared error was around 1.4 log units \cite{Bannan:2016lp}. 
-An important part of creating predictive models is the ability to know when they will be unreliable or fail. 
+but the root mean squared error was around 1.4 log units \cite{Bannan:2016lp}, so an appropriate estimated model uncertainty would have been 1.4 log units. A careful analysis of expected error could even yield model uncertainties which would vary based on the anticipated difficulty or complexity of a compound. 
+Our interest in model uncertainties is in part based on the realization that an important part of creating predictive models is the ability to know when they will be unreliable or fail. 
 Thus, analysis of model uncertainties is an important part of evaluating any model. 
 
 \section{Analysis of Submission Performance}
