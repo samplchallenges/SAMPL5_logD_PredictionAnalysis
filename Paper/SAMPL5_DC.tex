@@ -224,13 +224,13 @@ We calculated distribution coefficients through a few different methods as a ref
 KHB, a graduate student in the Mobley group, performed a set of blind calculations estimating the $\log D$ as a partition coefficient between cyclohexane and water calculated from solvation free energies.
 In addition, CCB and DLM performed calculations after the challenge which were not included with the prediction sets. 
 We considered a null hypothesis where all molecules are assumed to distribute equally between cyclohexane and water.
-Many fast structural based tools for octanol/water partition coefficients exist, which we compared with no and little correction for cyclohexane. 
-We also included post challenge analysis of protonation and tautomeric states as a correction from calculated partition coefficients to distribution coefficients
+Many fast structure-based tools for octanol/water partition coefficients exist, and we used one of those to estimate partition coefficients, both with no correction for the fact that we are interested in cyclohexane, and with a small adjustment for this as discussed below. 
+We also included post-challenge analysis of protonation and tautomeric states and used this to convert our calculated partition coefficients to distribution coefficients.
 
 \subsection{Calculating partition coefficients from solvation free energies}
 \label{methods:2}
-We decided to estimate distribution coefficients, more simplistically, by assuming only a single neutral tautomer of each solute and calculated $\log P$ from a difference in solvation free energies. 
-Before the challenge, each molecule was taken directly as the provided SMILES string.
+We decided to estimate distribution coefficients via a $\log P$ calculation, by assuming only a single neutral tautomer of each solute, then calculating $\log P$ from a difference in solvation free energies. 
+Before the challenge, each molecule was taken directly from the provided SMILES string.
 As demonstrated in the literature, \cite{Essex:1992bd,Best:1999ix,JohnEEksterowicz:1997cj,Jorgensen:1989ga,Jorgensen:1990ha,Garrido:2009hz,Garrido:2011es,Garrido:2012gc,Yang:2013io,Michel:2007gw,Genheden:2016jj}
 partition coefficients are directly proportional to the difference between the solvation free energy for the solute into each solvent. 
 We use previously established and automated protocols \cite{Bannan:2016lp} 
@@ -241,7 +241,7 @@ To calculate solvation free energies, we used automated tools created by the Mob
 Molecular dynamics simulations were performed in GROMACS  \cite{Berendsen:1995gro,Hess:2008db,Lindahl:2001gro3,vanderSpoel:2005hz,Pronk:2013ef,Pall:2014gb,Abraham:2015gj}
 with the General AMBER Force Field (GAFF) \cite{Wang:2004dev} with AM1-BCC charges\cite{Jakalian:2000ki,Jakalian:2002bd}.
 Topology and coordinate files for the solvated boxes with 1 solute molecule and 500 cyclohexane or 1000 water molecules were built using the Solvation Toolkit \cite{Bannan:2016lp}.
-These files were then converted to AMBER, DESMOND, and LAMMPS formats and provided to SAMPL5 participants. 
+These files were then converted to AMBER, DESMOND, and LAMMPS formats and provided to SAMPL5 participants as reference calculations.
 The Solvation Toolkit takes advantage of many open source Python modules and is available at https://github.com/MobleyLab/SolvationToolkit.
 It converts SMILES strings or IUPAC names of any mixture of small organic compounds to parameterized molecules and builds topology and coordinate files for a variety of simulation packages. 
 All molecular dynamics parameters are identical to previous studies \cite{Liu:2016kb,Klimovich:2010jm,Bannan:2016lp}.
@@ -250,14 +250,15 @@ Solvation free energies are calculated with Alchemical Analysis tool \cite{Klimo
 The partition coefficient was calculated as the difference between the cyclohexane solvation free energy and the hydration free energy.
 The statistical uncertainty was reported as the propagated uncertainty from the solvation free energy calculations. 
 The model uncertainty was estimated to be the same for all molecules and reported as the root-mean-squared error from a recent study on calculating cyclohexane/water partition coefficient, specifically 1.4 log units \cite{Bannan:2016lp}.
-These were assigned submission ID 39 and included in the error analysis performed on all submissions.
+These reference calculations were assigned submission ID 39 and included in the error analysis performed on all submissions.
 
 \paragraph{Simulation box size does not affect the calculated solvation free energy.} 
-Hydration free energies were previously shown to be independent of box sizes from 2 to 9 nanometers, within calculated uncertainties \cite{Parameswaran:2014kq}. 
-Polar solutes are more likely to significantly affect long range interactions so we calculated the dipole moment of each SAMPL5 molecule using the position and charges on atoms in the mol2 files. 
+Hydration free energies were previously shown to be independent of box size for box edges ranging from 2 to 9 nanometers, within calculated uncertainties \cite{Parameswaran:2014kq}; however, here, because cyclohexane is much less polar, we had some concern that finite size effects could still be significant. 
+To explore this, we performed some tests in which we varied the simulation box size.
+Because more polar solutes are more likely to have substantial long range interactions, we calculated the dipole moment of each SAMPL5 molecule using the position and charges on atoms in the mol2 files. 
 SAMPL5\_024 had the largest dipole moment so it was used as the solute for the box size investigation. 
 The solvation free energy calculations were set up as described above, changing the number of cyclohexane molecules from 100 to 500.  
-Our calculations above are performed with PME coulomb interactions.
+Our calculations above are performed with lattice-sum (PME) treatment of coulomb interactions.
 It was the primary focus of this check and we included duplicate calculations for the smaller box sizes where the initial coordinate file was the same, but new velocities were generated for the equilibrium phases. 
 We also repeated the solvation free energy calculations with reaction field coulomb interactions assigning the dielectric coefficient for cyclohexane, 2.043 \cite{crc}.
 \begin{figure} 
@@ -265,11 +266,11 @@ We also repeated the solvation free energy calculations with reaction field coul
 \caption{Comparison of box size}
 \label{boxSizes}  
 \end{figure}
-For both types of simulation, the calculated solvation free energy fluctuated around an average of $19.1 kcal/mol$ with no trend that would suggest solvation free energy depends on box size (figure \ref{boxSizes}).
-There are many other explanations for fluctuations in calculated solvation free energies, including sampling, that might account for the $0.48 kcal/mol$ range in the PME simulations. 
-Box sizes from 2.64 to 4.54 nm box edges have no significant affect on the calculated solvation free energies. 
-In the future, smaller box sizes could be used to use computational resources more efficiently. 
-The input, results, molecular dynamics parameter files, and tables of solvation free energies are available in the supporting information. 
+For both types of simulation, the calculated solvation free energy fluctuated around an average of $19.1$ kcal/mol with no trend that would suggest solvation free energy depends on box size (figure \ref{boxSizes}).
+There are many other explanations for fluctuations in calculated solvation free energies, including sampling, that might account for the $0.48$ kcal/mol range in the PME simulations. 
+Ultimately, we find that box edge lengths from 2.64 to 4.54 nm have no significant affect on the calculated solvation free energies. 
+This suggests that in the future, smaller box sizes could be used for computational efficiency. 
+The input, results, molecular dynamics parameter and corodinate files, and tables of solvation free energies are available in the supporting information. 
 
 \subsection{Consideration of tautomers after SAMPL5}
 \label{methods:3}
@@ -301,7 +302,7 @@ We then estimated $\log D$ using the equations above, accounting for just one ch
 For acidic solutes, the smallest acidic pKa was used with equation \ref{acidic}, oppositely for basic solutes the largest basic pKa was used with equation \ref{basic} to estimate $\log D$ from $\log P$. 
 
 Using pKa values only accounts for one change in protonation, whereas a correct distribution coefficient should include all relevant tautomers and protonation states of the molecule in both solvents. 
-To correct for all other tautomer states we used Schr\"{o}dinger's LigPrep \cite{ligprep} to enumerate tautomers for each molecule in the aqueous solution. 
+To account for all other tautomer states, we used Schr\"{o}dinger's LigPrep \cite{ligprep} to enumerate tautomers for each molecule in the aqueous solution. 
 The results of the enumeration can include an energetic ``state penalty'' calculated with Epik which relates the population of that tautomer to all others. 
 This state penalty can be converted into log units and used as a correction term to convert $\log P$ to $\log D$:
 \begin{equation}
@@ -314,13 +315,13 @@ Therefore both of these corrections account for the protonation or tautomer stat
 
 \subsection{Estimating distribution coefficients with a fast, structural based partition coefficient calculator}
 \label{methods:4}
-Many structural based tools exist for octanol/water partition coefficients; they are very fast and generally accurate. 
+Many structure-based tools exist for octanol/water partition coefficients; they are very fast and generally accurate. 
 However, these tools are all trained on empirical data, meaning they are limited by the training data. 
 We chose the OpenEye tool OEXlogP \cite{RenxiaoWang:1997fa,Wang:2000kk} as an example of such a tool. 
-Two post prediction sets were prepared with the OEXlogP tool.
+Two post-prediction sets were prepared with the OEXlogP tool.
 First, the predicted octanol/water partition coefficient was considered an estimate for $\log D$.
-In the second set, we calculated a correction for the bias between the calculated XlogP values and a set of experimental cyclohexane/water partition coefficients \cite{Leo:1971wu}.
-For the rest of this paper we will refer to the octanol/water partition coefficient set as $XlogP_{oct}$ and the bias corrected set as $XlogP_{corr}$. 
+In the second set, we calculated a correction for the bias (treated as a simple offset) between the calculated XlogP values and a set of experimental cyclohexane/water partition coefficients \cite{Leo:1971wu}.
+For the rest of this paper we will refer to the octanol/water partition coefficient set as $XlogP_{oct}$ and the bias-corrected set as $XlogP_{corr}$. 
 
 \section{Results and Discussion}
 \label{results:1}
