@@ -103,12 +103,14 @@ In the recent SAMPL5 challenge, participants submitted predictions for cyclohexa
 Distribution coefficients ($\log D$) replace the hydration free energies that were a central part of the past five SAMPL challenges.
 A wide variety of computational methods were represented by the 76 submissions from 18 participating groups. 
 Here, we analyze submissions by a variety of error metrics and provide details for a number of reference calculations we performed. 
-As in the SAMPL4 challenge, evaluation of model uncertainty estimates is closely considered, but remains an area where prediction and analysis need improvement. 
+As in the SAMPL4 challenge, we assessed the ability of participants to evaluate not just their statistical uncertainty, but their model uncertainty -- how well they can predict the magnitude of their model or force field error for specific predictions. 
+Unfortunately, this remains an area where prediction and analysis need improvement. 
 In SAMPL4 the top performing submissions achieved a root-mean-squared error (RMSE) around 1.5 kcal/mol. 
-If we anticipate accuracy in $\log D$ predictions to be similar to the hydration free energy predictions in SAMPL4, a root-mean-squared error (RMSE) around 1.5 kcal/mol, the expected error here would be around 1.54 log units. 
+If we anticipate accuracy in $\log D$ predictions to be similar to the hydration free energy predictions in SAMPL4, which had an root-mean-squared error (RMSE) around 1.5 kcal/mol, the expected error here would be around 1.54 log units. 
 Only a few submissions had an RMSE below 2.5 log units in their predicted $\log D$ values. 
-However, distribution coefficients introduced complexities, not present in past SAMPL challenges, including tautomer enumeration, that are likely to be important in predicting biomolecular properties of interest to drug discovery.
-Considering the insight gained by analyzing distribution coefficient predictions here and the fact that they are relatively straightforward to measure experimentally, makes them a promising source of data for future blind challenges. % I know this sentence needs to be fixed, but I've been staring at it for too long and didn't get it reworded on this write up. 
+However, distribution coefficients introduced complexities not present in past SAMPL challenges, including tautomer enumeration, that are likely to be important in predicting biomolecular properties of interest to drug discovery, so some decrease in accuracy would be expected.
+Overall, the SAMPL5 distribution coefficient challenge provided great insight into the importance of modeling a variety of physical effects. 
+We believe this type of measurements will be a promising source of data for future blind challenges, especially in view of the relatively straightforward nature of the experiments and the level of insight provided. 
 
 \keywords{distribution coefficient \and blind challenge \and free energy } 
 % CCB: these were options provided by the template, I don't know what they're for.
