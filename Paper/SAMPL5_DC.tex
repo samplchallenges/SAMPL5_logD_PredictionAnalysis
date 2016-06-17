@@ -160,7 +160,7 @@ As in past SAMPL challenges, each group could submit multiple sets of prediction
 There was also the option to remain anonymous.  
 A total of 76 prediction sets from 18 participants or participating groups were submitted and assigned a random 2 digit ID number 01 to 76 that will be used throughout this paper. 
 Predictions were analyzed and overview statistics, as well as individual analysis of each submission by various error metrics (as detailed below) were returned to each participant. 
-The challenge culminated with discussions of participants experiences and results at the 1st Annual D3R Workshop at the University of California, San Diego March 9-11, 2016.
+The challenge culminated with discussions of participants experiences and results at the 1st D3R Workshop at the University of California, San Diego March 9-11, 2016.
 
 \begin{table}
 \input{MoleculeTable.tex}
@@ -199,13 +199,14 @@ Thus, analysis of model uncertainties is an important part of evaluating any mod
 As in past SAMPL challenges, we considered a variety of error metrics in analyzing all predictions submitted to SAMPL5. 
 Each error metric was calculated for all submissions, by batch, and distributed to challenge participants before the workshop.
 Here we will focus primarily on six error metrics: the root-mean-squared error (RMSE), average unsigned error (AUE), average signed error (ASE), Pearson's R (R), Kendall's tau (tau), and the `error slope' explained in depth below. 
-We also calculated maximum absolute error and percent of predictions with the correct sign which are not included in the analysis here, but were provided to challenge participants and are available in the supporting information.
-Uncertainty in each metric was calculated as the standard deviation over 1000 bootstrap trials, where each trial consists of creating a `new' dataset by sampling pairs of (predicted, calculated) values and associated uncertainties from the original set, with replacement. 
+We also calculated the maximum absolute error and the percent of predictions with the correct sign, but these are not included in the analysis here.
+However, these metrics were provided to challenge participants and are available in the supporting information.
+The uncertainty in each metric was calculated as the standard deviation over 1000 bootstrap trials, where each trial consists of creating a `new' dataset by sampling pairs of (predicted, calculated) values and associated uncertainties from the original set, with replacement. 
 As described previously, this bootstrapping technique also included variation in the experimental values based on their reported uncertainties\cite{Mobley:2014gu}.
 
-As discussed above, an important evaluation of a predictive tool is the ability to predict the accuracy of a computational method -- that is, how well the calculated values are likely to agree with experiment -- not just its statistical error.  
-As in SAMPL4 \cite{Mobley:2014gu}, a quantile-quantile plot (QQ Plot) was created for each prediction set \cite{Wilk:1968cm}. 
-QQ Plots compare the fraction of a normal distribution within a number of standard deviations to the distribution of errors (calculated minus experiment) that are within that number of model uncertainties.
+As discussed above, an important factor influencing the utility of a predictive tool is the ability of the tool to not only provide predictions but to predict the accuracy of those predictions -- that is, how well the calculated values are likely to agree with experiment -- not just its statistical error.  
+To assess this, as in SAMPL4 \cite{Mobley:2014gu}, a quantile-quantile plot (QQ Plot) was created for each prediction set \cite{Wilk:1968cm}. 
+QQ Plots compare the fraction of a normal distribution within a specified number of standard deviations to the distribution of errors (calculated minus experiment) that are within that number of model uncertainties.
 For example, consider the number of predictions within one standard deviation of the expected value; if the samples are drawn from a normal distribution, then $~0.68$ of the values ought to fall within one standard deviation, so the value on the x-axis is $0.68$. The value on the y-axis will represent the fraction of predictions that are within one model uncertainty of the experimental value.  If the model uncertainty is accurate, then this ought also to correspond to a value of $0.68$.
 A linear regression analysis helps summarize these results.
 The `error slope' is the slope of the line comparing the fraction of predictions within a specified range of experiment to the expected fraction from a normal distribution.
@@ -213,7 +214,7 @@ An error slope of greater than one indicates that the calculated values are with
 In contrast, an error slope less than one suggests the model uncertainty was underestimated. 
 
 We also attempted to identify any individual molecules where most of the methods failed to accurately estimate the distribution coefficient. 
-To accomplish this a data set was created for each molecule consisting of all predictions submitted for that molecule, then all the error metrics discussed above were calculated for each molecule. 
+To accomplish this, we analyzed all predictions on a molecule-by-molecule basis via our usual set of error metrics.  
 Here we will primarily focus on just average unsigned error for molecules, but all other error metrics were provided to participants and are available in supporting information. 
 
 \section{Reference calculations} 
