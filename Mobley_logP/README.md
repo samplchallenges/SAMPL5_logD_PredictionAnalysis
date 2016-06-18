@@ -11,4 +11,5 @@ We used KHB's input files to make example simulation files that were provided fo
 * Method.* were draft files for writing the method that was incldued in our submission file (39)
 * DC-MobleySAMPL-1.txt and DCStandard-MobleySAMPL-1.txt: our submission files for SAMPL5
 * SAMPL5_withFreeEnergy.txt: Has our logD submission results and the calculated solvation free energies for each molecule. Provided to participants upon request. 
-
+* wetCyclohexane_SAMPL5_074: Directory includes all input and results files for the simulation with water in the cyclohexane phase
+* allSolvents: input files and trajectory file for simulation with water, cyclohexane, DMSO, and acetonitrile
