@@ -5,42 +5,42 @@ The style file: spphys.bst
 Database file #1: SAMPL5_DC.bib.bib
 You've used 54 entries,
             2812 wiz_defined-function locations,
-            933 strings with 14808 characters,
-and the built_in function-call counts, 18034 in all, are:
-= -- 1035
-> -- 615
-< -- 2
+            935 strings with 14816 characters,
+and the built_in function-call counts, 18180 in all, are:
+= -- 1051
+> -- 619
+< -- 5
 + -- 244
 - -- 187
-* -- 1058
-:= -- 2046
+* -- 1071
+:= -- 2056
 add.period$ -- 3
 call.type$ -- 54
-change.case$ -- 2
-chr.to.int$ -- 0
+change.case$ -- 4
+chr.to.int$ -- 9
 cite$ -- 54
-duplicate$ -- 2074
-empty$ -- 1902
+duplicate$ -- 2090
+empty$ -- 1909
 format.name$ -- 230
-if$ -- 4025
+if$ -- 4062
 int.to.chr$ -- 0
 int.to.str$ -- 54
-missing$ -- 537
+missing$ -- 538
 newline$ -- 173
-num.names$ -- 52
-pop$ -- 884
+num.names$ -- 53
+pop$ -- 886
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 464
+skip$ -- 469
 stack$ -- 0
-substring$ -- 458
-swap$ -- 1301
+substring$ -- 465
+swap$ -- 1312
 text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 0
-while$ -- 96
+while$ -- 97
 width$ -- 56
-write$ -- 425
+write$ -- 426

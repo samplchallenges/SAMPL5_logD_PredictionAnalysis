@@ -113,21 +113,14 @@ However, distribution coefficients introduced complexities not present in past S
 Overall, the SAMPL5 distribution coefficient challenge provided great insight into the importance of modeling a variety of physical effects. 
 We believe this type of measurements will be a promising source of data for future blind challenges, especially in view of the relatively straightforward nature of the experiments and the level of insight provided. 
 
-\keywords{distribution coefficient \and blind challenge \and free energy } 
+\keywords{SAMPL \and distribution coefficient \and blind challenge \and free energy \and alchemical \and molecular simulation } 
 % Are there other relevant key words
 \end{abstract}
 
 % Not sure where this would go, but we haven't discussed averaging the 'best' groups at all in the paper. 
 %DLM: Let's pass for now. We can leave this here in case we decide to add later.
 
-%%%%%%%%
-% CCB: Here is the (mostly short) list of things I think might need to be addressed before submitting, I'll include this on Slack too
-% Author contact info - see note above?
-% Are there other keywords that should be included with the abstract?
-% we refer many times to "in the supplementary information" which is actually online with DASH, check with journal if we can call that SI? (I've tried to mark where we say this so its easy to change later?
-% Table numbers in the text are assigned by which section they are in, but the caption label is numbered in order, I've indicated references to tables, just in case it needs to be changed.
-% There are a few places we say there is analysis "by batch" in the SI, it's not really by batch, like we never looked at statistics for batch 1 or 2 alone, its batch 0, 0-1, or 0-2. I'm not sure this wording is super important, but I indicated the spots in the tex.
-
+% CCB: There are a few references with ... for authors because that is the list we were provided of who was submitting articles 
 
 \section{Introduction}
 \label{intro}
@@ -162,7 +155,7 @@ Many of these issues will be highly relevant for nominally more challenging prob
 \section{Challenge Logistics}
 \label{logistics}
 SAMPL5 began on September 15, 2015
-when the specifications and input files for the challenge were made available on the D3R website (http://drugdesigndata.org); these are also provided in the supporting information.  % SI?
+when the specifications and input files for the challenge were made available on the D3R website (http://drugdesigndata.org); these are also provided in the supporting information, made available on the University of California Dash at % URL
 The challenge deadline was February 2, 2016 and experimental results were provided to participants not long after. 
 As in past SAMPL challenges, each group could submit multiple sets of predictions.
 There was also the option to remain anonymous.  
@@ -188,7 +181,7 @@ Participants could submit partial sets of predictions as long as they included f
 The idea was that all participants should attempt predictions on the full set if at all possible, but grouping into batches would allow people with particularly demanding methods (such as polarizable force fields or methods requiring intensive quantum mechanics) to focus on smaller compounds and still be evaluated. 
 Eight submissions from two participants included results for only batch 0, and an additional five submissions from two participants provided only batches 0 and 1.
 Here we focus on the results for the complete set of molecules (batches 0, 1, and 2). 
-Separate analysis for the other submission options (batch 0 or batches 0 and 1) is available in the supporting information. %SI?
+Separate analysis for dat subsets is available in the supporting information on Dash
 
 Participants were asked to report a cyclohexane/water distribution coefficient for each molecule. 
 As discussed above, distribution coefficients are the ratio of concentrations for all forms of the solute in the cyclohexane and aqueous layers, at a specified pH. 
@@ -208,7 +201,7 @@ As in past SAMPL challenges, we considered a variety of error metrics in analyzi
 Each error metric was calculated for all submissions, by batch, and distributed to challenge participants before the workshop. % by batch?
 Here we will focus primarily on six error metrics: the root-mean-squared error (RMSE), average unsigned error (AUE), average signed error (ASE), Pearson's R (R), Kendall's tau (tau), and the `error slope' explained in depth below. 
 We also calculated the maximum absolute error and the percent of predictions with the correct sign, but these are not included in the analysis here.
-However, these metrics were provided to challenge participants and are available in the supporting information. %SI?
+However, these metrics were provided to challenge participants and are available in the supporting information on Dash.
 The uncertainty in each metric was calculated as the standard deviation over 1000 bootstrap trials, where each trial consists of creating a `new' dataset by sampling pairs of (predicted, calculated) values from the original set, with replacement. 
 As described previously, this bootstrapping technique also included variation in the experimental values based on their reported uncertainties\cite{Mobley:2014gu}.
 
@@ -223,7 +216,7 @@ In contrast, an error slope less than one suggests the model uncertainty was und
 
 We also attempted to identify any individual molecules where most of the methods failed to accurately estimate the distribution coefficient. 
 To accomplish this, we analyzed all predictions on a molecule-by-molecule basis via our usual set of error metrics.  
-Here we will primarily focus on just average unsigned error for molecules, but all other error metrics were provided to participants and are available in supporting information. % SI?
+Here we will primarily focus on just average unsigned error for molecules, but all other error metrics were provided to participants and are available in supporting information on Dash.
 
 \section{Reference calculations} 
 \label{methods:1}
@@ -277,8 +270,7 @@ For both types of simulation, the calculated solvation free energy fluctuated ar
 There are many other explanations for fluctuations in calculated solvation free energies, including sampling, that might account for the $0.48$ kcal/mol range in the PME simulations. 
 Ultimately, we find that box edge lengths from 2.64 to 4.54 nm have no significant affect on the calculated solvation free energies. 
 This suggests that in the future, smaller box sizes could be used for computational efficiency. 
-The input, results, molecular dynamics parameter and corodinate files, and tables of solvation free energies are available in the supporting information. %SI?
-
+The input, results, molecular dynamics parameter and corodinate files, and tables of solvation free energies are available in the supporting information on Dash.
 \subsection{Consideration of tautomers after SAMPL5}
 \label{methods:3}
 
@@ -369,7 +361,7 @@ These are reported for all submissions (Table \ref{groupStats}), % table ref?
 but the rest of the analysis will focus only on submissions that reported results for batches 0, 1, and 2.
 For each submission, we also created a plot comparing the predicted and experimental values.
 Some example plots are provided (Fig. \ref{examplePlots}); these represent a typical submission, in that these submissions were in the middle of the pack by most error metrics. 
-Comparison and QQ plots for every submission are available in the supporting information as well as error metric tables by batch rather than just for the full set. %SI?
+Comparison and QQ plots for every submission are available in the supporting information on Dash as well as error metric tables by batch rather than just for the full set. 
 
 \begin{figure*} 
 \includegraphics{ErrorMetrics.eps}
@@ -545,7 +537,7 @@ We used SAMPL5\_050 and SAMPL5\_083 as examples since both have other neutral ta
 $\Delta G_{hydration}$ & $ 11.45 \pm 0.04 $ &  $ 21.50 \pm 0.03$ &  $33.98 \pm 0.07$ &  $32.68 \pm 0.1$ \\
 $\Delta G_{cyclohexane}$ & $ 13.09 \pm 0.04 $ &  $ 13.25 \pm 0.04$ &  $35.6 \pm 0.1$ &  $36.1 \pm 0.2$ \\
 $\log P_{cyc/wat}$ & $ 1.20 \pm 0.04 $ &  $ -6.04 \pm 0.03$ &  $1.21 \pm 0.09$ &  $2.5 \pm 0.2$ \\
-$state\ penalty$ correction & \multicolumn{1}{c}{$ -11.902 $} &  \multicolumn{1}{c|}{$ -0.453$} &  \multicolumn{1}{c}{$ -0.488 $} &  \multicolumn{1}{c|}{$ -6.53 $} \\
+state penalty correction & \multicolumn{1}{c}{$ -11.902 $} &  \multicolumn{1}{c|}{$ -0.453$} &  \multicolumn{1}{c}{$ -0.488 $} &  \multicolumn{1}{c|}{$ -6.53 $} \\
 $\log D_{cyc/wat}$ & $ -10.70 \pm 0.04 $ &  $ -6.50 \pm 0.03$ &  $0.72 \pm 0.09$ &  $-4.0 \pm 0.2$ \\
 \hline
 experimental $\log D$ & \multicolumn{2}{|c|}{$-3.2 \pm 0.6$} & \multicolumn{2}{|c|}{$-1.9 \pm 0.4 $} \\
@@ -558,15 +550,6 @@ For both SAMPL5\_050 and SAMPL5\_083 there were significant changes in their cal
 Distribution coefficients were calculated from the $\log P$ and state penalties calculated with Schr\"{o}dinger's LigPrep tool. 
 In both cases the $\log D$ is still significantly different from the experimental values. 
 Since both the calculated solvation free energies and the tautomer/protomer populations are needed to estimate the distribution coefficient, it is impossible for us to know which calculation introduces more error into our estimates.  
-
-\paragraph{Solvents are not completely immiscible.} 
-Though it is very small, 0.00047 mole fraction \cite{Black:1948bs}, the concentration of water in cyclohexane may affect how a solute is distributed across the two solvents. 
-This will be particularly important for solutes with many polar groups; and may be one reason it was difficult to accurate estimate the $\log D$ for SAMPL5\_074.
-We performed a new calculation of solvation free energy of SAMPL5\_074 into cyclohexane with water also in the solution. 
-This simulation was set-up with Solvation Toolkit as described above with 1 solute, 150 cyclohexane, and 7 water molecules. 
-This is roughly 100 times more water in the cyclohexane phase than is measured experimentally. 
-The local concentration of water near the solute is also likely to vary with as its polarity changes.
-In visualizing the trajectory for the production phase, all 7 water molecules stay next to SAMPL5\_074 for the full simulation. 
 \begin{table}
 \begin{tabular}{| l | r r |}
 \hline
@@ -582,12 +565,21 @@ experimental $\log D$ &\multicolumn{2}{|c|}{$-1.9 \pm 0.3 $} \\
 \label{waterInCyc}
 \caption{Shown are results for solvation free energy calculations for SAMPL5\_074 in dry cyclohexane and wet cyclohexane (7 water to 150 cyclohexane molecules) and how that affects the estimation for the cyclohexane/water distribution coefficient. Energy is reported in $kcal/mol$} 
 \end{table}
+\paragraph{Solvents are not completely immiscible.} 
+Though it is very small, 0.00047 mole fraction \cite{Black:1948bs}, the concentration of water in cyclohexane may affect how a solute is distributed across the two solvents. 
+This will be particularly important for solutes with many polar groups; and may be one reason it was difficult to accurate estimate the $\log D$ for SAMPL5\_074.
+We performed a new calculation of solvation free energy of SAMPL5\_074 into cyclohexane with water also in the solution. 
+This simulation was set-up with Solvation Toolkit as described above with 1 solute, 150 cyclohexane, and 7 water molecules. 
+This is roughly 100 times more water in the cyclohexane phase than is measured experimentally. 
+The local concentration of water near the solute is also likely to vary with as its polarity changes.
+In visualizing the trajectory for the production phase, all 7 water molecules stay next to SAMPL5\_074 for the full simulation. 
+In general, the local concentration of water near the solute may be higher than the bulk concentration in cyclohexane, possibly important when considering simulation settings.
 With this amount of water in cyclohexane, it results in a significant change in the computed solvation free energy for SAMPL5\_074 into cyclohexane with water (Table \ref{waterInCyc}). % table ref?
 This dramatically improves the estimation for $\log D$, proving that the presence of water in the cyclohexane layer could have dramatic affects on the calculated distribution coefficients. 
 As noted, this was done by dramatically overestimating the amount of water in cyclohexane. 
 However, it is sufficient to show that the presence of water in the cyclohexane phase can dramatically affect the computed distribution coefficient, depending on the affinity of the solute for water.
 Further simulations would be needed to conclude how varying the concentration of water in cyclohexane would affect these calculations.
-It should be noted, that the water molecules spend the entire production phase next to the solute, so in general the local concentration of water near the solute may higher than the bulk concentration in cyclohexane.
+It should be noted, that the water molecules spend the entire production phase next to the solute, so in general the local concentration of water near the solute may be higher than the bulk concentration in cyclohexane.
 
 \paragraph{Other buffer/solution components may affect distribution coefficients.} 
 The two phases for the distribution coefficients were cyclohexane and an aqueous buffer, however, dimethyl sulfoxide (DMSO) and acetonitrile were used in the experiments \cite{Rustenburg:sampl5} as well.
@@ -618,7 +610,7 @@ This latter uncertainty estimate is particularly key, as it would allow practiti
 Here, we find that almost every participant dramatically underestimated their model uncertainty. 
 The importance to improve error estimations as a community has been addressed in past SAMPL challenges \cite{Mobley:2014gu}. 
 
-Overall, the results of this challenge strongly suggest predictions for solute partitioning will be extremely helpful for driving improvements to physical modeling needed in pharmaceutical research. 
+The results of this challenge strongly suggest predictions for solute partitioning will be extremely helpful for driving improvements to physical modeling needed in pharmaceutical research. 
 The major challenges encountered here are all very likely to occur when attempting to predict binding affinities or other biomolecular properties of interest to drug discovery. 
 Specifically, accurately predicting the population of protonation and tautomeric states was a challenge, complicated by the fact that there is no simple way to compare these predictions to experimental conditions. 
 Tautomer population is environment-dependent in ways that can dramatically affect computed physical properties. 
@@ -638,25 +630,13 @@ We would also like to acknowledge Michael Shirts at University of Colorado Bould
 We also thank all the SAMPL5 participants and D3R Workshop attendees, especially John Chodera (MSKCC), Ari\"{e}n Rustenburg (MSKCC), Andreas Klamt (COSMOLogic), Christopher Fennell (Oklahoma State University), Samuel Genheden (Gothenburg University), Frank Pickard (National Institute of Health). 
 \end{acknowledgements}
 
-\subsection{Available in supporting info} 
-Below is a list of what we plan to include, it will be an archived directory with detailed READMEs, currently we're using this as a list so we don't forget anything:
-
-things provided to participants
-
-all scripts used for error analysis
-
-all participant files renamed with submission numbers 
-
-triple check no names/e-mails/institutions/etc in the final submitted data
-
-all plots not in the paper
-
-all input/output files for Schr\"{o}dinger calculations
-
-all input files and results files for 'logP' calculations, tautomer redos, box size simulations
-
-example MDP and run scripts
-
+\subsection{Supporting Information}
+Supporting information is available free of charge online through the University of California Dash at  % DASH website URL
+It includes all of the files provided to SAMPL5 participants. That includes a table of SAMPL5\_IDnumbers paired with SMILES,  MOL2 files for each molecule, and the GROMACS, AMBER, DESMOND, and LAMMPS topology and coordinate files for each solute in water and cyclohexane. 
+A separate directory is included with analysis associated with our reference calculations and post sample method development. 
+This includes all python scripts, input files, output files, and results files required to repeat our simulations and calculations done with Schr\"{o}dinger tools. 
+We also provide the data files for all submission, the scripts used for error analysis, plots for all submissions, and data for only batch 0 and batches 0 and 1.
+This is supported with detailed README files explaining the structure of the directories. 
  
 \bibliographystyle{spphys}       % APS-like style for physics
 \bibliography{SAMPL5_DC.bib}   % name your BibTeX data base
