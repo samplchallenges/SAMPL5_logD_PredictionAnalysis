@@ -155,7 +155,7 @@ Many of these issues will be highly relevant for nominally more challenging prob
 \section{Challenge Logistics}
 \label{logistics}
 SAMPL5 began on September 15, 2015
-when the specifications and input files for the challenge were made available on the D3R website (http://drugdesigndata.org); these are also provided in the supporting information, made available on the University of California Dash (http://n2t.net/ark:/b7280/d1988w).
+when the specifications and input files for the challenge were made available on the D3R website (http://drugdesigndata.org); these are also provided in the supporting information, made available on the University of California DASH (http://n2t.net/ark:/b7280/d1988w).
 The challenge deadline was February 2, 2016 and experimental results were provided to participants not long after. 
 As in past SAMPL challenges, each group could submit multiple sets of predictions.
 There was also the option to remain anonymous.  
@@ -181,7 +181,7 @@ Participants could submit partial sets of predictions as long as they included f
 The idea was that all participants should attempt predictions on the full set if at all possible, but grouping into batches would allow people with particularly demanding methods (such as polarizable force fields or methods requiring intensive quantum mechanics) to focus on smaller compounds and still be evaluated. 
 Eight submissions from two participants included results for only batch 0, and an additional five submissions from two participants provided only batches 0 and 1.
 Here we focus on the results for the complete set of molecules (batches 0, 1, and 2). 
-Separate analysis for dat subsets is available in the supporting information on Dash
+Separate analysis for data subsets is available in the supporting information on DASH.
 
 Participants were asked to report a cyclohexane/water distribution coefficient for each molecule. 
 As discussed above, distribution coefficients are the ratio of concentrations for all forms of the solute in the cyclohexane and aqueous layers, at a specified pH. 
@@ -201,7 +201,7 @@ As in past SAMPL challenges, we considered a variety of error metrics in analyzi
 Each error metric was calculated for all submissions, by batch, and distributed to challenge participants before the workshop. % by batch?
 Here we will focus primarily on six error metrics: the root-mean-squared error (RMSE), average unsigned error (AUE), average signed error (ASE), Pearson's R (R), Kendall's tau (tau), and the `error slope' explained in depth below. 
 We also calculated the maximum absolute error and the percent of predictions with the correct sign, but these are not included in the analysis here.
-However, these metrics were provided to challenge participants and are available in the supporting information on Dash.
+However, these metrics were provided to challenge participants and are available in the supporting information on DASH.
 The uncertainty in each metric was calculated as the standard deviation over 1000 bootstrap trials, where each trial consists of creating a `new' dataset by sampling pairs of (predicted, calculated) values from the original set, with replacement. 
 As described previously, this bootstrapping technique also included variation in the experimental values based on their reported uncertainties\cite{Mobley:2014gu}.
 
@@ -216,7 +216,7 @@ In contrast, an error slope less than one suggests the model uncertainty was und
 
 We also attempted to identify any individual molecules where most of the methods failed to accurately estimate the distribution coefficient. 
 To accomplish this, we analyzed all predictions on a molecule-by-molecule basis via our usual set of error metrics.  
-Here we will primarily focus on just average unsigned error for molecules, but all other error metrics were provided to participants and are available in supporting information on Dash.
+Here we will primarily focus on just average unsigned error for molecules, but all other error metrics were provided to participants and are available in supporting information on DASH.
 
 \section{Reference calculations} 
 \label{methods:1}
@@ -270,7 +270,7 @@ For both types of simulation, the calculated solvation free energy fluctuated ar
 There are many other explanations for fluctuations in calculated solvation free energies, including sampling, that might account for the $0.48$ kcal/mol range in the PME simulations. 
 Ultimately, we find that box edge lengths from 2.64 to 4.54 nm have no significant affect on the calculated solvation free energies. 
 This suggests that in the future, smaller box sizes could be used for computational efficiency. 
-The input, results, molecular dynamics parameter and corodinate files, and tables of solvation free energies are available in the supporting information on Dash.
+The input, results, molecular dynamics parameter and corodinate files, and tables of solvation free energies are available in the supporting information on DASH.
 \subsection{Consideration of tautomers after SAMPL5}
 \label{methods:3}
 
@@ -347,7 +347,7 @@ It took several challenges focused on hydration before a range of methods could 
 \scriptsize
 \input{groupStats.tex}
 \label{groupStats}
-\caption{Error metrics were calculate for each set of predictions, including root-mean-squared error (RMSE), average unsigned error (AUE), average signed error (ASE), Kendall's tau (tau), and Pearson's R (R). Error slope refers to the slope of data in a QQ Plot. Indicated submissions included only batch 0\textsuperscript{a} or batches 0 and 1\textsuperscript{b}.} 
+\caption{Error metrics were calculated for each set of predictions, including root-mean-squared error (RMSE), average unsigned error (AUE), average signed error (ASE), Kendall's tau (tau), and Pearson's R (R). Error slope refers to the slope of data in a QQ Plot. Indicated submissions included only batch 0\textsuperscript{a} or batches 0 and 1\textsuperscript{b}.} 
 \end{table}
 
 \begin{figure*} 
@@ -361,7 +361,7 @@ These are reported for all submissions (Table \ref{groupStats}), % table ref?
 but the rest of the analysis will focus only on submissions that reported results for batches 0, 1, and 2.
 For each submission, we also created a plot comparing the predicted and experimental values.
 Some example plots are provided (Fig. \ref{examplePlots}); these represent a typical submission, in that these submissions were in the middle of the pack by most error metrics. 
-Comparison and QQ plots for every submission are available in the supporting information on Dash as well as error metric tables by batch rather than just for the full set. 
+Comparison and QQ plots for every submission are available in the supporting information on DASH as well as error metric tables by batch rather than just for the full set. 
 
 \begin{figure*} 
 \includegraphics{ErrorMetrics.eps}
@@ -424,6 +424,7 @@ One way of evaluating predictive models is to compare them to a null hypothesis,
 In the case of distribution coefficients, we chose a null hypothesis where we assume all solute molecules distribute equally between cyclohexane and water, corresponding to $\log D = 0$, as suggested by Christopher Fennell \cite{ChrisFennell:sampl5pc}. 
 We performed all our standard error analyses discussed above (RMSE, AUE, and Ave. Err) on this simple model as a point of comparison (Table \ref{otherPredictions}). % table ref?
 % tau and R aren't included because you get an error, I assume because they're all zero
+%DLM: Yes, you can't measure correlation/rank ordering if all of your calculated values are the same. :) 
 The null hypothesis would have been within the top three submissions for both RMSE and AUE. 
 While this null hypothesis has no actual predictive power and could not be used to rank compounds, the fact that it performs quite well in terms of error statistics is a challenge for the other methods. 
 \begin{figure} 
@@ -440,7 +441,7 @@ To a first approximation, one might imagine that cyclohexane/water partition coe
 Therefore, we used OEXlogP from Openeye ($XlogP_{oct}$) to examine the possibility of estimating cyclohexane/water distribution coefficients with such a tool. 
 Next, we compared $XlogP_{oct}$ results for a set of compounds with experimental cyclohexane/water partition coefficients\cite{Leo:1971wu}. 
 A linear regression was used to correct the $XlogP_{oct}$ values with a slope of 0.7241 and a y-intercept of -1.0306 ($XlogP_{corr}$). 
-$XlogP_{oct}$ would be in the top few submissions by tau and R, but ranked in the middle all other metrics (Table \ref{otherPredictions}). % table ref
+$XlogP_{oct}$ would be in the top few submissions by tau and R, but ranked in the middle by all other metrics (Table \ref{otherPredictions}). % table ref
 However, with a simple linear regression trained on experimental cyclohexane/water partition coefficients, $XlogP_{corr}$ has a better RMSE and AUE than any SAMPL5 submission. 
 We do not wish to suggest that regression-trained tools are the best mechanism for predicting distribution coefficients; rather, this indicates the potential for cyclohexane/water distribution data to help drive improvements in our physical models, as clearly there are a range of physical effects here which are not yet well described by our models. 
 
@@ -449,7 +450,7 @@ We do not wish to suggest that regression-trained tools are the best mechanism f
 
 \begin{figure*}
 \includegraphics{MobleyPlots.eps}
-\caption{Plots showing our predictions (reference calculations) compared to experiment. Shown here is the results for submission 39 to SAMPL5, with no tautomer correction ($\log P$), distribution coefficient corrected from calculated partition coefficient based on pKas ($\log D_{pK_a}$), and distribution coefficient corrected from calculated partition coefficient based on state penalties ($\log D_{state\ penalty}$.}
+\caption{Plots showing our predictions (reference calculations) compared to experiment. Shown here are the results for submission 39 to SAMPL5, with no tautomer correction ($\log P$), distribution coefficient corrected from calculated partition coefficient based on pKas ($\log D_{pK_a}$), and distribution coefficient corrected from calculated partition coefficient based on state penalties ($\log D_{state\ penalty}$.}
 \label{MobleyPlots}       
 \end{figure*}
 
@@ -463,7 +464,7 @@ However, the results of our reference calculations are still helpful for underst
 For our reference calculations, solvation free energies were calculated using GROMACS with GAFF parameters and AM1-BCC charges. 
 Our reference calculations yielded partition coefficients, determined from the difference in solvation free energies without correcting for variation in tautomers. 
 These calculations were done blindly, and analyzed as submission number 39, which was in the top quarter of submissions by most error metrics (Table \ref{groupStats}) % table ref?
-although, there is a slight bias favoring concentrations in cyclohexane, evidenced by the average error ($1.6 \pm 0.3$).
+although there is a slight bias favoring concentrations in cyclohexane, evidenced by the average error ($1.6 \pm 0.3$).
 
 \begin{table}
 \footnotesize
@@ -515,7 +516,7 @@ While these three molecules are relatively small, there were no trends in AUE an
 We tried grouping molecules by functional group, molecular mass, and estimated number of tautomers to see if size, presence or absence of particular functional groups, or number of tautomers played a role in how difficult each compound was in general.
 The only trend found in this process was that all five carboxylic acids (SAMPL5\_ 010, 011, 015, 026, and 060) are in the worst ten molecules by AUE and RMSE. 
 This could be due to poor treatment of the effects of protonation state changes. 
-Among the bottom compounds, perhaps unsurprisingly, was SAMPL5\_083 which is a large macrocycle and SAMPL5\_050; both have many tautomeric forms. 
+Among the bottom compounds, perhaps unsurprisingly, was SAMPL5\_083 which is a large macrocycle, and SAMPL5\_050; both have many tautomeric forms. 
 Most submissions had significant errors in predicting SAMPL5\_074, despite the fact that it is relatively small, rigid, and has no other significant tautomers. 
 Below we will explore why some of these molecules may have had distribution coefficients which were particularly difficult to predict.
 
@@ -631,7 +632,7 @@ We also thank all the SAMPL5 participants and D3R Workshop attendees, especially
 \end{acknowledgements}
 
 \subsection{Supporting Information}
-Supporting information is available free of charge online through the University of California Dash at http://n2t.net/ark:/b7280/d1988w
+Supporting information is available free of charge online through the University of California DASH at http://n2t.net/ark:/b7280/d1988w
 It includes all of the files provided to SAMPL5 participants. That includes a table of SAMPL5\_IDnumbers paired with SMILES,  MOL2 files for each molecule, and the GROMACS, AMBER, DESMOND, and LAMMPS topology and coordinate files for each solute in water and cyclohexane. 
 A separate directory is included with analysis associated with our reference calculations and post sample method development. 
 This includes all python scripts, input files, output files, and results files required to repeat our simulations and calculations done with Schr\"{o}dinger tools. 
