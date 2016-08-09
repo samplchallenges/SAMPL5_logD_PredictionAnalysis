@@ -12,7 +12,7 @@ parameters['figure.subplot.right'] = 0.95
 
 rcParams.update(parameters)
 fig = figure(1)
-fig.suptitle('Box size affect on solvation free energy')
+fig.suptitle('Box size effect on solvation free energy')
 xlabel('Box Edge (nm)')
 ylabel('Solvation Free Energy (kcal/mol)')
 ylim(18.25, 19.75)
@@ -37,16 +37,23 @@ for d, entry in data.items():
         xs.append(edge)
         ys.append(dG)
         yerr.append(ddG)
-        
+
         number = int(num.split('_')[0])
         output.append('%s, %i, %.2f, %.3f, %.3f\n' % (d, number, edge, dG, ddG))
 
     if d == 'pme':
         sym = 'ro-'
+        label = 'PME'
     else:
         sym ='ks-'
-    
-    p = ax.errorbar(xs, ys, yerr = yerr, fmt = sym, label = d, capsize = 0.5)
+        label = 'reaction field'
+
+    # Sort by box size so connected lines go left to right always
+    temp = zip(xs, ys, yerr)
+    temp = sorted(temp)
+    xs, ys, yerr = zip(*temp)
+
+    p = ax.errorbar(xs, ys, yerr = yerr, fmt = sym, label = label, capsize = 0.5)
     print d
     print min(ys), max(ys)
     print max(ys) - min(ys)

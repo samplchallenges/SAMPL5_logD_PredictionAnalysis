@@ -46,17 +46,21 @@ grestore
 \smartqed  % flush right qed marks, e.g. at end of proof
 %
 \usepackage{graphicx}
-%
-% \usepackage{mathptmx}      % use Times fonts if available on your TeX system
-%
-% insert here the call for the packages your document requires
-%\usepackage{latexsym}
-% etc.
-%
-% please place your own definitions here and don't use \def but
-% \newcommand{}{}
+%\usepackage{todonotes}
+\usepackage[colorinlistoftodos]{todonotes}
+\newcommand{\Dtodo}{\todo[inline, color=red!50!]}
+\newcommand{\Ctodo}{\todo[inline, color=blue!50!]}
 
-
+%Replacement for the above after the style Bas used
+% Comments
+\newcounter{comment}
+\newcommand{\comment}[2][]{%
+% initials of the author (optional) + note in the margin
+\refstepcounter{comment}%
+{%
+\todo[inline, color={red!50},size=\small]{%
+\textbf{\footnotesize [\uppercase{#1}\thecomment]:}~#2}%
+}}
 
 % Insert the name of "your journal" with
 \journalname{Journal of Computer-Aided Molecular Design}
@@ -267,8 +271,9 @@ It was the primary focus of this check and we included duplicate calculations fo
 We also repeated the solvation free energy calculations with reaction field coulomb interactions assigning the dielectric coefficient for cyclohexane, 2.0243 \cite{crc}.
 \begin{figure} 
 \includegraphics{boxSize.eps}
-\caption{Comparison of box size}
+\caption{Calculated solvation free energy for SAMPL5\_024 is independent of box size for PME and reaction field coulomb interactions.}
 \label{boxSizes}  
+\comment[CCB]{What do you think of the new caption?}
 \end{figure}
 For both types of simulation, the calculated solvation free energy fluctuated around an average of $19.1$ kcal/mol with no trend that would suggest solvation free energy depends on box size (figure \ref{boxSizes}).
 There are many other explanations for fluctuations in calculated solvation free energies, including sampling, that might account for the $0.48$ kcal/mol range in the PME simulations. 
