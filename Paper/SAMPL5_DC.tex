@@ -243,6 +243,7 @@ Then the calculated partition coefficient was reported as an estimate for $\log 
 To calculate solvation free energies, we used automated tools created by the Mobley lab.
 Molecular dynamics simulations were performed in GROMACS  \cite{Berendsen:1995gro,Hess:2008db,Lindahl:2001gro3,vanderSpoel:2005hz,Pronk:2013ef,Pall:2014gb,Abraham:2015gj}
 with the General AMBER Force Field (GAFF) \cite{Wang:2004dev} with AM1-BCC charges\cite{Jakalian:2000ki,Jakalian:2002bd}.
+The TIP3P water model \cite{Jorgensen:1983fl} was used for the aqueous phase. 
 Topology and coordinate files for the solvated boxes with 1 solute molecule and 500 cyclohexane or 1000 water molecules were built using the Solvation Toolkit \cite{Bannan:2016lp}.
 These files were then converted to AMBER, DESMOND, and LAMMPS formats and provided to SAMPL5 participants as reference calculations.
 The Solvation Toolkit takes advantage of many open source Python modules and is available at https://github.com/MobleyLab/SolvationToolkit.
@@ -411,7 +412,8 @@ For submission 16, Andreas Klamt \emph{et. al.} from COSMOlogic used COSMO-RS to
 To find distribution coefficients, calculations for the formation of different protonation states, zwitterions, and tautomers were performed in COSMO-RS for relevant molecules. 
 For submission 14, Frank Pickard \emph{et al.} from the National Institute of Health calculated solvation free energies from QM calculations with SMD implicit solvent in Gaussian.
 Absolute $pK_a$ calculations were used to account for additional ionization states \cite{Pickard:sampl5}.
-For submission 36, Christopher Fennell \emph{et al.} from Oklahoma State University estimated $\log D$ as a partition coefficient, calculated from the difference in alchemical solvation free energies where the solute was parameterized with the dielectrically corrected general AMBER force field, water was the dielectrically corrected H2O-DC model, and cyclohexane was a specially optimized united-atom model \cite{Fennell:sampl5}.
+% Issue to raise with David
+For submission 36, Christopher Fennell \emph{et al.} from Oklahoma State University estimated $\log D$ as a partition coefficient, calculated from the difference in alchemical solvation free energies where the solute was parameterized with the dielectrically corrected general AMBER force field, water was the dielectrically corrected H2O-DC model, and cyclohexane was a specially optimized united-atom model \cite{Paranahewage:sampl5}.
 Further details for each of these submissions can be found in this issue so only a brief explanation of each method was provided here. 
 
 \subsection{Comparisons to simple empirical models} 
@@ -452,7 +454,7 @@ We do not wish to suggest that regression-trained tools are the best mechanism f
 
 \begin{figure*}
 \includegraphics{MobleyPlots.eps}
-\caption{Plots showing our predictions (reference calculations) compared to experiment. Shown here is the results for submission 39 to SAMPL5, with no tautomer correction ($\log P$), distribution coefficient corrected from calculated partition coefficient based on pKas ($\log D_{pK_a}$), and distribution coefficient corrected from calculated partition coefficient based on state penalties ($\log D_{state\ penalty}$.}
+\caption{Plots showing our predictions (reference calculations) compared to experiment. Shown here is the results for submission 39 to SAMPL5, with no tautomer correction ($\log P$), distribution coefficient corrected from calculated partition coefficient based on pKas ($\log D_{pK_a}$), and distribution coefficient corrected from calculated partition coefficient based on state penalties ($\log D_{state\ penalty}$).}
 \label{MobleyPlots}       
 \end{figure*}
 
