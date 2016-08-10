@@ -173,7 +173,7 @@ The challenge culminated with discussions of participants experiences and result
 \begin{table}
 \input{MoleculeTable.tex}
 \label{MoleculeTable}
-\caption{A complete list of compounds used in the SAMPL5 challenge, sorted by batch. The average unsigned error (AUE), reported in log units as SAMPL5 ID: AUE, was calculated with all submitted predictions for that compound.} 
+\caption{A complete list of compounds used in the SAMPL5 challenge, sorted by batch. The average unsigned error (AUE), reported in log units as SAMPL5 ID: AUE, was calculated with all submitted predictions for that compound. The 2D images were generated using OpenEye OEDepict toolkit \cite{openeye} using the provided SMILES strings.} 
 \end{table}
 
 For the prediction of distribution coefficients in SAMPL5, a total of 53 molecules were considered. 
@@ -544,8 +544,8 @@ We used SAMPL5\_050 and SAMPL5\_083 as examples since both have other neutral ta
 & \multicolumn{2}{|c|}{SAMPL5\_050} & \multicolumn{2}{|c|}{SAMPL5\_083} \\
 & tautomer 1 & tautomer 2 & tautomer 1 & tautomer 2 \\
 \hline
-$\Delta G_{hydration}$ & $ 11.45 \pm 0.04 $ &  $ 21.50 \pm 0.03$ &  $33.98 \pm 0.07$ &  $32.68 \pm 0.1$ \\
-$\Delta G_{cyclohexane}$ & $ 13.09 \pm 0.04 $ &  $ 13.25 \pm 0.04$ &  $35.6 \pm 0.1$ &  $36.1 \pm 0.2$ \\
+$\Delta G_{hydration}$ & $ -11.45 \pm 0.04 $ &  $ -21.50 \pm 0.03$ &  $-33.98 \pm 0.07$ &  $-32.68 \pm 0.1$ \\
+$\Delta G_{cyclohexane}$ & $ -13.09 \pm 0.04 $ &  $ -13.25 \pm 0.04$ &  $-35.6 \pm 0.1$ &  $-36.1 \pm 0.2$ \\
 $\log P_{cyc/wat}$ & $ 1.20 \pm 0.04 $ &  $ -6.04 \pm 0.03$ &  $1.21 \pm 0.09$ &  $2.5 \pm 0.2$ \\
 state penalty correction & \multicolumn{1}{c}{$ -11.902 $} &  \multicolumn{1}{c|}{$ -0.453$} &  \multicolumn{1}{c}{$ -0.488 $} &  \multicolumn{1}{c|}{$ -6.53 $} \\
 $\log D_{cyc/wat}$ & $ -10.70 \pm 0.04 $ &  $ -6.50 \pm 0.03$ &  $0.72 \pm 0.09$ &  $-4.0 \pm 0.2$ \\
@@ -565,8 +565,8 @@ Since both the calculated solvation free energies and the tautomer/protomer popu
 \hline
 & Dry Cyclohexane & Wet Cyclohexane \\
 \hline
-$\Delta G_{hydration}$ & \multicolumn{2}{|c|}{$ 21.90 \pm 0.04 $} \\
-$\Delta G_{cyclohexane}$ & $ 16.77 \pm 0.04 $ &  $ 19.54 \pm 0.04$ \\
+$\Delta G_{hydration}$ & \multicolumn{2}{|c|}{$ -21.90 \pm 0.04 $} \\
+$\Delta G_{cyclohexane}$ & $ -16.77 \pm 0.04 $ &  $ -19.54 \pm 0.04$ \\
 $\log D_{cyc/wat}$ & $ -3.76 \pm 0.04 $ &  $ -1.73 \pm 0.04$  \\
 \hline
 experimental $\log D$ &\multicolumn{2}{|c|}{$-1.9 \pm 0.3 $} \\

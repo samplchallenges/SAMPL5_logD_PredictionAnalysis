@@ -43,13 +43,13 @@ xLabel = r'Experimental $\log D$'
 yLabel = r'Predicted $\log D$'
 fig.suptitle("Comparing methods for correcting partition coefficients")
 
-ax1 = tools.ComparePlot([e,e], [pKa, logP], "", xLabel, yLabel, [de,de], [dlogD, dlogD], [r'$\log D_{pK_a}$', r'$\log P$'], limits = [-10, 8], leg = [0.02, 0.98, 2, 1], expError = 1.0, ax1 = fig.add_subplot(121), symbols = ['k^', 'ro' ], white_fill = True)
+ax1 = tools.ComparePlot([e,e], [pKa, logP], "", xLabel, yLabel, [de,de], [dlogD, dlogD], [r'$\log D_{pK_a}$', r'$\log P$'], limits = [-10, 8], leg = [0.02, 0.98, 2, 1], expError = 1.0, ax1 = fig.add_subplot(121, aspect = 1.0), symbols = ['k^', 'ro' ], white_fill = True)
 ax1.set_xlim(-13, 8)
 ax1.set_ylim(-13, 8)
 ax1.set_xlabel(xLabel)
 ax1.set_ylabel(yLabel)
 
-ax2 = tools.ComparePlot([e,e], [taut, pKa], "", xLabel, yLabel, [de,de], [dlogD, dlogD], [r'$\log D_{state\ penalty}$', r'$\log D_{pK_a}$' ], limits = [-10, 8], leg = [0.02, 0.98, 2, 1], expError = 1.0, ax1 = fig.add_subplot(122), symbols = ['bs', 'k^'], white_fill = True)
+ax2 = tools.ComparePlot([e,e], [taut, pKa], "", xLabel, yLabel, [de,de], [dlogD, dlogD], [r'$\log D_{state\ penalty}$', r'$\log D_{pK_a}$' ], limits = [-10, 8], leg = [0.02, 0.98, 2, 1], expError = 1.0, ax1 = fig.add_subplot(122, aspect = 1.0), symbols = ['bs', 'k^'], white_fill = True)
 ax2.set_xlim(-13, 8)
 ax2.set_ylim(-13, 8)
 ax2.set_xlabel(xLabel)
@@ -66,20 +66,20 @@ savefig('MobleyPlots.pdf')
 
 # Define arrows:
 arrow1 = [['050', -3.7, 1.18, -12.5, -8.5],
-        ['', -3.73, -9.75, -11.75, -8.5], 
-        ['060', -4, -3.65, -8, -5 ], 
+        ['', -3.73, -9.75, -11.75, -8.5],
+        ['060', -4, -3.65, -8, -5 ],
         ['', -4, -7.3, -7.25, -5],
-        ['063', -3, -3.7, -4.5, -5.5], 
-        ['', -3, -6., -3.75, -5.5], 
+        ['063', -3, -3.7, -4.5, -5.5],
+        ['', -3, -6., -3.75, -5.5],
         ['020', 1.7, -3.75, 4, -2]]
 
 arrow2 = [
-        ['063', -3, -6., 0, -8.5], 
-        ['', -3, -9.8, -0.2, -8.5], 
+        ['063', -3, -6., 0, -8.5],
+        ['', -3, -9.8, -0.2, -8.5],
         ['060', -4, -7.3, -8, -8.5],
         ['', -4, -8.1, -7.25, -8.5],
-        ['050', -3.73, -9.75, -7, -10.5], 
-        ['', -3.73, -10.75, -6.25, -10.5], 
+        ['050', -3.73, -9.75, -7, -10.5],
+        ['', -3.73, -10.75, -6.25, -10.5],
         ['020', 1.7, -3.75, 4, -2]]
 
 
@@ -115,17 +115,17 @@ for met in ['AveErr', 'RMS', 'AUE', 'tau', 'R']:
     if met == 'AveErr' or met == 'RMS' or met == 'AUE':
         pKa = "$ %.1f \\pm %.1f $" % (pKa[0], pKa[1])
         logP = "$ %.1f \\pm %.1f$" % (logP[0], logP[1])
-        state = "$ %.1f \\pm %.1f $" % (state[0], state[1]) 
+        state = "$ %.1f \\pm %.1f $" % (state[0], state[1])
     else:
         pKa = "$ %.2f \\pm %.2f $" % (pKa[0], pKa[1])
-        state = "$ %.2f \\pm %.2f $" % (state[0], state[1]) 
+        state = "$ %.2f \\pm %.2f $" % (state[0], state[1])
         if met == 'R':
             logP = "$ %.1f \\pm %.1f$" % (logP[0], logP[1])
         else:
             logP = "$ %.2f \\pm %.2f$" % (logP[0], logP[1])
 
- 
-    
+
+
     output.append("%s & %s & %s & %s \\\\ \n" % (met, logP, pKa, state))
 
 output.append("\\hline\n")
