@@ -1,10 +1,10 @@
 error metric,	 value,	 uncertainty
-RMS,	 2.269,	 0.169
-AUE,	 1.833,	 0.180
+RMS,	 1.778,	 0.120
+AUE,	 1.577,	 0.119
 tau,	 nan,	 nan
-percent,	 41.509,	 6.950
-AveErr,	 1.494,	 0.236
+percent,	 1.887,	 0.000
+AveErr,	 0.494,	 0.234
 R,	 nan,	 nan
 Rsquared,	 nan,	 nan
-error slope,	 0.204,	 0.059
-maxErr,	 4.900,	 0.423
+error slope,	 0.101,	 0.044
+maxErr,	 3.900,	 0.415
