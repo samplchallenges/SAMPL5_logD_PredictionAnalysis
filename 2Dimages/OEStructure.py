@@ -15,6 +15,8 @@ opts.SetTitleLocation(OETitleLocation_Hidden)
 opts.SetAtomColorStyle(OEAtomColorStyle_WhiteMonochrome)
 for name, e in d.items():
     smile = e['Smiles']
+    if name == 'SAMPL5_083':
+        print smile
     mol = OEMol()
     OEParseSmiles(mol, smile)
     OEPrepareDepiction(mol, False, True)
@@ -27,7 +29,7 @@ for name, e in d.items():
 batches = pickle.load(open('../DataFiles/batches.p','rb'))
 batches = [sorted(bat) for bat in batches]
 
-output = ['\\begin{tabular}{|c c c|}\n', 
+output = ['\\begin{tabular}{|c c c|}\n',
         '\\bf{Batch 0} & \\bf{Batch 1} & \\bf{Batch 2} \\\\ \n']
 
 maxlines = max([len(batches[0]), len(batches[1]), len(batches[2])])
@@ -46,7 +48,7 @@ for idx in range(maxlines):
 # Make Better LaTeX table
 output = ['\\begin{tabular}{|c c c c c|}\n']
 image = "\\includegraphics[height = 0.09\\textheight]{2DImages/%s.pdf}"
-aue = "$ %.1f \\pm %.1f $" 
+aue = "$ %.1f \\pm %.1f $"
 
 
 for idx, bat in enumerate(batches):
@@ -79,7 +81,7 @@ for idx, bat in enumerate(batches):
 # Make Better LaTeX table
 output = ['\\begin{tabular}{|c c c c c c c|}\n']
 image = "\\includegraphics[width = 0.14\\textwidth]{2DImages/%s.pdf}"
-aue = "$ %.1f \\pm %.1f $" 
+aue = "$ %.1f \\pm %.1f $"
 
 
 for idx, bat in enumerate(batches):
