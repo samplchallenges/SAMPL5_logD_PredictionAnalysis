@@ -35,7 +35,7 @@ for met in ['AveErr', 'RMS', 'AUE', 'tau', 'R']:
             n = 'N/A'
         else:
             n = "$ %.2f \\pm %.2f $" % (n[0], n[1])
-    
+
     output.append("%s & %s & %s & %s \\\\ \n" % (met, n, x, c))
 
 output.append("\\hline\n")

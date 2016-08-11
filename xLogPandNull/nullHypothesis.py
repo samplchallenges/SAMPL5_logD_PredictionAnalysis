@@ -1,7 +1,7 @@
 import pickle
 from sigfig.sigfig import *
 import numpy as np
-import imp 
+import imp
 tools = imp.load_source('tools','../DataFiles/tools.py')
 
 bootits = 1000 # number of bootstrap iterations
@@ -29,7 +29,7 @@ AlldExp = dExp[0] + dExp[1] + dExp[2]
 # Null hypothesis assumes a 50:50 split between solvents so logD = 0
 Calc = [ [0.0 for k in b] for b in batches]
 # For the QQ plot and error slope, we will assume the error is 1 log unit
-AllCalc = [1.0 for i in range(len(AllExp))]
+AllCalc = [0.0 for i in range(len(AllExp))]
 
 # No calculated uncertainty for plotting purposes
 dCalc  = [ [0.0 for k in b] for b in batches]

@@ -173,7 +173,7 @@ The challenge culminated with discussions of participants experiences and result
 \begin{table}
 \input{MoleculeTable.tex}
 \label{MoleculeTable}
-\caption{A complete list of compounds used in the SAMPL5 challenge, sorted by batch. The average unsigned error (AUE), reported in log units as SAMPL5 ID: AUE, was calculated with all submitted predictions for that compound.} 
+\caption{A complete list of compounds used in the SAMPL5 challenge, sorted by batch. The average unsigned error (AUE), reported in log units as SAMPL5 ID: AUE, was calculated with all submitted predictions for that compound. The 2D images were generated using OpenEye OEDepict toolkit \cite{openeye} using the provided SMILES strings.} 
 \end{table}
 
 For the prediction of distribution coefficients in SAMPL5, a total of 53 molecules were considered. 
@@ -271,7 +271,7 @@ It was the primary focus of this check and we included duplicate calculations fo
 We also repeated the solvation free energy calculations with reaction field coulomb interactions assigning the dielectric coefficient for cyclohexane, 2.0243 \cite{crc}.
 \begin{figure} 
 \includegraphics{boxSize.eps}
-\caption{Calculated solvation free energy for SAMPL5\_024 is independent of box size for PME and reaction field coulomb interactions.}
+\caption{Calculated solvation free energy for SAMPL5\_024 is independent of box size for PME and reaction field coulomb interactions. Points are connected to help distinguish between the two data sets}
 \label{boxSizes}  
 \comment[CCB]{What do you think of the new caption?}
 \end{figure}
@@ -279,7 +279,7 @@ For both types of simulation, the calculated solvation free energy fluctuated ar
 There are many other explanations for fluctuations in calculated solvation free energies, including sampling, that might account for the $0.48$ kcal/mol range in the PME simulations. 
 Ultimately, we find that box edge lengths from 2.64 to 4.54 nm have no significant affect on the calculated solvation free energies. 
 This suggests that in the future, smaller box sizes could be used for computational efficiency. 
-The input, results, molecular dynamics parameter and corodinate files, and tables of solvation free energies are available in the supporting information on Dash.
+The input, results, molecular dynamics parameter and coordinate files, and tables of solvation free energies are available in the supporting information on Dash.
 \subsection{Consideration of tautomers after SAMPL5}
 \label{methods:3}
 
@@ -432,9 +432,8 @@ Further details for each of these submissions can be found in this issue so only
 \end{table}
 One way of evaluating predictive models is to compare them to a null hypothesis, or default result of some kind.  
 In the case of distribution coefficients, we chose a null hypothesis where we assume all solute molecules distribute equally between cyclohexane and water, corresponding to $\log D = 0$, as suggested by Christopher Fennell \cite{ChrisFennell:sampl5pc}. 
-We performed all our standard error analyses discussed above (RMSE, AUE, and Ave. Err) on this simple model as a point of comparison (Table \ref{otherPredictions}). % table ref?
-% tau and R aren't included because you get an error, I assume because they're all zero
-The null hypothesis would have been within the top three submissions for both RMSE and AUE. 
+We performed all our standard error analyses discussed above (RMSE, AUE, and Ave. Err) on this simple model as a point of comparison (Table \ref{otherPredictions}). 
+The null hypothesis would have been the top submission for both RMSE and AUE. 
 While this null hypothesis has no actual predictive power and could not be used to rank compounds, the fact that it performs quite well in terms of error statistics is a challenge for the other methods. 
 \begin{figure} 
 \includegraphics{dynamicRange.eps}
@@ -519,7 +518,7 @@ A better solution would compute state penalties in both water and cyclohexane, b
 \label{results:7}
 With only 53 molecules, it is difficult to find any statistically significant trends in terms of functional groups which are well- or poorly-predicted in general; compared to past SAMPL challenges, this set of molecules is much more complex. 
 They are on average larger, more flexible, and contain multiple functional groups per compound. 
-For each molecule, we organized a data set of predicted distribution coefficients and compared them to the experimental values, calculating the average unsigned error for each (Table \ref{MoleculeTable}). % table reference?
+For each molecule, we organized a data set of predicted distribution coefficients and compared them to the experimental values, calculating the average unsigned error for each (Table \ref{MoleculeTable}).
 There are only three molecules with an AUE less than 2.0 log units (SAMPL5\_ 003, 045, and 059).
 While these three molecules are relatively small, there were no trends in AUE and molecular weight, which was a trend present in SAMPL4 hydration free energy results \cite{Mobley:2014gu}.
 We tried grouping molecules by functional group, molecular mass, and estimated number of tautomers to see if size, presence or absence of particular functional groups, or number of tautomers played a role in how difficult each compound was in general.
@@ -544,8 +543,8 @@ We used SAMPL5\_050 and SAMPL5\_083 as examples since both have other neutral ta
 & \multicolumn{2}{|c|}{SAMPL5\_050} & \multicolumn{2}{|c|}{SAMPL5\_083} \\
 & tautomer 1 & tautomer 2 & tautomer 1 & tautomer 2 \\
 \hline
-$\Delta G_{hydration}$ & $ 11.45 \pm 0.04 $ &  $ 21.50 \pm 0.03$ &  $33.98 \pm 0.07$ &  $32.68 \pm 0.1$ \\
-$\Delta G_{cyclohexane}$ & $ 13.09 \pm 0.04 $ &  $ 13.25 \pm 0.04$ &  $35.6 \pm 0.1$ &  $36.1 \pm 0.2$ \\
+$\Delta G_{hydration}$ & $ -11.45 \pm 0.04 $ &  $ -21.50 \pm 0.03$ &  $-33.98 \pm 0.07$ &  $-32.68 \pm 0.1$ \\
+$\Delta G_{cyclohexane}$ & $ -13.09 \pm 0.04 $ &  $ -13.25 \pm 0.04$ &  $-35.6 \pm 0.1$ &  $-36.1 \pm 0.2$ \\
 $\log P_{cyc/wat}$ & $ 1.20 \pm 0.04 $ &  $ -6.04 \pm 0.03$ &  $1.21 \pm 0.09$ &  $2.5 \pm 0.2$ \\
 state penalty correction & \multicolumn{1}{c}{$ -11.902 $} &  \multicolumn{1}{c|}{$ -0.453$} &  \multicolumn{1}{c}{$ -0.488 $} &  \multicolumn{1}{c|}{$ -6.53 $} \\
 $\log D_{cyc/wat}$ & $ -10.70 \pm 0.04 $ &  $ -6.50 \pm 0.03$ &  $0.72 \pm 0.09$ &  $-4.0 \pm 0.2$ \\
@@ -565,8 +564,8 @@ Since both the calculated solvation free energies and the tautomer/protomer popu
 \hline
 & Dry Cyclohexane & Wet Cyclohexane \\
 \hline
-$\Delta G_{hydration}$ & \multicolumn{2}{|c|}{$ 21.90 \pm 0.04 $} \\
-$\Delta G_{cyclohexane}$ & $ 16.77 \pm 0.04 $ &  $ 19.54 \pm 0.04$ \\
+$\Delta G_{hydration}$ & \multicolumn{2}{|c|}{$ -21.90 \pm 0.04 $} \\
+$\Delta G_{cyclohexane}$ & $ -16.77 \pm 0.04 $ &  $ -19.54 \pm 0.04$ \\
 $\log D_{cyc/wat}$ & $ -3.76 \pm 0.04 $ &  $ -1.73 \pm 0.04$  \\
 \hline
 experimental $\log D$ &\multicolumn{2}{|c|}{$-1.9 \pm 0.3 $} \\

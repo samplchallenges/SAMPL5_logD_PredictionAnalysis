@@ -87,6 +87,12 @@ J.~Michel, M.~Orsi, J.W. Essex, J. Phys. Chem. B \textbf{112}(3), 657 (2007)
 S.~Genheden, Journal of Chemical Theory and Computation \textbf{12}(1), 297
   (2016)
 
+\bibitem{openeye}
+I.~OpenEye Scientific~Software.
+\newblock Oechem.
+\newblock http://www.eyesopen.com (2010).
+\newblock \urlprefix\url{www.eyesopen.com}
+
 \bibitem{Bannan:2016lp}
 C.C. Bannan, G.~Calabr\'{o}, D.Y. Kyu, D.L. Mobley, in review  (2016)
 
