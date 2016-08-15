@@ -166,8 +166,12 @@ for idx, metrics in enumerate([mets1, mets2]):
         
         # Make plots
         axes_list[index] = tools.histPlot(subIDs, vals, dvals, "Submission Number", met, '', option = options[idx][index], absolute = absolutes[idx], ax = axes_list[index])
-        axes_list[index][0].set_ylabel(met, labelpad = 0.35)
-        axes_list[index][1].set_ylabel(met, labelpad = 0.35)
+        if met == 'RMS':
+            ylab = 'RMSE'
+        else:
+            ylab = met
+        axes_list[index][0].set_ylabel(ylab, labelpad = 0.35)
+        axes_list[index][1].set_ylabel(ylab, labelpad = 0.35)
 
     # Save and close figure
     fig.set_frameon(False)
