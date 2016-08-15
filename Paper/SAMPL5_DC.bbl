@@ -94,7 +94,8 @@ I.~OpenEye Scientific~Software.
 \newblock \urlprefix\url{www.eyesopen.com}
 
 \bibitem{Bannan:2016lp}
-C.C. Bannan, G.~Calabr\'{o}, D.Y. Kyu, D.L. Mobley, in review  (2016)
+C.C. Bannan, G.~Calabr\'{o}, D.Y. Kyu, D.L. Mobley, Journal of Chemical Theory
+  and Computation \textbf{12}(8), 4015 (2016)
 
 \bibitem{Wilk:1968cm}
 M.B. Wilk, R.~Gnanadesikan, Biometrika \textbf{55}(1), 1 (1968)
@@ -187,25 +188,64 @@ R.~Wang, Y.~Fu, L.~Lai, Journal of Chemical Information and Modeling
 R.~Wang, Y.~Gao, L.~Lai, Perspectives in Drug Discovery and Design
   \textbf{19}(1), 47 (2000)
 
-\bibitem{Paluch:sampl5}
-S.~Diaz-Rodriguez, S.M. Bozada, J.R. Phifer, A.S. Paluch, Journal of
-  Computer-Aided Molecular Design  (2016)
+\bibitem{Paranahewage:sampl5}
+S.S. Paranahewage, C.S. Gierhart, C.J. Fennell, Journal of Computer-Aided
+  Molecular Design  (2016)
+
+\bibitem{Iorga:sampl5}
+B.~Iorga, I.M. Kenney, O.~Beckstein, Journal of Computer-Aided Molecular Design
+   (2016)
+
+\bibitem{Bosisio:sampl5}
+S.~Bosisio, A.S.J.S. Mey, J.~Michel, Journal of Computer-Aided Molecular Design
+   (2016)
+
+\bibitem{Pickard:sampl5}
+F.~Pickard, G.~K\"onig, F.~Tofoleanu, J.~Lee, A.~Simmonett, Y.~Shao, J.~Ponder,
+  B.R. Brooks, Journal of Computer-Aided Molecular Design  (2016)
 
 \bibitem{Konig:sampl5}
 G.~K\"{o}nig, F.C. Pickard, J.~Huang, A.C. Simmonett, F.~Tofoleanu, J.~Lee,
   P.O. Dral, F.N.U. Samarjeet, M.~Jones, Y.~Shao, W.~Thiel, B.R. Brooks,
   Journal of Computer-Aided Molecular Design  (2016)
 
-\bibitem{Klamt:sampl5}
-A.~Klamt, F.~Eckert, J.~Reinisch, K.~Wichmann, Journal of Computer-Aided
+\bibitem{Genheden:sampl5}
+S.~Genheden, J.~Essex, Journal of Computer-Aided Molecular Design  (2016)
+
+\bibitem{Kamath:sampl5}
+G.~Kamath, I.~Kurnikov, B.~Fain, I.~Leontyev, A.~Illarionov, O.~Butin,
+  M.~Olevanov, L.~Pereyaslavets, Journal of Computer-Aided Molecular Design
+  (2016)
+
+\bibitem{Brini:sampl5}
+E.~Brini, S.S. Paranahewage, C.J. Fennell, K.A. Dill, Journal of Computer-Aided
   Molecular Design  (2016)
 
-\bibitem{Pickard:sampl5}
-F.~Pickard, G.~K\"onig, F.~Tofoleanu, J.~Lee, A.~Simmonett, Y.~Shao, J.~Ponder,
-  B.R. Brooks, Journal of Computer-Aided Molecular Design  (2016)
+\bibitem{Jones:sampl5}
+M.R. Jones, B.R. Brooks, A.K. Wilson, Journal of Computer-Aided Molecular
+  Design  (2016)
 
-\bibitem{Paranahewage:sampl5}
-S.S. Paranahewage, C.S. Gierhart, C.J. Fennell, Journal of Computer-Aided
+\bibitem{Tielker:sampl5}
+N.~Tielker, D.~Tomazic, J.~Heil, T.~Kloss, S.~Ehrhart, S.~G\"ussregen, K.F.
+  Schmidt, S.~Kast, Journal of Computer-Aided Molecular Design  (2016)
+
+\bibitem{Luchko:sampl5}
+T.~Luchko, N.~Blinov, G.C. Limon, K.P. Joyce, A.~Kovalenko, Journal of
+  Computer-Aided Molecular Design  (2016)
+
+\bibitem{Paluch:sampl5}
+S.~Diaz-Rodriguez, S.M. Bozada, J.R. Phifer, A.S. Paluch, Journal of
+  Computer-Aided Molecular Design  (2016)
+
+\bibitem{Park:sampl5}
+H.~Park, K.C. Chung, Journal of Computer-Aided Molecular Design  (2016)
+
+\bibitem{Santos-Martins:sampl5}
+D.~Santos-Martins, P.A. Fernandes, M.J.a. Ramos, Journal of Computer-Aided
+  Molecular Design  (2016)
+
+\bibitem{Klamt:sampl5}
+A.~Klamt, F.~Eckert, J.~Reinisch, K.~Wichmann, Journal of Computer-Aided
   Molecular Design  (2016)
 
 \bibitem{ChrisFennell:sampl5pc}

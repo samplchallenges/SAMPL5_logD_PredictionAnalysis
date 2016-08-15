@@ -332,22 +332,34 @@ In the second set, we used a linear regression to correct for the bias between t
 For the rest of this paper we will refer to the octanol/water partition coefficient set as $XlogP_{oct}$ and the bias-corrected set as $XlogP_{corr}$. 
 
 \subsection{Exploring the possibility of mixing solvents}
-
+\comment[CCB]{new methods section}
 No two solvents are perfectly immiscible. 
-To explore the change in computed solvation free energy into cyclohexane with water present
+We considered the experimental concentration of cyclohexane in water (...) to be too low to affect the calculated distribution coefficients. 
+However, water in cyclohexane, with an experimental concentration of ... , has a possibility of affecting the computed solvation free energies, especially for solutes with many polar functional groups. 
+Additionally, it has been suggested that more polar molecules may pull water molecules into the organic phase. 
+\comment[CCB]{add citations and numbers}
+To explore the effects of water in cyclohexane we repeated simulations for SAMPL5\_074 with 1 and 7 water molecules in a box with 150 cyclohexane molecules and 1 solute molecule. 
+The input files for this simulation were also created with Solvation Toolkit as described above and the same simulation protocol was followed.
+
+Additionally, in the experimental determination of these distribution coefficients there were small concentrations of dimethyl sulfoxide (DMSO) and acetonitrile. 
+The experimental concentrations consisted of each solvent are approximately 50\%, 50\%, 1\%, and 0.4\% by volume for cyclohexane, water, DMSO, and acetonitrile respectively  \cite{Rustenburg:sampl5}.
+To explore how the DMSO and acetonitrile distribute between cyclohexane and water we performed a single simulation with 130 cyclohexane, 780 water, 4 DMSO, and 2 acetonitrile molecules. 
 
 \section{Results and Discussion}
 \label{results:1}
 A broad range of methods were used for the 76 submissions predicting cyclohexane/water distribution coefficients for the SAMPL5 challenge. 
-Many of these predictions used alchemical molecular dynamics simulations to estimate the solvation free energy in explicit solvent using several classes of force fields, including fixed-charge all-atom force fields, all-atom/coarse-grained hybrid force fields, and polarizable force fields. 
-One participant used Semi-Explicit Assembly, an alchemical solvation free energy method for a rigid solute in an implicit solvent. 
-A variety of quantum mechanics (QM) methods were also used including QM/molecular mechanics (QM/MM) with implicit or explicit solvent, QM with non-Boltzmann Bennett free energy calculations, and QM energy calculations with a single optimized molecular geometry. 
-Two participants used variations on the reference interaction-site model (RISM), an integral equation approach, to predict solvation free energies. 
-One participant used QM calculations to derive parameters to tune an empirical model for activity coefficients and used these to estimate distribution coefficients.
-A few submissions used empirically trained methods for calculating solvation free energies. 
-A particularly successful submission, which will be discussed again below, employed the Conductor-Like-Screening Model for Real Solvents (COSMO-RS). 
-% Add available citations in this issue. 
-%DLM: ALso we should add cites to existing methods; I'll try and remember to ask participants for what we should cite after we have this submitted and we can add it in revision.
+Many of these predictions used alchemical molecular dynamics simulations to estimate the solvation free energy in explicit solvent using several classes of force fields, including fixed-charge all-atom force fields \cite{Paranahewage:sampl5,Iorga:sampl5,Bosisio:sampl5,Pickard:sampl5,Konig:sampl5},
+all-atom/coarse-grained hybrid force fields \cite{Genheden:sampl5}, 
+and polarizable force fields \cite{Kamath:sampl5}. 
+One participant used Semi-Explicit Assembly, an alchemical solvation free energy method for a rigid solute in an implicit solvent \cite{Brini:sampl5}. 
+A variety of quantum mechanics (QM) methods were also used including QM/molecular mechanics (QM/MM) with explicit solvent \cite{Pickard:sampl5,Konig:sampl5}, 
+QM with non-Boltzmann Bennett free energy calculations \cite{Pickard:sampl5,Konig:sampl5}, 
+and QM energy calculations with a single optimized molecular geometry \cite{Pickard:sampl5,Jones:sampl5}. 
+Two participants used variations on the reference interaction-site model (RISM), an integral equation approach, to predict solvation free energies \cite{Tielker:sampl5,Luchko:sampl5}. 
+One participant used QM calculations to derive parameters to tune an empirical model for activity coefficients and used these to estimate distribution coefficients \cite{Paluch:sampl5}.
+A few submissions used empirically trained methods for calculating solvation free energies \cite{Park:sampl5,Santos-Martins:sampl5}. 
+A particularly successful submission, which will be discussed again below, employed the Conductor-Like-Screening Model for Real Solvents (COSMO-RS)  \cite{Klamt:sampl5}. 
+\comment[CCB]{David you had a note about citing existing references, is that something we should be trying to do at this point in the game?}
 
 SAMPL5 is the first SAMPL challenge to include distribution coefficients, but we can estimate how well we expect submissions to do based on past SAMPL challenges which included hydration free energies. 
 Distribution coefficients can be related to transfer free energy between solvents, which allows us to estimate an expected performance from root-mean-squared error (RMSE) in past hydration free energy calculations. 
@@ -355,7 +367,7 @@ In SAMPL4  \cite{Mobley:2014gu}, the average RMSE for the best half of submissio
 Here, only five submissions had an RMSE less than 2.5 log units in SAMPL5. 
 There are many reasons for this perceived change in accuracy, such as a more complex set of molecules, the use of cyclohexane as a solvent, and the complexity of estimating tautomer populations, discussed in depth below. 
 Since this is the first challenge on predicting distribution coefficients, it is likely that participants had not yet developed good protocols to deal with many of these challenges, meaning that somewhat less accuracy ought to be expected.
-It took several challenges focused on hydration before a range of methods could achieve the success noted in SAMPL4.
+It took several challenges focused on hydration \cite{Mobley:2014gu,Geballe:2012fc,Geballe:2010jr,Klimovich:2010jm,Mobley:2009iu,Mobley:2012jwa,Nicholls:2008cx}  before a range of methods could achieve the success noted in SAMPL4.
  
 \begin{table}
 \scriptsize
@@ -366,12 +378,12 @@ It took several challenges focused on hydration before a range of methods could 
 
 \begin{figure*} 
 \includegraphics{ExamplePlots.eps} 
-\caption{Example plots created for each set of predictions. These were chosen to try to represent average submissions, those that were in the middle by most error metrics. Comparison plots show how predicted distribution coefficients compared to experiment for both submissions. QQ Plots show how errors in the predictions were distributed compared to expectations given the model uncertainty.}
+\caption{Example plots created for each set of predictions. Submission 21 \cite{Konig:sampl5} and submission 49 \cite{Santos-Martins:sampl5} were chosen to try to represent average submissions, those that were in the middle by most error metrics. Comparison plots show how predicted distribution coefficients compared to experiment for both submissions. QQ Plots show how errors in the predictions were distributed compared to expectations given the model uncertainty.}
 \label{examplePlots}       
 \end{figure*}
 
 As discussed above, we calculated root-mean-squared error (RMSE), average unsigned error (AUE), average signed error (ASE), Pearson's R (R), Kendall's tau (tau), and the slope from the QQ plot (error slope) for each set of predictions.
-These are reported for all submissions (Table \ref{groupStats}), % table ref?
+These are reported for all submissions (Table \ref{groupStats}), 
 but the rest of the analysis will focus only on submissions that reported results for batches 0, 1, and 2.
 For each submission, we also created a plot comparing the predicted and experimental values.
 Some example plots are provided (Fig. \ref{examplePlots}); these represent a typical submission, in that these submissions were in the middle of the pack by most error metrics. 
@@ -398,7 +410,7 @@ While figures \ref{histogramsAverage} and \ref{histogramsCorrelations} are order
 
 In the error slope analysis, the slopes are often substantially different from 1, indicating that participants generally provided poor estimates of model uncertainty. 
 Only the top three submissions are within uncertainty of 1.
-Andrew Paluch from Miami University used conservative estimates based on results in previous calculations for solubility and hydration free energy for submissions 53 and 60  \cite{Paluch:sampl5}.
+Sebastian Diaz-Rodriguez et. al from Miami University used conservative estimates based on results in previous calculations for solubility and hydration free energy for submissions 53 and 60  \cite{Paluch:sampl5}.
 Gerhard K\"{o}nig et. al from Max-Planck-Institut f\"{u}r Kohlenforschung provided no explicit discussion of model uncertainty with submission 43  \cite{Konig:sampl5}.
 Only submission 40 significantly overestimated their model uncertainty.
 All other submissions have an error slope below one, indicating a significant underestimation of the model uncertainty. 
@@ -600,7 +612,7 @@ Also, longer simulations will be required to account for the water molecules mov
 \comment[CCB]{this sort of just ends, another concluding sentence might be good}
 
 \paragraph{Other buffer/solution components may affect distribution coefficients.} 
-The two phases for the distribution coefficients were cyclohexane and an aqueous buffer, however, dimethyl sulfoxide (DMSO) and acetonitrile were used in the experiments  \cite{Rustenburg:sampl5} as well.
+The two phases for the distribution coefficients were cyclohexane and an aqueous buffer, however, DMSO and acetonitrile were used in the experiments  \cite{Rustenburg:sampl5} as well.
 While DMSO and acetonitrile were at very low concentrations, their presence in either solvent layer may affect how a solute distributes between phases. 
 We created topology and coordinate files for a system with 780 water, 130 cyclohexane, 4 DMSO, and 2 acetonitrile molecules using SolvationToolkit, roughly matching the experimental concentrations.
 The system was minimized and equilibrated following our procedure above and then a 5 ns constant pressure and temperature production simulation was run. 
