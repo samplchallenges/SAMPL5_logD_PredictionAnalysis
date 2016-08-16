@@ -188,6 +188,14 @@ R.~Wang, Y.~Fu, L.~Lai, Journal of Chemical Information and Modeling
 R.~Wang, Y.~Gao, L.~Lai, Perspectives in Drug Discovery and Design
   \textbf{19}(1), 47 (2000)
 
+\bibitem{Black:1948bs}
+C.~Black, G.G. Joris, H.S. Taylor, The Journal of Chemical Physics
+  \textbf{16}(5), 538 (1948)
+
+\bibitem{VMD}
+W.~Humphrey, A.~Dalke, K.~Schulten, Journal of Molecular Graphics
+  \textbf{14}(1), 33 (1996)
+
 \bibitem{Paranahewage:sampl5}
 S.S. Paranahewage, C.S. Gierhart, C.J. Fennell, Journal of Computer-Aided
   Molecular Design  (2016)
@@ -259,13 +267,5 @@ A.~Klamt.
 \bibitem{FrankPickard:sampl5pc}
 F.C. Pickard~IV.
 \newblock Personal Communication (2016)
-
-\bibitem{Black:1948bs}
-C.~Black, G.G. Joris, H.S. Taylor, The Journal of Chemical Physics
-  \textbf{16}(5), 538 (1948)
-
-\bibitem{VMD}
-W.~Humphrey, A.~Dalke, K.~Schulten, Journal of Molecular Graphics
-  \textbf{14}(1), 33 (1996)
 
 \end{thebibliography}
