@@ -245,13 +245,13 @@ To calculate solvation free energies, we used automated tools created by the Mob
 Molecular dynamics simulations were performed in GROMACS   \cite{Berendsen:1995gro,Hess:2008db,Lindahl:2001gro3,vanderSpoel:2005hz,Pronk:2013ef,Pall:2014gb,Abraham:2015gj}
 with the General AMBER Force Field (GAFF)  \cite{Wang:2004dev} with AM1-BCC charges  \cite{Jakalian:2000ki,Jakalian:2002bd}.
 The TIP3P water model  \cite{Jorgensen:1983fl} was used for the aqueous phase. 
-Topology and coordinate files for the solvated boxes with 1 solute molecule and 500 cyclohexane or 1000 water molecules were built using the Solvation Toolkit  \cite{Bannan:2016lp}.
+Topology and coordinate files for the solvated boxes with 1 solute molecule and 500 cyclohexane or 1000 water molecules were built using our Solvation Toolkit  \cite{Bannan:2016lp}.
 These files were then converted to AMBER, DESMOND, and LAMMPS formats and provided to SAMPL5 participants as reference calculations.
 The Solvation Toolkit takes advantage of many open source Python modules and is available at https://github.com/MobleyLab/SolvationToolkit.
 It converts SMILES strings or IUPAC names of any mixture of small organic compounds to parameterized molecules and builds topology and coordinate files for a variety of simulation packages. 
 All molecular dynamics parameters are identical to previous studies  \cite{Liu:2016kb,Klimovich:2010jm,Bannan:2016lp}.
 The molecule is taken from the solvated box to a non-interacting gas phase in 20 lambda values. 
-Solvation free energies are calculated with Alchemical Analysis tool  \cite{Klimovich:2015er} using the multi-state Bennett acceptance ratio to extract free energy difference between the beginning and end state. 
+Solvation free energies are calculated with Alchemical Analysis tool  \cite{Klimovich:2015er} using the multi-state Bennett acceptance ratio to extract the free energy difference between the beginning and end state. 
 The partition coefficient was calculated as the difference between the cyclohexane solvation free energy and the hydration free energy.
 The statistical uncertainty was reported as the propagated uncertainty from the solvation free energy calculations. 
 The model uncertainty was estimated to be the same for all molecules and reported as the root-mean-squared error from a recent study on calculating cyclohexane/water partition coefficient, specifically 1.4 log units  \cite{Bannan:2016lp}.
@@ -329,22 +329,23 @@ In the second set, we used a linear regression to correct for the bias between t
 For the rest of this paper we will refer to the octanol/water partition coefficient set as $XlogP_{oct}$ and the bias-corrected set as $XlogP_{corr}$. 
 
 \subsection{Exploring the possibility of mixing solvents}
-\comment[CCB]{new methods section}
-No two solvents are perfectly immiscible. 
-The experimental concentration of water in cyclohexane is 0.00047 mole fraction \cite{Black:1948bs}.
+Because no two solvents are perfectly immiscible, we wanted to explore the effect that a small amount of water present in cyclohexane would have on computed $\log D$ values for one of the more polar solutes. 
+The experimental concentration of water in cyclohexane is 0.00047 mole fraction \cite{Black:1948bs}. 
 The presence of water in the cyclohexane phase has a possibility of affecting the transfer free energy, especially for solutes with many polar functional groups. 
-Also, it has been suggested that polar compounds can pull water with them from the aqueous layer into the organic solvent \cite{Leo:1971wu}. 
-To explore the effects of water in cyclohexane we performed two additional simulations for SAMPL5\_074.
-In both test simulations there were 150 cyclohexane molecules with 1 solute. 
-The first with 7 water in the cyclohexane and the next with only 1 water molecule. 
-The input files for this simulation were also created with Solvation Toolkit as described above and the same simulation protocol was followed.
+Also, it has been suggested that particularly polar compounds can pull water with them from the aqueous layer into the organic solvent \cite{Leo:1971wu}; while this is a kinetic argument and should not apply to equilibrium thermodynamic properties like $\log D$, the point is well taken --- some solutes have a particularly high affinity for water and may actually impact the amount of water present in cyclohexane when the solute is present at finite concentration.
+Thus, to investigate this, we took one of the most polar compounds -- one for which we had particularly large errors relative to experiment -- SAMPL5\_074, and performed two additional sets of free energy calculations in cyclohexane. 
+Both sets of simulations had the single solute in 150 cyclohexane molecules, but varied in water content -- the first with seven water molecules present in cyclohexane, and the second with only a single water molecule.  
+The input files for these simulations were also created with Solvation Toolkit as described above and the same simulation protocol was followed. 
+These simulations were conducted after the SAMPL submission deadline in order to help us understand the role of water in such cases.
 
-Additionally, in the experimental determination of these distribution coefficients there were small concentrations of dimethyl sulfoxide (DMSO) and acetonitrile. 
-The experimental concentrations consisted of each solvent are approximately 50\%, 50\%, 1\%, and 0.4\% by volume for cyclohexane, water, DMSO, and acetonitrile respectively  \cite{Rustenburg:sampl5}.
-To explore how the DMSO and acetonitrile distribute between cyclohexane and water we performed a single simulation with 130 cyclohexane, 780 water, 4 DMSO, and 2 acetonitrile molecules. 
+The experiments were not done on completely pure water and cyclohexane -- particularly, experimental distribution coefficients were measured with small amounts of dimethyl sulfoxide (DMSO) and acetonitrile present in solution. 
+Therefore, we investigated the how acetonitrile and DMSO would distribute in simulations. 
+The experimental concentrations reported for each solvent are approximately 50\%, 50\%, 1\%, and 0.4\% by volume for cyclohexane, water, DMSO, and acetonitrile respectively  \cite{Rustenburg:sampl5}.
+To explore how the DMSO and acetonitrile distribute between cyclohexane and water we performed a single simulation with 130 cyclohexane, 780 water, four DMSO, and two acetonitrile molecules. 
+\comment[DLM]{",  mirroring roughly those concentrations"? (Is that where you came up with these numbers?)}
 Input topology and coordinate files were created with Solvation Toolkit. 
 The system was minimized and equilibrated following our reference calculation procedure and then a 5 ns constant pressure and temperature production simulation was run. 
-The trajectory from this simulation was visualized with VMD  \cite{VMD} and the movie for it is available in the supplementary information. 
+The trajectory from this simulation was visualized with VMD  \cite{VMD} and a movie is available in the supplementary information. 
 
 
 \section{Results and Discussion}
@@ -353,7 +354,7 @@ A broad range of methods were used for the 76 submissions predicting cyclohexane
 Many of these predictions used alchemical molecular dynamics simulations to estimate the solvation free energy in explicit solvent using several classes of force fields, including fixed-charge all-atom force fields \cite{Paranahewage:sampl5,Iorga:sampl5,Bosisio:sampl5,Pickard:sampl5,Konig:sampl5},
 all-atom/coarse-grained hybrid force fields \cite{Genheden:sampl5}, 
 and polarizable force fields \cite{Kamath:sampl5}. 
-One participant used Semi-Explicit Assembly, an alchemical solvation free energy method for a rigid solute in an implicit solvent \cite{Brini:sampl5}. 
+One participant used Semi-Explicit Assembly, a type of implicit solvent solvation free energy method applied to one or more chosen solute conformations \cite{Brini:sampl5}. 
 A variety of quantum mechanics (QM) methods were also used including QM/molecular mechanics (QM/MM) with explicit solvent \cite{Pickard:sampl5,Konig:sampl5}, 
 QM with non-Boltzmann Bennett free energy calculations \cite{Pickard:sampl5,Konig:sampl5}, 
 and QM energy calculations with a single optimized molecular geometry \cite{Pickard:sampl5,Jones:sampl5}. 
@@ -460,7 +461,7 @@ While this null hypothesis has no actual predictive power and could not be used 
 \end{figure}
 These results may also provide commentary on the dataset, which contains a reasonably large percentage of $\log D$ values that are not that far off from zero (figure \ref{dynamicRange}).
 Organizers had hoped to ensure equal coverage of all $\log D$ values within the assay range, but due to experimental time constraints this was not possible. 
-It is possible the null model would look worse if the experimental results were more evenly dispersed in the entire dynamic range. 
+It is possible the null model would look worse if the experimental results were more evenly dispersed across the entire dynamic range. 
 
 There are many structure-based and/or empirically trained prediction methods for octanol/water partition coefficients.
 To a first approximation, one might imagine that cyclohexane/water partition coefficients would follow similar trends to those in octanol/water. 
@@ -540,8 +541,7 @@ There are a variety of factors that could be contributing to this slight bias.
 A recent study by the Mobley group calculated partition coefficients for small molecules and found a slight bias for alcohol compounds to over favor cyclohexane\cite{Bannan:2016lp}.
 Possibly, this demonstrates a limitation in GAFF or atomistic force fields in general to accurately predict the behavior of solutes in polar and non-polar environments. 
 That same study found that for large, flexible compounds insufficient conformational sampling can dramatically affect the calculated partition coefficients \cite{Bannan:2016lp}. 
-Given the number of large, flexible, and polyfunctional compounds in SAMPL5 more investigation into each of these effects along with improved tautomer enumeration would be required to completely understand the slight bias seen here. 
-\comment[CCB]{above, I am trying to acknowledge the slight bias for cyclohexane and highlight possible reasons for it}
+Given the number of large, flexible, and polyfunctional compounds in SAMPL5, more investigation into each of these effects along with improved tautomer enumeration and handling (especially for the cyclohexane phase) will be required to completely understand the slight bias seen here. 
 
 \subsection{Examining individual molecules}
 \label{results:7}
@@ -564,9 +564,10 @@ For example, we compared population corrections we derived using Schr\"{o}dinger
 If we could perfectly calculate solvation free energies and tautomer populations in both solvents, the starting tautomer should not affect the final calculated distribution coefficient, but differing corrections -- such as these -- will yield different results.
 Additionally, whenever protonation state/tautomer populations are not estimated correctly or not included in \emph{both solvents}, the initial choice of protonation state/tautomer is likely to affect computed $\log D$ values.
 Here, our initial solvation free energy calculations used provided SMILES strings without any consideration of other tautomers.
-To explore how this may have affected our $\log D$ calculation, we decided to repeat a few solvation free energy calculations with different tautomers. 
+To explore how this may have affected our $\log D$ calculation, we decided to repeat a few solvation free energy calculations with alternate tautomers. 
 We used SAMPL5\_050 and SAMPL5\_083 as examples since both have other neutral tautomers that could be present in both the water and cyclohexane solutions. 
 Also, most participants had a difficult time correctly predicting the correct $\log D$ value for them both. 
+\comment[DLM]{"Them both" is not quite clear - "both of them simultaneously", or "either of them" maybe would be better... i.e. do you mean that both were hard, or that it was hard to get both right at the same time?} 
 The new tautomer for SAMPL5\_050 was found with Ligprep \cite{ligprep}; the one for SAMPL5\_083 was found with COSMO-RS and was provided by Andreas Klamt \cite{AndreasKlamt:sampl5pc,Klamt:sampl5}. 
 \begin{table}
 \begin{tabular}{| l | l l | l l |}
@@ -584,7 +585,7 @@ experimental $\log D$ & \multicolumn{2}{|c|}{$-3.2 \pm 0.6$} & \multicolumn{2}{|
 \hline
 \end{tabular}
 \label{tautomerChanges}
-\caption{Here are the results for solvation free energy of two different tautomers of SAMPL5\_ 050 and 083. Corrections from $\log P$ to $\log D$ account for tautomer populations in the aqueous phase. Energies are reported in $kcal/mol$.}
+\caption{Shown are the results for solvation free energy of two different tautomers of SAMPL5\_ 050 and 083. Corrections from $\log P$ to $\log D$ account for tautomer populations in the aqueous phase. Energies are reported in $kcal/mol$.}
 \end{table}
 For both SAMPL5\_050 and SAMPL5\_083 there were significant changes in their calculated solvation free energies and partition coefficients for the two different tautomers (Table \ref{tautomerChanges}).
 Distribution coefficients were calculated from the $\log P$ and state penalties calculated with Schr\"{o}dinger's LigPrep tool  \cite{ligprep}. 
@@ -595,7 +596,7 @@ Since both the calculated solvation free energies and the tautomer/protomer popu
 \hline
 Number Molecules & 0 water & 1 water & 7 water\\
 \hline
-$\Delta G_{hydration}$ & \multicolumn{3}{|c|}{$ -21.90 \pm 0.04 $} \\
+$\Delta G_{hydration}$ & \multicolumn{3}{|c|}{$ -21.90 \pm 0.04 $} \\ \comment[DLM]{This line looks odd as it looks like you're saying the hydration free energy in one water is -21.9 kcal/mol. Reformat, or just repeat the value in each column and clarify in the caption?}
 $\Delta G_{cyclohexane}$ & $ -16.77 \pm 0.04 $ &  $-18.05 \pm 0.04 $ & $ -19.54 \pm 0.04$ \\
 $\log D_{cyc/wat}$ & $ -3.76 \pm 0.04 $ & $-2.82 \pm 0.04$ & $ -1.73 \pm 0.04$  \\
 \hline
@@ -603,44 +604,45 @@ experimental $\log D$ &\multicolumn{3}{|c|}{$-1.9 \pm 0.3 $} \\
 \hline
 \end{tabular}
 \label{waterInCyc}
-\caption{Shown are results for solvation free energy and distribution coefficient for SAMPL5\_074 in cyclohexane with no water present, 1 water molecule, and 7 water molecules all with 150 cyclohexane molecules and 1 solute molecule. Energy is reported in $kcal/mol$} 
-\comment[CCB]{new caption}
+\caption{Shown are results for the solvation free energy and distribution coefficient for SAMPL5\_074 in cyclohexane with no water present, 1 water molecule, and 7 water molecules all with 150 cyclohexane molecules and 1 solute molecule. Energy is reported in $kcal/mol$} 
 \end{table}
 \comment[CCB]{updated water in cyclohexane section}
 \paragraph{Solvents are not completely immiscible.} 
-Though it is very small, 0.00047 mole fraction  \cite{Black:1948bs}, the concentration of water in cyclohexane may affect how a solute is distributed across the two solvents. 
+Though the concentration of water in cyclohexane is very small, 0.00047 mole fraction  \cite{Black:1948bs}, it may still affect how a solute is distributed across the two solvents. 
 This will be particularly important for solutes with many polar groups; and may be one reason it was difficult to accurate estimate the $\log D$ for SAMPL5\_074.
 We performed two new calculations of solvation free energy of SAMPL5\_074 into cyclohexane with water also in the solution. 
 These simulations were set-up with Solvation Toolkit as described above.
-The first simulation contained 7 water molecules and the second had 1 water molecule, with 1 solute molecule and 150 cyclohexane molecules. 
-While neither of these results reach the low experimental concentration of water in cyclohexane, they do demonstrate the dramatic variation in solvation free energy caused by the presence of water in cyclohexane. 
-With varying amounts of water in cyclohexane, it results in a significant changes in the computed solvation free energy for SAMPL5\_074 into cyclohexane with water (Table \ref{waterInCyc}). 
-This dramatically improves the estimation for $\log D$, proving that the presence of water in the cyclohexane layer could have dramatic affects on the calculated distribution coefficients. 
-In visualizing both trajectories for the production phase, all water molecules stay next to SAMPL5\_074 for the full simulation. 
-We would expect that the addition of a second solvent would caused increased uncertainty in the solvation free energy due to the more mixed states; the continued proximity of water to the solute likely accounts for the lack of change in the calculated uncertainty. 
-For a solute with so many polar functional groups, it is unsurprising that the water molecules in cyclohexane are drawn to the solute. 
-In general, the local concentration of water near the solute may be higher than the bulk concentration in cyclohexane, possibly important when considering simulation settings.
-The concentration of water in cyclohexane for these simulations are 0.0067 and 0.047 for 1 and 7 water molecules, both an overestimation of the amount of water in cyclohexane. 
-However, it is sufficient to show that the presence of water in the cyclohexane phase can dramatically affect the computed distribution coefficient, depending on the affinity of the solute for water.
-To accurately account for these affects simulations would need significantly larger box sizes to match the experimental water concentration. 
+Both sets of simulations had a single solute molecule in 150 cyclohexanes, but one had seven water molecules and the other had a single water molecule. 
+While neither of these results reach the low experimental concentration of water in cyclohexane, they do demonstrate the dramatic variation in solvation free energy and $\log D$ which can be caused by the presence of water in cyclohexane. 
+With varying amounts of water in cyclohexane, the water dramatically impacts the computed solvation free energy for SAMPL5\_074 into cyclohexane (Table \ref{waterInCyc}) and thus calculated $\log D$ values. 
+In this case particular case, the presence of water also dramatically improves the estimation for $\log D$, though as noted this is with far too high a water concentration in cyclohexane. 
+We visualized trajectories from the production phase of our calculations and find that all water molecules stay adjacent to SAMPL5\_074 for the full simulation, likely indicating a particularly high affinity for water. 
+Addition of one or a few molecules of a second solvent (water) to cyclohexane might be expected to raise the uncertainty in calculated free energies significantly due to slow mixing of the second solvent in the simulation box, but we do not observe that here. 
+It seems likely this is because the water molecules are so strongly attracted to the solute that they essentially stay bound throughout the simulations, so we do not observe slow mixing and the associated increased uncertainty.  
+For a solute with so many polar functional groups, it is perhaps unsurprising that the water molecules in cyclohexane are drawn to the solute. 
+In general, this suggests that the local concentration of water near highly polar solutes may be higher than the bulk concentration in cyclohexane, and this may potentially be important when considering simulation settings.
+It is important to note that the concentration of water in cyclohexane for these simulations are 0.0067 and 0.047 for 1 and 7 water molecules, both a gross overestimate of the amount of water in cyclohexane (by multiple orders of magnitude) as our focus here was to explore the sensitivity of $\log D$ to cyclohexane water content. 
+However, our results are sufficient to show that the presence of water in the cyclohexane phase can dramatically affect the computed distribution coefficient, depending on the affinity of the solute for water.
+To accurately account for these effects, we will need long simulations at much larger box sizes to not only match the experimental water concentration, but to determine how much water will localize around the solute at equilibrium.
+%In the above sentence, I'm trying to allude to the idea that it's not just about having the right concentration, it's also about the number of waters that will "bind", i.e. if we had the right concentration but only one water, I think we still probably wouldn't get things right...  
 Also, longer simulations will be required to account for the water molecules moving from the solute and into the cyclohexane bulk. 
+\comment[DLM]{I don't actually understand what you're getting at in this last sentence.}
 
 \paragraph{Other buffer/solution components may affect distribution coefficients.} 
 The two phases for the distribution coefficients were cyclohexane and an aqueous buffer, however, DMSO and acetonitrile were used in the experiments  \cite{Rustenburg:sampl5} as well.
 While DMSO and acetonitrile were at very low concentrations, their presence in either solvent layer may affect how a solute distributes between phases. 
 We created topology and coordinate files for a system with 780 water, 130 cyclohexane, 4 DMSO, and 2 acetonitrile molecules using SolvationToolkit, roughly matching the experimental concentrations.
 In the trajectory visualized with VMD, both DMSO and acetonitrile spend most of their time near the solvent interface, with very little movement into the bulk of the water or cyclohexane. 
-A detailed understanding of the implications of this for both calculated and measured distribution coefficients would require further study. 
+In our view, this does not immediately suggest profound implications for calculated $\log D$ values, but a detailed understanding of the implications of this for both calculated and measured distribution coefficients will require further study. 
 
 \section{Conclusions}
 \label{conclusions}
 
 Past SAMPL challenges often involved a broad range of methods for hydration free energies. 
 Here, in our first SAMPL on cyclohexane/water distribution coefficients, we saw a similarly diverse set of methods. 
-Predicting $\log D$ accurately for this set of molecules was rather difficult. 
+Predicting $\log D$ accurately for this set of molecules was rather difficult, exhibiting a number of the same challenges that will face accurate prediction of binding affinities.
 The best methods showed reasonable agreement with experiment with RMSEs around 2.5 log units and Kendall tau's around 0.6. 
-However, considering the null model and $XlogP_{corr}$ both would have been the top submission by RMSE and AUE there is clear room for improve in every method used by SAMPL5 participants. 
-\comment[CCB]{Updated wording above and emphasized the need for improvement}
+However, considering that the null model and $XlogP_{corr}$ both would have topped the submissions list by RMSE and AUE, there is clear room for all of the methods employed in SAMPL5 to improve. 
 
 This SAMPL5 set was substantially more complex, flexible, and polyfunctional than typical molecules in SAMPL hydration challenge sets. 
 Additionally, the most relevant protonation state and tautomer were not always clear for the compounds.
@@ -648,31 +650,35 @@ Some compounds likely had multiple relevant protonation states and tautomers, an
 These issues are especially important given that the challenge focused on distribution coefficients rather than partition coefficients ($\log P$).
 Given these complexities, it is not surprising that we saw drop in performance relative to the accuracy that would have been expected for $\log D$ values if participants predicted $\log D$ based on solvation free energies in two solvents that could be computed as accurately as hydration free energies in previous SAMPL challenge (yielding an expected accuracy of about 1.5 log units). 
 In large part, this is probably because of the additional complexities of distribution coefficients such as the need to account for other protonation states and tautomers. 
-Solvation free energy calculations performed with a less dominant tautomer of SAMPL5\_050 lead to a $\log D$ estimate of $-10.70 \pm 0.04$ which is $7.5$ log units below the experimental value. 
-Accurately accounting for tautomers appears to be a vital part of accurately calculating $\log D$, and better methods for treating protonation and especially tautomeric states in non-aqueous environments are needed.
+Our solvation free energy calculations performed with a less dominant tautomer of SAMPL5\_050 lead to a $\log D$ estimate of $-10.70 \pm 0.04$ which is $7.5$ log units below the experimental value. 
+Thus, accurately accounting for tautomers appears to be a vital part of accurately calculating $\log D$, and better methods for treating protonation and especially tautomeric states in non-aqueous environments are needed.
 
-\comment[CCB]{two new paragraphs on sampling and dynamic range}
 As mentioned earlier, the molecules chosen for SAMPL5 are generally larger and more flexible than those in past SAMPL challenges. 
 It follows that conformational sampling of the solutes might play a significant role in accurately predicting these distribution coefficients. 
 In a previous study using the same protocol as the reference calculation here, the Mobley lab showed that changing the initial conformation of a large, flexible molecule dramatically changed its calculated partition coefficient due to insufficient conformational sampling \cite{Bannan:2016lp}.
 In this issue, Tyler Luchko \emph{et. al} spend time addressing the importance of conformational sampling for these molecules in the context of their submission results for the  challenge \cite{Luchko:sampl5}. 
-
-A common trend in these submissions was that the dynamic range in the predicted distribution coefficients was larger than the experimental results, that is, generally the smallest $\log D$ values were under estimated and the largest were over estimated. 
-This dynamic range is visible in figures \ref{examplePlots}, \ref{BestGroups}, and \ref{MobleyPlots}, but was evident in comparison plots for almost all submissions.
-For SAMPL5\_074, the introduction of water to cyclohexane increased the $\log D$ estimate from -3.76 to -1.73; it is possible that accounting for water in cyclohexane would correct for the underestimation at the lower end of the $\log D$ values. 
-As discussed above, it is possible that insufficient conformational sampling could account for some of this problem. 
-For example, if a solute has a particular conformation that is more stable in a non-polar environment and that conformation was not found for the solute in cyclohexane due to insufficient conformational sampling then the calculated distribution coefficient would over favor the aqueous environment. 
+%DLM: Have you looked at the Luchko paper on this point? Is it a helpful discussion? By citing it here we're essentially recommending it so I want to make sure one of us actually does recommend it. :) 
 
 We asked participants to estimate two forms of uncertainty, statistical uncertainty and model uncertainty, the latter of which should predict how well their calculation will agree with experiment. 
 This latter uncertainty estimate is particularly key, as it would allow practitioners to predict how reliable their calculations are likely to be in applications. 
 Here, we find that almost every participant dramatically underestimated their model uncertainty. 
-The importance to improve error estimations as a community has been addressed in past SAMPL challenges  \cite{Mobley:2014gu}. 
+The importance for the community to improve error estimation has been addressed in past SAMPL challenges  \cite{Mobley:2014gu}, but clearly, much more work is still needed.
+%DLM: Moved this up from below where it seemed out of place.
+
+A common trend in SAMPL5 submissions was that the dynamic range in the predicted distribution coefficients was larger than the dynamic range observed experimentally -- that is, generally, the smallest $\log D$ values were underestimated and the largest were overestimated. 
+This issue of dynamic range is visible in figures \ref{examplePlots}, \ref{BestGroups}, and \ref{MobleyPlots}, but was evident in comparison plots for almost all submissions.
+For SAMPL5\_074, the introduction of water to cyclohexane increased the $\log D$ estimate from -3.76 to -1.73; it is possible that accounting for water in cyclohexane would affect the apparent underestimation at the lower end of the $\log D$ scale. 
+As discussed above, it is also possible that insufficient conformational sampling could account for some of this problem. 
+For example, if a solute has a particular conformation that is more stable in a non-polar environment and that conformation was not found for the solute in cyclohexane due to insufficient conformational sampling, then the calculated distribution coefficient would over favor the aqueous environment. 
+However, this will require further investigation. 
+It is of course also possible that experimental issues could have compressed the measured dynamic range of compounds, but this too will require further investigation.
 
 The results of this challenge strongly suggest predictions for solute partitioning will be extremely helpful for driving improvements to physical modeling needed in pharmaceutical research. 
 The major challenges encountered here are all very likely to occur when attempting to predict binding affinities or other biomolecular properties of interest to drug discovery. 
-Specifically, accurately predicting the population of protonation and tautomeric states was a challenge, complicated by the fact that there is no simple way to compare these predictions to experimental conditions. 
-Tautomer population is environment-dependent in ways that can dramatically affect computed physical properties. 
-These same scenarios are likely to apply to biomolecular binding. 
+Specifically, accurately predicting the population of protonation and tautomeric states was a challenge, complicated by the fact that there is no simple way to predicted protonation states and tautomers to corresponding experimental values relevant to the conditions studied here. 
+Most work so far on tautomer prediction has focused on tautomeric ratios in vacuum or in water, but tautomer populations are likely environment-dependent in ways that can dramatically affect computed physical properties. 
+\comment[DLM]{Our wordings here seemed a little bit jumpy/unclear (I didn't notice before) so I tried to add a few words to explain what I think we mean. Is that better?}
+These same challenges are likely to apply when predicting biomolecular binding. 
 An improved treatment of these effects within the context of SAMPL or similar challenges will drive advances in computational techniques also used to predict binding and related properties such as solubility.  
 
 Overall, distribution coefficients have been an extremely valuable part of this year's SAMPL5 challenge, and, since they can be measured in a relatively straightforward way, seem to be a promising potential source of future data for blind challenges.  
@@ -680,12 +686,12 @@ Additionally, this data highlights important issues, such as tautomer enumeratio
 The ability to create new, completely blind data sets make distribution coefficients a great option for future challenges. 
 
 \begin{acknowledgements} 
-We appreciate financial support from the National Institutes of Health (1R01GM108889-01) and the National Science Foundation (CHE 1352608), and computing support from the UCI GreenPlanet cluster, supported in part by NSF Grant CHE-0840513. 
+D.L.M and C.C.B. appreciate financial support from the National Institutes of Health (1R01GM108889-01) and the National Science Foundation (CHE 1352608), and computing support from the UCI GreenPlanet cluster, supported in part by NSF Grant CHE-0840513. 
 This work was made possible in part by NIH grant U01 GM111528 for the Drug Design Data Resource, which supported the SAMPL workshop. 
 The contents of this paper are solely the responsibility of the authors and do not necessarily represent the official views of the NIH.
 M.K.G. has an equity interest in and is a cofounder and scientific advisor of VeraChem LLC. 
-We would also like to acknowledge Michael Shirts at University of Colorado Boulder for his help with input file format conversion and reference energy calculations and John Shelley, Art Bochevarov, Robert Abel, and Mats Svensson from Schr\"{o}dinger for their help with pKa and tautomer enumeration calculations. 
-We also thank all the SAMPL5 participants and D3R Workshop attendees, especially John Chodera (MSKCC), Ari\"{e}n Rustenburg (MSKCC), Andreas Klamt (COSMOLogic), Christopher Fennell (Oklahoma State University), Samuel Genheden (Gothenburg University), Frank Pickard (National Institute of Health). 
+We would also like to acknowledge John Shelley, Art Bochevarov, Robert Abel, and Mats Svensson from Schr\"{o}dinger for their help with pKa and tautomer enumeration calculations. %Shirts is an author so no longer belongs in acknowledgments.
+We also thank all the SAMPL5 participants and D3R Workshop attendees, and we especially appreciate valuable discussions with John Chodera (MSKCC), Ari\"{e}n Rustenburg (MSKCC), Andreas Klamt (COSMOLogic), Christopher Fennell (Oklahoma State University), Samuel Genheden (Gothenburg University), and Frank Pickard (National Institute of Health). 
 \end{acknowledgements}
 
 \subsection{Supporting Information}
