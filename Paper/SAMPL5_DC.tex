@@ -172,6 +172,7 @@ The challenge culminated with discussions of participants experiences and result
 \label{MoleculeTable}
 \caption{A complete list of compounds used in the SAMPL5 challenge, sorted by batch. The average unsigned error (AUE), reported in log units as SAMPL5 ID: AUE, was calculated with all submitted predictions for that compound. The 2D images were generated using OpenEye OEDepict toolkit  \cite{openeye} using the provided SMILES strings.} 
 \end{table}
+\comment[DLM]{Is there a way to stretch 084 a bit wider/taller? Its dimensions look smaller than, say, 065, which -- given its bulk -- makes it hard to see what it is without zooming a ton.}
 
 For the prediction of distribution coefficients in SAMPL5, a total of 53 molecules were considered. 
 They were assigned an identifier in the form SAMPL5\_XXX and are pictured in table \ref{MoleculeTable}.  
@@ -270,7 +271,6 @@ We also repeated the solvation free energy calculations with reaction field coul
 \includegraphics{boxSize.eps}
 \caption{Calculated solvation free energy for SAMPL5\_024 is independent of box size for PME and reaction field coulomb interactions. Points are connected to help distinguish between the two data sets}
 \label{boxSizes}  
-\comment[CCB]{What do you think of the new caption?}
 \end{figure}
 For both types of simulation, the calculated solvation free energy fluctuated around an average of $19.1$ kcal/mol with no trend that would suggest solvation free energy depends on box size (figure \ref{boxSizes}).
 There are many other explanations for fluctuations in calculated solvation free energies, including sampling, that might account for the $0.48$ kcal/mol range in the PME simulations. 
