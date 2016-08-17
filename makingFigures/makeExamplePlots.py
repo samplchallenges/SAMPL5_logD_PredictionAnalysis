@@ -34,15 +34,15 @@ rcParams.update(parameters)
 fig = figure(1)
 xLabel = r'Experimental $\log D$'
 yLabel = r'Predicted $\log D$'
-# Get 23's data and make comparison plot
-c23 = [ [ predictions[23]['data'][k][0] for k in batch ] for batch in batches ]
-dc23 = [ [ predictions[23]['data'][k][1] for k in batch ] for batch in batches ]
-ax1 = tools.ComparePlot(e, c23, "Compare to experiment for submission 23", xLabel, yLabel, de, dc23, ['batch 0', 'batch 1', 'batch 2'], limits = [-13, 12], leg = [0.02, 0.98, 2, 1], expError = 1.0, ax1 = fig.add_subplot(221))
+# Get 21's data and make comparison plot
+c21 = [ [ predictions[21]['data'][k][0] for k in batch ] for batch in batches ]
+dc21 = [ [ predictions[21]['data'][k][1] for k in batch ] for batch in batches ]
+ax1 = tools.ComparePlot(e, c21, "Compare to experiment for submission 21", xLabel, yLabel, de, dc21, ['batch 0', 'batch 1', 'batch 2'], limits = [-13, 12], leg = [0.02, 0.98, 2, 1], expError = 1.0, ax1 = fig.add_subplot(221))
 ax1.set_xlim(-13, 12)
 ax1.set_ylim(-13, 12)
 ax1.set_xlabel(xLabel)
 ax1.set_ylabel(yLabel)
-ax1.set_title('Compare submission 23 to experiment')
+ax1.set_title('Compare submission 21 to experiment')
 
 # Get 49's data and make comparison plot
 c49 = [ [ predictions[49]['data'][k][0] for k in batch ] for batch in batches ]
@@ -54,13 +54,13 @@ ax2.set_xlabel(xLabel)
 ax2.set_ylabel(yLabel)
 ax2.set_title('Compare submission 49 to experiment')
 
-# Get 23's QQ data and make QQ plot
-QQdata = predictions[23]['batch2']['QQdata']
-slope = predictions[23]['batch2']['error slope'][0]
-ax3 = tools.makeQQplot(QQdata[0], QQdata[1], slope, 'Q-Q plot for submission 23', ax1 = fig.add_subplot(223), leg = [0.02, 0.98, 2, 1]) 
+# Get 21's QQ data and make QQ plot
+QQdata = predictions[21]['batch2']['QQdata']
+slope = predictions[21]['batch2']['error slope'][0]
+ax3 = tools.makeQQplot(QQdata[0], QQdata[1], slope, 'Q-Q plot for submission 21', ax1 = fig.add_subplot(223), leg = [0.02, 0.98, 2, 1]) 
 ax3.set_xlabel("Expected fraction within range")
 ax3.set_ylabel("Fraction of predictions within range")
-ax3.set_title('Submission 23 Q-Q plot')
+ax3.set_title('Submission 21 Q-Q plot')
 
 # Get 49's QQ data and make QQ plot
 QQdata = predictions[49]['batch2']['QQdata']
@@ -166,8 +166,12 @@ for idx, metrics in enumerate([mets1, mets2]):
         
         # Make plots
         axes_list[index] = tools.histPlot(subIDs, vals, dvals, "Submission Number", met, '', option = options[idx][index], absolute = absolutes[idx], ax = axes_list[index])
-        axes_list[index][0].set_ylabel(met, labelpad = 0.35)
-        axes_list[index][1].set_ylabel(met, labelpad = 0.35)
+        if met == 'RMS':
+            ylab = 'RMSE'
+        else:
+            ylab = met
+        axes_list[index][0].set_ylabel(ylab, labelpad = 0.35)
+        axes_list[index][1].set_ylabel(ylab, labelpad = 0.35)
 
     # Save and close figure
     fig.set_frameon(False)
