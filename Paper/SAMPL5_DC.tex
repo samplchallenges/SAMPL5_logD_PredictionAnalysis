@@ -81,10 +81,6 @@ M.K.G. has an equity interest in and is a cofounder and scientiﬁc advisor of Ver
         Michael K. Gilson \and
         David L. Mobley
 }
-% I only included contact info for David, I assume you are the corresponding author and that we only need to include contact info for one person
-% The example had the same contact info for all the authors, but we all have different departments/institutions
-%DLM: I would have to flip through a couple jcamd articles to sort that out.
-% CCB: I looked at some examples, some of them have complete contact info for every different locations, others including the SAMPL4 paper only had contact info for the corresponding author and institution for everyone else. 
 \institute{C. C. Bannan \at Department of Chemistry, University of California, Irvine
 	\and
 	K. H. Burley \at Department of Pharmaceutical Sciences, University of California, Irvine
@@ -122,9 +118,6 @@ We believe these types of measurements will be a promising source of data for fu
 
 \keywords{SAMPL \and distribution coefficient \and blind challenge \and free energy \and alchemical \and molecular simulation } 
 \end{abstract}
-
-% Not sure where this would go, but we haven't discussed averaging the 'best' groups at all in the paper. 
-%DLM: Let's pass for now. We can leave this here in case we decide to add later.
 
 \section{Introduction}
 \label{intro}
@@ -172,7 +165,7 @@ The challenge culminated with discussions of participants experiences and result
 \label{MoleculeTable}
 \caption{A complete list of compounds used in the SAMPL5 challenge, sorted by batch. The average unsigned error (AUE), reported in log units as SAMPL5 ID: AUE, was calculated with all submitted predictions for that compound. The 2D images were generated using OpenEye OEDepict toolkit  \cite{openeye} using the provided SMILES strings.} 
 \end{table}
-\comment[DLM]{Is there a way to stretch 084 a bit wider/taller? Its dimensions look smaller than, say, 065, which -- given its bulk -- makes it hard to see what it is without zooming a ton.}
+% I rotated 083, it is a little more clear now
 
 For the prediction of distribution coefficients in SAMPL5, a total of 53 molecules were considered. 
 They were assigned an identifier in the form SAMPL5\_XXX and are pictured in table \ref{MoleculeTable}.  
@@ -227,8 +220,8 @@ Here we will primarily focus on just average unsigned error for molecules, but a
 \label{methods:1}
 
 We calculated distribution coefficients through a few different methods as a reference. 
-KHB, a graduate student in the Mobley group, performed a set of blind calculations estimating the $\log D$ as a partition coefficient between cyclohexane and water calculated from solvation free energies.
-In addition, CCB and DLM performed post-challenge analysis of protonation and tautomeric states and used this to convert our calculated partition coefficients to distribution coefficients.
+K.H.B., a graduate student in the Mobley group, performed a set of blind calculations estimating the $\log D$ as a partition coefficient between cyclohexane and water calculated from solvation free energies.
+In addition, C.C.B. and D.L.M. performed post-challenge analysis of protonation and tautomeric states and used this to convert our calculated partition coefficients to distribution coefficients.
 We considered a null hypothesis where all molecules are assumed to distribute equally between cyclohexane and water.
 Many fast structure-based tools for octanol/water partition coefficients exist, and we used one of those to estimate partition coefficients, both with no correction for the fact that we are interested in cyclohexane, and with a small adjustment for this as discussed below. 
 
@@ -341,8 +334,7 @@ These simulations were conducted after the SAMPL submission deadline in order to
 The experiments were not done on completely pure water and cyclohexane -- particularly, experimental distribution coefficients were measured with small amounts of dimethyl sulfoxide (DMSO) and acetonitrile present in solution. 
 Therefore, we investigated the how acetonitrile and DMSO would distribute in simulations. 
 The experimental concentrations reported for each solvent are approximately 50\%, 50\%, 1\%, and 0.4\% by volume for cyclohexane, water, DMSO, and acetonitrile respectively  \cite{Rustenburg:sampl5}.
-To explore how the DMSO and acetonitrile distribute between cyclohexane and water we performed a single simulation with 130 cyclohexane, 780 water, four DMSO, and two acetonitrile molecules. 
-\comment[DLM]{",  mirroring roughly those concentrations"? (Is that where you came up with these numbers?)}
+To explore how the DMSO and acetonitrile distribute between cyclohexane and water we performed a single simulation with 130 cyclohexane, 780 water, four DMSO, and two acetonitrile molecules mirroring those concentrations. 
 Input topology and coordinate files were created with Solvation Toolkit. 
 The system was minimized and equilibrated following our reference calculation procedure and then a 5 ns constant pressure and temperature production simulation was run. 
 The trajectory from this simulation was visualized with VMD  \cite{VMD} and a movie is available in the supplementary information. 
@@ -566,8 +558,7 @@ Additionally, whenever protonation state/tautomer populations are not estimated 
 Here, our initial solvation free energy calculations used provided SMILES strings without any consideration of other tautomers.
 To explore how this may have affected our $\log D$ calculation, we decided to repeat a few solvation free energy calculations with alternate tautomers. 
 We used SAMPL5\_050 and SAMPL5\_083 as examples since both have other neutral tautomers that could be present in both the water and cyclohexane solutions. 
-Also, most participants had a difficult time correctly predicting the correct $\log D$ value for them both. 
-\comment[DLM]{"Them both" is not quite clear - "both of them simultaneously", or "either of them" maybe would be better... i.e. do you mean that both were hard, or that it was hard to get both right at the same time?} 
+Also, most participants failed to accurately predict the correct $\log D$ for either solute. 
 The new tautomer for SAMPL5\_050 was found with Ligprep \cite{ligprep}; the one for SAMPL5\_083 was found with COSMO-RS and was provided by Andreas Klamt \cite{AndreasKlamt:sampl5pc,Klamt:sampl5}. 
 \begin{table}
 \begin{tabular}{| l | l l | l l |}
@@ -596,7 +587,7 @@ Since both the calculated solvation free energies and the tautomer/protomer popu
 \hline
 Number Molecules & 0 water & 1 water & 7 water\\
 \hline
-$\Delta G_{hydration}$ & \multicolumn{3}{|c|}{$ -21.90 \pm 0.04 $} \\ \comment[DLM]{This line looks odd as it looks like you're saying the hydration free energy in one water is -21.9 kcal/mol. Reformat, or just repeat the value in each column and clarify in the caption?}
+$\Delta G_{hydration}$ & \multicolumn{3}{|c|}{$ -21.90 \pm 0.04 $} \\ \hline
 $\Delta G_{cyclohexane}$ & $ -16.77 \pm 0.04 $ &  $-18.05 \pm 0.04 $ & $ -19.54 \pm 0.04$ \\
 $\log D_{cyc/wat}$ & $ -3.76 \pm 0.04 $ & $-2.82 \pm 0.04$ & $ -1.73 \pm 0.04$  \\
 \hline
@@ -604,7 +595,7 @@ experimental $\log D$ &\multicolumn{3}{|c|}{$-1.9 \pm 0.3 $} \\
 \hline
 \end{tabular}
 \label{waterInCyc}
-\caption{Shown are results for the solvation free energy and distribution coefficient for SAMPL5\_074 in cyclohexane with no water present, 1 water molecule, and 7 water molecules all with 150 cyclohexane molecules and 1 solute molecule. Energy is reported in $kcal/mol$} 
+\caption{Shown are results for the solvation free energy and distribution coefficient for SAMPL5\_074 in cyclohexane with no water present, 1 water molecule, and 7 water molecules all with 150 cyclohexane molecules and 1 solute molecule. No changes were made for the aqueous phase so the $\Delta G_{hydration}$ is the same for all three calculations. Energy is reported in $kcal/mol$. } 
 \end{table}
 \comment[CCB]{updated water in cyclohexane section}
 \paragraph{Solvents are not completely immiscible.} 
@@ -663,7 +654,6 @@ We asked participants to estimate two forms of uncertainty, statistical uncertai
 This latter uncertainty estimate is particularly key, as it would allow practitioners to predict how reliable their calculations are likely to be in applications. 
 Here, we find that almost every participant dramatically underestimated their model uncertainty. 
 The importance for the community to improve error estimation has been addressed in past SAMPL challenges  \cite{Mobley:2014gu}, but clearly, much more work is still needed.
-%DLM: Moved this up from below where it seemed out of place.
 
 A common trend in SAMPL5 submissions was that the dynamic range in the predicted distribution coefficients was larger than the dynamic range observed experimentally -- that is, generally, the smallest $\log D$ values were underestimated and the largest were overestimated. 
 This issue of dynamic range is visible in figures \ref{examplePlots}, \ref{BestGroups}, and \ref{MobleyPlots}, but was evident in comparison plots for almost all submissions.
@@ -677,7 +667,6 @@ The results of this challenge strongly suggest predictions for solute partitioni
 The major challenges encountered here are all very likely to occur when attempting to predict binding affinities or other biomolecular properties of interest to drug discovery. 
 Specifically, accurately predicting the population of protonation and tautomeric states was a challenge, complicated by the fact that there is no simple way to predicted protonation states and tautomers to corresponding experimental values relevant to the conditions studied here. 
 Most work so far on tautomer prediction has focused on tautomeric ratios in vacuum or in water, but tautomer populations are likely environment-dependent in ways that can dramatically affect computed physical properties. 
-\comment[DLM]{Our wordings here seemed a little bit jumpy/unclear (I didn't notice before) so I tried to add a few words to explain what I think we mean. Is that better?}
 These same challenges are likely to apply when predicting biomolecular binding. 
 An improved treatment of these effects within the context of SAMPL or similar challenges will drive advances in computational techniques also used to predict binding and related properties such as solubility.  
 
@@ -686,7 +675,7 @@ Additionally, this data highlights important issues, such as tautomer enumeratio
 The ability to create new, completely blind data sets make distribution coefficients a great option for future challenges. 
 
 \begin{acknowledgements} 
-D.L.M and C.C.B. appreciate financial support from the National Institutes of Health (1R01GM108889-01) and the National Science Foundation (CHE 1352608), and computing support from the UCI GreenPlanet cluster, supported in part by NSF Grant CHE-0840513. 
+D.L.M, K.H.B. and C.C.B. appreciate financial support from the National Institutes of Health (1R01GM108889-01) and the National Science Foundation (CHE 1352608), and computing support from the UCI GreenPlanet cluster, supported in part by NSF Grant CHE-0840513. 
 This work was made possible in part by NIH grant U01 GM111528 for the Drug Design Data Resource, which supported the SAMPL workshop. 
 The contents of this paper are solely the responsibility of the authors and do not necessarily represent the official views of the NIH.
 M.K.G. has an equity interest in and is a cofounder and scientific advisor of VeraChem LLC. 
